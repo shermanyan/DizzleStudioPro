@@ -4,3 +4,6 @@ project(DizzleStudioPro)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(DizzleStudioPro main.cpp)
+
+target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
+find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
