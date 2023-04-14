@@ -11,7 +11,7 @@ DizzleStudioPro is an audio mixing app built with SFML and C++ that allows users
 - Adjust tempo and pitch
 - Export audio projects
 
-## Rough Draft 
+## Prototype 
 
 ![App Screenshot](https://user-images.githubusercontent.com/93677930/232147668-fd4f5746-4e20-41fb-b6b9-b14452b32d6f.png)
 
