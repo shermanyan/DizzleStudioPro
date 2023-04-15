@@ -86,8 +86,7 @@ add_executable(DizzleStudioPro
         App/UIComponents/Layer/DrawableAudioNode.h
         App/UIComponents/SeekBar.cpp
         App/UIComponents/SeekBar.h
-        main.cpp
-#        TrackPrototypeTest.cpp
+        TrackPrototypeTest.cpp
         )
 
 
