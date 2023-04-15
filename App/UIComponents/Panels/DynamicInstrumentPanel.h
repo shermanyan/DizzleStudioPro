@@ -1,0 +1,14 @@
+//
+// Created by Sherman Yan on 4/14/23.
+//
+
+#ifndef DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
+#define DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
+
+
+class DynamicInstrumentPanel {
+
+};
+
+
+#endif //DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
