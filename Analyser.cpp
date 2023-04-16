@@ -137,6 +137,7 @@ void Analyser::activateVisulizer() {
     //sound.play();
 }
 
+//set the position of the visualizer
 void Analyser::setPosition(float x, float y) {
     visualizerPosition.x = x;
     visualizerPosition.y = y;
