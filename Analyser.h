@@ -25,18 +25,21 @@ public:
     std::vector<sf::Int16> monosamples;
 
     //Window Size
-    sf::Vector2u windowSize;
     int textureX;
     int textureY;
+    sf::Vector2u windowSize;
 
     sf::RenderTexture rendergraph;
     sf::Sprite graph;
+    sf::Vector2f visualizerPosition;
 
     void updateVisualizer();
     std::size_t vertexCount;
     std::vector<sf::Vertex> vertices;
     bool* vertexColorUpdated;
     sf::VertexBuffer vb;
+    float lineThickness;
+    sf::RectangleShape drawColumn(std::size_t i, float firstRectCenterY) const;
 
 public:
     sf::Sound sound;

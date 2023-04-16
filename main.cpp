@@ -8,7 +8,7 @@ int main() {
 
     //Visualizer Constructor
     Analyser visualizer ("Sounds/TestSounds/Naruto.wav", window.getSize());
-    visualizer.setPosition(100, 700);
+    visualizer.setPosition(100, 400);
 
     //plays sound and activates the visualizer
     visualizer.activateVisulizer();
