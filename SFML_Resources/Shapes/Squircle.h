@@ -11,7 +11,7 @@ class Squircle : public sf::Drawable, public sf::Transformable {
 private:
 
     sf::Vector2f size;
-    float radius;
+    float radii[4];
 
     sf::CircleShape corners[4];
     sf::ConvexShape body;
@@ -30,7 +30,11 @@ public:
 
     Squircle(const sf::Vector2f &size, float radius);
 
+    Squircle(const sf::Vector2f& size, const float (&radii)[4]);
+
     Squircle(const sf::Vector2f &size, float radius, const sf::Color &color);
+
+    Squircle(const sf::Vector2f &size, const float (&radii)[4], const sf::Color &color);
 
 
     void setSize(const sf::Vector2f &size);
@@ -38,6 +42,7 @@ public:
     void setSize(float x, float y);
 
     void setRadius(float radius);
+    void setRadius(const float (&radii)[4]);
 
     void setFillColor(const sf::Color &color);
 

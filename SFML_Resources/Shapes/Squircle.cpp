@@ -3,42 +3,56 @@
 //
 
 #include "Squircle.h"
-Squircle::Squircle(): Squircle({50,50},25){}
+Squircle::Squircle(): Squircle({50,50},0){}
 
-Squircle::Squircle(const sf::Vector2f& size, float radius):Squircle(size, radius,sf::Color::White){}
+Squircle::Squircle(const sf::Vector2f& size, float radius):
+Squircle(size, {radius,radius,radius,radius},sf::Color::White){}
 
-Squircle::Squircle(const sf::Vector2f& size, float radius, const sf::Color& color):radius(radius), size(size) {
+Squircle::Squircle(const sf::Vector2f& size, const float (&radii)[4]):
+Squircle(size, radii,sf::Color::White){}
 
+Squircle::Squircle(const sf::Vector2f& size, float radius, const sf::Color& color):
+Squircle(size, {radius,radius,radius,radius},sf::Color::White) {}
+
+Squircle::Squircle(const sf::Vector2f &size, const float (&radii)[4], const sf::Color &color): size(size) {
+
+    setRadius(radii);
     refresh();
     setFillColor(color);
 }
 
+
 void Squircle::setupCorners() {
 
+    // [0 - topLeft], [1 - topRight], [2 - bottomRight], [3 - bottomLeft]
+
     for (int i = 0; i < 4; ++i) {
-        corners[i].setRadius(radius);
-        corners[i].setOrigin(radius,radius);
+        corners[i].setRadius(radii[i]);
+        corners[i].setOrigin(radii[i],radii[i]);
     }
 
-    corners[0].setPosition(radius,radius);
-    corners[1].setPosition(radius,size.y - radius);
-    corners[2].setPosition(size.x - radius, radius);
-    corners[3].setPosition(size.x - radius, size.y - radius);
+    corners[0].setPosition(radii[0],radii[0]);
+    corners[1].setPosition(size.x - radii[1], radii[1]);
+    corners[3].setPosition(radii[3],size.y - radii[3]);
+    corners[2].setPosition(size.x - radii[2], size.y - radii[2]);
 }
-
 
 void Squircle::setupBody() {
 
     body.setPointCount(8);
 
-    body.setPoint(0, {0,radius});
-    body.setPoint(1, {radius,0});
-    body.setPoint(2, {size.x-radius,0});
-    body.setPoint(3, {size.x,radius});
-    body.setPoint(4, {size.x,size.y-radius});
-    body.setPoint(5, {size.x-radius,size.y});
-    body.setPoint(6, {radius,size.y});
-    body.setPoint(7, {0,size.y-radius});
+    // [0 - topLeft}
+    body.setPoint(0, {0,radii[0]});
+    body.setPoint(1, {radii[0],0});
+    //[1 - topRight]
+    body.setPoint(2, {size.x-radii[1],0});
+    body.setPoint(3, {size.x,radii[1]});
+    //[2 - bottomRight]
+    body.setPoint(4, {size.x,size.y-radii[2]});
+    body.setPoint(5, {size.x-radii[2],size.y});
+    //[3 - bottomLeft]
+    body.setPoint(6, {radii[3],size.y});
+    body.setPoint(7, {0,size.y-radii[3]});
 
 }
 
@@ -58,8 +72,8 @@ void Squircle::setSize(const sf::Vector2f &size) {
 }
 
 void Squircle::refresh() {
-    setupBody();
     setupCorners();
+    setupBody();
 }
 
 void Squircle::setSize(float x, float y) {
@@ -75,12 +89,17 @@ void Squircle::setFillColor(const sf::Color &color) {
 }
 
 void Squircle::setRadius(float radius) {
-    this->radius = radius;
+    setRadius({radius,radius,radius,radius});
     refresh();
+}
+void Squircle::setRadius(const float (&radii)[4]) {
+    for (int i = 0; i < 4 ; ++i) {
+        this->radii[i] = radii[i];
+    }
 }
 
 float Squircle::getRadius() {
-    return radius;
+    return std::max({radii[0], radii[1], radii[2], radii[3]});
 }
 
 sf::Vector2f Squircle::getSize() {
@@ -94,4 +113,6 @@ sf::FloatRect Squircle::getGlobalBounds() const {
 sf::FloatRect Squircle::getLocalBounds() const {
     return body.getLocalBounds();
 }
+
+
 

@@ -22,7 +22,7 @@ int main()
 
     Squircle seek({10, 100},5);
     Squircle track({1000,120},10);
-    Squircle button({100,100},20);
+    Squircle button({100,100}, 20);
 
     std::vector<Squircle> nodes;
 
