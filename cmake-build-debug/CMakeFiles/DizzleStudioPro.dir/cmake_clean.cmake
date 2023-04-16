@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.o"
+  "CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.o.d"
   "CMakeFiles/DizzleStudioPro.dir/main.cpp.o"
   "CMakeFiles/DizzleStudioPro.dir/main.cpp.o.d"
   "DizzleStudioPro"

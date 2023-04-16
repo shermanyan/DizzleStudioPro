@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/Analyser.cpp" "CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.o" "gcc" "CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.o.d"
   "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/main.cpp" "CMakeFiles/DizzleStudioPro.dir/main.cpp.o" "gcc" "CMakeFiles/DizzleStudioPro.dir/main.cpp.o.d"
   )
 

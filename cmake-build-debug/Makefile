@@ -129,6 +129,30 @@ DizzleStudioPro/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/build
 .PHONY : DizzleStudioPro/fast
 
+Analyser.o: Analyser.cpp.o
+.PHONY : Analyser.o
+
+# target to build an object file
+Analyser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.o
+.PHONY : Analyser.cpp.o
+
+Analyser.i: Analyser.cpp.i
+.PHONY : Analyser.i
+
+# target to preprocess a source file
+Analyser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.i
+.PHONY : Analyser.cpp.i
+
+Analyser.s: Analyser.cpp.s
+.PHONY : Analyser.s
+
+# target to generate assembly for a file
+Analyser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/Analyser.cpp.s
+.PHONY : Analyser.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DizzleStudioPro"
+	@echo "... Analyser.o"
+	@echo "... Analyser.i"
+	@echo "... Analyser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

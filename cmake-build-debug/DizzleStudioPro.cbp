@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/Analyser.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/Analyser.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
 		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/main.cpp">
 			<Option target="DizzleStudioPro"/>
 		</Unit>
