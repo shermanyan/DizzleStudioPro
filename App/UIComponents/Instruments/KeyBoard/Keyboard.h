@@ -11,7 +11,7 @@
 
 class Keyboard: public AppComponent{
 private:
-    ScrollableContainer<OctaveKeys> keyboard;
+    std::vector<OctaveKeys> keyboard;
 
 public:
     Keyboard();

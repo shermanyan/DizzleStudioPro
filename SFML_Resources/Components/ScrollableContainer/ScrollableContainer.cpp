@@ -110,8 +110,8 @@ void ScrollableContainer<T>::eventHandler(sf::RenderWindow &window, const sf::Ev
     for (auto &i : items)
         i.eventHandler(window,event);
 
-   if (event.type == sf::Event::MouseWheelScrolled)
-        scroll(event.mouseWheelScroll.delta * 5);
+//   if (event.type == sf::Event::MouseWheelScrolled)
+//        scroll(event.mouseWheelScroll.delta * 5);
 
 }
 
@@ -165,8 +165,7 @@ typename ScrollableContainer<T>::iterator ScrollableContainer<T>::end() const {
 template<class T>
 void ScrollableContainer<T>::setPosition(const sf::Vector2f & pos){
     Transformable::setPosition(pos);
-
-    setParentTransformable(getTransform());
+    setParentTransform(getTransform());
 }
 
 template<class T>
@@ -175,11 +174,13 @@ void ScrollableContainer<T>::setPosition(float x, float y){
 }
 
 template<class T>
-void ScrollableContainer<T>::setParentTransformable(const sf::Transform &transform) {
+void ScrollableContainer<T>::setParentTransform(const sf::Transform &transform) {
+
     Transformable::setParentTransform(transform);
     for (auto & i:items) {
-        i.setParentTransform(getTransform());
+        i.setParentTransform(transform);
     }
+
 }
 
 

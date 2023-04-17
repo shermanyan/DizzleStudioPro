@@ -7,37 +7,47 @@
 Keyboard::Keyboard() {
 
     for(int i = 0; i<2; i++){
-        keyboard.push_back({});
+        keyboard.emplace_back();
     }
 
-    keyboard.setBound({0, 0, 1920,367});
+    Position::right(keyboard.front(), keyboard.back(),10);
 
 }
 
 void Keyboard::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
-    target.draw(keyboard,states);
+    for (auto&o :keyboard) {
+        target.draw(o,states);
+
+    }
 }
 
 sf::FloatRect Keyboard::getGlobalBounds() const {
-    return getTransform().transformRect(keyboard.getGlobalBounds());
+//    return getTransform().transformRect(keyboard.getGlobalBounds());
 }
 
 sf::FloatRect Keyboard::getLocalBounds() const {
-    return keyboard.getLocalBounds();
+//    return keyboard.getLocalBounds();
 }
 
 void Keyboard::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    keyboard.eventHandler(window,event);
+    for (auto&o :keyboard) {
+        o.eventHandler(window,event);
+    }
 }
 
 void Keyboard::update(const sf::RenderWindow &window) {
-    keyboard.update(window);
+    for (auto&o :keyboard) {
+        o.update(window);
+    }
 }
 
 void Keyboard::setPosition(const sf::Vector2f &pos) {
     Transformable::setPosition(pos);
-    keyboard.setParentTransform(getTransform());
+
+    for (auto&o :keyboard) {
+        o.setParentTransform(getTransform());
+    }
 }
 
 void Keyboard::setPosition(float x, float y) {

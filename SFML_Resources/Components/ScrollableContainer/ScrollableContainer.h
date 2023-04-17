@@ -46,7 +46,7 @@ public:
 
     void setPosition(const sf::Vector2f & pos);
     void setPosition(float x, float y);
-    void setParentTransformable(const sf::Transform& transform);
+    void setParentTransform(const sf::Transform& transform);
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 

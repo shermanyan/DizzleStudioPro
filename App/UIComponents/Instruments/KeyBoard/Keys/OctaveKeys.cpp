@@ -162,8 +162,6 @@ void OctaveKeys::refresh() {
 
 void OctaveKeys::setPosition(const sf::Vector2f &pos) {
     Transformable::setPosition(pos);
-    setParentTransform(getTransform());
-
 }
 
 void OctaveKeys::setPosition(float x, float y) {
@@ -174,8 +172,9 @@ void OctaveKeys::setParentTransform(const sf::Transform& transform) {
 
     Transformable::setParentTransform(transform);
 
+    sf::Transform trans = transform;
     for (auto &k :blackKeys)
-        k.setParentTransform(transform);
+        k.setParentTransform(trans);
     for (auto &k :whiteKeys)
-        k.setParentTransform(transform);
+        k.setParentTransform(trans);
 }
