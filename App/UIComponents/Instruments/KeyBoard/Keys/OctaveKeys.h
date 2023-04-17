@@ -35,8 +35,9 @@ private:
     void setWhiteKeysSize();
     void setBlackKeysSize();
 
-
     void positionKeys();
+
+    void setChildrenTransform(const sf::Transform& transform) override;
 
 public:
     //Default Constructor
@@ -61,11 +62,6 @@ public:
 
     //Set spacing between keys
     void setKeySpacing(float spacing);
-
-    void setPosition(const sf::Vector2f & pos);
-    void setPosition(float x, float y);
-
-    void setParentTransform(const sf::Transform& transform);
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;

@@ -72,6 +72,14 @@ sf::FloatRect ScrollableContainer<T>::getGlobalBounds() const {
 }
 
 template<class T>
+sf::FloatRect ScrollableContainer<T>::getLocalBounds() const {
+    sf::FloatRect bounds = getGlobalBounds();
+    bounds.left = 0;
+    bounds.top = 0;
+    return bounds;
+}
+
+template<class T>
 void ScrollableContainer<T>::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
     states.transform *= getTransform();
@@ -102,7 +110,6 @@ void ScrollableContainer<T>::update(const sf::RenderWindow &window) {
                 exit(11);
         }
     }
-
 }
 
 template<class T>
@@ -110,8 +117,8 @@ void ScrollableContainer<T>::eventHandler(sf::RenderWindow &window, const sf::Ev
     for (auto &i : items)
         i.eventHandler(window,event);
 
-//   if (event.type == sf::Event::MouseWheelScrolled)
-//        scroll(event.mouseWheelScroll.delta * 5);
+   if (event.type == sf::Event::MouseWheelScrolled)
+        scroll(event.mouseWheelScroll.delta * 5);
 
 }
 
@@ -135,13 +142,7 @@ void ScrollableContainer<T>::setScrollDirection(ScrollEnum scrollDirection) {
     ScrollableContainer::scrollDirection = scrollDirection;
 }
 
-template<class T>
-sf::FloatRect ScrollableContainer<T>::getLocalBounds() const {
-    sf::FloatRect bounds = getGlobalBounds();
-    bounds.left = 0;
-    bounds.top = 0;
-    return bounds;
-}
+
 
 template<class T>
 typename ScrollableContainer<T>::iterator ScrollableContainer<T>::begin() {
@@ -162,26 +163,12 @@ template<class T>
 typename ScrollableContainer<T>::iterator ScrollableContainer<T>::end() const {
     return items.end();
 }
-template<class T>
-void ScrollableContainer<T>::setPosition(const sf::Vector2f & pos){
-    Transformable::setPosition(pos);
-    setParentTransform(getTransform());
-}
 
 template<class T>
-void ScrollableContainer<T>::setPosition(float x, float y){
-    setPosition({x,y});
-}
-
-template<class T>
-void ScrollableContainer<T>::setParentTransform(const sf::Transform &transform) {
-
-    Transformable::setParentTransform(transform);
-    for (auto & i:items) {
+void ScrollableContainer<T>::setChildrenTransform(const sf::Transform &transform) {
+    for(auto &i : items)
         i.setParentTransform(transform);
-    }
 
 }
-
 
 #endif

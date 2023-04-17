@@ -25,6 +25,7 @@ private:
 
     void scroll(float delta);
 
+    void setChildrenTransform(const sf::Transform& transform) override;
 public:
     void setSpacing(float spacing);
 
@@ -43,10 +44,6 @@ public:
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
-
-    void setPosition(const sf::Vector2f & pos);
-    void setPosition(float x, float y);
-    void setParentTransform(const sf::Transform& transform);
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 

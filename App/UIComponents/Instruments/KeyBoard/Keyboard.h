@@ -13,11 +13,9 @@ class Keyboard: public AppComponent{
 private:
     std::vector<OctaveKeys> keyboard;
 
+    void setChildrenTransform(const sf::Transform& transform) override;
 public:
     Keyboard();
-
-    void setPosition(const sf::Vector2f & pos);
-    void setPosition(float x, float y);
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 

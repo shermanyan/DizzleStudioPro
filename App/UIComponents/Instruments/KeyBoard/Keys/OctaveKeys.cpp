@@ -123,7 +123,6 @@ void OctaveKeys::setWhiteKeysSize() {
         k.setSize({keyWidth, size.y});
         k.setClickableRange({0,size.y * blackKeySizeRatio.y ,keyWidth,size.y - (size.y * blackKeySizeRatio.y)});
     }
-
 }
 
 void OctaveKeys::setBlackKeysSize() {
@@ -160,21 +159,13 @@ void OctaveKeys::refresh() {
     positionKeys();
 }
 
-void OctaveKeys::setPosition(const sf::Vector2f &pos) {
-    Transformable::setPosition(pos);
-}
 
-void OctaveKeys::setPosition(float x, float y) {
-    setPosition({x,y});
-}
+void OctaveKeys::setChildrenTransform(const sf::Transform &transform) {
 
-void OctaveKeys::setParentTransform(const sf::Transform& transform) {
-
-    Transformable::setParentTransform(transform);
-
-    sf::Transform trans = transform;
-    for (auto &k :blackKeys)
-        k.setParentTransform(trans);
     for (auto &k :whiteKeys)
-        k.setParentTransform(trans);
+        k.setParentTransform(transform);
+    for (auto &k :blackKeys)
+        k.setParentTransform(transform);
 }
+
+

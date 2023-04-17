@@ -15,4 +15,24 @@ sf::Transform Transformable::getCombinedTransform() const {
 
 void Transformable::setParentTransform(const sf::Transform &transform) {
     this->transform = transform;
+    setChildrenTransform(getCombinedTransform());
+
 }
+
+void Transformable::setChildrenTransform(const sf::Transform &transform) {
+}
+
+void Transformable::setPosition(const sf::Vector2f &pos) {
+    sf::Transformable::setPosition(pos);
+
+    sf::Transform trans = getTransform();
+    setParentTransform(trans);
+    setChildrenTransform(trans);
+}
+
+void Transformable::setPosition(float x, float y) {
+    setPosition({x, y});
+}
+
+
+

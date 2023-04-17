@@ -8,27 +8,28 @@ int main(){
 
 //    Key key;
 //    key.setPosition(100,100);
-    OctaveKeys octave;
-    octave.setPosition(100,1000);
-    octave.setFillColors({{36,36,36},{94,94,94}});
+//    OctaveKeys octave;
+//    octave.setPosition(100,1000);
+//    octave.setFillColors({{36,36,36},{94,94,94}});
 //
 //
 //    octave.getGlobalBounds();
     Keyboard keyboard;
-    keyboard.setPosition(100,100);
+    keyboard.setPosition(200,100);
 
-    ScrollableContainer<OctaveKeys> keys;
-    for (int i = 0; i < 2 ; ++i) {
-        keys.push_back({});
+    ScrollableContainer<Key> keys;
+    for (int i = 0; i < 3 ; ++i) {
+        keys.push_back({{100, 100}, sf::Color::White});
     }
+
     keys.setPosition(100,600);
 
     Application tester;
-    tester.setWindowSize({2000, 2000});
+    tester.setWindowSize({3500, 2000});
     tester.setBgColor(sf::Color{31,31,31});
 
 //    tester.addComponent(key);
-    tester.addComponent(octave);
+//    tester.addComponent(octave);
     tester.addComponent(keys);
 
     tester.addComponent(keyboard);
