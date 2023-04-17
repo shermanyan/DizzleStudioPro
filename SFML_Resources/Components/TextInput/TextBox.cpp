@@ -34,6 +34,9 @@ void TextBox::setupTextBox() {
     setOutlineColor(sf::Color::White);
 
     setState(SELECTED,false);
+
+    text.setPosition( 10, 0);
+
 }
 void TextBox::setFont(sf::Font &font) {
     text.setFont(font);
@@ -69,7 +72,7 @@ void TextBox::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         text.eventHandler(window, event);
     }
 
-    if (MouseEvents::isClick(box,window)) {
+    if (MouseEvents::isClick(getTransform().transformRect(box.getGlobalBounds()),window)) {
         setState(SELECTED, true);
     }
     else if(MouseEvents::isClick(window)) {
@@ -112,22 +115,12 @@ Typing* TextBox::getText(){
 }
 
 sf::FloatRect TextBox::getGlobalBounds() const {
-    return box.getGlobalBounds();
+    return getTransform().transformRect(box.getGlobalBounds());
 }
 sf::FloatRect TextBox::getLocalBounds() const {
     return box.getLocalBounds();
 }
 
-void TextBox::setPosition(const sf::Vector2f &pos) {
-    Transformable::setPosition(pos);
-    box.setPosition(pos);
-    text.setPosition(pos.x + 10, pos.y);
-    c.setPosition(pos);
-}
-
-void TextBox::setPosition(float x, float y) {
-    setPosition({x, y});
-}
 
 
 

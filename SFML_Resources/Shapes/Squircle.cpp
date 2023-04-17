@@ -31,10 +31,10 @@ void Squircle::setupCorners() {
         corners[i].setOrigin(radii[i],radii[i]);
     }
 
-    corners[0].setPosition(radii[0],radii[0]);
-    corners[1].setPosition(size.x - radii[1], radii[1]);
-    corners[3].setPosition(radii[3],size.y - radii[3]);
-    corners[2].setPosition(size.x - radii[2], size.y - radii[2]);
+    corners[0].setPosition(position + sf::Vector2f{radii[0], radii[0]});
+    corners[1].setPosition(position + sf::Vector2f{size.x - radii[1], radii[1]});
+    corners[3].setPosition(position + sf::Vector2f{radii[3], size.y - radii[3]});
+    corners[2].setPosition(position + sf::Vector2f{size.x - radii[2], size.y - radii[2]});
 }
 
 void Squircle::setupBody() {
@@ -42,17 +42,17 @@ void Squircle::setupBody() {
     body.setPointCount(8);
 
     // [0 - topLeft}
-    body.setPoint(0, {0,radii[0]});
-    body.setPoint(1, {radii[0],0});
+    body.setPoint(0, position + sf::Vector2f {0,radii[0]});
+    body.setPoint(1, position + sf::Vector2f{radii[0],0});
     //[1 - topRight]
-    body.setPoint(2, {size.x-radii[1],0});
-    body.setPoint(3, {size.x,radii[1]});
+    body.setPoint(2, position + sf::Vector2f{size.x-radii[1],0});
+    body.setPoint(3, position + sf::Vector2f{size.x,radii[1]});
     //[2 - bottomRight]
-    body.setPoint(4, {size.x,size.y-radii[2]});
-    body.setPoint(5, {size.x-radii[2],size.y});
+    body.setPoint(4, position + sf::Vector2f{size.x,size.y-radii[2]});
+    body.setPoint(5, position + sf::Vector2f{size.x-radii[2],size.y});
     //[3 - bottomLeft]
-    body.setPoint(6, {radii[3],size.y});
-    body.setPoint(7, {0,size.y-radii[3]});
+    body.setPoint(6, position + sf::Vector2f{radii[3],size.y});
+    body.setPoint(7, position + sf::Vector2f{0,size.y-radii[3]});
 
 }
 
@@ -88,21 +88,25 @@ void Squircle::setFillColor(const sf::Color &color) {
     body.setFillColor(color);
 }
 
+sf::Color Squircle::getFillColor() const{
+    return body.getFillColor();
+}
+
 void Squircle::setRadius(float radius) {
     setRadius({radius,radius,radius,radius});
-    refresh();
 }
 void Squircle::setRadius(const float (&radii)[4]) {
     for (int i = 0; i < 4 ; ++i) {
         this->radii[i] = radii[i];
     }
+    refresh();
 }
 
 float Squircle::getRadius() {
     return std::max({radii[0], radii[1], radii[2], radii[3]});
 }
 
-sf::Vector2f Squircle::getSize() {
+sf::Vector2f Squircle::getSize() const {
     return size;
 }
 
@@ -113,6 +117,8 @@ sf::FloatRect Squircle::getGlobalBounds() const {
 sf::FloatRect Squircle::getLocalBounds() const {
     return body.getLocalBounds();
 }
+
+
 
 
 

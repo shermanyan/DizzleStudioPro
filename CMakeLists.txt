@@ -3,6 +3,13 @@ project(DizzleStudioPro)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include_directories(App)
+include_directories(App/UIComponents)
+include_directories(App/UIComponents/Instruments/DrumPad)
+include_directories(App/UIComponents/Instruments/KeyBoard)
+include_directories(App/UIComponents/Instruments/KeyBoard/Keys)
+include_directories(App/UIComponents/Layer)
+include_directories(App/UIComponents/Panels)
 include_directories(SFML_Resources/Components/ScrollableContainer)
 include_directories(SFML_Resources/Components/TextInput)
 include_directories(SFML_Resources/Components/Typing)
@@ -14,6 +21,32 @@ include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
 
 add_executable(DizzleStudioPro
+        App/UIComponents/Instruments/DrumPad/DrumPad.cpp
+        App/UIComponents/Instruments/DrumPad/DrumPad.h
+        App/UIComponents/Instruments/DrumPad/Pads.cpp
+        App/UIComponents/Instruments/DrumPad/Pads.h
+        App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp
+        App/UIComponents/Instruments/KeyBoard/Keys/Key.h
+        App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp
+        App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.h
+        App/UIComponents/Instruments/KeyBoard/Keyboard.cpp
+        App/UIComponents/Instruments/KeyBoard/Keyboard.h
+        App/UIComponents/Layer/DrawableAudioNode.cpp
+        App/UIComponents/Layer/DrawableAudioNode.h
+        App/UIComponents/Layer/Label.cpp
+        App/UIComponents/Layer/Label.h
+        App/UIComponents/Layer/Layer.cpp
+        App/UIComponents/Layer/Layer.h
+        App/UIComponents/Layer/Track.cpp
+        App/UIComponents/Layer/Track.h
+        App/UIComponents/Panels/DynamicInstrumentPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel.h
+        App/UIComponents/Panels/LayersPanel.cpp
+        App/UIComponents/Panels/LayersPanel.h
+        App/UIComponents/SeekBar.cpp
+        App/UIComponents/SeekBar.h
+        App/AudioNode.cpp
+        App/AudioNode.h
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.h
         SFML_Resources/Components/ScrollableContainer/ScrollEnum.h
@@ -56,39 +89,9 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-        App/UIComponents/Panels/DynamicInstrumentPanel.cpp
-        App/UIComponents/Panels/DynamicInstrumentPanel.h
-        App/UIComponents/Layer/Layer.cpp
-        App/UIComponents/Layer/Layer.h
-        App/UIComponents/Layer/Label.cpp
-        App/UIComponents/Layer/Label.h
-        App/UIComponents/Layer/Track.cpp
-        App/UIComponents/Layer/Track.h
-        App/UIComponents/Panels/LayersPanel.cpp
-        App/UIComponents/Panels/LayersPanel.h
-        App/UIComponents/Instruments/KeyBoard/Keyboard.cpp
-        App/UIComponents/Instruments/KeyBoard/Keyboard.h
-        App/UIComponents/Instruments/DrumPad/Pads.cpp
-        App/UIComponents/Instruments/DrumPad/Pads.h
-        App/UIComponents/Instruments/DrumPad/DrumPad.cpp
-        App/UIComponents/Instruments/DrumPad/DrumPad.h
-        App/UIComponents/Instruments/KeyBoard/Keys/Keys.cpp
-        App/UIComponents/Instruments/KeyBoard/Keys/Keys.h
-        App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp
-        App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.h
-        App/UIComponents/Instruments/KeyBoard/Keys/BlackKey.cpp
-        App/UIComponents/Instruments/KeyBoard/Keys/BlackKey.h
-        App/UIComponents/Instruments/KeyBoard/Keys/WhiteKey.cpp
-        App/UIComponents/Instruments/KeyBoard/Keys/WhiteKey.h
-        App/AudioNode.cpp
-        App/AudioNode.h
-        App/UIComponents/Layer/DrawableAudioNode.cpp
-        App/UIComponents/Layer/DrawableAudioNode.h
-        App/UIComponents/SeekBar.cpp
-        App/UIComponents/SeekBar.h
-        TrackPrototypeTest.cpp
-        )
-
+        KeyboardTester.cpp
+#        TrackPrototypeTest.cpp
+        SFML_Resources/Tools/Helpers/Transformable.cpp SFML_Resources/Tools/Helpers/Transformable.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

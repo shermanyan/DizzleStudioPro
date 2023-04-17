@@ -9,25 +9,15 @@
 
 class MouseEvents {
 public:
-    template<class T>
-    static bool isHover(const T& Obj , const sf::RenderWindow& window);
+    static bool isHover(const sf::FloatRect& bounds , const sf::RenderWindow& window);
 
-    template<class T>
-    static bool isClick(const T& Obj , const sf::RenderWindow& window);
+
+    static bool isClick(const sf::FloatRect& bounds, const sf::RenderWindow& window);
 
     static bool isClick(const sf::RenderWindow& window);
 
 
 };
-template<class T>
-bool MouseEvents::isHover(const T &Obj, const sf::RenderWindow &window) {
-    sf::Vector2f mPos = (sf::Vector2f)sf::Mouse::getPosition(window);
-    return Obj.getGlobalBounds().contains(mPos);
-}
 
-template<class T>
-bool MouseEvents::isClick(const T &Obj, const sf::RenderWindow &window) {
-    return isHover(Obj, window) && sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) ;
-}
 
 #endif //MOUSEEVENTS_H

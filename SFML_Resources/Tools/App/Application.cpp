@@ -92,4 +92,8 @@ void Application::eventHandler(sf::RenderWindow &window, const sf::Event &event)
 
 }
 
+void Application::setBgColor(const sf::Color &bgColor) {
+    Application::bgColor = bgColor;
+}
+
 

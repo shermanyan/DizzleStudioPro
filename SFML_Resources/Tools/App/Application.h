@@ -28,6 +28,8 @@ public:
 
     using sf::RenderWindow::getSize;
 
+    void setBgColor(const sf::Color &bgColor);
+
     void setWindowSize(const sf::Vector2u& windowSize);
     void addComponent(AppComponent& component);
     void disableResize();

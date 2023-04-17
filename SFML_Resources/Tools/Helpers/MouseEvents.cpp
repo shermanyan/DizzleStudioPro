@@ -11,6 +11,14 @@ bool MouseEvents::isClick(const sf::RenderWindow &window) {
 }
 
 
+bool MouseEvents::isHover(const sf::FloatRect& bounds, const sf::RenderWindow &window) {
+    sf::Vector2f mPos = (sf::Vector2f)sf::Mouse::getPosition(window);
+    return bounds.contains(mPos);
+}
+
+bool MouseEvents::isClick(const sf::FloatRect& bounds, const sf::RenderWindow &window) {
+    return isHover(bounds, window) && sf::Mouse::isButtonPressed(sf::Mouse::Button::Left);
+}
 
 
 

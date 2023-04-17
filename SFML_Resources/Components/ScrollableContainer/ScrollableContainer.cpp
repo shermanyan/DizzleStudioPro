@@ -8,7 +8,7 @@
 #include "ScrollableContainer.h"
 #include <iostream>
 template<class T>
-int ScrollableContainer<T>::MAX_ITEMS = 10;
+int ScrollableContainer<T>::MAX_ITEMS = 25;
 
 template<class T>
 ScrollableContainer<T>::ScrollableContainer() {}
@@ -26,7 +26,7 @@ void ScrollableContainer<T>::scroll(float delta) {
             case HORIZONTAL: {
                 if (delta + selfSize.left <= bound.left &&
                     delta + selfSize.left + selfSize.width >= bound.width)
-                    items[0]->move(delta * direction, 0);
+                    items[0].move(delta * direction, 0);
 
                 break;
             }
@@ -34,7 +34,7 @@ void ScrollableContainer<T>::scroll(float delta) {
                 if (delta + selfSize.top <= bound.top &&
                     delta + selfSize.top + selfSize.height >= bound.height)
 
-                    items[0]->move(0, delta * direction);
+                    items[0].move(0, delta * direction);
 
                 break;
             }
@@ -45,11 +45,10 @@ void ScrollableContainer<T>::scroll(float delta) {
 }
 
 template<class T>
-void ScrollableContainer<T>::addComponent(T *item) {
+void ScrollableContainer<T>::push_back(T item) {
 
     if (items.size() <= MAX_ITEMS)
         items.push_back(item);
-
 }
 
 template<class T>
@@ -65,36 +64,38 @@ void ScrollableContainer<T>::setItemSpacing(float spacing) {
 template<class T>
 sf::FloatRect ScrollableContainer<T>::getGlobalBounds() const {
     if(!items.empty()) {
-        sf::Vector2f f = getTransform().transformPoint(items.front()->getPosition());
-        sf::FloatRect e = getTransform().transformRect(items.back()->getGlobalBounds());
-        return {f.x, f.y, (spacing + e.width) * items.size() - spacing , e.height};
-    } return {0,0,0,0};
+        sf::Vector2f f = getTransform().transformPoint(items.front().getPosition());
+        sf::FloatRect e = getTransform().transformRect(items.back().getGlobalBounds());
+        return getTransform().transformRect({f.x, f.y, (spacing + e.width) * items.size() - spacing , e.height});
+    }
+    return getTransform().transformRect({0,0,0,0});
 }
 
 template<class T>
 void ScrollableContainer<T>::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
     states.transform *= getTransform();
-    for(auto *d:items)
-        target.draw(*d,states);
+    for(auto &d:items)
+        target.draw(d,states);
 
 }
 
 template<class T>
 void ScrollableContainer<T>::update(const sf::RenderWindow &window) {
+    for (auto &i : items)
+        i.update(window);
 
     if(!items.empty()) {
         switch (scrollDirection) {
             case HORIZONTAL: {
                 for (int i = 1; i < items.size(); i++) {
-                    Position::right(*items[i], *items[i - 1], spacing);
+                    Position::right(items[i], items[i - 1], spacing);
                 }
                 break;
             }
             case VERTICAL: {
                 for (int i = 1; i < items.size(); i++)
-                    Position::bottom(*items[i], *items[i - 1], spacing);
-
+                    Position::bottom(items[i], items[i - 1], spacing);
                 break;
             }
             default:
@@ -105,21 +106,11 @@ void ScrollableContainer<T>::update(const sf::RenderWindow &window) {
 }
 
 template<class T>
-void ScrollableContainer<T>::setPosition(float x, float y) {
-    setPosition({x,y});
-}
-
-template<class T>
-void ScrollableContainer<T>::setPosition(const sf::Vector2f& pos) {
-    if (!items.empty())
-        for (auto *i:items) {
-            i->setPosition(pos);
-        }
-}
-
-template<class T>
 void ScrollableContainer<T>::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-   if (event.type == sf::Event::MouseWheelScrolled )
+    for (auto &i : items)
+        i.eventHandler(window,event);
+
+   if (event.type == sf::Event::MouseWheelScrolled)
         scroll(event.mouseWheelScroll.delta * 5);
 
 }
@@ -143,5 +134,53 @@ template<class T>
 void ScrollableContainer<T>::setScrollDirection(ScrollEnum scrollDirection) {
     ScrollableContainer::scrollDirection = scrollDirection;
 }
+
+template<class T>
+sf::FloatRect ScrollableContainer<T>::getLocalBounds() const {
+    sf::FloatRect bounds = getGlobalBounds();
+    bounds.left = 0;
+    bounds.top = 0;
+    return bounds;
+}
+
+template<class T>
+typename ScrollableContainer<T>::iterator ScrollableContainer<T>::begin() {
+    return items.begin();
+}
+
+template<class T>
+typename ScrollableContainer<T>::iterator ScrollableContainer<T>::end() {
+    return items.end();
+}
+
+template<class T>
+typename ScrollableContainer<T>::iterator ScrollableContainer<T>::begin() const {
+    return items.begin();
+}
+
+template<class T>
+typename ScrollableContainer<T>::iterator ScrollableContainer<T>::end() const {
+    return items.end();
+}
+template<class T>
+void ScrollableContainer<T>::setPosition(const sf::Vector2f & pos){
+    Transformable::setPosition(pos);
+
+    setParentTransformable(getTransform());
+}
+
+template<class T>
+void ScrollableContainer<T>::setPosition(float x, float y){
+    setPosition({x,y});
+}
+
+template<class T>
+void ScrollableContainer<T>::setParentTransformable(const sf::Transform &transform) {
+    Transformable::setParentTransform(transform);
+    for (auto & i:items) {
+        i.setParentTransform(getTransform());
+    }
+}
+
 
 #endif

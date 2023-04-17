@@ -56,39 +56,30 @@ bool TextInput::isOperator(char c) {
 }
 
 void TextInput::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(textBox);
-    target.draw(label);
+    states.transform *= getTransform();
+    target.draw(textBox,states);
+    target.draw(label,states);
 }
 
 sf::FloatRect TextInput::getGlobalBounds() const {
     sf::FloatRect bounds , tBound = textBox.getGlobalBounds(),lBound = label.getGlobalBounds();
     sf::Vector2f lPos = label.getPosition(), tPos = textBox.getPosition();
     bounds.left = label.getPosition().x;
-    bounds.top =  tPos.y > label.getPosition().y? tPos.y: label.getPosition().y;
+    bounds.top =  tPos.y > lPos.y? tPos.y: lPos.y;
     bounds.width = lBound.width + tBound.width;
     bounds.height = lBound.height > tBound.height? lBound.height: tBound.height;
 
-    return bounds;
+    return getTransform().transformRect(bounds);
 }
 
 sf::FloatRect TextInput::getLocalBounds() const {
-    sf::FloatRect bounds , tBound = textBox.getGlobalBounds(),lBound = label.getGlobalBounds();
+    sf::FloatRect bounds , tBound = textBox.getLocalBounds(),lBound = label.getLocalBounds();
     bounds.width = lBound.width + tBound.width;
     bounds.height = lBound.height > tBound.height? lBound.height: tBound.height;
 
     return bounds;
 }
 
-void TextInput::setPosition(const sf::Vector2f &pos) {
-    Transformable::setPosition(pos);
-    label.setPosition(pos);
-    Position::center(textBox,label);
-    Position::right(textBox,label,30);
-}
-
-void TextInput::setPosition(float x, float y) {
-    setPosition({x,y});
-}
 
 void TextInput::setLabelString(const std::string &label) {
     this->label.setString(label);

@@ -32,15 +32,13 @@ public:
     void setTextBoxFillColor(const sf::Color& color);
     void setTextBoxOutlineColor(const sf::Color& color);
 
-    sf::FloatRect getGlobalBounds() const;
-    sf::FloatRect getLocalBounds() const;
+    sf::FloatRect getGlobalBounds() const override;
+    sf::FloatRect getLocalBounds() const override;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void update(const sf::RenderWindow &window) override;
 
-    void setPosition(const sf::Vector2f& pos);
-    void setPosition(float x, float y);
 
 };
 

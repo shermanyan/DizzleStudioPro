@@ -48,11 +48,9 @@ public:
 
     Typing* getText();
 
-    sf::FloatRect getGlobalBounds()const;
-    sf::FloatRect getLocalBounds() const;
+    sf::FloatRect getGlobalBounds()const override;
+    sf::FloatRect getLocalBounds() const override;
 
-    void setPosition(const sf::Vector2f& pos);
-    void setPosition(float x, float y);
 
 };
 
