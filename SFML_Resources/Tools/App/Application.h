@@ -21,12 +21,11 @@ private:
     void windowEventListener(sf::Event &event);
     void windowUpdater();
 
+    using sf::Window::setSize;
 public:
     Application();
     Application(const std::string& windowName);
     Application(const std::string& windowName, const sf::Color &bgColor);
-
-    using sf::RenderWindow::getSize;
 
     void setBgColor(const sf::Color &bgColor);
 

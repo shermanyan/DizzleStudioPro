@@ -8,6 +8,8 @@
 #include "AppComponent.h"
 #include "ScrollEnum.h"
 #include "Position.h"
+#include "MouseEvents.h"
+
 template<class T>
 class ScrollableContainer : public AppComponent{
 private:
@@ -15,18 +17,21 @@ private:
     float spacing = 10;
     std::vector<T> items;
 
-    typedef typename std::vector<T>::iterator iterator;
     int direction = 1;
-    float speedMultiplier;
+    float speedMultiplier = 1;
 
     sf::FloatRect bound;
 
     ScrollEnum scrollDirection = HORIZONTAL;
+    typedef typename std::vector<T>::iterator iterator;
 
-    void scroll(float delta);
+    void scroll(float delta, const sf::RenderWindow& window);
 
     void setChildrenTransform(const sf::Transform& transform) override;
 public:
+    ScrollableContainer();
+    ScrollableContainer(ScrollEnum scrollDirection, float spacing);
+
     void setSpacing(float spacing);
 
     void setSpeedMultiplier(float speedMultiplier);
@@ -34,9 +39,6 @@ public:
     void setBound(const sf::FloatRect &bound);
 
     void setScrollDirection(ScrollEnum scrollDirection);
-
-    ScrollableContainer();
-    ScrollableContainer(ScrollEnum scrollDirection, float spacing);
 
     void push_back(T item);
     void reverseScrollDirection();

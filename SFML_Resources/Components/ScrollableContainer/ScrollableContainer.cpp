@@ -11,30 +11,34 @@ template<class T>
 int ScrollableContainer<T>::MAX_ITEMS = 25;
 
 template<class T>
-ScrollableContainer<T>::ScrollableContainer() {}
+ScrollableContainer<T>::ScrollableContainer() {
+}
 
 template<class T>
 ScrollableContainer<T>::ScrollableContainer(ScrollEnum scrollDirection, float spacing):
 scrollDirection(scrollDirection), spacing(spacing){
+
+
 }
 
 template<class T>
-void ScrollableContainer<T>::scroll(float delta) {
+void ScrollableContainer<T>::scroll(float delta, const sf::RenderWindow& window) {
     if (!items.empty()) {
         sf::FloatRect selfSize = getGlobalBounds();
         switch (scrollDirection) {
             case HORIZONTAL: {
-                if (delta + selfSize.left <= bound.left &&
-                    delta + selfSize.left + selfSize.width >= bound.width)
-                    items[0].move(delta * direction, 0);
+                if (MouseEvents::isHover(selfSize,window) &&
+                (selfSize.left + delta <= bound.left && selfSize.left + selfSize.width + delta >= bound.left + bound.width)) {
+                    items[0].move(delta * direction,0);
 
+                }
                 break;
             }
             case VERTICAL: {
-                if (delta + selfSize.top <= bound.top &&
-                    delta + selfSize.top + selfSize.height >= bound.height)
-
+                if (MouseEvents::isHover(bound,window) &&
+                (selfSize.top + delta <= bound.top && selfSize.top + selfSize.height + delta >= bound.top + bound.height)) {
                     items[0].move(0, delta * direction);
+                }
 
                 break;
             }
@@ -64,9 +68,10 @@ void ScrollableContainer<T>::setItemSpacing(float spacing) {
 template<class T>
 sf::FloatRect ScrollableContainer<T>::getGlobalBounds() const {
     if(!items.empty()) {
-        sf::Vector2f f = getTransform().transformPoint(items.front().getPosition());
-        sf::FloatRect e = getTransform().transformRect(items.back().getGlobalBounds());
-        return getTransform().transformRect({f.x, f.y, (spacing + e.width) * items.size() - spacing , e.height});
+        sf::FloatRect bounds = items.front().getGlobalBounds();
+        bounds.width = (bounds.width * items.size()) + (10*(items.size()-1));
+
+        return getTransform().transformRect(bounds);
     }
     return getTransform().transformRect({0,0,0,0});
 }
@@ -109,6 +114,7 @@ void ScrollableContainer<T>::update(const sf::RenderWindow &window) {
             default:
                 exit(11);
         }
+        setChildrenTransform(getTransform());
     }
 }
 
@@ -117,8 +123,8 @@ void ScrollableContainer<T>::eventHandler(sf::RenderWindow &window, const sf::Ev
     for (auto &i : items)
         i.eventHandler(window,event);
 
-   if (event.type == sf::Event::MouseWheelScrolled)
-        scroll(event.mouseWheelScroll.delta * 5);
+    if (event.type == sf::Event::MouseWheelScrolled)
+        scroll(event.mouseWheelScroll.delta * 5, window);
 
 }
 

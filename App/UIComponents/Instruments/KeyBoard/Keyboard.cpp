@@ -6,12 +6,8 @@
 
 Keyboard::Keyboard() {
 
-    for(int i = 0; i<3; i++){
+    for(int i = 0; i<1; i++){
         keyboard.emplace_back();
-    }
-
-    for (int i = 1; i < keyboard.size(); ++i) {
-        Position::right(keyboard[i], keyboard[i-1],10);
     }
 
 }
@@ -24,11 +20,16 @@ void Keyboard::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 
 sf::FloatRect Keyboard::getGlobalBounds() const {
-//    return getTransform().transformRect(getPosition().x, getPosition().y , keyboard.size() * keyboard.front().getGlobalBounds().width, );
-}
+    sf::FloatRect bounds = keyboard.front().getGlobalBounds();
+    bounds.width = (bounds.width * keyboard.size()) + (10*(keyboard.size()-1));
 
+    return getTransform().transformRect(bounds);
+}
 sf::FloatRect Keyboard::getLocalBounds() const {
-//    return keyboard.getLocalBounds();
+    sf::FloatRect bounds = getGlobalBounds();
+    bounds.left = 0;
+    bounds.top = 0;
+    return bounds;
 }
 
 void Keyboard::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -45,7 +46,12 @@ void Keyboard::update(const sf::RenderWindow &window) {
         o.update(window);
     }
 
-
+    for (int i = 1; i < keyboard.size(); ++i) {
+        sf::FloatRect s = (keyboard[i].getGlobalBounds());
+        sf::FloatRect r = (keyboard[i-1].getGlobalBounds());
+        keyboard[i].setPosition({r.left + r.width + 10, s.top});
+    }
+    setChildrenTransform(getTransform());
 }
 
 void Keyboard::setChildrenTransform(const sf::Transform &transform) {

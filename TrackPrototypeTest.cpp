@@ -44,7 +44,7 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            else if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(button, window)) {
+            else if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(button.getGlobalBounds(), window)) {
                 button.setFillColor(sf::Color::Red);
                 nodes.emplace_back();
                 nodes.back().setSize(10, 100);
