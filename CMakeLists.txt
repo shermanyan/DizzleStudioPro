@@ -89,6 +89,9 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
+        SFML_Resources/Tools/Helpers/SpriteImage.cpp
+        SFML_Resources/Tools/Helpers/SpriteImage.h
+
         KeyboardTester.cpp
 #        TrackPrototypeTest.cpp
         SFML_Resources/Tools/App/Transformable.cpp SFML_Resources/Tools/App/Transformable.h
