@@ -24,6 +24,26 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Enums"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/TestSounds"/>
 					<Add directory="/opt/homebrew/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -46,6 +66,26 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Enums"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds"/>
+					<Add directory="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/TestSounds"/>
 					<Add directory="/opt/homebrew/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -82,7 +122,247 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/main.cpp">
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/AudioNode.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/AudioNode.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/Sounds.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/Sounds.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/SoundsEnum.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Textures.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Textures.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/TexturesEnum.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/DrumPad.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/DrumPad.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/Pads.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/Pads.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keyboard.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/Key.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/DrawableAudioNode.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/DrawableAudioNode.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Label.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Label.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Layer.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Layer.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Track.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Track.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/LayersPanel.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/LayersPanel.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/SeekBar.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/SeekBar.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/AudioVisualizerTester.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer/ScrollEnum.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/Cursor.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/Cursor.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextBox.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextBox.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextInput.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextInput.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextboxLabel.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextboxLabel.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Letter.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Letter.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/MultiText.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/MultiText.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Typing.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Typing.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes/Squircle.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes/Squircle.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/AppComponent.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Application.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Application.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/EventHandleable.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Transformable.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Transformable.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Updatable.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Enums/FontsEnum.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Enums/StatesEnum.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Fonts.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Fonts.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/KeyboardShortcuts.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/MouseEvents.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/MouseEvents.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/Position.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/Position.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/SpriteImage.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/SpriteImage.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/States.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/States.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/History.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/History.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/HistoryNode.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/Snapshot.cpp">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/Snapshot.h">
+			<Option target="DizzleStudioPro"/>
+		</Unit>
+		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/SnapshotInterface.h">
 			<Option target="DizzleStudioPro"/>
 		</Unit>
 		<Unit filename="/Users/hargy/CLionProjects/CS008/DizzleStudioPro/CMakeLists.txt">

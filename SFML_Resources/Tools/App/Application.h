@@ -1,5 +1,5 @@
 //
-// Created by Dave R. Smith on 2/14/23.
+// Created by Sherman Yan on 2/14/23.
 //
 
 #ifndef APPLICATION_H

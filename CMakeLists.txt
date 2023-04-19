@@ -20,6 +20,9 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
+include_directories(App/UIComponents/MusicTrackSelection)
+include_directories(App/Resources/Sounds/)
+include_directories(App/Resources/Sounds/TestSounds)
 
 add_executable(DizzleStudioPro
         App/Resources/Textures.cpp
@@ -97,8 +100,11 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-        KeyboardTester.cpp
-        )
+
+        #KeyboardTester.cpp
+        AudioVisualizerTester.cpp
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h App/Resources/Sounds/Sounds.cpp App/Resources/Sounds/Sounds.h App/Resources/Sounds/SoundsEnum.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

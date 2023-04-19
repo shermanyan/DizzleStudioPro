@@ -1,5 +1,5 @@
 //
-// Created by Dave R. Smith on 2/14/23.
+// Created by Sherman Yah on 2/14/23.
 //
 
 #include "Application.h"

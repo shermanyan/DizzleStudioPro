@@ -69,35 +69,595 @@ include CMakeFiles/DizzleStudioPro.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DizzleStudioPro.dir/flags.make
 
-CMakeFiles/DizzleStudioPro.dir/main.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
-CMakeFiles/DizzleStudioPro.dir/main.cpp.o: ../main.cpp
-CMakeFiles/DizzleStudioPro.dir/main.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DizzleStudioPro.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/main.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/main.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/main.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/main.cpp
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o: ../App/Resources/Textures.cpp
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Textures.cpp
 
-CMakeFiles/DizzleStudioPro.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/main.cpp > CMakeFiles/DizzleStudioPro.dir/main.cpp.i
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Textures.cpp > CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.i
 
-CMakeFiles/DizzleStudioPro.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/main.cpp -o CMakeFiles/DizzleStudioPro.dir/main.cpp.s
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Textures.cpp -o CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o: ../App/UIComponents/Instruments/DrumPad/DrumPad.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/DrumPad.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/DrumPad.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/DrumPad.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o: ../App/UIComponents/Instruments/DrumPad/Pads.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/Pads.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/Pads.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad/Pads.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o: ../App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o: ../App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o: ../App/UIComponents/Instruments/KeyBoard/Keyboard.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o: ../App/UIComponents/Layer/DrawableAudioNode.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/DrawableAudioNode.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/DrawableAudioNode.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/DrawableAudioNode.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o: ../App/UIComponents/Layer/Label.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Label.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Label.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Label.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o: ../App/UIComponents/Layer/Layer.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Layer.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Layer.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Layer.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o: ../App/UIComponents/Layer/Track.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Track.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Track.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Layer/Track.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o: ../App/UIComponents/Panels/DynamicInstrumentPanel.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o: ../App/UIComponents/Panels/LayersPanel.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/LayersPanel.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/LayersPanel.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/LayersPanel.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o: ../App/UIComponents/SeekBar.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/SeekBar.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/SeekBar.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/SeekBar.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o: ../App/AudioNode.cpp
+CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/AudioNode.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/AudioNode.cpp > CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/AudioNode.cpp -o CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o: ../SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o: ../SFML_Resources/Components/TextInput/Cursor.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/Cursor.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/Cursor.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/Cursor.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o: ../SFML_Resources/Components/TextInput/TextBox.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextBox.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextBox.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextBox.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o: ../SFML_Resources/Components/TextInput/TextboxLabel.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextboxLabel.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextboxLabel.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextboxLabel.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o: ../SFML_Resources/Components/TextInput/TextInput.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextInput.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextInput.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput/TextInput.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o: ../SFML_Resources/Components/Typing/Letter.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Letter.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Letter.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Letter.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o: ../SFML_Resources/Components/Typing/MultiText.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/MultiText.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/MultiText.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/MultiText.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o: ../SFML_Resources/Components/Typing/Typing.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Typing.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Typing.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing/Typing.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o: ../SFML_Resources/Shapes/Squircle.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes/Squircle.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes/Squircle.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes/Squircle.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o: ../SFML_Resources/Tools/App/Application.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Application.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Application.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Application.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o: ../SFML_Resources/Tools/App/Transformable.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Transformable.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Transformable.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App/Transformable.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o: ../SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o: ../SFML_Resources/Tools/Helpers/MouseEvents.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/MouseEvents.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/MouseEvents.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/MouseEvents.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o: ../SFML_Resources/Tools/Helpers/Position.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/Position.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/Position.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/Position.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o: ../SFML_Resources/Tools/Helpers/SpriteImage.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/SpriteImage.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/SpriteImage.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/SpriteImage.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o: ../SFML_Resources/Tools/Helpers/States.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/States.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/States.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers/States.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o: ../SFML_Resources/Tools/History/History.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/History.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/History.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/History.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o: ../SFML_Resources/Tools/History/Snapshot.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/Snapshot.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/Snapshot.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History/Snapshot.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o: ../SFML_Resources/Tools/Fonts.cpp
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Fonts.cpp
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Fonts.cpp > CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Fonts.cpp -o CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o: ../AudioVisualizerTester.cpp
+CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/AudioVisualizerTester.cpp
+
+CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/AudioVisualizerTester.cpp > CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/AudioVisualizerTester.cpp -o CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o: ../App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp > CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp -o CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s
+
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o: CMakeFiles/DizzleStudioPro.dir/flags.make
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o: ../App/Resources/Sounds/Sounds.cpp
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o: CMakeFiles/DizzleStudioPro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o -MF CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o.d -o CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o -c /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/Sounds.cpp
+
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/Sounds.cpp > CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.i
+
+CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds/Sounds.cpp -o CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.s
 
 # Object files for target DizzleStudioPro
 DizzleStudioPro_OBJECTS = \
-"CMakeFiles/DizzleStudioPro.dir/main.cpp.o"
+"CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o" \
+"CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o"
 
 # External object files for target DizzleStudioPro
 DizzleStudioPro_EXTERNAL_OBJECTS =
 
-DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/main.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o
+DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o
 DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/build.make
 DizzleStudioPro: /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib
 DizzleStudioPro: /opt/homebrew/lib/libsfml-audio.2.5.1.dylib
 DizzleStudioPro: /opt/homebrew/lib/libsfml-window.2.5.1.dylib
 DizzleStudioPro: /opt/homebrew/lib/libsfml-system.2.5.1.dylib
 DizzleStudioPro: CMakeFiles/DizzleStudioPro.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable DizzleStudioPro"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable DizzleStudioPro"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DizzleStudioPro.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
