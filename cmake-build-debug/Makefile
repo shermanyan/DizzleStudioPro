@@ -153,30 +153,6 @@ App/AudioNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.s
 .PHONY : App/AudioNode.cpp.s
 
-App/Resources/Sounds/Sounds.o: App/Resources/Sounds/Sounds.cpp.o
-.PHONY : App/Resources/Sounds/Sounds.o
-
-# target to build an object file
-App/Resources/Sounds/Sounds.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.o
-.PHONY : App/Resources/Sounds/Sounds.cpp.o
-
-App/Resources/Sounds/Sounds.i: App/Resources/Sounds/Sounds.cpp.i
-.PHONY : App/Resources/Sounds/Sounds.i
-
-# target to preprocess a source file
-App/Resources/Sounds/Sounds.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.i
-.PHONY : App/Resources/Sounds/Sounds.cpp.i
-
-App/Resources/Sounds/Sounds.s: App/Resources/Sounds/Sounds.cpp.s
-.PHONY : App/Resources/Sounds/Sounds.s
-
-# target to generate assembly for a file
-App/Resources/Sounds/Sounds.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/Resources/Sounds/Sounds.cpp.s
-.PHONY : App/Resources/Sounds/Sounds.cpp.s
-
 App/Resources/Textures.o: App/Resources/Textures.cpp.o
 .PHONY : App/Resources/Textures.o
 
@@ -417,77 +393,77 @@ App/UIComponents/Layer/Track.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.s
 .PHONY : App/UIComponents/Layer/Track.cpp.s
 
-App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.o: App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o
-.PHONY : App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.o
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.o: App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.o
 
 # target to build an object file
-App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o
-.PHONY : App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o
 
-App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.i: App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i
-.PHONY : App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.i
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.i: App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.i
 
 # target to preprocess a source file
-App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i
-.PHONY : App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.i
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i
 
-App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.s: App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s
-.PHONY : App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.s
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.s: App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.s
 
 # target to generate assembly for a file
-App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s
-.PHONY : App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.s
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s
 
-App/UIComponents/Panels/DynamicInstrumentPanel.o: App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o
-.PHONY : App/UIComponents/Panels/DynamicInstrumentPanel.o
+App/UIComponents/Panels/Base/LayersPanel.o: App/UIComponents/Panels/Base/LayersPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.o
 
 # target to build an object file
-App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o
-.PHONY : App/UIComponents/Panels/DynamicInstrumentPanel.cpp.o
+App/UIComponents/Panels/Base/LayersPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/LayersPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.cpp.o
 
-App/UIComponents/Panels/DynamicInstrumentPanel.i: App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i
-.PHONY : App/UIComponents/Panels/DynamicInstrumentPanel.i
+App/UIComponents/Panels/Base/LayersPanel.i: App/UIComponents/Panels/Base/LayersPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.i
 
 # target to preprocess a source file
-App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i
-.PHONY : App/UIComponents/Panels/DynamicInstrumentPanel.cpp.i
+App/UIComponents/Panels/Base/LayersPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/LayersPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.cpp.i
 
-App/UIComponents/Panels/DynamicInstrumentPanel.s: App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s
-.PHONY : App/UIComponents/Panels/DynamicInstrumentPanel.s
+App/UIComponents/Panels/Base/LayersPanel.s: App/UIComponents/Panels/Base/LayersPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.s
 
 # target to generate assembly for a file
-App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s
-.PHONY : App/UIComponents/Panels/DynamicInstrumentPanel.cpp.s
+App/UIComponents/Panels/Base/LayersPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/LayersPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.cpp.s
 
-App/UIComponents/Panels/LayersPanel.o: App/UIComponents/Panels/LayersPanel.cpp.o
-.PHONY : App/UIComponents/Panels/LayersPanel.o
+App/UIComponents/Panels/KeyboardPanel.o: App/UIComponents/Panels/KeyboardPanel.cpp.o
+.PHONY : App/UIComponents/Panels/KeyboardPanel.o
 
 # target to build an object file
-App/UIComponents/Panels/LayersPanel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.o
-.PHONY : App/UIComponents/Panels/LayersPanel.cpp.o
+App/UIComponents/Panels/KeyboardPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/KeyboardPanel.cpp.o
+.PHONY : App/UIComponents/Panels/KeyboardPanel.cpp.o
 
-App/UIComponents/Panels/LayersPanel.i: App/UIComponents/Panels/LayersPanel.cpp.i
-.PHONY : App/UIComponents/Panels/LayersPanel.i
+App/UIComponents/Panels/KeyboardPanel.i: App/UIComponents/Panels/KeyboardPanel.cpp.i
+.PHONY : App/UIComponents/Panels/KeyboardPanel.i
 
 # target to preprocess a source file
-App/UIComponents/Panels/LayersPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.i
-.PHONY : App/UIComponents/Panels/LayersPanel.cpp.i
+App/UIComponents/Panels/KeyboardPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/KeyboardPanel.cpp.i
+.PHONY : App/UIComponents/Panels/KeyboardPanel.cpp.i
 
-App/UIComponents/Panels/LayersPanel.s: App/UIComponents/Panels/LayersPanel.cpp.s
-.PHONY : App/UIComponents/Panels/LayersPanel.s
+App/UIComponents/Panels/KeyboardPanel.s: App/UIComponents/Panels/KeyboardPanel.cpp.s
+.PHONY : App/UIComponents/Panels/KeyboardPanel.s
 
 # target to generate assembly for a file
-App/UIComponents/Panels/LayersPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel.cpp.s
-.PHONY : App/UIComponents/Panels/LayersPanel.cpp.s
+App/UIComponents/Panels/KeyboardPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/KeyboardPanel.cpp.s
+.PHONY : App/UIComponents/Panels/KeyboardPanel.cpp.s
 
 App/UIComponents/SeekBar.o: App/UIComponents/SeekBar.cpp.o
 .PHONY : App/UIComponents/SeekBar.o
@@ -513,29 +489,29 @@ App/UIComponents/SeekBar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.s
 .PHONY : App/UIComponents/SeekBar.cpp.s
 
-AudioVisualizerTester.o: AudioVisualizerTester.cpp.o
-.PHONY : AudioVisualizerTester.o
+KeyboardTester.o: KeyboardTester.cpp.o
+.PHONY : KeyboardTester.o
 
 # target to build an object file
-AudioVisualizerTester.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.o
-.PHONY : AudioVisualizerTester.cpp.o
+KeyboardTester.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/KeyboardTester.cpp.o
+.PHONY : KeyboardTester.cpp.o
 
-AudioVisualizerTester.i: AudioVisualizerTester.cpp.i
-.PHONY : AudioVisualizerTester.i
+KeyboardTester.i: KeyboardTester.cpp.i
+.PHONY : KeyboardTester.i
 
 # target to preprocess a source file
-AudioVisualizerTester.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.i
-.PHONY : AudioVisualizerTester.cpp.i
+KeyboardTester.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/KeyboardTester.cpp.i
+.PHONY : KeyboardTester.cpp.i
 
-AudioVisualizerTester.s: AudioVisualizerTester.cpp.s
-.PHONY : AudioVisualizerTester.s
+KeyboardTester.s: KeyboardTester.cpp.s
+.PHONY : KeyboardTester.s
 
 # target to generate assembly for a file
-AudioVisualizerTester.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/AudioVisualizerTester.cpp.s
-.PHONY : AudioVisualizerTester.cpp.s
+KeyboardTester.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/KeyboardTester.cpp.s
+.PHONY : KeyboardTester.cpp.s
 
 SFML_Resources/Components/ScrollableContainer/ScrollableContainer.o: SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o
 .PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.o
@@ -1005,9 +981,6 @@ help:
 	@echo "... App/AudioNode.o"
 	@echo "... App/AudioNode.i"
 	@echo "... App/AudioNode.s"
-	@echo "... App/Resources/Sounds/Sounds.o"
-	@echo "... App/Resources/Sounds/Sounds.i"
-	@echo "... App/Resources/Sounds/Sounds.s"
 	@echo "... App/Resources/Textures.o"
 	@echo "... App/Resources/Textures.i"
 	@echo "... App/Resources/Textures.s"
@@ -1038,21 +1011,21 @@ help:
 	@echo "... App/UIComponents/Layer/Track.o"
 	@echo "... App/UIComponents/Layer/Track.i"
 	@echo "... App/UIComponents/Layer/Track.s"
-	@echo "... App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.o"
-	@echo "... App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.i"
-	@echo "... App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.s"
-	@echo "... App/UIComponents/Panels/DynamicInstrumentPanel.o"
-	@echo "... App/UIComponents/Panels/DynamicInstrumentPanel.i"
-	@echo "... App/UIComponents/Panels/DynamicInstrumentPanel.s"
-	@echo "... App/UIComponents/Panels/LayersPanel.o"
-	@echo "... App/UIComponents/Panels/LayersPanel.i"
-	@echo "... App/UIComponents/Panels/LayersPanel.s"
+	@echo "... App/UIComponents/Panels/Base/DynamicInstrumentPanel.o"
+	@echo "... App/UIComponents/Panels/Base/DynamicInstrumentPanel.i"
+	@echo "... App/UIComponents/Panels/Base/DynamicInstrumentPanel.s"
+	@echo "... App/UIComponents/Panels/Base/LayersPanel.o"
+	@echo "... App/UIComponents/Panels/Base/LayersPanel.i"
+	@echo "... App/UIComponents/Panels/Base/LayersPanel.s"
+	@echo "... App/UIComponents/Panels/KeyboardPanel.o"
+	@echo "... App/UIComponents/Panels/KeyboardPanel.i"
+	@echo "... App/UIComponents/Panels/KeyboardPanel.s"
 	@echo "... App/UIComponents/SeekBar.o"
 	@echo "... App/UIComponents/SeekBar.i"
 	@echo "... App/UIComponents/SeekBar.s"
-	@echo "... AudioVisualizerTester.o"
-	@echo "... AudioVisualizerTester.i"
-	@echo "... AudioVisualizerTester.s"
+	@echo "... KeyboardTester.o"
+	@echo "... KeyboardTester.i"
+	@echo "... KeyboardTester.s"
 	@echo "... SFML_Resources/Components/ScrollableContainer/ScrollableContainer.o"
 	@echo "... SFML_Resources/Components/ScrollableContainer/ScrollableContainer.i"
 	@echo "... SFML_Resources/Components/ScrollableContainer/ScrollableContainer.s"

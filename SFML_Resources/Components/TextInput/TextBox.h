@@ -17,7 +17,7 @@
 #include "MouseEvents.h"
 #include <stack>
 
-class TextBox: public AppComponent, public States{
+class TextBox: public AppComponent{
 private:
 
     std::stack<Letter> hiddenLetters;

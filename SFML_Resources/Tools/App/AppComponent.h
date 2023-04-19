@@ -8,8 +8,9 @@
 #include "EventHandleable.h"
 #include "Updatable.h"
 #include "Transformable.h"
+#include "States.h"
 
-class AppComponent: public EventHandleable, public sf::Drawable, public Transformable, public Updatable{
+class AppComponent: public EventHandleable, public sf::Drawable, public Transformable, public Updatable, public States{
 
 };
 

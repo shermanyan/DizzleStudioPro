@@ -26,8 +26,7 @@ void Keyboard::setupKeyboard() {
 }
 
 void Keyboard::setSize(const sf::Vector2f &size) {
-    float width = (size.x/keyboard.size()) - (keyboard.front().getKeySpacing() * (keyboard.size() - 1));
-
+    float width = ((size.x - (keyboard.front().getKeySpacing() * (keyboard.size() - 1)))/keyboard.size()) ;
     for (auto &o : keyboard)
         o.setSize({width, size.y});
 
