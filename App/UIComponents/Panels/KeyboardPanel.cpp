@@ -6,7 +6,7 @@
 
 KeyboardPanel::KeyboardPanel():DynamicInstrumentPanel{} {
 
-    keyboard = {2,sf::Vector2f {1960,407}- sf::Vector2f {80,80}};
+    keyboard = {2,DynamicInstrumentPanel::getSize()- sf::Vector2f {60,60}};
     Position::center(keyboard,*this);
 }
 

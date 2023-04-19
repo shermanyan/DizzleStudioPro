@@ -118,7 +118,7 @@ void OctaveKeys::setupBlackKeys() {
 }
 
 void OctaveKeys::setWhiteKeysSize() {
-    float keyWidth = ((size.x - (spacing/6))/7) ;
+    float keyWidth = ((size.x - (spacing * 6)) /7) ;
     for (auto &k :whiteKeys) {
         k.setSize({keyWidth, size.y});
         k.setClickableRange({0,size.y * blackKeySizeRatio.y ,keyWidth,size.y - (size.y * blackKeySizeRatio.y)});
