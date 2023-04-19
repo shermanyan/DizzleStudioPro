@@ -10,7 +10,7 @@
 class Squircle : public sf::Drawable, public sf::Transformable {
 private:
 
-    sf::Vector2f size, position;
+    sf::Vector2f size;
     float radii[4];
 
     sf::CircleShape corners[4];

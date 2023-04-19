@@ -11,6 +11,7 @@ include_directories(App/UIComponents/Instruments/KeyBoard)
 include_directories(App/UIComponents/Instruments/KeyBoard/Keys)
 include_directories(App/UIComponents/Layer)
 include_directories(App/UIComponents/Panels)
+include_directories(App/UIComponents/Panels/Base)
 include_directories(SFML_Resources/Components/ScrollableContainer)
 include_directories(SFML_Resources/Components/TextInput)
 include_directories(SFML_Resources/Components/Typing)
@@ -43,10 +44,10 @@ add_executable(DizzleStudioPro
         App/UIComponents/Layer/Layer.h
         App/UIComponents/Layer/Track.cpp
         App/UIComponents/Layer/Track.h
-        App/UIComponents/Panels/DynamicInstrumentPanel.cpp
-        App/UIComponents/Panels/DynamicInstrumentPanel.h
-        App/UIComponents/Panels/LayersPanel.cpp
-        App/UIComponents/Panels/LayersPanel.h
+        App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp
+        App/UIComponents/Panels/Base/DynamicInstrumentPanel.h
+        App/UIComponents/Panels/Base/LayersPanel.cpp
+        App/UIComponents/Panels/Base/LayersPanel.h
         App/UIComponents/SeekBar.cpp
         App/UIComponents/SeekBar.h
         App/AudioNode.cpp
@@ -98,7 +99,8 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
         KeyboardTester.cpp
-        )
+#        TrackPrototypeTest.cpp
+        App/UIComponents/Panels/KeyboardPanel.cpp App/UIComponents/Panels/KeyboardPanel.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
