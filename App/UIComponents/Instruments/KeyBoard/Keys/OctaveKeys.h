@@ -63,6 +63,9 @@ public:
     //Set spacing between keys
     void setKeySpacing(float spacing);
 
+    float getKeySpacing() const;
+
+
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
 

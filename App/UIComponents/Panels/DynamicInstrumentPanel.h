@@ -5,8 +5,8 @@
 #ifndef DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
 #define DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
 
-
-class DynamicInstrumentPanel {
+#include "AppComponent.h"
+class DynamicInstrumentPanel: public AppComponent {
 
 };
 

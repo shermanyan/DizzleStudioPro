@@ -151,6 +151,8 @@ void OctaveKeys::positionKeys() {
         blackKeys[i].setPosition(whiteKeys[whiteKeyIndex].getPosition().x - (spacing / 2) - (blackKeys[i].getSize().x/2), blackKeys[i].getPosition().y);
     }
 
+    setChildrenTransform(getTransform());
+
 }
 
 void OctaveKeys::refresh() {
@@ -166,6 +168,10 @@ void OctaveKeys::setChildrenTransform(const sf::Transform &transform) {
         k.setParentTransform(transform);
     for (auto &k :blackKeys)
         k.setParentTransform(transform);
+}
+
+float OctaveKeys::getKeySpacing() const {
+    return spacing;
 }
 
 

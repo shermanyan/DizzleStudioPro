@@ -9,7 +9,7 @@
 class Transformable: public sf::Transformable {
 
 private:
-    sf::Transform transform = {};
+    sf::Transform parentTransform = {};
 
     virtual void setChildrenTransform(const sf::Transform& transform);
 
@@ -19,8 +19,8 @@ public:
     sf::Transform getParentTransform() const;
     sf::Transform getCombinedTransform() const;
 
-    virtual sf::FloatRect getGlobalBounds() const = 0;
-    virtual sf::FloatRect getLocalBounds() const = 0;
+    virtual sf::FloatRect getGlobalBounds() const;
+    virtual sf::FloatRect getLocalBounds() const;
 
     void setPosition(const sf::Vector2f & pos);
     void setPosition(float x, float y);

@@ -6,17 +6,16 @@
 
 
 sf::Transform Transformable::getParentTransform() const {
-    return transform;
+    return parentTransform;
 }
 
 sf::Transform Transformable::getCombinedTransform() const {
-    return getTransform() * transform;
+    return getTransform() * parentTransform;
 }
 
 void Transformable::setParentTransform(const sf::Transform &transform) {
-    this->transform = transform;
+    this->parentTransform = transform;
     setChildrenTransform(getCombinedTransform());
-
 }
 
 void Transformable::setChildrenTransform(const sf::Transform &transform) {
@@ -25,13 +24,19 @@ void Transformable::setChildrenTransform(const sf::Transform &transform) {
 void Transformable::setPosition(const sf::Vector2f &pos) {
     sf::Transformable::setPosition(pos);
 
-    sf::Transform trans = getTransform();
-    setParentTransform(trans);
-    setChildrenTransform(trans);
+    setParentTransform(getTransform());
+    setChildrenTransform(getTransform());
 }
 
 void Transformable::setPosition(float x, float y) {
     setPosition({x, y});
+}
+
+sf::FloatRect Transformable::getGlobalBounds() const {
+
+}
+
+sf::FloatRect Transformable::getLocalBounds() const {
 }
 
 

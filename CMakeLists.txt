@@ -91,7 +91,9 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/Fonts.h
         KeyboardTester.cpp
 #        TrackPrototypeTest.cpp
-        SFML_Resources/Tools/Helpers/Transformable.cpp SFML_Resources/Tools/Helpers/Transformable.h)
+        SFML_Resources/Tools/App/Transformable.cpp SFML_Resources/Tools/App/Transformable.h
+#        RecorderTester.cpp
+        )
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

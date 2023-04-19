@@ -66,6 +66,7 @@ int main()
         timer.setString(std::to_string(clock.getElapsedTime().asMilliseconds() * 0.001));
         seek.setPosition(track.getPosition().x + (velocity * clock.getElapsedTime().asMicroseconds()), seek.getPosition().y);
 
+
         if (seek.getPosition().x >= track.getPosition().x + track.getSize().x)
             clock.restart();
 

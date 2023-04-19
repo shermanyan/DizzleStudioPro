@@ -11,11 +11,6 @@
 
 class AppComponent: public EventHandleable, public sf::Drawable, public Transformable, public Updatable{
 
-public:
-    virtual sf::FloatRect getGlobalBounds() const = 0;
-    virtual sf::FloatRect getLocalBounds() const = 0;
-
-
 };
 
 

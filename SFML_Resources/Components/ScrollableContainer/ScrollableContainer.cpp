@@ -148,8 +148,6 @@ void ScrollableContainer<T>::setScrollDirection(ScrollEnum scrollDirection) {
     ScrollableContainer::scrollDirection = scrollDirection;
 }
 
-
-
 template<class T>
 typename ScrollableContainer<T>::iterator ScrollableContainer<T>::begin() {
     return items.begin();
