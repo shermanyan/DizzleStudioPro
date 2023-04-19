@@ -12,7 +12,6 @@ int main(){
 
     StaticAudioVisualizer staticVisualizer("App/Resources/Sounds/TestSounds/Naruto.wav", tester.getSize().x, tester.getSize().y);
 
-    staticVisualizer.
     tester.addComponent(staticVisualizer);
 
     tester.run();
