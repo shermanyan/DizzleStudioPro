@@ -4,6 +4,7 @@ project(DizzleStudioPro)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(App)
+include_directories(App/Resources)
 include_directories(App/UIComponents)
 include_directories(App/UIComponents/Instruments/DrumPad)
 include_directories(App/UIComponents/Instruments/KeyBoard)
@@ -21,6 +22,9 @@ include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
 
 add_executable(DizzleStudioPro
+        App/Resources/Textures.cpp
+        App/Resources/Textures.h
+        App/Resources/TexturesEnum.h
         App/UIComponents/Instruments/DrumPad/DrumPad.cpp
         App/UIComponents/Instruments/DrumPad/DrumPad.h
         App/UIComponents/Instruments/DrumPad/Pads.cpp
@@ -70,6 +74,8 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/App/Application.cpp
         SFML_Resources/Tools/App/Application.h
         SFML_Resources/Tools/App/EventHandleable.h
+        SFML_Resources/Tools/App/Transformable.cpp
+        SFML_Resources/Tools/App/Transformable.h
         SFML_Resources/Tools/App/Updatable.h
         SFML_Resources/Tools/Enums/FontsEnum.h
         SFML_Resources/Tools/Enums/StatesEnum.h
@@ -79,6 +85,8 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/Helpers/MouseEvents.h
         SFML_Resources/Tools/Helpers/Position.cpp
         SFML_Resources/Tools/Helpers/Position.h
+        SFML_Resources/Tools/Helpers/SpriteImage.cpp
+        SFML_Resources/Tools/Helpers/SpriteImage.h
         SFML_Resources/Tools/Helpers/States.cpp
         SFML_Resources/Tools/Helpers/States.h
         SFML_Resources/Tools/History/History.cpp
@@ -89,14 +97,9 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-        SFML_Resources/Tools/Helpers/SpriteImage.cpp
-        SFML_Resources/Tools/Helpers/SpriteImage.h
-
         KeyboardTester.cpp
-#        TrackPrototypeTest.cpp
-        SFML_Resources/Tools/App/Transformable.cpp SFML_Resources/Tools/App/Transformable.h
-#        RecorderTester.cpp
         )
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
+

@@ -19,15 +19,15 @@ int main(){
 //
 //    octave.getGlobalBounds();
 
-    Keyboard keyboard;
+    Keyboard keyboard(2,{400,50});
     keyboard.setPosition(200,100);
 
 
 
 //    tester.addComponent(key);
-    tester.addComponent(octave);
+//    tester.addComponent(octave);
 
-//    tester.addComponent(keyboard);
+    tester.addComponent(keyboard);
     tester.run();
     return 0;
 }
