@@ -5,11 +5,13 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(App)
 include_directories(App/Resources)
+include_directories(App/Resources/Sounds)
 include_directories(App/UIComponents)
 include_directories(App/UIComponents/Instruments/DrumPad)
 include_directories(App/UIComponents/Instruments/KeyBoard)
 include_directories(App/UIComponents/Instruments/KeyBoard/Keys)
 include_directories(App/UIComponents/Layer)
+include_directories(App/UIComponents/MusicTrackSelection)
 include_directories(App/UIComponents/Panels)
 include_directories(App/UIComponents/Panels/Base)
 include_directories(SFML_Resources/Components/ScrollableContainer)
@@ -23,6 +25,9 @@ include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
 
 add_executable(DizzleStudioPro
+        App/Resources/Sounds/Sounds.cpp
+        App/Resources/Sounds/Sounds.h
+        App/Resources/Sounds/SoundsEnum.h
         App/Resources/Textures.cpp
         App/Resources/Textures.h
         App/Resources/TexturesEnum.h
@@ -44,10 +49,14 @@ add_executable(DizzleStudioPro
         App/UIComponents/Layer/Layer.h
         App/UIComponents/Layer/Track.cpp
         App/UIComponents/Layer/Track.h
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h
         App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp
         App/UIComponents/Panels/Base/DynamicInstrumentPanel.h
         App/UIComponents/Panels/Base/LayersPanel.cpp
         App/UIComponents/Panels/Base/LayersPanel.h
+        App/UIComponents/Panels/KeyboardPanel.cpp
+        App/UIComponents/Panels/KeyboardPanel.h
         App/UIComponents/SeekBar.cpp
         App/UIComponents/SeekBar.h
         App/AudioNode.cpp
@@ -98,10 +107,11 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-        KeyboardTester.cpp
+        AudioVisualizerTester.cpp
+#        KeyboardTester.cpp
+#        RecorderTester.cpp
 #        TrackPrototypeTest.cpp
-        App/UIComponents/Panels/KeyboardPanel.cpp App/UIComponents/Panels/KeyboardPanel.h)
+        )
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
-
