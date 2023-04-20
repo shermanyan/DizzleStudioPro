@@ -11,6 +11,7 @@ class Transformable: public sf::Transformable {
 private:
     sf::Transform parentTransform = {};
 
+protected:
     virtual void setChildrenTransform(const sf::Transform& transform);
 
 public:
@@ -22,8 +23,8 @@ public:
     virtual sf::FloatRect getGlobalBounds() const;
     virtual sf::FloatRect getLocalBounds() const;
 
-    void setPosition(const sf::Vector2f & pos);
-    void setPosition(float x, float y);
+    virtual void setPosition(const sf::Vector2f & pos);
+    virtual void setPosition(float x, float y);
 
 
 };

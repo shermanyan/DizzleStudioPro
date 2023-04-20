@@ -36,7 +36,6 @@ public:
 
     Squircle(const sf::Vector2f &size, const float (&radii)[4], const sf::Color &color);
 
-
     void setSize(const sf::Vector2f &size);
     void setSize(float x, float y);
 

@@ -30,6 +30,8 @@ private:
     void setupTextBox();
     void updateTextBox();
 
+    bool boxState = true;
+
 public:
     TextBox();
     TextBox(const std::string& label);
@@ -41,6 +43,8 @@ public:
     void setBoxSize(const sf::Vector2f& size);
     void setFillColor(const sf::Color& color);
     void setOutlineColor(const sf::Color& color);
+    void setString(const std::string& string);
+    void toggleBoxState();
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
