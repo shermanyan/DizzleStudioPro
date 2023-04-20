@@ -23,7 +23,7 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
-
+include_directories(App/UIComponents/AudioRecording)
 add_executable(DizzleStudioPro
         App/Resources/Sounds/Sounds.cpp
         App/Resources/Sounds/Sounds.h
@@ -107,11 +107,19 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-        AudioVisualizerTester.cpp
+#        AudioVisualizerTester.cpp
 #        KeyboardTester.cpp
 #        RecorderTester.cpp
 #        TrackPrototypeTest.cpp
-        App/UIComponents/Panels/StaticVisualizerPanel.cpp App/UIComponents/Panels/StaticVisualizerPanel.h)
+        App/UIComponents/Panels/StaticVisualizerPanel.cpp
+        App/UIComponents/Panels/StaticVisualizerPanel.h
+        App/UIComponents/AudioRecording/AudioVisualizer.cpp
+        App/UIComponents/AudioRecording/AudioVisualizer.h
+        LiveVisualizerTester.cpp
+        App/UIComponents/Panels/AudioRecordingPanel.cpp
+        App/UIComponents/Panels/AudioRecordingPanel.h
+        App/UIComponents/AudioRecording/AudioVisualizer.h
+        App/UIComponents/AudioRecording/AudioVisualizer.cpp)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

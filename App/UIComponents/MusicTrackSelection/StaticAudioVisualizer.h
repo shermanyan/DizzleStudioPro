@@ -16,6 +16,8 @@ public:
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+    void loadVisualizer(const std::string& filePath);
+    sf::SoundBuffer getSong();
     sf::SoundBuffer buffer;
     sf::Sound sound;
     bool isPlaying = false;

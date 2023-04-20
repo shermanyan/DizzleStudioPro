@@ -2,20 +2,22 @@
 // Created by Brandon Hargitay on 4/19/23.
 //
 
-#ifndef DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
-#define DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
+#ifndef DIZZLESTUDIOPRO_AUDIORECORDINGPANEL_H
+#define DIZZLESTUDIOPRO_AUDIORECORDINGPANEL_H
+
 #include "DynamicInstrumentPanel.h"
-#include "StaticAudioVisualizer.h"
+#include "AudioVisualizer.h"
 #include "SpriteImage.h"
 
-class StaticVisualizerPanel : public DynamicInstrumentPanel {
+class AudioRecordingPanel : public DynamicInstrumentPanel{
 private:
-    StaticAudioVisualizer visualizer;
-    SpriteImage playButton;
+    AudioVisualizer liveRecording;
+    SpriteImage button;
     sf::Texture texture;
+    bool isRecording = false;
 public:
 
-    StaticVisualizerPanel();
+    AudioRecordingPanel();
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 
@@ -23,12 +25,10 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-
     void setPosition(sf::Vector2f pos);
 
+    void setScale(float x, float y);
 };
 
 
-
-
-#endif //DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
+#endif //DIZZLESTUDIOPRO_AUDIORECORDINGPANEL_H

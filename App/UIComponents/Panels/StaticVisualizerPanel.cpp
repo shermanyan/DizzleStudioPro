@@ -8,13 +8,11 @@
 #include "MouseEvents.h"
 
 StaticVisualizerPanel::StaticVisualizerPanel()
-: visualizer("App/Resources/Sounds/TestSounds/JCole.wav", {1200,900}), textInput("test")
+: visualizer("JCole.wav", {1200,900})
 {
-    texture = Textures::getTexture(PAUSE_BUTTON);
+    texture = Textures::getTexture(PLAY_BUTTON);
     playButton.setTexture(texture);
     playButton.setSize({200,200});
-
-
 }
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -42,13 +40,12 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
     visualizer.draw(target, states);
     target.draw(playButton);
 
-    target.draw(textInput);
 }
 
 void StaticVisualizerPanel::setPosition( sf::Vector2f pos) {
     DynamicInstrumentPanel::setPosition(pos);
     pos.x = DynamicInstrumentPanel::getGlobalBounds().left + 750;
-    pos.y = DynamicInstrumentPanel::getGlobalBounds().top -250;
+    pos.y = DynamicInstrumentPanel::getGlobalBounds().top + 205;
     playButton.setPosition(sf::Vector2f(DynamicInstrumentPanel::getGlobalBounds().left + 500 , DynamicInstrumentPanel::getGlobalBounds().top +100));
     visualizer.setPosition(pos);
 }
