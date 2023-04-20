@@ -129,29 +129,845 @@ DizzleStudioPro/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/build
 .PHONY : DizzleStudioPro/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+App/AudioNode.o: App/AudioNode.cpp.o
+.PHONY : App/AudioNode.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/main.cpp.o
-.PHONY : main.cpp.o
+App/AudioNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.o
+.PHONY : App/AudioNode.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+App/AudioNode.i: App/AudioNode.cpp.i
+.PHONY : App/AudioNode.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/main.cpp.i
-.PHONY : main.cpp.i
+App/AudioNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.i
+.PHONY : App/AudioNode.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+App/AudioNode.s: App/AudioNode.cpp.s
+.PHONY : App/AudioNode.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/main.cpp.s
-.PHONY : main.cpp.s
+App/AudioNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/AudioNode.cpp.s
+.PHONY : App/AudioNode.cpp.s
+
+App/Resources/Textures.o: App/Resources/Textures.cpp.o
+.PHONY : App/Resources/Textures.o
+
+# target to build an object file
+App/Resources/Textures.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o
+.PHONY : App/Resources/Textures.cpp.o
+
+App/Resources/Textures.i: App/Resources/Textures.cpp.i
+.PHONY : App/Resources/Textures.i
+
+# target to preprocess a source file
+App/Resources/Textures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.i
+.PHONY : App/Resources/Textures.cpp.i
+
+App/Resources/Textures.s: App/Resources/Textures.cpp.s
+.PHONY : App/Resources/Textures.s
+
+# target to generate assembly for a file
+App/Resources/Textures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.s
+.PHONY : App/Resources/Textures.cpp.s
+
+App/UIComponents/Instruments/DrumPad/DrumPad.o: App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o
+.PHONY : App/UIComponents/Instruments/DrumPad/DrumPad.o
+
+# target to build an object file
+App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o
+.PHONY : App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o
+
+App/UIComponents/Instruments/DrumPad/DrumPad.i: App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i
+.PHONY : App/UIComponents/Instruments/DrumPad/DrumPad.i
+
+# target to preprocess a source file
+App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i
+.PHONY : App/UIComponents/Instruments/DrumPad/DrumPad.cpp.i
+
+App/UIComponents/Instruments/DrumPad/DrumPad.s: App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s
+.PHONY : App/UIComponents/Instruments/DrumPad/DrumPad.s
+
+# target to generate assembly for a file
+App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s
+.PHONY : App/UIComponents/Instruments/DrumPad/DrumPad.cpp.s
+
+App/UIComponents/Instruments/DrumPad/Pads.o: App/UIComponents/Instruments/DrumPad/Pads.cpp.o
+.PHONY : App/UIComponents/Instruments/DrumPad/Pads.o
+
+# target to build an object file
+App/UIComponents/Instruments/DrumPad/Pads.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o
+.PHONY : App/UIComponents/Instruments/DrumPad/Pads.cpp.o
+
+App/UIComponents/Instruments/DrumPad/Pads.i: App/UIComponents/Instruments/DrumPad/Pads.cpp.i
+.PHONY : App/UIComponents/Instruments/DrumPad/Pads.i
+
+# target to preprocess a source file
+App/UIComponents/Instruments/DrumPad/Pads.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.i
+.PHONY : App/UIComponents/Instruments/DrumPad/Pads.cpp.i
+
+App/UIComponents/Instruments/DrumPad/Pads.s: App/UIComponents/Instruments/DrumPad/Pads.cpp.s
+.PHONY : App/UIComponents/Instruments/DrumPad/Pads.s
+
+# target to generate assembly for a file
+App/UIComponents/Instruments/DrumPad/Pads.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.s
+.PHONY : App/UIComponents/Instruments/DrumPad/Pads.cpp.s
+
+App/UIComponents/Instruments/KeyBoard/Keyboard.o: App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keyboard.o
+
+# target to build an object file
+App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.o
+
+App/UIComponents/Instruments/KeyBoard/Keyboard.i: App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keyboard.i
+
+# target to preprocess a source file
+App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.i
+
+App/UIComponents/Instruments/KeyBoard/Keyboard.s: App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keyboard.s
+
+# target to generate assembly for a file
+App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keyboard.cpp.s
+
+App/UIComponents/Instruments/KeyBoard/Keys/Key.o: App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/Key.o
+
+# target to build an object file
+App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.o
+
+App/UIComponents/Instruments/KeyBoard/Keys/Key.i: App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/Key.i
+
+# target to preprocess a source file
+App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.i
+
+App/UIComponents/Instruments/KeyBoard/Keys/Key.s: App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/Key.s
+
+# target to generate assembly for a file
+App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp.s
+
+App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.o: App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.o
+
+# target to build an object file
+App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.o
+
+App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.i: App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.i
+
+# target to preprocess a source file
+App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.i
+
+App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.s: App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.s
+
+# target to generate assembly for a file
+App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s
+.PHONY : App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp.s
+
+App/UIComponents/Layer/DrawableAudioNode.o: App/UIComponents/Layer/DrawableAudioNode.cpp.o
+.PHONY : App/UIComponents/Layer/DrawableAudioNode.o
+
+# target to build an object file
+App/UIComponents/Layer/DrawableAudioNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.o
+.PHONY : App/UIComponents/Layer/DrawableAudioNode.cpp.o
+
+App/UIComponents/Layer/DrawableAudioNode.i: App/UIComponents/Layer/DrawableAudioNode.cpp.i
+.PHONY : App/UIComponents/Layer/DrawableAudioNode.i
+
+# target to preprocess a source file
+App/UIComponents/Layer/DrawableAudioNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.i
+.PHONY : App/UIComponents/Layer/DrawableAudioNode.cpp.i
+
+App/UIComponents/Layer/DrawableAudioNode.s: App/UIComponents/Layer/DrawableAudioNode.cpp.s
+.PHONY : App/UIComponents/Layer/DrawableAudioNode.s
+
+# target to generate assembly for a file
+App/UIComponents/Layer/DrawableAudioNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/DrawableAudioNode.cpp.s
+.PHONY : App/UIComponents/Layer/DrawableAudioNode.cpp.s
+
+App/UIComponents/Layer/Label.o: App/UIComponents/Layer/Label.cpp.o
+.PHONY : App/UIComponents/Layer/Label.o
+
+# target to build an object file
+App/UIComponents/Layer/Label.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.o
+.PHONY : App/UIComponents/Layer/Label.cpp.o
+
+App/UIComponents/Layer/Label.i: App/UIComponents/Layer/Label.cpp.i
+.PHONY : App/UIComponents/Layer/Label.i
+
+# target to preprocess a source file
+App/UIComponents/Layer/Label.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.i
+.PHONY : App/UIComponents/Layer/Label.cpp.i
+
+App/UIComponents/Layer/Label.s: App/UIComponents/Layer/Label.cpp.s
+.PHONY : App/UIComponents/Layer/Label.s
+
+# target to generate assembly for a file
+App/UIComponents/Layer/Label.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Label.cpp.s
+.PHONY : App/UIComponents/Layer/Label.cpp.s
+
+App/UIComponents/Layer/Layer.o: App/UIComponents/Layer/Layer.cpp.o
+.PHONY : App/UIComponents/Layer/Layer.o
+
+# target to build an object file
+App/UIComponents/Layer/Layer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.o
+.PHONY : App/UIComponents/Layer/Layer.cpp.o
+
+App/UIComponents/Layer/Layer.i: App/UIComponents/Layer/Layer.cpp.i
+.PHONY : App/UIComponents/Layer/Layer.i
+
+# target to preprocess a source file
+App/UIComponents/Layer/Layer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.i
+.PHONY : App/UIComponents/Layer/Layer.cpp.i
+
+App/UIComponents/Layer/Layer.s: App/UIComponents/Layer/Layer.cpp.s
+.PHONY : App/UIComponents/Layer/Layer.s
+
+# target to generate assembly for a file
+App/UIComponents/Layer/Layer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Layer.cpp.s
+.PHONY : App/UIComponents/Layer/Layer.cpp.s
+
+App/UIComponents/Layer/Track.o: App/UIComponents/Layer/Track.cpp.o
+.PHONY : App/UIComponents/Layer/Track.o
+
+# target to build an object file
+App/UIComponents/Layer/Track.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.o
+.PHONY : App/UIComponents/Layer/Track.cpp.o
+
+App/UIComponents/Layer/Track.i: App/UIComponents/Layer/Track.cpp.i
+.PHONY : App/UIComponents/Layer/Track.i
+
+# target to preprocess a source file
+App/UIComponents/Layer/Track.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.i
+.PHONY : App/UIComponents/Layer/Track.cpp.i
+
+App/UIComponents/Layer/Track.s: App/UIComponents/Layer/Track.cpp.s
+.PHONY : App/UIComponents/Layer/Track.s
+
+# target to generate assembly for a file
+App/UIComponents/Layer/Track.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Layer/Track.cpp.s
+.PHONY : App/UIComponents/Layer/Track.cpp.s
+
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.o: App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.o
+
+# target to build an object file
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.o
+
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.i: App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.i
+
+# target to preprocess a source file
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.i
+
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.s: App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.s
+
+# target to generate assembly for a file
+App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp.s
+
+App/UIComponents/Panels/Base/LayersPanel.o: App/UIComponents/Panels/Base/LayersPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.o
+
+# target to build an object file
+App/UIComponents/Panels/Base/LayersPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/LayersPanel.cpp.o
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.cpp.o
+
+App/UIComponents/Panels/Base/LayersPanel.i: App/UIComponents/Panels/Base/LayersPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.i
+
+# target to preprocess a source file
+App/UIComponents/Panels/Base/LayersPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/LayersPanel.cpp.i
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.cpp.i
+
+App/UIComponents/Panels/Base/LayersPanel.s: App/UIComponents/Panels/Base/LayersPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.s
+
+# target to generate assembly for a file
+App/UIComponents/Panels/Base/LayersPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/Base/LayersPanel.cpp.s
+.PHONY : App/UIComponents/Panels/Base/LayersPanel.cpp.s
+
+App/UIComponents/Panels/KeyboardPanel.o: App/UIComponents/Panels/KeyboardPanel.cpp.o
+.PHONY : App/UIComponents/Panels/KeyboardPanel.o
+
+# target to build an object file
+App/UIComponents/Panels/KeyboardPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/KeyboardPanel.cpp.o
+.PHONY : App/UIComponents/Panels/KeyboardPanel.cpp.o
+
+App/UIComponents/Panels/KeyboardPanel.i: App/UIComponents/Panels/KeyboardPanel.cpp.i
+.PHONY : App/UIComponents/Panels/KeyboardPanel.i
+
+# target to preprocess a source file
+App/UIComponents/Panels/KeyboardPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/KeyboardPanel.cpp.i
+.PHONY : App/UIComponents/Panels/KeyboardPanel.cpp.i
+
+App/UIComponents/Panels/KeyboardPanel.s: App/UIComponents/Panels/KeyboardPanel.cpp.s
+.PHONY : App/UIComponents/Panels/KeyboardPanel.s
+
+# target to generate assembly for a file
+App/UIComponents/Panels/KeyboardPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/KeyboardPanel.cpp.s
+.PHONY : App/UIComponents/Panels/KeyboardPanel.cpp.s
+
+App/UIComponents/SeekBar.o: App/UIComponents/SeekBar.cpp.o
+.PHONY : App/UIComponents/SeekBar.o
+
+# target to build an object file
+App/UIComponents/SeekBar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.o
+.PHONY : App/UIComponents/SeekBar.cpp.o
+
+App/UIComponents/SeekBar.i: App/UIComponents/SeekBar.cpp.i
+.PHONY : App/UIComponents/SeekBar.i
+
+# target to preprocess a source file
+App/UIComponents/SeekBar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.i
+.PHONY : App/UIComponents/SeekBar.cpp.i
+
+App/UIComponents/SeekBar.s: App/UIComponents/SeekBar.cpp.s
+.PHONY : App/UIComponents/SeekBar.s
+
+# target to generate assembly for a file
+App/UIComponents/SeekBar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/App/UIComponents/SeekBar.cpp.s
+.PHONY : App/UIComponents/SeekBar.cpp.s
+
+KeyboardTester.o: KeyboardTester.cpp.o
+.PHONY : KeyboardTester.o
+
+# target to build an object file
+KeyboardTester.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/KeyboardTester.cpp.o
+.PHONY : KeyboardTester.cpp.o
+
+KeyboardTester.i: KeyboardTester.cpp.i
+.PHONY : KeyboardTester.i
+
+# target to preprocess a source file
+KeyboardTester.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/KeyboardTester.cpp.i
+.PHONY : KeyboardTester.cpp.i
+
+KeyboardTester.s: KeyboardTester.cpp.s
+.PHONY : KeyboardTester.s
+
+# target to generate assembly for a file
+KeyboardTester.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/KeyboardTester.cpp.s
+.PHONY : KeyboardTester.cpp.s
+
+SFML_Resources/Components/ScrollableContainer/ScrollableContainer.o: SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o
+.PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.o
+
+# target to build an object file
+SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o
+.PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.o
+
+SFML_Resources/Components/ScrollableContainer/ScrollableContainer.i: SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i
+.PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.i
+
+# target to preprocess a source file
+SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i
+.PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.i
+
+SFML_Resources/Components/ScrollableContainer/ScrollableContainer.s: SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s
+.PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s
+.PHONY : SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp.s
+
+SFML_Resources/Components/TextInput/Cursor.o: SFML_Resources/Components/TextInput/Cursor.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/Cursor.o
+
+# target to build an object file
+SFML_Resources/Components/TextInput/Cursor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/Cursor.cpp.o
+
+SFML_Resources/Components/TextInput/Cursor.i: SFML_Resources/Components/TextInput/Cursor.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/Cursor.i
+
+# target to preprocess a source file
+SFML_Resources/Components/TextInput/Cursor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/Cursor.cpp.i
+
+SFML_Resources/Components/TextInput/Cursor.s: SFML_Resources/Components/TextInput/Cursor.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/Cursor.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/TextInput/Cursor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/Cursor.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/Cursor.cpp.s
+
+SFML_Resources/Components/TextInput/TextBox.o: SFML_Resources/Components/TextInput/TextBox.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/TextBox.o
+
+# target to build an object file
+SFML_Resources/Components/TextInput/TextBox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/TextBox.cpp.o
+
+SFML_Resources/Components/TextInput/TextBox.i: SFML_Resources/Components/TextInput/TextBox.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/TextBox.i
+
+# target to preprocess a source file
+SFML_Resources/Components/TextInput/TextBox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/TextBox.cpp.i
+
+SFML_Resources/Components/TextInput/TextBox.s: SFML_Resources/Components/TextInput/TextBox.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/TextBox.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/TextInput/TextBox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/TextBox.cpp.s
+
+SFML_Resources/Components/TextInput/TextInput.o: SFML_Resources/Components/TextInput/TextInput.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/TextInput.o
+
+# target to build an object file
+SFML_Resources/Components/TextInput/TextInput.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/TextInput.cpp.o
+
+SFML_Resources/Components/TextInput/TextInput.i: SFML_Resources/Components/TextInput/TextInput.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/TextInput.i
+
+# target to preprocess a source file
+SFML_Resources/Components/TextInput/TextInput.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/TextInput.cpp.i
+
+SFML_Resources/Components/TextInput/TextInput.s: SFML_Resources/Components/TextInput/TextInput.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/TextInput.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/TextInput/TextInput.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextInput.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/TextInput.cpp.s
+
+SFML_Resources/Components/TextInput/TextboxLabel.o: SFML_Resources/Components/TextInput/TextboxLabel.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/TextboxLabel.o
+
+# target to build an object file
+SFML_Resources/Components/TextInput/TextboxLabel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.o
+.PHONY : SFML_Resources/Components/TextInput/TextboxLabel.cpp.o
+
+SFML_Resources/Components/TextInput/TextboxLabel.i: SFML_Resources/Components/TextInput/TextboxLabel.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/TextboxLabel.i
+
+# target to preprocess a source file
+SFML_Resources/Components/TextInput/TextboxLabel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.i
+.PHONY : SFML_Resources/Components/TextInput/TextboxLabel.cpp.i
+
+SFML_Resources/Components/TextInput/TextboxLabel.s: SFML_Resources/Components/TextInput/TextboxLabel.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/TextboxLabel.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/TextInput/TextboxLabel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextboxLabel.cpp.s
+.PHONY : SFML_Resources/Components/TextInput/TextboxLabel.cpp.s
+
+SFML_Resources/Components/Typing/Letter.o: SFML_Resources/Components/Typing/Letter.cpp.o
+.PHONY : SFML_Resources/Components/Typing/Letter.o
+
+# target to build an object file
+SFML_Resources/Components/Typing/Letter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.o
+.PHONY : SFML_Resources/Components/Typing/Letter.cpp.o
+
+SFML_Resources/Components/Typing/Letter.i: SFML_Resources/Components/Typing/Letter.cpp.i
+.PHONY : SFML_Resources/Components/Typing/Letter.i
+
+# target to preprocess a source file
+SFML_Resources/Components/Typing/Letter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.i
+.PHONY : SFML_Resources/Components/Typing/Letter.cpp.i
+
+SFML_Resources/Components/Typing/Letter.s: SFML_Resources/Components/Typing/Letter.cpp.s
+.PHONY : SFML_Resources/Components/Typing/Letter.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/Typing/Letter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Letter.cpp.s
+.PHONY : SFML_Resources/Components/Typing/Letter.cpp.s
+
+SFML_Resources/Components/Typing/MultiText.o: SFML_Resources/Components/Typing/MultiText.cpp.o
+.PHONY : SFML_Resources/Components/Typing/MultiText.o
+
+# target to build an object file
+SFML_Resources/Components/Typing/MultiText.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.o
+.PHONY : SFML_Resources/Components/Typing/MultiText.cpp.o
+
+SFML_Resources/Components/Typing/MultiText.i: SFML_Resources/Components/Typing/MultiText.cpp.i
+.PHONY : SFML_Resources/Components/Typing/MultiText.i
+
+# target to preprocess a source file
+SFML_Resources/Components/Typing/MultiText.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.i
+.PHONY : SFML_Resources/Components/Typing/MultiText.cpp.i
+
+SFML_Resources/Components/Typing/MultiText.s: SFML_Resources/Components/Typing/MultiText.cpp.s
+.PHONY : SFML_Resources/Components/Typing/MultiText.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/Typing/MultiText.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/MultiText.cpp.s
+.PHONY : SFML_Resources/Components/Typing/MultiText.cpp.s
+
+SFML_Resources/Components/Typing/Typing.o: SFML_Resources/Components/Typing/Typing.cpp.o
+.PHONY : SFML_Resources/Components/Typing/Typing.o
+
+# target to build an object file
+SFML_Resources/Components/Typing/Typing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.o
+.PHONY : SFML_Resources/Components/Typing/Typing.cpp.o
+
+SFML_Resources/Components/Typing/Typing.i: SFML_Resources/Components/Typing/Typing.cpp.i
+.PHONY : SFML_Resources/Components/Typing/Typing.i
+
+# target to preprocess a source file
+SFML_Resources/Components/Typing/Typing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.i
+.PHONY : SFML_Resources/Components/Typing/Typing.cpp.i
+
+SFML_Resources/Components/Typing/Typing.s: SFML_Resources/Components/Typing/Typing.cpp.s
+.PHONY : SFML_Resources/Components/Typing/Typing.s
+
+# target to generate assembly for a file
+SFML_Resources/Components/Typing/Typing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/Typing/Typing.cpp.s
+.PHONY : SFML_Resources/Components/Typing/Typing.cpp.s
+
+SFML_Resources/Shapes/Squircle.o: SFML_Resources/Shapes/Squircle.cpp.o
+.PHONY : SFML_Resources/Shapes/Squircle.o
+
+# target to build an object file
+SFML_Resources/Shapes/Squircle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o
+.PHONY : SFML_Resources/Shapes/Squircle.cpp.o
+
+SFML_Resources/Shapes/Squircle.i: SFML_Resources/Shapes/Squircle.cpp.i
+.PHONY : SFML_Resources/Shapes/Squircle.i
+
+# target to preprocess a source file
+SFML_Resources/Shapes/Squircle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.i
+.PHONY : SFML_Resources/Shapes/Squircle.cpp.i
+
+SFML_Resources/Shapes/Squircle.s: SFML_Resources/Shapes/Squircle.cpp.s
+.PHONY : SFML_Resources/Shapes/Squircle.s
+
+# target to generate assembly for a file
+SFML_Resources/Shapes/Squircle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.s
+.PHONY : SFML_Resources/Shapes/Squircle.cpp.s
+
+SFML_Resources/Tools/App/Application.o: SFML_Resources/Tools/App/Application.cpp.o
+.PHONY : SFML_Resources/Tools/App/Application.o
+
+# target to build an object file
+SFML_Resources/Tools/App/Application.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.o
+.PHONY : SFML_Resources/Tools/App/Application.cpp.o
+
+SFML_Resources/Tools/App/Application.i: SFML_Resources/Tools/App/Application.cpp.i
+.PHONY : SFML_Resources/Tools/App/Application.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/App/Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.i
+.PHONY : SFML_Resources/Tools/App/Application.cpp.i
+
+SFML_Resources/Tools/App/Application.s: SFML_Resources/Tools/App/Application.cpp.s
+.PHONY : SFML_Resources/Tools/App/Application.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/App/Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Application.cpp.s
+.PHONY : SFML_Resources/Tools/App/Application.cpp.s
+
+SFML_Resources/Tools/App/Transformable.o: SFML_Resources/Tools/App/Transformable.cpp.o
+.PHONY : SFML_Resources/Tools/App/Transformable.o
+
+# target to build an object file
+SFML_Resources/Tools/App/Transformable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.o
+.PHONY : SFML_Resources/Tools/App/Transformable.cpp.o
+
+SFML_Resources/Tools/App/Transformable.i: SFML_Resources/Tools/App/Transformable.cpp.i
+.PHONY : SFML_Resources/Tools/App/Transformable.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/App/Transformable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.i
+.PHONY : SFML_Resources/Tools/App/Transformable.cpp.i
+
+SFML_Resources/Tools/App/Transformable.s: SFML_Resources/Tools/App/Transformable.cpp.s
+.PHONY : SFML_Resources/Tools/App/Transformable.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/App/Transformable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/App/Transformable.cpp.s
+.PHONY : SFML_Resources/Tools/App/Transformable.cpp.s
+
+SFML_Resources/Tools/Fonts.o: SFML_Resources/Tools/Fonts.cpp.o
+.PHONY : SFML_Resources/Tools/Fonts.o
+
+# target to build an object file
+SFML_Resources/Tools/Fonts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.o
+.PHONY : SFML_Resources/Tools/Fonts.cpp.o
+
+SFML_Resources/Tools/Fonts.i: SFML_Resources/Tools/Fonts.cpp.i
+.PHONY : SFML_Resources/Tools/Fonts.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/Fonts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.i
+.PHONY : SFML_Resources/Tools/Fonts.cpp.i
+
+SFML_Resources/Tools/Fonts.s: SFML_Resources/Tools/Fonts.cpp.s
+.PHONY : SFML_Resources/Tools/Fonts.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/Fonts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Fonts.cpp.s
+.PHONY : SFML_Resources/Tools/Fonts.cpp.s
+
+SFML_Resources/Tools/Helpers/KeyboardShortcuts.o: SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/KeyboardShortcuts.o
+
+# target to build an object file
+SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.o
+
+SFML_Resources/Tools/Helpers/KeyboardShortcuts.i: SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/KeyboardShortcuts.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.i
+
+SFML_Resources/Tools/Helpers/KeyboardShortcuts.s: SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/KeyboardShortcuts.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp.s
+
+SFML_Resources/Tools/Helpers/MouseEvents.o: SFML_Resources/Tools/Helpers/MouseEvents.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/MouseEvents.o
+
+# target to build an object file
+SFML_Resources/Tools/Helpers/MouseEvents.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/MouseEvents.cpp.o
+
+SFML_Resources/Tools/Helpers/MouseEvents.i: SFML_Resources/Tools/Helpers/MouseEvents.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/MouseEvents.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/Helpers/MouseEvents.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/MouseEvents.cpp.i
+
+SFML_Resources/Tools/Helpers/MouseEvents.s: SFML_Resources/Tools/Helpers/MouseEvents.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/MouseEvents.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/Helpers/MouseEvents.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/MouseEvents.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/MouseEvents.cpp.s
+
+SFML_Resources/Tools/Helpers/Position.o: SFML_Resources/Tools/Helpers/Position.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/Position.o
+
+# target to build an object file
+SFML_Resources/Tools/Helpers/Position.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/Position.cpp.o
+
+SFML_Resources/Tools/Helpers/Position.i: SFML_Resources/Tools/Helpers/Position.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/Position.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/Helpers/Position.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/Position.cpp.i
+
+SFML_Resources/Tools/Helpers/Position.s: SFML_Resources/Tools/Helpers/Position.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/Position.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/Helpers/Position.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/Position.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/Position.cpp.s
+
+SFML_Resources/Tools/Helpers/SpriteImage.o: SFML_Resources/Tools/Helpers/SpriteImage.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/SpriteImage.o
+
+# target to build an object file
+SFML_Resources/Tools/Helpers/SpriteImage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/SpriteImage.cpp.o
+
+SFML_Resources/Tools/Helpers/SpriteImage.i: SFML_Resources/Tools/Helpers/SpriteImage.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/SpriteImage.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/Helpers/SpriteImage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/SpriteImage.cpp.i
+
+SFML_Resources/Tools/Helpers/SpriteImage.s: SFML_Resources/Tools/Helpers/SpriteImage.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/SpriteImage.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/Helpers/SpriteImage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/SpriteImage.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/SpriteImage.cpp.s
+
+SFML_Resources/Tools/Helpers/States.o: SFML_Resources/Tools/Helpers/States.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/States.o
+
+# target to build an object file
+SFML_Resources/Tools/Helpers/States.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.o
+.PHONY : SFML_Resources/Tools/Helpers/States.cpp.o
+
+SFML_Resources/Tools/Helpers/States.i: SFML_Resources/Tools/Helpers/States.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/States.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/Helpers/States.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.i
+.PHONY : SFML_Resources/Tools/Helpers/States.cpp.i
+
+SFML_Resources/Tools/Helpers/States.s: SFML_Resources/Tools/Helpers/States.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/States.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/Helpers/States.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/Helpers/States.cpp.s
+.PHONY : SFML_Resources/Tools/Helpers/States.cpp.s
+
+SFML_Resources/Tools/History/History.o: SFML_Resources/Tools/History/History.cpp.o
+.PHONY : SFML_Resources/Tools/History/History.o
+
+# target to build an object file
+SFML_Resources/Tools/History/History.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.o
+.PHONY : SFML_Resources/Tools/History/History.cpp.o
+
+SFML_Resources/Tools/History/History.i: SFML_Resources/Tools/History/History.cpp.i
+.PHONY : SFML_Resources/Tools/History/History.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/History/History.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.i
+.PHONY : SFML_Resources/Tools/History/History.cpp.i
+
+SFML_Resources/Tools/History/History.s: SFML_Resources/Tools/History/History.cpp.s
+.PHONY : SFML_Resources/Tools/History/History.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/History/History.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/History.cpp.s
+.PHONY : SFML_Resources/Tools/History/History.cpp.s
+
+SFML_Resources/Tools/History/Snapshot.o: SFML_Resources/Tools/History/Snapshot.cpp.o
+.PHONY : SFML_Resources/Tools/History/Snapshot.o
+
+# target to build an object file
+SFML_Resources/Tools/History/Snapshot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.o
+.PHONY : SFML_Resources/Tools/History/Snapshot.cpp.o
+
+SFML_Resources/Tools/History/Snapshot.i: SFML_Resources/Tools/History/Snapshot.cpp.i
+.PHONY : SFML_Resources/Tools/History/Snapshot.i
+
+# target to preprocess a source file
+SFML_Resources/Tools/History/Snapshot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.i
+.PHONY : SFML_Resources/Tools/History/Snapshot.cpp.i
+
+SFML_Resources/Tools/History/Snapshot.s: SFML_Resources/Tools/History/Snapshot.cpp.s
+.PHONY : SFML_Resources/Tools/History/Snapshot.s
+
+# target to generate assembly for a file
+SFML_Resources/Tools/History/Snapshot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DizzleStudioPro.dir/build.make CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Tools/History/Snapshot.cpp.s
+.PHONY : SFML_Resources/Tools/History/Snapshot.cpp.s
 
 # Help Target
 help:
@@ -162,9 +978,111 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DizzleStudioPro"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... App/AudioNode.o"
+	@echo "... App/AudioNode.i"
+	@echo "... App/AudioNode.s"
+	@echo "... App/Resources/Textures.o"
+	@echo "... App/Resources/Textures.i"
+	@echo "... App/Resources/Textures.s"
+	@echo "... App/UIComponents/Instruments/DrumPad/DrumPad.o"
+	@echo "... App/UIComponents/Instruments/DrumPad/DrumPad.i"
+	@echo "... App/UIComponents/Instruments/DrumPad/DrumPad.s"
+	@echo "... App/UIComponents/Instruments/DrumPad/Pads.o"
+	@echo "... App/UIComponents/Instruments/DrumPad/Pads.i"
+	@echo "... App/UIComponents/Instruments/DrumPad/Pads.s"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keyboard.o"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keyboard.i"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keyboard.s"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keys/Key.o"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keys/Key.i"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keys/Key.s"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.o"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.i"
+	@echo "... App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.s"
+	@echo "... App/UIComponents/Layer/DrawableAudioNode.o"
+	@echo "... App/UIComponents/Layer/DrawableAudioNode.i"
+	@echo "... App/UIComponents/Layer/DrawableAudioNode.s"
+	@echo "... App/UIComponents/Layer/Label.o"
+	@echo "... App/UIComponents/Layer/Label.i"
+	@echo "... App/UIComponents/Layer/Label.s"
+	@echo "... App/UIComponents/Layer/Layer.o"
+	@echo "... App/UIComponents/Layer/Layer.i"
+	@echo "... App/UIComponents/Layer/Layer.s"
+	@echo "... App/UIComponents/Layer/Track.o"
+	@echo "... App/UIComponents/Layer/Track.i"
+	@echo "... App/UIComponents/Layer/Track.s"
+	@echo "... App/UIComponents/Panels/Base/DynamicInstrumentPanel.o"
+	@echo "... App/UIComponents/Panels/Base/DynamicInstrumentPanel.i"
+	@echo "... App/UIComponents/Panels/Base/DynamicInstrumentPanel.s"
+	@echo "... App/UIComponents/Panels/Base/LayersPanel.o"
+	@echo "... App/UIComponents/Panels/Base/LayersPanel.i"
+	@echo "... App/UIComponents/Panels/Base/LayersPanel.s"
+	@echo "... App/UIComponents/Panels/KeyboardPanel.o"
+	@echo "... App/UIComponents/Panels/KeyboardPanel.i"
+	@echo "... App/UIComponents/Panels/KeyboardPanel.s"
+	@echo "... App/UIComponents/SeekBar.o"
+	@echo "... App/UIComponents/SeekBar.i"
+	@echo "... App/UIComponents/SeekBar.s"
+	@echo "... KeyboardTester.o"
+	@echo "... KeyboardTester.i"
+	@echo "... KeyboardTester.s"
+	@echo "... SFML_Resources/Components/ScrollableContainer/ScrollableContainer.o"
+	@echo "... SFML_Resources/Components/ScrollableContainer/ScrollableContainer.i"
+	@echo "... SFML_Resources/Components/ScrollableContainer/ScrollableContainer.s"
+	@echo "... SFML_Resources/Components/TextInput/Cursor.o"
+	@echo "... SFML_Resources/Components/TextInput/Cursor.i"
+	@echo "... SFML_Resources/Components/TextInput/Cursor.s"
+	@echo "... SFML_Resources/Components/TextInput/TextBox.o"
+	@echo "... SFML_Resources/Components/TextInput/TextBox.i"
+	@echo "... SFML_Resources/Components/TextInput/TextBox.s"
+	@echo "... SFML_Resources/Components/TextInput/TextInput.o"
+	@echo "... SFML_Resources/Components/TextInput/TextInput.i"
+	@echo "... SFML_Resources/Components/TextInput/TextInput.s"
+	@echo "... SFML_Resources/Components/TextInput/TextboxLabel.o"
+	@echo "... SFML_Resources/Components/TextInput/TextboxLabel.i"
+	@echo "... SFML_Resources/Components/TextInput/TextboxLabel.s"
+	@echo "... SFML_Resources/Components/Typing/Letter.o"
+	@echo "... SFML_Resources/Components/Typing/Letter.i"
+	@echo "... SFML_Resources/Components/Typing/Letter.s"
+	@echo "... SFML_Resources/Components/Typing/MultiText.o"
+	@echo "... SFML_Resources/Components/Typing/MultiText.i"
+	@echo "... SFML_Resources/Components/Typing/MultiText.s"
+	@echo "... SFML_Resources/Components/Typing/Typing.o"
+	@echo "... SFML_Resources/Components/Typing/Typing.i"
+	@echo "... SFML_Resources/Components/Typing/Typing.s"
+	@echo "... SFML_Resources/Shapes/Squircle.o"
+	@echo "... SFML_Resources/Shapes/Squircle.i"
+	@echo "... SFML_Resources/Shapes/Squircle.s"
+	@echo "... SFML_Resources/Tools/App/Application.o"
+	@echo "... SFML_Resources/Tools/App/Application.i"
+	@echo "... SFML_Resources/Tools/App/Application.s"
+	@echo "... SFML_Resources/Tools/App/Transformable.o"
+	@echo "... SFML_Resources/Tools/App/Transformable.i"
+	@echo "... SFML_Resources/Tools/App/Transformable.s"
+	@echo "... SFML_Resources/Tools/Fonts.o"
+	@echo "... SFML_Resources/Tools/Fonts.i"
+	@echo "... SFML_Resources/Tools/Fonts.s"
+	@echo "... SFML_Resources/Tools/Helpers/KeyboardShortcuts.o"
+	@echo "... SFML_Resources/Tools/Helpers/KeyboardShortcuts.i"
+	@echo "... SFML_Resources/Tools/Helpers/KeyboardShortcuts.s"
+	@echo "... SFML_Resources/Tools/Helpers/MouseEvents.o"
+	@echo "... SFML_Resources/Tools/Helpers/MouseEvents.i"
+	@echo "... SFML_Resources/Tools/Helpers/MouseEvents.s"
+	@echo "... SFML_Resources/Tools/Helpers/Position.o"
+	@echo "... SFML_Resources/Tools/Helpers/Position.i"
+	@echo "... SFML_Resources/Tools/Helpers/Position.s"
+	@echo "... SFML_Resources/Tools/Helpers/SpriteImage.o"
+	@echo "... SFML_Resources/Tools/Helpers/SpriteImage.i"
+	@echo "... SFML_Resources/Tools/Helpers/SpriteImage.s"
+	@echo "... SFML_Resources/Tools/Helpers/States.o"
+	@echo "... SFML_Resources/Tools/Helpers/States.i"
+	@echo "... SFML_Resources/Tools/Helpers/States.s"
+	@echo "... SFML_Resources/Tools/History/History.o"
+	@echo "... SFML_Resources/Tools/History/History.i"
+	@echo "... SFML_Resources/Tools/History/History.s"
+	@echo "... SFML_Resources/Tools/History/Snapshot.o"
+	@echo "... SFML_Resources/Tools/History/Snapshot.i"
+	@echo "... SFML_Resources/Tools/History/Snapshot.s"
 .PHONY : help
 
 
