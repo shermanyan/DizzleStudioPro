@@ -12,6 +12,8 @@
 #include "KeyboardPanel.h"
 #include "EmptyPanel.h"
 
+#include "StaticVisualizerPanel.h"
+
 class DynamicInstrumentPanel: public AppComponent {
 
 private:

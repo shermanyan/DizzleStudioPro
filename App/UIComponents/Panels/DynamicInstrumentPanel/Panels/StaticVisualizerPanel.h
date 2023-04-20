@@ -4,11 +4,11 @@
 
 #ifndef DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
 #define DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
-#include "DynamicInstrumentPanel.h"
 #include "StaticAudioVisualizer.h"
 #include "SpriteImage.h"
+#include "BasePanel.h"
 
-class StaticVisualizerPanel : public DynamicInstrumentPanel {
+class StaticVisualizerPanel : public BasePanel {
 private:
     StaticAudioVisualizer visualizer;
     SpriteImage playButton;

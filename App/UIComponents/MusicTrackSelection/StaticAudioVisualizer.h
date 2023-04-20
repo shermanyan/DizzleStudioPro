@@ -9,6 +9,8 @@
 #include "AppComponent.h"
 #include <SFML/Audio.hpp>
 #include "Sounds.h"
+#include "Squircle.h"
+
 class StaticAudioVisualizer : public AppComponent {
 public:
     StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size);
@@ -24,7 +26,7 @@ public:
 
 private:
 
-    std::vector<sf::RectangleShape> visualizerBars;
+    std::vector<Squircle> visualizerBars;
     unsigned int width;
     unsigned int height;
     sf::Transform transform;

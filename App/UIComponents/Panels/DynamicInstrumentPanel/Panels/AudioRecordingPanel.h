@@ -5,11 +5,11 @@
 #ifndef DIZZLESTUDIOPRO_AUDIORECORDINGPANEL_H
 #define DIZZLESTUDIOPRO_AUDIORECORDINGPANEL_H
 
-#include "DynamicInstrumentPanel.h"
 #include "AudioVisualizer.h"
 #include "SpriteImage.h"
+#include "BasePanel.h"
 
-class AudioRecordingPanel : public DynamicInstrumentPanel{
+class AudioRecordingPanel : public BasePanel{
 private:
     AudioVisualizer liveRecording;
     SpriteImage button;

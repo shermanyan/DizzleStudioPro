@@ -9,6 +9,7 @@ StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const 
         : width(size.x), height(size.y) {
 
     loadVisualizer(filePath);
+
 }
 
 
@@ -104,7 +105,7 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
         float normalizedAverage = average / 32768.0f;
         float barHeight = normalizedAverage * height;
         float clampedBarHeight = std::min(barHeight, 320.f);
-
+        visualizerBars[i].setRadius(2.5);
         visualizerBars[i].setSize(sf::Vector2f(barWidth, clampedBarHeight));
     }
     setPosition({0,0});
