@@ -30,6 +30,8 @@ void Keyboard::setSize(const sf::Vector2f &size) {
     for (auto &o : keyboard)
         o.setSize({width, size.y});
 
+    reposition();
+
 }
 
 sf::Vector2f Keyboard::getSize() const {
@@ -49,7 +51,6 @@ void Keyboard::setSpacing(float spacing) {
 unsigned int Keyboard::getNumOctaves() const {
     return numOctaves;
 }
-
 
 
 void Keyboard::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -76,27 +77,25 @@ void Keyboard::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     for (auto&o :keyboard) {
         o.eventHandler(window,event);
     }
-    if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-        setPosition((sf::Vector2f )sf::Mouse::getPosition(window));
-
 }
 
 void Keyboard::update(const sf::RenderWindow &window) {
     for (auto&o :keyboard) {
         o.update(window);
     }
-
-    for (int i = 1; i < keyboard.size(); ++i) {
-        sf::FloatRect s = (keyboard[i].getGlobalBounds());
-        sf::FloatRect r = (keyboard[i-1].getGlobalBounds());
-        keyboard[i].setPosition({r.left + r.width + 10, s.top});
-    }
-    setChildrenTransform(getTransform());
 }
 
 void Keyboard::setChildrenTransform(const sf::Transform &transform) {
     for(auto &o : keyboard)
         o.setParentTransform(transform);
+}
+
+void Keyboard::reposition() {
+    for (int i = 1; i < keyboard.size(); ++i) {
+        Position::right(keyboard[i],keyboard[i-1],spacing);
+    }
+    setChildrenTransform(getTransform());
+
 }
 
 

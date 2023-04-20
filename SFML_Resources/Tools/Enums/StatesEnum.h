@@ -8,6 +8,7 @@
 enum StatesEnum{
     SELECTED,
     ACTIVE,
+    HIDDEN,
     LAST_STATE
 };
 

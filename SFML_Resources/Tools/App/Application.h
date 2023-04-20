@@ -26,6 +26,7 @@ public:
     Application();
     Application(const std::string& windowName);
     Application(const std::string& windowName, const sf::Color &bgColor);
+    Application(const sf::Vector2u& windowSize, const std::string& windowName, const sf::Color &bgColor);
 
     void setBgColor(const sf::Color &bgColor);
 

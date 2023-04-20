@@ -5,12 +5,16 @@
 #ifndef DIZZLESTUDIOPRO_KEYBOARDPANEL_H
 #define DIZZLESTUDIOPRO_KEYBOARDPANEL_H
 
-#include "DynamicInstrumentPanel.h"
+#include "BasePanel.h"
 #include "Keyboard.h"
 
-class KeyboardPanel: public DynamicInstrumentPanel{
+class KeyboardPanel: public BasePanel{
 private:
     Keyboard keyboard;
+
+protected:
+    void setChildrenTransform(const sf::Transform &transform) override;
+
 public:
     KeyboardPanel();
 
@@ -20,12 +24,8 @@ public:
 
     void update(const sf::RenderWindow &window) override;
 
-    void setPosition(const sf::Vector2f & pos);
-    void setPosition(float x, float y);
-
-private:
-    void setChildrenTransform(const sf::Transform &transform) override;
-
+//    void setPosition(const sf::Vector2f & pos) override;
+//    void setPosition(float x, float y) override;
 
 };
 

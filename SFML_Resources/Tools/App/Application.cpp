@@ -4,21 +4,25 @@
 
 #include "Application.h"
 
-Application::Application(): Application("Default Application",sf::Color::Black){
+Application::Application():
+Application("Default Application",sf::Color::Black){
 }
 
-Application::Application(const std::string &windowName): Application(windowName,sf::Color::Black){
+Application::Application(const std::string &windowName):
+Application(windowName,sf::Color::Black){
+}
+Application::Application(const std::string &windowName, const sf::Color &bgColor):
+Application({1920,1080},windowName,sf::Color::Black){
 }
 
-Application::Application(const std::string &windowName, const sf::Color &bgColor){
+Application::Application(const sf::Vector2u &windowSize, const std::string &windowName, const sf::Color &bgColor) {
     this->windowName = windowName;
     this->bgColor = bgColor;
-    this->windowSize = {1920, 1080};
-    create({windowSize.x, windowSize.y,32}, windowName);
+    this->windowSize = {windowSize};
+    create({windowSize.x, windowSize.y,64}, windowName);
     setFramerateLimit(60);
-
-//    r.setSize({100, 100});
 }
+
 
 void Application::addComponent(AppComponent &component) {
     components.push_back(&component);
@@ -96,5 +100,7 @@ void Application::eventHandler(sf::RenderWindow &window, const sf::Event &event)
 void Application::setBgColor(const sf::Color &bgColor) {
     Application::bgColor = bgColor;
 }
+
+
 
 

@@ -38,7 +38,7 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     if(//event.type == sf::Event::MouseButtonPressed &&
             MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window))
 
-    key.setFillColor(color * sf::Color{150,150,150});
+    key.setFillColor(color + sf::Color{25,25,25});
 
     else
         setFillColor(color);

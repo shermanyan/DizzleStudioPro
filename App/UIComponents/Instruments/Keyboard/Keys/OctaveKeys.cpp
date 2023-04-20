@@ -5,7 +5,7 @@
 #include "OctaveKeys.h"
 #include <iostream>
 
-OctaveKeys::OctaveKeys(): OctaveKeys({760,347}, {{36, 36, 36}, {94, 94, 94}}) {
+OctaveKeys::OctaveKeys(): OctaveKeys({760,347}, { {94, 94, 94},{36, 36, 36}}) {
 
 }
 OctaveKeys::OctaveKeys(const sf::Vector2<sf::Color> &keyColors): OctaveKeys({760,347},keyColors) {

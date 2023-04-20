@@ -5,15 +5,14 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(App)
 include_directories(App/Resources)
-include_directories(App/Resources/Sounds)
-include_directories(App/UIComponents)
 include_directories(App/UIComponents/Instruments/DrumPad)
-include_directories(App/UIComponents/Instruments/KeyBoard)
-include_directories(App/UIComponents/Instruments/KeyBoard/Keys)
-include_directories(App/UIComponents/Layer)
-include_directories(App/UIComponents/MusicTrackSelection)
-include_directories(App/UIComponents/Panels)
-include_directories(App/UIComponents/Panels/Base)
+include_directories(App/UIComponents/Instruments/Keyboard)
+include_directories(App/UIComponents/Instruments/Keyboard/Keys)
+include_directories(App/UIComponents/Panels/DynamicInstrumentPanel)
+include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Base)
+include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Panels)
+include_directories(App/UIComponents/Panels/LayersPanel)
+include_directories(App/UIComponents/Track)
 include_directories(SFML_Resources/Components/ScrollableContainer)
 include_directories(SFML_Resources/Components/TextInput)
 include_directories(SFML_Resources/Components/Typing)
@@ -23,11 +22,8 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
-include_directories(App/UIComponents/AudioRecording)
+
 add_executable(DizzleStudioPro
-        App/Resources/Sounds/Sounds.cpp
-        App/Resources/Sounds/Sounds.h
-        App/Resources/Sounds/SoundsEnum.h
         App/Resources/Textures.cpp
         App/Resources/Textures.h
         App/Resources/TexturesEnum.h
@@ -35,32 +31,37 @@ add_executable(DizzleStudioPro
         App/UIComponents/Instruments/DrumPad/DrumPad.h
         App/UIComponents/Instruments/DrumPad/Pads.cpp
         App/UIComponents/Instruments/DrumPad/Pads.h
-        App/UIComponents/Instruments/KeyBoard/Keys/Key.cpp
-        App/UIComponents/Instruments/KeyBoard/Keys/Key.h
-        App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.cpp
-        App/UIComponents/Instruments/KeyBoard/Keys/OctaveKeys.h
-        App/UIComponents/Instruments/KeyBoard/Keyboard.cpp
-        App/UIComponents/Instruments/KeyBoard/Keyboard.h
-        App/UIComponents/Layer/DrawableAudioNode.cpp
-        App/UIComponents/Layer/DrawableAudioNode.h
-        App/UIComponents/Layer/Label.cpp
-        App/UIComponents/Layer/Label.h
-        App/UIComponents/Layer/Layer.cpp
-        App/UIComponents/Layer/Layer.h
-        App/UIComponents/Layer/Track.cpp
-        App/UIComponents/Layer/Track.h
-        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
-        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h
-        App/UIComponents/Panels/Base/DynamicInstrumentPanel.cpp
-        App/UIComponents/Panels/Base/DynamicInstrumentPanel.h
-        App/UIComponents/Panels/Base/LayersPanel.cpp
-        App/UIComponents/Panels/Base/LayersPanel.h
-        App/UIComponents/Panels/KeyboardPanel.cpp
-        App/UIComponents/Panels/KeyboardPanel.h
-        App/UIComponents/SeekBar.cpp
-        App/UIComponents/SeekBar.h
+        App/UIComponents/Instruments/Keyboard/Keys/Key.cpp
+        App/UIComponents/Instruments/Keyboard/Keys/Key.h
+        App/UIComponents/Instruments/Keyboard/Keys/OctaveKeys.cpp
+        App/UIComponents/Instruments/Keyboard/Keys/OctaveKeys.h
+        App/UIComponents/Instruments/Keyboard/Keyboard.cpp
+        App/UIComponents/Instruments/Keyboard/Keyboard.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelEnum.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.h
+        App/UIComponents/Panels/LayersPanel/LayersPanel.cpp
+        App/UIComponents/Panels/LayersPanel/LayersPanel.h
+        App/UIComponents/Track/DrawableAudioNode.cpp
+        App/UIComponents/Track/DrawableAudioNode.h
+        App/UIComponents/Track/Label.cpp
+        App/UIComponents/Track/Label.h
+        App/UIComponents/Track/Layer.cpp
+        App/UIComponents/Track/Layer.h
+        App/UIComponents/Track/SeekBar.cpp
+        App/UIComponents/Track/SeekBar.h
+        App/UIComponents/Track/Track.cpp
+        App/UIComponents/Track/Track.h
         App/AudioNode.cpp
         App/AudioNode.h
+        App/StudioMain.cpp
+        App/StudioMain.h
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.h
         SFML_Resources/Components/ScrollableContainer/ScrollEnum.h
@@ -107,19 +108,12 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-#        AudioVisualizerTester.cpp
+        DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
 #        RecorderTester.cpp
-#        TrackPrototypeTest.cpp
-        App/UIComponents/Panels/StaticVisualizerPanel.cpp
-        App/UIComponents/Panels/StaticVisualizerPanel.h
-        App/UIComponents/AudioRecording/AudioVisualizer.cpp
-        App/UIComponents/AudioRecording/AudioVisualizer.h
-        LiveVisualizerTester.cpp
-        App/UIComponents/Panels/AudioRecordingPanel.cpp
-        App/UIComponents/Panels/AudioRecordingPanel.h
-        App/UIComponents/AudioRecording/AudioVisualizer.h
-        App/UIComponents/AudioRecording/AudioVisualizer.cpp)
+#        TrackPrototypeTester.cpp
+        )
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
+
