@@ -111,7 +111,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        RecorderTester.cpp
 #        TrackPrototypeTest.cpp
-        )
+        App/UIComponents/Panels/StaticVisualizerPanel.cpp App/UIComponents/Panels/StaticVisualizerPanel.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

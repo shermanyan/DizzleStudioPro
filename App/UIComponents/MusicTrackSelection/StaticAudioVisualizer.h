@@ -12,14 +12,15 @@
 class StaticAudioVisualizer : public AppComponent {
 public:
     StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size);
-    void setPosition(float posX, float posY);
+    void setPosition(const sf::Vector2f & pos);
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     sf::SoundBuffer buffer;
     sf::Sound sound;
+    bool isPlaying = false;
 
 private:
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
     std::vector<sf::RectangleShape> visualizerBars;
     unsigned int width;
@@ -27,7 +28,6 @@ private:
     sf::Transform transform;
 
     void updateColors();
-    bool isPlaying = false;
 
 };
 

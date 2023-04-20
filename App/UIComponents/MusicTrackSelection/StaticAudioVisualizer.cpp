@@ -8,15 +8,15 @@
 StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size)
         : width(size.x), height(size.y) {
 
-    buffer = Sounds::getSound(NARUTO);
+//    buffer = Sounds::getSound(NARUTO);
 
-//    if (!buffer.loadFromFile(filePath)) {
-//        std::cout << "Fail";
-//    }
+    if (!buffer.loadFromFile(filePath)) {
+        std::cout << "Fail";
+    }
     sound.setBuffer(buffer);
 
     float spacing = 15.0f;
-    float barWidth = 3.0f;
+    float barWidth = 5.0f;
     unsigned int numBars = static_cast<unsigned int>((width - spacing) / (barWidth + spacing));
 
     visualizerBars.resize(numBars);
@@ -37,16 +37,16 @@ StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const 
 
         visualizerBars[i].setSize(sf::Vector2f(barWidth, barHeight));
     }
-    setPosition(0, 0);
+    setPosition({0,0});
 }
 
 
 
-void StaticAudioVisualizer::setPosition(float posX, float posY) {
+void StaticAudioVisualizer::setPosition(const sf::Vector2f & pos) {
     float spacing = 15.0f;
     for (unsigned int i = 0; i < visualizerBars.size(); ++i) {
-        float barX = posX + i * (visualizerBars[i].getSize().x + spacing);
-        float barY = posY + (height - visualizerBars[i].getSize().y) / 2;
+        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
+        float barY = pos.y + (height - visualizerBars[i].getSize().y) / 2;
         visualizerBars[i].setPosition(barX, barY);
     }
 }
@@ -59,25 +59,26 @@ void StaticAudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates stat
 }
 
 void StaticAudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if (event.type == sf::Event::KeyPressed) {
-        if (event.key.code == sf::Keyboard::Space) {
-            if (sound.getStatus() != sf::Sound::Playing) {
-                sound.play();
-                isPlaying = true;
-            } else {
-                sound.pause();
-                isPlaying = false;
 
-            }
-        } else if (event.key.code == sf::Keyboard::P) {
-            sound.stop();
-            isPlaying = false;
-
-            for (auto& bar : visualizerBars) {
-                bar.setFillColor(sf::Color::White);
-            }
+    if (sound.getStatus() != sf::Sound::Playing) {
+        sound.play();
+        isPlaying = true;
+    } else {
+        sound.stop();
+        isPlaying = false;
+        for (auto& bar : visualizerBars) {
+            bar.setFillColor(sf::Color::White);
         }
     }
+
+    if(event.key.code == sf::Keyboard::P) {
+        sound.stop();
+        isPlaying = false;
+        for (auto& bar : visualizerBars) {
+            bar.setFillColor(sf::Color::White);
+        }
+    }
+
 }
 
 void StaticAudioVisualizer::update(const sf::RenderWindow &window) {
@@ -89,7 +90,6 @@ void StaticAudioVisualizer::update(const sf::RenderWindow &window) {
 void StaticAudioVisualizer::updateColors() {
 
     float currentTime = sound.getPlayingOffset().asSeconds();
-
     float duration = sound.getBuffer()->getDuration().asSeconds();
 
     float progress = currentTime / duration;
@@ -104,3 +104,5 @@ void StaticAudioVisualizer::updateColors() {
         }
     }
 }
+
+
