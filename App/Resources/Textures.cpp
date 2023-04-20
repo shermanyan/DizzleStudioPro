@@ -15,7 +15,15 @@ std::string Textures::getPath(TextureEnums texture) {
     switch (texture){
         case PAUSE_BUTTON:
             return "App/Resources/Textueres/PauseButton.png";
-        case LAST_IMG:
+        case PLAY_BUTTON:
+            return "App/Resources/Textueres/PlayButton.png";
+        case PLAY_BUTTON_GREY:
+            return "App/Resources/Textueres/PlayButtonGrey.png";
+        case PAUSE_BUTTON_RED:
+            return "App/Resources/Textueres/PauseButtonRed.png";
+        case MIC_BUTTON_RED:
+            return "App/Resources/Textueres/MicButtonRed.png";
+        case LAST_TEX:
             break;
     }
 }

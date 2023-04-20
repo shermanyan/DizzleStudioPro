@@ -3,7 +3,10 @@
 //
 
 enum TextureEnums{
-    HOME,
     PAUSE_BUTTON,
-    LAST_IMG
+    PLAY_BUTTON,
+    PLAY_BUTTON_GREY,
+    PAUSE_BUTTON_RED,
+    MIC_BUTTON_RED,
+    LAST_TEX
 };
