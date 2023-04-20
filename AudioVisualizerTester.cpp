@@ -7,11 +7,12 @@
 int main(){
 
     Application tester;
-    tester.setWindowSize({3500, 2000});
+    tester.setWindowSize({2000, 1125});
     tester.setBgColor(sf::Color::Black);
 
-    StaticAudioVisualizer staticVisualizer("App/Resources/Sounds/TestSounds/Naruto.wav", tester.getSize().x, tester.getSize().y);
-
+    StaticAudioVisualizer staticVisualizer("App/Resources/Sounds/TestSounds/Naruto.wav", {1000,400});
+    staticVisualizer.setPosition(100,0);
+    //staticVisualizer.setScale(2,0.5);
     tester.addComponent(staticVisualizer);
 
     tester.run();

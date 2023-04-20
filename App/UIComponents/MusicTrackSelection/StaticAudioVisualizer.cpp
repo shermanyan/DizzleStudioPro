@@ -2,22 +2,26 @@
 // Created by Brandon Hargitay on 4/19/23.
 //
 
+#include <iostream>
 #include "StaticAudioVisualizer.h"
 
-StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, unsigned int width, unsigned int height)
-        : width(width), height(height) {
-    sf::SoundBuffer buffer = Sounds::getSound(NARUTO);
+StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size)
+        : width(size.x), height(size.y) {
+
+    buffer = Sounds::getSound(NARUTO);
 
 //    if (!buffer.loadFromFile(filePath)) {
-//        return;
+//        std::cout << "Fail";
 //    }
+    sound.setBuffer(buffer);
 
-    float barWidthScale = 0.2f; // Change this value to adjust the width of the bars
-    float spacing = 2.0f;
-    float barWidth = ((static_cast<float>(width) - spacing * (numBars - 1)) / numBars) * barWidthScale;
+    float spacing = 15.0f;
+    float barWidth = 3.0f;
+    unsigned int numBars = static_cast<unsigned int>((width - spacing) / (barWidth + spacing));
+
     visualizerBars.resize(numBars);
 
-    const sf::Int16* samples = buffer.getSamples();
+    const sf::Int16 *samples = buffer.getSamples();
     std::size_t sampleCount = buffer.getSampleCount();
 
     for (unsigned int i = 0; i < numBars; ++i) {
@@ -31,23 +35,18 @@ StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, unsign
         float normalizedAverage = average / 32768.0f;
         float barHeight = normalizedAverage * height;
 
-        float halfBarHeight = barHeight / 2;
         visualizerBars[i].setSize(sf::Vector2f(barWidth, barHeight));
-        visualizerBars[i].setPosition(i * (barWidth + spacing), height / 2.0f - halfBarHeight);
     }
+    setPosition(0, 0);
 }
 
 
-
-void StaticAudioVisualizer::setScale(float scaleX, float scaleY) {
-    transform.scale(scaleX, scaleY);
-}
 
 void StaticAudioVisualizer::setPosition(float posX, float posY) {
     float spacing = 15.0f;
-    for (unsigned int i = 0; i < numBars; ++i) {
+    for (unsigned int i = 0; i < visualizerBars.size(); ++i) {
         float barX = posX + i * (visualizerBars[i].getSize().x + spacing);
-        float barY = posY + (height / 2.0f - visualizerBars[i].getSize().y / 2);
+        float barY = posY + (height - visualizerBars[i].getSize().y) / 2;
         visualizerBars[i].setPosition(barX, barY);
     }
 }
@@ -60,9 +59,48 @@ void StaticAudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates stat
 }
 
 void StaticAudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    if (event.type == sf::Event::KeyPressed) {
+        if (event.key.code == sf::Keyboard::Space) {
+            if (sound.getStatus() != sf::Sound::Playing) {
+                sound.play();
+                isPlaying = true;
+            } else {
+                sound.pause();
+                isPlaying = false;
 
+            }
+        } else if (event.key.code == sf::Keyboard::P) {
+            sound.stop();
+            isPlaying = false;
+
+            for (auto& bar : visualizerBars) {
+                bar.setFillColor(sf::Color::White);
+            }
+        }
+    }
 }
 
 void StaticAudioVisualizer::update(const sf::RenderWindow &window) {
+    if (isPlaying) {
+        updateColors();
+    }
+}
 
+void StaticAudioVisualizer::updateColors() {
+
+    float currentTime = sound.getPlayingOffset().asSeconds();
+
+    float duration = sound.getBuffer()->getDuration().asSeconds();
+
+    float progress = currentTime / duration;
+
+    for (unsigned int i = 0; i < visualizerBars.size(); ++i) {
+
+        float barProgress = static_cast<float>(i) / visualizerBars.size();
+        if (barProgress <= progress) {
+            visualizerBars[i].setFillColor(sf::Color::Green);
+        } else {
+            visualizerBars[i].setFillColor(sf::Color::White);
+        }
+    }
 }
