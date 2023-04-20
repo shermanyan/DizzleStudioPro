@@ -17,6 +17,8 @@ std::string Fonts::getPath(FontsEnum font) {
     switch (font) {
         case OPEN_SANS:
             return "SFML_Resources/fonts/OpenSans-Bold.ttf";
+        case NUNITO_BOLD:
+            return "SFML_Resources/Fonts/Nunito-ExtraBold.ttf";
         case LAST_FONT:
             break;
     }

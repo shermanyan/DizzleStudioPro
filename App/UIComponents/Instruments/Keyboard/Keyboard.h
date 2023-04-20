@@ -20,6 +20,7 @@ private:
 
     void setupKeyboard();
 
+    void reposition();
 public:
     Keyboard();
     Keyboard(unsigned int numOctaves);

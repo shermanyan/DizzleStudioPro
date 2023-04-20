@@ -2,22 +2,23 @@
 // Created by Sherman Yan on 4/14/23.
 //
 
-#ifndef DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
-#define DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
+#ifndef DIZZLESTUDIOPRO_BASEPANEL_H
+#define DIZZLESTUDIOPRO_BASEPANEL_H
 
 #include "AppComponent.h"
 #include "Squircle.h"
 #include "Position.h"
+#include "PanelEnum.h"
 
-class DynamicInstrumentPanel: public AppComponent {
+class BasePanel: public AppComponent {
 
 private:
     Squircle inside, outside;
     float borderWidth = 20;
 
 public:
-    DynamicInstrumentPanel();
-    DynamicInstrumentPanel(const sf::Vector2f& size);
+    BasePanel();
+    BasePanel(const sf::Vector2f& size);
 
     void setSize(const sf::Vector2f& size);
     sf::Vector2f getSize();
@@ -42,4 +43,4 @@ public:
 };
 
 
-#endif //DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
+#endif //DIZZLESTUDIOPRO_BASEPANEL_H

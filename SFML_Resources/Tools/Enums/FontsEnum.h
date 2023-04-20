@@ -6,6 +6,7 @@
 
 enum FontsEnum{
     OPEN_SANS,
+    NUNITO_BOLD,
     LAST_FONT
 };
 #endif //FONTSENUM_H

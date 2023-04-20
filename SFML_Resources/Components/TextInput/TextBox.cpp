@@ -6,11 +6,12 @@
 
 void TextBox::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
-    target.draw(box);
-    target.draw(text);
+    if(boxState)
+        target.draw(box,states);
+    target.draw(text,states);
 
     if (c.checkStates(ACTIVE) && checkStates(SELECTED))
-        target.draw(c);
+        target.draw(c,states);
 
 }
 
@@ -72,7 +73,7 @@ void TextBox::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         text.eventHandler(window, event);
     }
 
-    if (MouseEvents::isClick(getTransform().transformRect(box.getGlobalBounds()),window)) {
+    if (MouseEvents::isClick(getCombinedTransform().transformRect(box.getGlobalBounds()),window)) {
         setState(SELECTED, true);
     }
     else if(MouseEvents::isClick(window)) {
@@ -82,14 +83,13 @@ void TextBox::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 }
 
 void TextBox::update(const sf::RenderWindow &window) {
-    if (checkStates(SELECTED)){
-        text.updatePosition();
-        updateTextBox();
+    text.updatePosition();
 
-        sf::FloatRect tPos = text.getGlobalBounds();
-        c.setPosition(tPos.left + tPos.width, c.getPosition().y);
-        c.update();
-    }
+    sf::FloatRect tPos = text.getGlobalBounds();
+    c.setPosition(tPos.left + tPos.width, c.getPosition().y);
+    c.update();
+
+    updateTextBox();
 
 }
 
@@ -119,6 +119,14 @@ sf::FloatRect TextBox::getGlobalBounds() const {
 }
 sf::FloatRect TextBox::getLocalBounds() const {
     return box.getLocalBounds();
+}
+
+void TextBox::toggleBoxState() {
+    boxState = !boxState;
+}
+
+void TextBox::setString(const std::string &string) {
+    text.setString(string);
 }
 
 

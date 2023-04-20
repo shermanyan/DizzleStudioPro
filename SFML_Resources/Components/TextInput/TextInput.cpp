@@ -9,7 +9,10 @@ TextInput::TextInput(){
 }
 
 TextInput::TextInput(const std::string &label):TextInput() {
+    setState(HIDDEN,false);
+
     setLabelString(label);
+
 }
 
 void TextInput::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -56,9 +59,11 @@ bool TextInput::isOperator(char c) {
 }
 
 void TextInput::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    states.transform *= getTransform();
-    target.draw(textBox,states);
-    target.draw(label,states);
+    if(!checkStates(HIDDEN)) {
+        states.transform *= getTransform();
+        target.draw(textBox, states);
+        target.draw(label, states);
+    }
 }
 
 sf::FloatRect TextInput::getGlobalBounds() const {
@@ -119,6 +124,18 @@ void TextInput::setTextBoxOutlineColor(const sf::Color &color) {
 
 void TextInput::setLabelFillColor(const sf::Color &color) {
     label.setFillColor(color);
+}
+
+void TextInput::toggleBox() {
+    textBox.toggleBoxState();
+}
+
+void TextInput::setString(const std::string &string) {
+    textBox.setString(string);
+}
+
+void TextInput::setChildrenTransform(const sf::Transform &transform) {
+    textBox.setParentTransform(getTransform());
 }
 
 

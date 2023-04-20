@@ -31,7 +31,13 @@ public:
     void setTextBoxSize(const sf::Vector2f& size);
     void setTextBoxFillColor(const sf::Color& color);
     void setTextBoxOutlineColor(const sf::Color& color);
+    void toggleBox();
+    void setString(const std::string& string);
 
+private:
+    void setChildrenTransform(const sf::Transform &transform) override;
+
+public:
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
 

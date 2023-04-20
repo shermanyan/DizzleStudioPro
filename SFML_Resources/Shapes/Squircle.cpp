@@ -12,7 +12,7 @@ Squircle::Squircle(const sf::Vector2f& size, const float (&radii)[4]):
 Squircle(size, radii,sf::Color::White){}
 
 Squircle::Squircle(const sf::Vector2f& size, float radius, const sf::Color& color):
-Squircle(size, {radius,radius,radius,radius},sf::Color::White) {}
+Squircle(size, {radius,radius,radius,radius},color) {}
 
 Squircle::Squircle(const sf::Vector2f &size, const float (&radii)[4], const sf::Color &color): size(size) {
 
@@ -64,6 +64,7 @@ void Squircle::draw(sf::RenderTarget &target, sf::RenderStates states) const {
         target.draw(corners[i],states);
     }
     target.draw(body,states);
+
 }
 
 void Squircle::setSize(const sf::Vector2f &size) {

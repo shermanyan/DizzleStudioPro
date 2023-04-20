@@ -4,7 +4,7 @@
 #include "Application.h"
 #include "OctaveKeys.h"
 #include "Keyboard.h"
-#include "KeyboardPanel.h"
+#include "UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.h"
 int main(){
 
     Application tester;
