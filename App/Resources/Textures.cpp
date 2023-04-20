@@ -13,9 +13,9 @@ void Textures::load(TextureEnums texture) {
 
 std::string Textures::getPath(TextureEnums texture) {
     switch (texture){
-        case PAUSE_BUTTON:
-            return "App/Resources/Textueres/PlayButtonGreen.png";
         case PLAY_BUTTON:
+            return "App/Resources/Textueres/PlayButtonGreen.png";
+        case PAUSE_BUTTON:
             return "App/Resources/Textueres/PauseButtonGreen.png";
         case PLAY_BUTTON_GREY:
             return "App/Resources/Textueres/PlayButtonGrey.png";

@@ -13,18 +13,8 @@ StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const 
 }
 
 
-
-void StaticAudioVisualizer::setPosition(const sf::Vector2f & pos) {
-    float spacing = 15.0f;
-    for (unsigned int i = 0; i < visualizerBars.size(); ++i) {
-        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
-        float barY = pos.y - visualizerBars[i].getSize().y / 2;
-        visualizerBars[i].setPosition(barX, barY);
-    }
-}
-
 void StaticAudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    states.transform *= transform;
+    states.transform *= getTransform();
     for (const auto& bar : visualizerBars) {
         target.draw(bar, states);
     }
@@ -108,11 +98,49 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
         visualizerBars[i].setRadius(2.5);
         visualizerBars[i].setSize(sf::Vector2f(barWidth, clampedBarHeight));
     }
-    setPosition({0,0});
+
+    reposition();
 }
 
 sf::SoundBuffer StaticAudioVisualizer::getSong() {
     return buffer;
 }
+
+void StaticAudioVisualizer::reposition() {
+
+//    float spacing = 15.0f;
+    for (int i = 1; i < visualizerBars.size(); ++i) {
+        Position::center(visualizerBars[i], visualizerBars[i-1]);
+        Position::right(visualizerBars[i], visualizerBars[i - 1], spacing);
+    }
+
+    //    for (unsigned int i = 0; i < visualizerBars.size(); ++i) {
+//        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
+//        float barY = pos.y - visualizerBars[i].getSize().y / 2;
+//        visualizerBars[i].setPosition(barX, barY);
+//    }
+
+}
+
+sf::FloatRect StaticAudioVisualizer::getGlobalBounds() const {
+    sf::FloatRect bounds = visualizerBars.front().getGlobalBounds();
+    bounds.width = (bounds.width * visualizerBars.size()) + (visualizerBars.size()-1) * spacing;
+
+    for (auto &b : visualizerBars) {
+        sf::FloatRect h = b.getGlobalBounds();
+        if (h.height > bounds.height) {
+            bounds.height = h.height;
+        }
+        if (h.top > bounds.top) {
+            bounds.top = h.top;
+        }
+
+
+
+    }
+    return getTransform().transformRect(bounds);
+}
+
+
 
 

@@ -35,7 +35,7 @@ StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,3
     trackPanel.setPosition(20,80);
 
     addComponent(dynamicInstrumentPanel);
-    addComponent(trackPanel);
-    addComponent(projectTitle);
+//    addComponent(trackPanel);
+//    addComponent(projectTitle);
 }
 
