@@ -85,5 +85,3 @@ sf::Vector2f BasePanel::getSize() {
 
 
 
-
-

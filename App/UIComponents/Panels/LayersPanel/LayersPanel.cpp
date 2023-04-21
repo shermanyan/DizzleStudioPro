@@ -28,10 +28,19 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         for (auto &i: labels) {
             if (event.type == sf::Event::MouseButtonPressed &&
             MouseEvents::isClick(getTransform().transformRect(i.getGlobalBounds()), window)) {
-                instrumentPanel->setActivePanel(i.getTrackType());
+                panelType = i.getTrackType();
+                instrumentPanel->setActivePanel(panelType);
             }
         }
+
+        if (event.type == sf::Event::MouseButtonPressed && panelType == KEYBOARD) {
+            auto *panel = dynamic_cast<KeyboardPanel *>(instrumentPanel->getPanel());
+            KeyEnum num = panel->getKeyPressed(window).second;
+            if (num != NULL_KEY)
+                std::cout << num << " ";
+        }
     }
+
 
 
 }

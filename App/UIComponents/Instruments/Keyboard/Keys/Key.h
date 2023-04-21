@@ -36,6 +36,8 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
+    bool isClick(const sf::RenderWindow& window) const;
+
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
 

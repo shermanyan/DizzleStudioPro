@@ -6,13 +6,13 @@
 
 void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-    if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::K) {
-        dynamicInstrumentPanel.setActivePanel(KEYBOARD);
-
-    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::V) {
-        dynamicInstrumentPanel.setActivePanel(VOCAL);
-    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::E)
-        dynamicInstrumentPanel.setActivePanel(EMPTY_PANEL);
+//    if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::K) {
+//        dynamicInstrumentPanel.setActivePanel(KEYBOARD);
+//
+//    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::V) {
+//        dynamicInstrumentPanel.setActivePanel(VOCAL);
+//    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::E)
+//        dynamicInstrumentPanel.setActivePanel(EMPTY_PANEL);
 
 
 }

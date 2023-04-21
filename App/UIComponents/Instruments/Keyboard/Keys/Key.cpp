@@ -35,10 +35,8 @@ void Key::setFillColor(const sf::Color &color) {
 
 void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-    if(//event.type == sf::Event::MouseButtonPressed &&
-            MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window))
-
-    key.setFillColor(color + sf::Color{25,25,25});
+    if(isClick(window))
+        key.setFillColor(color + sf::Color{25,25,25});
 
     else
         setFillColor(color);
@@ -74,6 +72,10 @@ void Key::setRadius(float radius) {
 
 void Key::setRadius(const float (&radii)[4]) {
     key.setRadius(radii);
+}
+
+bool Key::isClick(const sf::RenderWindow &window) const {
+    return (MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
 }
 
 

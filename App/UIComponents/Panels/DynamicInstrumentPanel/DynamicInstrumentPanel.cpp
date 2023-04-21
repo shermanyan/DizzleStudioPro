@@ -33,6 +33,7 @@ void DynamicInstrumentPanel::setActivePanel(PanelEnum panel) {
         setChildrenTransform(getTransform());
     }
 
+    currentPanelEnum = panel;
     currentPanel = panels.at(panel);
 
 }
@@ -77,6 +78,14 @@ void DynamicInstrumentPanel::setChildrenTransform(const sf::Transform &transform
     for(auto& p :panels)
         p.second->setParentTransform(transform);
 
+}
+
+PanelEnum DynamicInstrumentPanel::getActivePanel() const {
+    return currentPanelEnum;
+}
+
+BasePanel* DynamicInstrumentPanel::getPanel() const {
+    return currentPanel;
 }
 
 //void DynamicInstrumentPanel::setPosition(const sf::Vector2f &pos) {

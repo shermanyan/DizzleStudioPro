@@ -21,16 +21,20 @@ private:
 
     BasePanel* currentPanel;
 
+    PanelEnum currentPanelEnum;
+
     void loadPanel(PanelEnum panel);
 
     void setChildrenTransform(const sf::Transform &transform) override;
-
 
 public:
     DynamicInstrumentPanel();
     ~DynamicInstrumentPanel() override;
 
     void setActivePanel(PanelEnum panel);
+    PanelEnum getActivePanel() const;
+
+    BasePanel* getPanel() const;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
