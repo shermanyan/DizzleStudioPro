@@ -32,10 +32,6 @@ public:
 
     void setActivePanel(PanelEnum panel);
 
-//    void setPosition(const sf::Vector2f &pos) override;
-//
-//    void setPosition(float x, float y) override;
-
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

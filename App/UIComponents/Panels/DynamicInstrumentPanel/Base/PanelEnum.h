@@ -7,10 +7,10 @@
 
 
 enum PanelEnum{
-    KEYBOARD,
-    DRUMPAD,
-    AUDIO,
-    VOCAL,
+    KEYBOARD = 0,
+    DRUMPAD = 1,
+    AUDIO = 2,
+    VOCAL = 3,
     EMPTY_PANEL
 
 };

@@ -7,19 +7,31 @@
 
 #include "AppComponent.h"
 #include "Squircle.h"
+#include "TrackLabel.h"
+#include "DynamicInstrumentPanel.h"
 
 class LayersPanel: public AppComponent {
 private:
+
+    DynamicInstrumentPanel* instrumentPanel = nullptr;
+
     Squircle background;
+    std::vector<TrackLabel> labels;
+    std::vector<sf::Color> trackColors = {{167,42,54},{14,122,40},{41,107,170},{175,143,54}};
+
+
+protected:
+    void setChildrenTransform(const sf::Transform &transform) override;
 
 public:
     LayersPanel();
+
+    void setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel);
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 
     void update(const sf::RenderWindow &window) override;
 
-protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };
 
