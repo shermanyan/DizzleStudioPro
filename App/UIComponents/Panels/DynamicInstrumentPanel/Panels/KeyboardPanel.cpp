@@ -3,7 +3,6 @@
 //
 
 #include "KeyboardPanel.h"
-#include <iostream>
 
 KeyboardPanel::KeyboardPanel(): BasePanel{} {
 

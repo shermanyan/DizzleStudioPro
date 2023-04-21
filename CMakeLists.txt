@@ -22,7 +22,10 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
-
+include_directories(App/Resources/Sounds)
+include_directories(App/UIComponents/AudioRecording)
+include_directories(App/UIComponents/MusicTrackSelection)
+include_directories(App/Resources/Textueres)
 add_executable(DizzleStudioPro
         App/Resources/Textures.cpp
         App/Resources/Textures.h
@@ -108,6 +111,15 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/SnapshotInterface.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
+        App/UIComponents/AudioRecording/AudioVisualizer.h
+        App/UIComponents/AudioRecording/AudioVisualizer.cpp
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h
+#        LiveVisualizerTester.cpp
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
 #        RecorderTester.cpp

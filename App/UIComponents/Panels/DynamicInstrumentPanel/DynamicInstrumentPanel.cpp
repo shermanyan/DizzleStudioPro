@@ -60,7 +60,7 @@ void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
             break;
         }
         case VOCAL: {
-            throw;
+            panels[VOCAL]= new StaticVisualizerPanel;
             break;
         }
         case EMPTY_PANEL: {

@@ -6,9 +6,12 @@
 
 void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-    if(event.type == event.KeyPressed && event.key.code == sf::Keyboard::K)
+    if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::K) {
         dynamicInstrumentPanel.setActivePanel(KEYBOARD);
-    else if(event.type == event.KeyPressed && event.key.code == sf::Keyboard::E)
+
+    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::V) {
+        dynamicInstrumentPanel.setActivePanel(VOCAL);
+    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::E)
         dynamicInstrumentPanel.setActivePanel(EMPTY_PANEL);
 
 
@@ -32,7 +35,7 @@ StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,3
     trackPanel.setPosition(20,80);
 
     addComponent(dynamicInstrumentPanel);
-    addComponent(trackPanel);
-    addComponent(projectTitle);
+//    addComponent(trackPanel);
+//    addComponent(projectTitle);
 }
 
