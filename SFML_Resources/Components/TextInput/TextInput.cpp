@@ -137,4 +137,3 @@ void TextInput::setChildrenTransform(const sf::Transform &transform) {
     textBox.setParentTransform(transform);
 }
 
-

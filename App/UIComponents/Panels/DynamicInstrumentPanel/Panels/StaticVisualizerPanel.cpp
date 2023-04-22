@@ -7,7 +7,11 @@
 #include "MouseEvents.h"
 
 StaticVisualizerPanel::StaticVisualizerPanel()
+<<<<<<< HEAD
 : visualizer("Kenderick.wav", {1200,900}) {
+=======
+        : visualizer("Kenderick.wav", {1200,900}) {
+>>>>>>> Sherman
     texture = Textures::getTexture(PLAY_BUTTON);
     playPauseButton.setTexture(texture);
     playPauseButton.setSize({200, 200});
@@ -63,4 +67,8 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
 void StaticVisualizerPanel::setChildrenTransform(const sf::Transform &transform) {
     visualizer.setParentTransform(transform);
     songNameInput.setParentTransform(transform);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Sherman

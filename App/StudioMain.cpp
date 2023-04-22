@@ -6,6 +6,7 @@
 
 void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
+<<<<<<< HEAD
     if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::K) {
         dynamicInstrumentPanel.setActivePanel(KEYBOARD);
 
@@ -15,6 +16,15 @@ void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) 
         dynamicInstrumentPanel.setActivePanel(AUDIO);
     } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::E){
         dynamicInstrumentPanel.setActivePanel(EMPTY_PANEL);
+=======
+//    if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::K) {
+//        dynamicInstrumentPanel.setActivePanel(KEYBOARD);
+//
+//    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::V) {
+//        dynamicInstrumentPanel.setActivePanel(VOCAL);
+//    } else if (event.type == event.KeyPressed && event.key.code == sf::Keyboard::E)
+//        dynamicInstrumentPanel.setActivePanel(EMPTY_PANEL);
+>>>>>>> Sherman
 
     }
 
@@ -33,9 +43,11 @@ StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,3
     projectTitle.toggleBox();
     projectTitle.setString("Untitled");
 
+
     dynamicInstrumentPanel.setPosition(20,700);
 
     trackPanel.setPosition(20,80);
+    trackPanel.setInstrumentPanel(&dynamicInstrumentPanel);
 
     addComponent(dynamicInstrumentPanel);
     addComponent(trackPanel);

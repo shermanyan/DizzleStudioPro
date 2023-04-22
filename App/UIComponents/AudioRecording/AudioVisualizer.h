@@ -39,4 +39,8 @@ private:
 };
 
 
+<<<<<<< HEAD
 #endif //DIZZLESTUDIOPRO_AUDIOVISUALIZER_H
+=======
+#endif //DIZZLESTUDIOPRO_AUDIOVISUALIZER_H
+>>>>>>> Sherman

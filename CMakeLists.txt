@@ -42,7 +42,7 @@ add_executable(DizzleStudioPro
         App/UIComponents/Instruments/Keyboard/Keyboard.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.h
-        App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelEnum.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelTypeEnum.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.cpp
@@ -53,8 +53,8 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/LayersPanel/LayersPanel.h
         App/UIComponents/Track/DrawableAudioNode.cpp
         App/UIComponents/Track/DrawableAudioNode.h
-        App/UIComponents/Track/Label.cpp
-        App/UIComponents/Track/Label.h
+        App/UIComponents/Track/TrackLabel.cpp
+        App/UIComponents/Track/TrackLabel.h
         App/UIComponents/Track/Layer.cpp
         App/UIComponents/Track/Layer.h
         App/UIComponents/Track/SeekBar.cpp
@@ -124,7 +124,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        RecorderTester.cpp
 #        TrackPrototypeTester.cpp
-        )
+        App/UIComponents/Instruments/SoundKeys.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
