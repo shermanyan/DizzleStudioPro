@@ -3,7 +3,6 @@
 //
 
 #include "KeyboardPanel.h"
-#include <iostream>
 
 KeyboardPanel::KeyboardPanel(): BasePanel{} {
 
@@ -29,6 +28,10 @@ void KeyboardPanel::draw(sf::RenderTarget &target, sf::RenderStates states) cons
 
 void KeyboardPanel::setChildrenTransform(const sf::Transform &transform) {
     keyboard.setParentTransform(transform);
+}
+
+std::pair<int, SoundKeys> KeyboardPanel::getKeyPressed(const sf::RenderWindow &window) const {
+    return keyboard.getKeyPressed(window);
 }
 
 //void KeyboardPanel::setPosition(const sf::Vector2f &pos) {

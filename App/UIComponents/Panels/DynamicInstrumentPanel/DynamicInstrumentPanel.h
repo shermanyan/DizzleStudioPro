@@ -6,33 +6,38 @@
 #define DIZZLESTUDIOPRO_DYNAMICINSTRUMENTPANEL_H
 #include <map>
 #include "AppComponent.h"
-#include "PanelEnum.h"
+#include "PanelTypeEnum.h"
 #include "BasePanel.h"
 
 #include "KeyboardPanel.h"
 #include "EmptyPanel.h"
+#include "StaticVisualizerPanel.h"
+#include "AudioRecordingPanel.h"
+
+#include "StaticVisualizerPanel.h"
+#include "AudioRecordingPanel.h"
 
 class DynamicInstrumentPanel: public AppComponent {
 
 private:
-    std::map<PanelEnum,BasePanel*> panels;
+    std::map<PanelTypeEnum,BasePanel*> panels;
 
     BasePanel* currentPanel;
 
-    void loadPanel(PanelEnum panel);
+    PanelTypeEnum currentPanelEnum;
+
+    void loadPanel(PanelTypeEnum panel);
 
     void setChildrenTransform(const sf::Transform &transform) override;
-
 
 public:
     DynamicInstrumentPanel();
     ~DynamicInstrumentPanel() override;
 
-    void setActivePanel(PanelEnum panel);
+    void setActivePanel(PanelTypeEnum panel);
+    PanelTypeEnum getActivePanel() const;
 
-//    void setPosition(const sf::Vector2f &pos) override;
-//
-//    void setPosition(float x, float y) override;
+    BasePanel* getPanel() const;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;

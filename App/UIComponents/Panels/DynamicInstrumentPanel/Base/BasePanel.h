@@ -8,7 +8,7 @@
 #include "AppComponent.h"
 #include "Squircle.h"
 #include "Position.h"
-#include "PanelEnum.h"
+#include "PanelTypeEnum.h"
 
 class BasePanel: public AppComponent {
 

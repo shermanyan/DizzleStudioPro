@@ -45,7 +45,6 @@ void TextInput::colorWord(MultiText *&text, const std::string& target, const sf:
 }
 
 void TextInput::update(const sf::RenderWindow &window) {
-
     textBox.update(window);
 }
 
@@ -135,7 +134,6 @@ void TextInput::setString(const std::string &string) {
 }
 
 void TextInput::setChildrenTransform(const sf::Transform &transform) {
-    textBox.setParentTransform(getTransform());
+    textBox.setParentTransform(transform);
 }
-
 
