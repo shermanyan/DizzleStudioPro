@@ -11,9 +11,12 @@
 
 class SongInput : public BasePanel {
 private:
-        TextInput songInput;
-        Squircle loadButton;
-        sf::Text text;
+    TextInput songInput;
+    Squircle loadButton;
+    sf::Text text;
+
+    void setChildrenTransform(const sf::Transform &transform) override;
+
 public:
 
     SongInput();
@@ -26,7 +29,6 @@ public:
 
     void init();
 
-    void setParentTransform(const sf::Transform &transform) override;
 
 };
 
