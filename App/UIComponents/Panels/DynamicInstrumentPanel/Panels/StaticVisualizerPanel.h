@@ -7,12 +7,14 @@
 #include "StaticAudioVisualizer.h"
 #include "SpriteImage.h"
 #include "BasePanel.h"
+#include "TextInput.h"
 
 class StaticVisualizerPanel : public BasePanel {
 private:
     StaticAudioVisualizer visualizer;
-    SpriteImage playButton;
+    SpriteImage playPauseButton;
     sf::Texture texture;
+    TextInput songNameInput;
 public:
 
     StaticVisualizerPanel();
