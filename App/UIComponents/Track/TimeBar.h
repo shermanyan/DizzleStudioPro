@@ -1,21 +1,32 @@
 //
-// Created by Sherman Yan on 4/14/23.
+// Created by Sherman Yan on 4/22/23.
 //
 
-#ifndef DIZZLESTUDIOPRO_TRACK_H
-#define DIZZLESTUDIOPRO_TRACK_H
+#ifndef DIZZLESTUDIOPRO_TIMEBAR_H
+#define DIZZLESTUDIOPRO_TIMEBAR_H
 
 #include "AppComponent.h"
 #include "Squircle.h"
+#include "Position.h"
 
-class Track: public AppComponent{
+class TimeBar: public AppComponent {
 private:
     Squircle background;
+    std::vector<Squircle> intervalBars;
 
+    int duration = 0;
+
+    void position();
+    void resize();
 public:
-    Track();
+    TimeBar();
+
+    void setSize(const sf::Vector2f& size);
+    void setDuration(int seconds);
+    int getDuration()const ;
 
     sf::FloatRect getGlobalBounds() const override;
+
     sf::FloatRect getLocalBounds() const override;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
@@ -25,4 +36,4 @@ public:
 };
 
 
-#endif //DIZZLESTUDIOPRO_TRACK_H
+#endif //DIZZLESTUDIOPRO_TIMEBAR_H

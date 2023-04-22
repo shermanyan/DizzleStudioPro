@@ -9,6 +9,8 @@
 #include "Squircle.h"
 #include "Layer.h"
 #include "DynamicInstrumentPanel.h"
+#include "SeekBar.h"
+#include "TimeBar.h"
 
 class LayersPanel: public AppComponent {
 private:
@@ -16,11 +18,13 @@ private:
     DynamicInstrumentPanel* instrumentPanel = nullptr;
 
     Squircle background;
-
+    TimeBar timeBar;
 
     std::vector<Layer> layers;
 
     sf::Color trackColors[4] = {{167,42,54},{14,122,40},{41,107,170},{175,143,54}};
+
+    SeekBar seek;
 
 
 protected:

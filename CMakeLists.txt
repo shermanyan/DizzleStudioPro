@@ -124,7 +124,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        RecorderTester.cpp
 #        TrackPrototypeTester.cpp
-        App/UIComponents/Instruments/SoundKeys.h App/UIComponents/MusicTrackSelection/SongInput.cpp App/UIComponents/MusicTrackSelection/SongInput.h)
+        App/UIComponents/Instruments/SoundKeys.h SFML_Resources/Tools/Clock.cpp SFML_Resources/Tools/Clock.h App/UIComponents/Track/TimeBar.cpp App/UIComponents/Track/TimeBar.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
