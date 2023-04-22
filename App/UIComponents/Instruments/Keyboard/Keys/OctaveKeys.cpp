@@ -108,6 +108,8 @@ void OctaveKeys::setUpWhiteKeys() {
     for (int i = 0; i < 7; ++i) {
         whiteKeys[KeyEnum(C + i)] = {};
         whiteKeys.at(KeyEnum(C + i)).setRadius({10,10,10,10});
+        whiteKeys.at(KeyEnum(C + i)).setKeyType(KeyEnum(C + i));
+
     }
 }
 
@@ -116,6 +118,7 @@ void OctaveKeys::setupBlackKeys() {
     for (int i = 0; i < 5; ++i) {
         blackKeys[KeyEnum(Cs + i)] = {};
         blackKeys.at(KeyEnum(Cs + i)).setRadius({5,5,10,10});
+        blackKeys.at(KeyEnum(Cs + i)).setKeyType(KeyEnum(Cs + i));
     }
 }
 

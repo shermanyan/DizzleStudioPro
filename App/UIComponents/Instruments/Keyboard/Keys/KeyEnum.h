@@ -6,8 +6,8 @@
 #define DIZZLESTUDIOPRO_KEYENUM_H
 
 enum KeyEnum{
+    NULL_KEY,
     C,D,E,F,G,A,B,
     Cs,Ds,Fs,Gs,As,
-    NULL_KEY
 };
 #endif //DIZZLESTUDIOPRO_KEYENUM_H

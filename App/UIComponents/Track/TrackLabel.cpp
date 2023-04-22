@@ -7,10 +7,10 @@
 TrackLabel::TrackLabel():
         TrackLabel({380, 120}, sf::Color::White) {}
 
-TrackLabel::TrackLabel(const sf::Color &labelColor, PanelEnum type):
+TrackLabel::TrackLabel(const sf::Color &labelColor, PanelTypeEnum type):
         TrackLabel({380, 120}, labelColor, type) {}
 
-TrackLabel::TrackLabel(const sf::Vector2f &size, const sf::Color &labelColor, PanelEnum type) {
+TrackLabel::TrackLabel(const sf::Vector2f &size, const sf::Color &labelColor, PanelTypeEnum type) {
     setTrack(type);
     setSize(size);
     setTrackColor(labelColor);
@@ -24,7 +24,7 @@ void TrackLabel::setSize(const sf::Vector2f &size) {
 }
 
 void TrackLabel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(MouseEvents::isClick(getParentTransform().transformRect(getGlobalBounds()),window))
+    if(MouseEvents::isClick(getCombinedTransform().transformRect(getGlobalBounds()),window))
         label.setFillColor(trackColor * sf::Color{10,10,10});
     else
         label.setFillColor(trackColor);
@@ -43,8 +43,8 @@ void TrackLabel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
 }
 
-void TrackLabel::setTrack(PanelEnum type) {
-    panelType = type;
+void TrackLabel::setTrack(PanelTypeEnum type) {
+    trackType = type;
 
     switch (type) {
         case KEYBOARD: {
@@ -97,8 +97,8 @@ void TrackLabel::setTrackColor(const sf::Color &trackColor) {
     label.setFillColor(trackColor);
 }
 
-PanelEnum TrackLabel::getTrackType() {
-    return panelType;
+PanelTypeEnum TrackLabel::getTrackType() const {
+    return trackType;
 }
 
 

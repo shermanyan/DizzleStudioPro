@@ -27,15 +27,14 @@ void DynamicInstrumentPanel::draw(sf::RenderTarget &target, sf::RenderStates sta
     target.draw(*currentPanel,states);
 }
 
-void DynamicInstrumentPanel::setActivePanel(PanelEnum panel) {
+void DynamicInstrumentPanel::setActivePanel(PanelTypeEnum panel) {
     if (panels.count(panel) == 0) {
         loadPanel(panel);
         setChildrenTransform(getTransform());
     }
-
+    std::cout << panel << " ";
     currentPanelEnum = panel;
     currentPanel = panels.at(panel);
-
 }
 
 DynamicInstrumentPanel::~DynamicInstrumentPanel() {
@@ -45,7 +44,7 @@ DynamicInstrumentPanel::~DynamicInstrumentPanel() {
 }
 
 
-void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
+void DynamicInstrumentPanel::loadPanel(PanelTypeEnum panel) {
     switch (panel) {
 
         case KEYBOARD: {
@@ -77,10 +76,9 @@ void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
 void DynamicInstrumentPanel::setChildrenTransform(const sf::Transform &transform) {
     for(auto& p :panels)
         p.second->setParentTransform(transform);
-
 }
 
-PanelEnum DynamicInstrumentPanel::getActivePanel() const {
+PanelTypeEnum DynamicInstrumentPanel::getActivePanel() const {
     return currentPanelEnum;
 }
 

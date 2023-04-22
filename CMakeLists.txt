@@ -42,7 +42,7 @@ add_executable(DizzleStudioPro
         App/UIComponents/Instruments/Keyboard/Keyboard.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.h
-        App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelEnum.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelTypeEnum.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.cpp

@@ -9,7 +9,7 @@
 #include "Squircle.h"
 #include "Textures.h"
 #include "SpriteImage.h"
-#include "PanelEnum.h"
+#include "PanelTypeEnum.h"
 #include "Position.h"
 #include "MouseEvents.h"
 
@@ -21,21 +21,22 @@ private:
 
     sf::Color trackColor;
 
-    PanelEnum panelType;
+    PanelTypeEnum trackType = EMPTY_PANEL;
 
 public:
     TrackLabel();
-    TrackLabel(const sf::Color& labelColor, PanelEnum type = EMPTY_PANEL);
-    TrackLabel(const sf::Vector2f& size, const sf::Color& labelColor , PanelEnum type = EMPTY_PANEL);
+    TrackLabel(const sf::Color& labelColor, PanelTypeEnum type = EMPTY_PANEL);
+    TrackLabel(const sf::Vector2f& size, const sf::Color& labelColor , PanelTypeEnum type = EMPTY_PANEL);
 
     sf::Color getTrackColor() const;
     void setTrackColor(const sf::Color &trackColor);
 
-    void setTrack(PanelEnum type );
+    void setTrack(PanelTypeEnum type);
+
+    PanelTypeEnum getTrackType() const;
 
     void setSize(const sf::Vector2f& size);
 
-    PanelEnum getTrackType();
 
     sf::FloatRect getGlobalBounds() const override;
 

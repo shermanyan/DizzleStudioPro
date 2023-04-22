@@ -7,7 +7,7 @@
 
 #include "AppComponent.h"
 #include "Squircle.h"
-#include "TrackLabel.h"
+#include "Layer.h"
 #include "DynamicInstrumentPanel.h"
 
 class LayersPanel: public AppComponent {
@@ -15,11 +15,12 @@ private:
 
     DynamicInstrumentPanel* instrumentPanel = nullptr;
 
-    PanelEnum panelType;
-
     Squircle background;
-    std::vector<TrackLabel> labels;
-    std::vector<sf::Color> trackColors = {{167,42,54},{14,122,40},{41,107,170},{175,143,54}};
+
+
+    std::vector<Layer> layers;
+
+    sf::Color trackColors[4] = {{167,42,54},{14,122,40},{41,107,170},{175,143,54}};
 
 
 protected:

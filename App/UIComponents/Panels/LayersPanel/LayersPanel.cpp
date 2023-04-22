@@ -4,68 +4,66 @@
 
 #include "LayersPanel.h"
 
+void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
+    for (auto&l:layers) {
+        l.setParentTransform(transform);
+    }
+}
+
 LayersPanel::LayersPanel() {
     background = {{1960, 600},20, {121,121,121}};
 
-    for (int i = 0; i < 4; i++) {
-        labels.emplace_back(trackColors[i]);
-    }
-    labels.front().setPosition(20,70);
-    for (int i = 1; i < labels.size(); i++) {
-        Position::center(labels[i],labels[i-1]);
-        Position::bottom(labels[i],labels[i-1],10);
-    }
-    labels[0].setTrack(KEYBOARD);
-    labels[1].setTrack(AUDIO);
-
-}
-
-void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    for(auto& i:labels) {
-        i.eventHandler(window, event);
-    }
-    if(instrumentPanel) {
-        for (auto &i: labels) {
-            if (event.type == sf::Event::MouseButtonPressed &&
-            MouseEvents::isClick(getTransform().transformRect(i.getGlobalBounds()), window)) {
-                panelType = i.getTrackType();
-                instrumentPanel->setActivePanel(panelType);
-            }
-        }
-
-        if (event.type == sf::Event::MouseButtonPressed && panelType == KEYBOARD) {
-            auto *panel = dynamic_cast<KeyboardPanel *>(instrumentPanel->getPanel());
-            KeyEnum num = panel->getKeyPressed(window).second;
-            if (num != NULL_KEY)
-                std::cout << num << " ";
-        }
+    for (int i = 0; i < 4; ++i) {
+        layers.emplace_back();
+        layers.back().setTrackColor(trackColors[i]);
     }
 
-
-
-}
-
-void LayersPanel::update(const sf::RenderWindow &window) {
-    for(auto& i:labels)
-        i.update(window);
-
-}
-
-void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-
-    states.transform *= getTransform();
-    target.draw(background,states);
-    for (auto& l: labels) {
-        target.draw(l,states);
-
+    layers.front().setPosition(20,70);
+    for (int i = 1; i < layers.size(); i++) {
+        Position::center(layers[i],layers[i-1]);
+        Position::bottom(layers[i],layers[i-1],10);
     }
-}
 
-void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
-    for(auto& i:labels)
-        i.setParentTransform(transform);
+    layers[1].setTrack(KEYBOARD);
+    layers[0].setTrack(AUDIO);
+
 }
 
 void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel) {
-    LayersPanel::instrumentPanel = instrumentPanel;
+
+    this->instrumentPanel = instrumentPanel;
+
+    for (auto&l:layers) {
+        l.setInstrumentPanel(instrumentPanel);
+    }
+}
+
+void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+
+    for (auto&l:layers) {
+        l.eventHandler(window,event);
+
+        if (event.MouseButtonPressed && MouseEvents::isClick(getTransform().transformRect(l.getGlobalBounds()), window)) {
+            instrumentPanel->setActivePanel(l.getTrackType());
+        }
+    }
+
+}
+
+
+
+void LayersPanel::update(const sf::RenderWindow &window) {
+    for (auto&l:layers) {
+        l.update(window);
+    }
+}
+
+void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    states.transform *= getTransform();
+    target.draw(background,states);
+
+    for (auto&l:layers) {
+        target.draw(l,states);
+    }
+
 }

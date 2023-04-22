@@ -10,6 +10,7 @@
 #include "Squircle.h"
 #include "Position.h"
 #include "MouseEvents.h"
+#include "KeyEnum.h"
 
 class Key: public AppComponent {
 private:
@@ -17,6 +18,8 @@ private:
 
     Squircle key;
     sf::Color color;
+
+    KeyEnum keyType = NULL_KEY;
 
 public:
     //default constructor
@@ -35,6 +38,8 @@ public:
 
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
+
+    void setKeyType(KeyEnum type);
 
     bool isClick(const sf::RenderWindow& window) const;
 
