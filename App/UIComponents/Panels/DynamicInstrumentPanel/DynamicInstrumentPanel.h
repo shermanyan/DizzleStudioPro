@@ -11,8 +11,8 @@
 
 #include "KeyboardPanel.h"
 #include "EmptyPanel.h"
-
 #include "StaticVisualizerPanel.h"
+#include "AudioRecordingPanel.h"
 
 class DynamicInstrumentPanel: public AppComponent {
 

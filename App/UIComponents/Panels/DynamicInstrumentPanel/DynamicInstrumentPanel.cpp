@@ -56,7 +56,7 @@ void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
             break;
         }
         case AUDIO: {
-            throw;
+            panels[AUDIO]= new AudioRecordingPanel;
             break;
         }
         case VOCAL: {

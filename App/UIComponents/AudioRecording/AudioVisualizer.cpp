@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "AudioVisualizer.h"
+#include "Position.h"
 
 AudioVisualizer::AudioVisualizer(unsigned int width, unsigned int height)
         : width(width), height(height) {
@@ -69,32 +70,30 @@ bool AudioVisualizer::onProcessSamples(const sf::Int16* samples, std::size_t sam
         // Update the rectangle
         float halfBarHeight = barHeight / 2;
         visualizerBars[i].setSize(sf::Vector2f(visualizerBars[i].getSize().x, barHeight));
-        visualizerBars[i].setPosition(visualizerBars[i].getPosition().x, height / 2.0f - halfBarHeight);
+//        visualizerBars[i].setPosition(visualizerBars[i].getPosition().x, height / 2.0f - halfBarHeight);
     }
+    reposition();
 
     return true;
 }
 
 
 void AudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    states.transform *= transform;
+    states.transform *= getTransform();
     for (const auto& bar : visualizerBars) {
         target.draw(bar, states);
     }
 }
 
-void AudioVisualizer::setScale(float scaleX, float scaleY) {
-    transform.scale(scaleX, scaleY);
-}
 
-void AudioVisualizer::setPosition(sf::Vector2f pos) {
-    float spacing = 10.0f; // Change this value to adjust the spacing between bars
-    for (unsigned int i = 0; i < numBars; ++i) {
-        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
-        float barY = pos.y + (height / 2.0f - visualizerBars[i].getSize().y / 2);
-        visualizerBars[i].setPosition(barX, barY);
-    }
-}
+//void AudioVisualizer::setPosition(sf::Vector2f pos) {
+//    float spacing = 10.0f; // Change this value to adjust the spacing between bars
+//    for (unsigned int i = 0; i < numBars; ++i) {
+//        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
+//        float barY = pos.y + (height / 2.0f - visualizerBars[i].getSize().y / 2);
+//        visualizerBars[i].setPosition(barX, barY);
+//    }
+//}
 
 void AudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
@@ -103,6 +102,32 @@ void AudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Event &ev
 void AudioVisualizer::update(const sf::RenderWindow &window) {
 
 }
+
+sf::FloatRect AudioVisualizer::getGlobalBounds() const {
+    sf::FloatRect bounds;
+    bounds.width = width;
+    bounds.height = height;
+
+    return getTransform().transformRect(bounds);
+}
+
+void AudioVisualizer::reposition() {
+    float spacing = 10.0f; // Change this value to adjust the spacing between bars
+//    for (unsigned int i = 0; i < numBars; ++i) {
+//        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
+//        float barY = pos.y + (height / 2.0f - visualizerBars[i].getSize().y / 2);
+//        visualizerBars[i].setPosition(barX, barY);
+//    }
+
+    visualizerBars.front().setPosition(0,height /2 - visualizerBars.front().getGlobalBounds().height/2);
+//    float spacing = 15.0f;
+    for (int i = 1; i < visualizerBars.size(); ++i) {
+        Position::center(visualizerBars[i], visualizerBars[i-1]);
+        Position::right(visualizerBars[i], visualizerBars[i - 1], spacing);
+    }
+}
+
+
 
 
 
