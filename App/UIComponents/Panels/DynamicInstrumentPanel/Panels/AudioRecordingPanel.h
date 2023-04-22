@@ -25,9 +25,10 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    void setPosition(sf::Vector2f pos);
 
-    void setScale(float x, float y);
+
+protected:
+    void setChildrenTransform(const sf::Transform &transform) override;
 };
 
 

@@ -76,7 +76,7 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
     sound.setBuffer(buffer);
 
     float spacing = 15.0f;
-    float barWidth = 5.0f;
+    float barWidth = 15.0f;
     unsigned int numBars = static_cast<unsigned int>((width - spacing) / (barWidth + spacing));
 
     visualizerBars.resize(numBars);
@@ -95,7 +95,7 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
         float normalizedAverage = average / 32768.0f;
         float barHeight = normalizedAverage * height;
         float clampedBarHeight = std::min(barHeight, 320.f);
-        visualizerBars[i].setRadius(2.5);
+        visualizerBars[i].setRadius(7);
         visualizerBars[i].setSize(sf::Vector2f(barWidth, clampedBarHeight));
     }
 
@@ -108,6 +108,7 @@ sf::SoundBuffer StaticAudioVisualizer::getSong() {
 
 void StaticAudioVisualizer::reposition() {
 
+    visualizerBars.front().setPosition(0,height /2 - visualizerBars.front().getGlobalBounds().height/2);
 //    float spacing = 15.0f;
     for (int i = 1; i < visualizerBars.size(); ++i) {
         Position::center(visualizerBars[i], visualizerBars[i-1]);
@@ -123,24 +124,9 @@ void StaticAudioVisualizer::reposition() {
 }
 
 sf::FloatRect StaticAudioVisualizer::getGlobalBounds() const {
-    sf::FloatRect bounds = visualizerBars.front().getGlobalBounds();
-    bounds.width = (bounds.width * visualizerBars.size()) + (visualizerBars.size()-1) * spacing;
+    sf::FloatRect bounds;
+    bounds.width = width;
+    bounds.height = height;
 
-    for (auto &b : visualizerBars) {
-        sf::FloatRect h = b.getGlobalBounds();
-        if (h.height > bounds.height) {
-            bounds.height = h.height;
-        }
-        if (h.top > bounds.top) {
-            bounds.top = h.top;
-        }
-
-
-
-    }
     return getTransform().transformRect(bounds);
 }
-
-
-
-

@@ -18,7 +18,7 @@ StaticVisualizerPanel::StaticVisualizerPanel()
     playButton.setPosition(playButton.getPosition().x - 600 ,playButton.getPosition().y);
 
     Position::center(visualizer,*this);
-    visualizer.setPosition(visualizer.getPosition().x +200 ,visualizer.getPosition().y + 30);
+    visualizer.setPosition(visualizer.getPosition().x + 200 ,visualizer.getPosition().y );
 }
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {

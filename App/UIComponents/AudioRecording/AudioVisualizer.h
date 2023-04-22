@@ -4,8 +4,8 @@
 
 #ifndef DIZZLESTUDIOPRO_AUDIOVISUALIZER_H
 #define DIZZLESTUDIOPRO_AUDIOVISUALIZER_H
-#include "DynamicInstrumentPanel.h"
 #include <SFML/Audio.hpp>
+#include "AppComponent.h"
 
 class AudioVisualizer : public AppComponent , public sf::SoundRecorder {
 public:
@@ -13,8 +13,7 @@ public:
 
     bool startRecording();
     void stopRecording();
-    void setScale(float scaleX, float scaleY);
-    void setPosition(sf::Vector2f pos);
+//    void setPosition(sf::Vector2f pos);
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     virtual bool onProcessSamples(const sf::Int16* samples, std::size_t sampleCount) override;
     std::vector<sf::RectangleShape> visualizerBars;
@@ -23,11 +22,14 @@ public:
     const unsigned int numBars = 80;
     std::vector<sf::Int16> sampleBuffer;
 
-    sf::Transform transform;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 
     void update(const sf::RenderWindow &window) override;
+
+    sf::FloatRect getGlobalBounds() const override;
+
+    void reposition();
 
 private:
 

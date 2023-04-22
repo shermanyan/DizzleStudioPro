@@ -32,7 +32,6 @@ void DynamicInstrumentPanel::setActivePanel(PanelTypeEnum panel) {
         loadPanel(panel);
         setChildrenTransform(getTransform());
     }
-    std::cout << panel << " ";
     currentPanelEnum = panel;
     currentPanel = panels.at(panel);
 }
@@ -56,11 +55,11 @@ void DynamicInstrumentPanel::loadPanel(PanelTypeEnum panel) {
             break;
         }
         case AUDIO: {
-            panels[AUDIO]= new StaticVisualizerPanel;
+            panels[AUDIO] = new StaticVisualizerPanel;
             break;
         }
         case VOCAL: {
-            throw;
+            panels[VOCAL] = new AudioRecordingPanel;
             break;
         }
         case EMPTY_PANEL: {

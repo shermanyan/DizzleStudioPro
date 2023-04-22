@@ -24,8 +24,11 @@ LayersPanel::LayersPanel() {
         Position::bottom(layers[i],layers[i-1],10);
     }
 
-    layers[1].setTrack(KEYBOARD);
-    layers[0].setTrack(AUDIO);
+    layers[0].setTrack(KEYBOARD);
+    layers[1].setTrack(AUDIO);
+    layers[2].setTrack(VOCAL);
+
+
 
 }
 
