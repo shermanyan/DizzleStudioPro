@@ -134,7 +134,7 @@ void TextInput::setString(const std::string &string) {
 }
 
 void TextInput::setChildrenTransform(const sf::Transform &transform) {
-    textBox.setParentTransform(getTransform());
+    textBox.setParentTransform(transform);
 }
 
 
