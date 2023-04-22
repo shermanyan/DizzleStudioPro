@@ -10,6 +10,7 @@
 #include "Squircle.h"
 #include "TrackLabel.h"
 #include "DynamicInstrumentPanel.h"
+#include "Track.h"
 
 class Layer: public AppComponent {
 private:
@@ -17,6 +18,7 @@ private:
     DynamicInstrumentPanel* instrumentPanel = nullptr;
 
     TrackLabel label;
+    Track track;
 
     sf::Color trackColor = {0,0,0};
 

@@ -4,6 +4,7 @@
 #include "Fonts.h"
 #include "MouseEvents.h"
 #include <iostream>
+#include "Clock.h"
 int main()
 {
 
@@ -12,13 +13,13 @@ int main()
     sf::Vector2u windowSize({2000,1125});
     sf::RenderWindow window({windowSize.x,windowSize.y}, "SFML Tutorial");
     window.setFramerateLimit(60);
-    sf::Clock clock;
+    Clock clock;
     sf::Text timer;
 
     timer.setFont(Fonts::getFont(OPEN_SANS));
     timer.setPosition(20,20);
     timer.setCharacterSize(50);
-    clock.restart();
+//    clock.start();
 
     Squircle seek({10, 100},5);
     Squircle track({1000,120},10);
@@ -32,8 +33,8 @@ int main()
     Position::center(seek,track);
     Position::alignLeft(seek,track);
 
-    float seconds = 20;
-    float velocity = track.getSize().x/(seconds * 1000000);
+    float seconds = 10;
+    float velocity = track.getSize().x/(seconds);
 
     bool draw = false;
 
@@ -44,6 +45,15 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
 
+            if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::P)
+                    clock.toggle();
+                else if (event.key.code == sf::Keyboard::Right)
+                    clock.forward(1);
+                else if (event.key.code == sf::Keyboard::Left)
+                    clock.rewind(1);
+
+            }
             else if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(button.getGlobalBounds(), window)) {
                 button.setFillColor(sf::Color::Red);
                 nodes.emplace_back();
@@ -63,12 +73,13 @@ int main()
                                           nodes.back().getSize().y));
         }
 
-        timer.setString(std::to_string(clock.getElapsedTime().asMilliseconds() * 0.001));
-        seek.setPosition(track.getPosition().x + (velocity * clock.getElapsedTime().asMicroseconds()), seek.getPosition().y);
+        timer.setString(std::to_string(clock.getElapsedTimeAsSeconds()));
+
+        seek.setPosition(track.getPosition().x + (velocity * clock.getElapsedTimeAsSeconds()), seek.getPosition().y);
 
 
         if (seek.getPosition().x >= track.getPosition().x + track.getSize().x)
-            clock.restart();
+            clock.stop();
 
         window.clear();
         window.draw(button);

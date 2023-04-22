@@ -28,7 +28,12 @@ LayersPanel::LayersPanel() {
     layers[1].setTrack(AUDIO);
     layers[2].setTrack(VOCAL);
 
-
+    seek.setSize({10,560});
+    seek.setDuration(10);
+    seek.setLength(1510);
+    seek.setFillColor({185,185,185});
+    seek.setPosition(420,25);
+    seek.setRadius(5);
 
 }
 
@@ -43,6 +48,7 @@ void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel) {
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
+    seek.eventHandler(window,event);
     for (auto&l:layers) {
         l.eventHandler(window,event);
 
@@ -56,6 +62,8 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
 
 
 void LayersPanel::update(const sf::RenderWindow &window) {
+    seek.update(window);
+
     for (auto&l:layers) {
         l.update(window);
     }
@@ -68,5 +76,7 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     for (auto&l:layers) {
         target.draw(l,states);
     }
+
+    target.draw(seek,states);
 
 }
