@@ -59,7 +59,10 @@ void Layer::setTrack(PanelTypeEnum type) {
 }
 
 sf::FloatRect Layer::getGlobalBounds() const {
-    return getTransform().transformRect(label.getGlobalBounds());
+    sf::FloatRect bounds = label.getGlobalBounds();
+    bounds.width += 10 + track.getGlobalBounds().width;
+
+    return getTransform().transformRect(bounds);
 }
 
 sf::FloatRect Layer::getLocalBounds() const {

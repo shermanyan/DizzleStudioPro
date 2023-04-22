@@ -35,6 +35,9 @@ LayersPanel::LayersPanel() {
     seek.setPosition(420,25);
     seek.setRadius(5);
 
+    Position::alignRight(timeBar,layers[0]);
+    Position::top(timeBar,layers[0],10);
+
 }
 
 void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel) {
@@ -49,6 +52,8 @@ void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel) {
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     seek.eventHandler(window,event);
+    timeBar.eventHandler(window,event);
+
     for (auto&l:layers) {
         l.eventHandler(window,event);
 
@@ -57,12 +62,14 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         }
     }
 
+
 }
 
 
 
 void LayersPanel::update(const sf::RenderWindow &window) {
     seek.update(window);
+    timeBar.update(window);
 
     for (auto&l:layers) {
         l.update(window);
@@ -77,6 +84,7 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
         target.draw(l,states);
     }
 
+    target.draw(timeBar,states);
     target.draw(seek,states);
 
 }

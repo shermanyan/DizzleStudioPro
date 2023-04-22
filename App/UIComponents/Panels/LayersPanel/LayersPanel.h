@@ -10,6 +10,7 @@
 #include "Layer.h"
 #include "DynamicInstrumentPanel.h"
 #include "SeekBar.h"
+#include "TimeBar.h"
 
 class LayersPanel: public AppComponent {
 private:
@@ -17,6 +18,7 @@ private:
     DynamicInstrumentPanel* instrumentPanel = nullptr;
 
     Squircle background;
+    TimeBar timeBar;
 
     std::vector<Layer> layers;
 
