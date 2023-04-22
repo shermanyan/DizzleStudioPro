@@ -16,21 +16,14 @@ AudioRecordingPanel::AudioRecordingPanel() : liveRecording(100,2200){
     button.setPosition(button.getPosition().x - 600 ,button.getPosition().y);
 
     Position::center(liveRecording,*this);
-<<<<<<< HEAD
-=======
     liveRecording.setPosition(liveRecording.getPosition().x - 200 ,liveRecording.getPosition().y);
 
->>>>>>> Sherman
 }
 
 void AudioRecordingPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
 
-<<<<<<< HEAD
     if(MouseEvents::isClick(getCombinedTransform().transformRect(button.getGlobalBounds()),window) ){
-=======
-    if(event.MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(button.getGlobalBounds()),window) ){
->>>>>>> Sherman
         if(!isRecording){
             button.setTexture(Textures::getTexture(PAUSE_BUTTON_RED));
             liveRecording.startRecording();
@@ -77,10 +70,3 @@ void AudioRecordingPanel::draw(sf::RenderTarget &target, sf::RenderStates states
 void AudioRecordingPanel::setChildrenTransform(const sf::Transform &transform) {
     liveRecording.setParentTransform(transform);
 }
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> Sherman

@@ -76,11 +76,8 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
     sound.setBuffer(buffer);
 
     float spacing = 15.0f;
-<<<<<<< HEAD
     float barWidth = 12.0f;
-=======
-    float barWidth = 15.0f;
->>>>>>> Sherman
+
     unsigned int numBars = static_cast<unsigned int>((width - spacing) / (barWidth + spacing));
 
     visualizerBars.resize(numBars);
@@ -99,11 +96,8 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
         float normalizedAverage = average / 32768.0f;
         float barHeight = normalizedAverage * height;
         float clampedBarHeight = std::min(barHeight, 320.f);
-<<<<<<< HEAD
+
         visualizerBars[i].setRadius(5);
-=======
-        visualizerBars[i].setRadius(7);
->>>>>>> Sherman
         visualizerBars[i].setSize(sf::Vector2f(barWidth, clampedBarHeight));
     }
 
@@ -138,10 +132,3 @@ sf::FloatRect StaticAudioVisualizer::getGlobalBounds() const {
 
     return getTransform().transformRect(bounds);
 }
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> Sherman

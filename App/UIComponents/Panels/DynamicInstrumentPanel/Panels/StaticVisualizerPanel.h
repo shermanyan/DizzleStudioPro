@@ -34,9 +34,4 @@ protected:
 
 
 
-
-<<<<<<< HEAD
-#endif //DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
-=======
-#endif //DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
->>>>>>> Sherman
+#endif

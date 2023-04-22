@@ -39,11 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DizzleStudioPro::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a10feb7b2347d71183db.json
-					"jsonFile" : "target-DizzleStudioPro-Debug-e59c811d49052fff95b7.json",
-========
 					"jsonFile" : "target-DizzleStudioPro-Debug-ed6cb894744bf2207f5c.json",
->>>>>>>> Sherman:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-33d72e0022c0c97c8e6e.json
 					"name" : "DizzleStudioPro",
 					"projectIndex" : 0
 				}

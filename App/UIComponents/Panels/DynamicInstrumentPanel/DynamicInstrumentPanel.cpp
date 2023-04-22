@@ -55,19 +55,11 @@ void DynamicInstrumentPanel::loadPanel(PanelTypeEnum panel) {
             break;
         }
         case AUDIO: {
-<<<<<<< HEAD
-            panels[AUDIO]= new AudioRecordingPanel;
-            break;
-        }
-        case VOCAL: {
-            panels[VOCAL]= new StaticVisualizerPanel;
-=======
             panels[AUDIO] = new StaticVisualizerPanel;
             break;
         }
         case VOCAL: {
             panels[VOCAL] = new AudioRecordingPanel;
->>>>>>> Sherman
             break;
         }
         case EMPTY_PANEL: {

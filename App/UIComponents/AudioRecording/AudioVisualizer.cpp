@@ -129,10 +129,3 @@ void AudioVisualizer::reposition() {
 
 
 
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> Sherman
