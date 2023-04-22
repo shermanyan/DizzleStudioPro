@@ -18,11 +18,10 @@ StaticVisualizerPanel::StaticVisualizerPanel()
     Position::center(visualizer, *this);
     visualizer.setPosition(visualizer.getPosition().x + 385, visualizer.getPosition().y);
 
+    songNameInput.setPosition(60, 100);
     songNameInput.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
     songNameInput.setString("Song");
     songNameInput.toggleBox();
-
-    songNameInput.setPosition(60, 100);
     songNameInput.setTextBoxSize({300,80});
 
 }
