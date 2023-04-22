@@ -46,3 +46,5 @@
 1	88	1682054710854737447	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/Pads.cpp.o	2069c01951d09d2f
 11	352	1682135295226496501	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp.o	9a354fd35128c64a
 352	397	1682135295273103225	DizzleStudioPro	8b788c92fa571ea2
+5	344	1682135358270183809	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp.o	8c5321b642c86298
+344	389	1682135358316683950	DizzleStudioPro	8b788c92fa571ea2

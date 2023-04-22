@@ -24,7 +24,7 @@ StaticVisualizerPanel::StaticVisualizerPanel()
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
 
-    if(MouseEvents::isClick(getCombinedTransform().transformRect(playButton.getGlobalBounds()),window) ){
+    if(event.MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(playButton.getGlobalBounds()),window) ){
         visualizer.eventHandler(window,event);
         if(visualizer.isPlaying){
             playButton.setTexture(Textures::getTexture(PAUSE_BUTTON));
