@@ -18,17 +18,11 @@ StaticVisualizerPanel::StaticVisualizerPanel()
     Position::center(visualizer, *this);
     visualizer.setPosition(visualizer.getPosition().x + 385, visualizer.getPosition().y);
 
-    songNameInput.setPosition(60, 100);
-    songNameInput.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
-    songNameInput.setString("Song");
-    songNameInput.toggleBox();
-    songNameInput.setTextBoxSize({300,80});
-
 }
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
-    songNameInput.eventHandler(window, event);
+    songinput.eventHandler(window, event);
 
     if(MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window) ){
         visualizer.eventHandler(window,event);
@@ -39,12 +33,14 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
 
         }
     }
+
+
 }
 
 void StaticVisualizerPanel::update(const sf::RenderWindow &window) {
     BasePanel::update(window);
     visualizer.update(window);
-    songNameInput.update(window);
+    songinput.update(window);
 }
 
 void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -54,12 +50,12 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
 
     target.draw(visualizer,states);
     target.draw(playPauseButton,states);
-    target.draw(songNameInput,states);
+    target.draw(songinput,states);
 
 }
 
 
 void StaticVisualizerPanel::setChildrenTransform(const sf::Transform &transform) {
     visualizer.setParentTransform(transform);
-    songNameInput.setParentTransform(transform);
+    songinput.setParentTransform(transform);
 }

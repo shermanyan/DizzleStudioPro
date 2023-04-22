@@ -8,6 +8,7 @@
 #include "SpriteImage.h"
 #include "BasePanel.h"
 #include "TextInput.h"
+#include "SongInput.h"
 
 class StaticVisualizerPanel : public BasePanel {
 private:
@@ -15,6 +16,8 @@ private:
     SpriteImage playPauseButton;
     sf::Texture texture;
     TextInput songNameInput;
+
+    SongInput songinput;
 public:
 
     StaticVisualizerPanel();
