@@ -90,3 +90,7 @@
 1638	1675	1682205935851811105	DizzleStudioPro	5c7f9c9e907d0ea
 2	375	1682206220083020906	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/SongInput.cpp.o	372d09a42c8c11ab
 375	434	1682206220142761863	DizzleStudioPro	5c7f9c9e907d0ea
+3	341	1682206341999013374	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp.o	2f5980e2972f1db
+3	379	1682206342036799109	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp.o	7a8aebfe797b33ec
+3	390	1682206342048288029	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/AudioRecording/AudioVisualizer.cpp.o	fc984c2226eb61ff
+390	433	1682206342092987466	DizzleStudioPro	5c7f9c9e907d0ea
