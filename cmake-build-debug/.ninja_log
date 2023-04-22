@@ -90,3 +90,15 @@
 350	399	1682139184154046186	DizzleStudioPro	8b788c92fa571ea2
 4	380	1682139231745067974	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o	985ddbd91538f752
 380	427	1682139231794273009	DizzleStudioPro	8b788c92fa571ea2
+4	353	1682139289602064255	CMakeFiles/DizzleStudioPro.dir/App/Resources/Textures.cpp.o	68fa785dd7a4196e
+5	395	1682139289644553060	CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Components/TextInput/TextBox.cpp.o	68256af78f157282
+5	397	1682139289647669528	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Track/Layer.cpp.o	d27f302d693dc76
+5	415	1682139289664909001	CMakeFiles/DizzleStudioPro.dir/App/StudioMain.cpp.o	3ea9c02bf9bc843
+5	422	1682139289671610564	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.cpp.o	42e6ca494c2c08d0
+4	444	1682139289693520969	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel/LayersPanel.cpp.o	537a78705dadd395
+353	726	1682139289974844715	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/AudioRecording/AudioVisualizer.cpp.o	fec84de22a559f53
+422	754	1682139289996276201	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp.o	9a354fd35128c64a
+398	759	1682139290009002743	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp.o	8c5321b642c86298
+395	769	1682139290018221856	CMakeFiles/DizzleStudioPro.dir/DizzleStudioProApp_main.cpp.o	4ed99bc9262db134
+415	773	1682139290023038455	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp.o	985ddbd91538f752
+773	823	1682139290074694831	DizzleStudioPro	8b788c92fa571ea2
