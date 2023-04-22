@@ -6,7 +6,7 @@
 #define DIZZLESTUDIOPRO_OCTAVEKEYS_H
 
 #include "Key.h"
-#include "KeyEnum.h"
+#include "UIComponents/Instruments/SoundKeys.h"
 #include <map>
 
 class OctaveKeys: public AppComponent {
@@ -18,8 +18,8 @@ private:
     sf::Vector2<sf::Color> keyColors;
     float spacing = 10;
 
-    std::map<KeyEnum,Key> whiteKeys;
-    std::map<KeyEnum,Key> blackKeys;
+    std::map<SoundKeys,Key> whiteKeys;
+    std::map<SoundKeys,Key> blackKeys;
 
     //refresh key positions
     void refresh();
@@ -66,7 +66,7 @@ public:
 
     float getKeySpacing() const;
 
-    KeyEnum getKeyPress(const sf::RenderWindow& window) const;
+    SoundKeys getKeyPress(const sf::RenderWindow& window) const;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;

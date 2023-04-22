@@ -106,9 +106,9 @@ void OctaveKeys::setupKeys() {
 
 void OctaveKeys::setUpWhiteKeys() {
     for (int i = 0; i < 7; ++i) {
-        whiteKeys[KeyEnum(C + i)] = {};
-        whiteKeys.at(KeyEnum(C + i)).setRadius({10,10,10,10});
-        whiteKeys.at(KeyEnum(C + i)).setKeyType(KeyEnum(C + i));
+        whiteKeys[SoundKeys(C + i)] = {};
+        whiteKeys.at(SoundKeys(C + i)).setRadius({10, 10, 10, 10});
+        whiteKeys.at(SoundKeys(C + i)).setKeyType(SoundKeys(C + i));
 
     }
 }
@@ -116,9 +116,9 @@ void OctaveKeys::setUpWhiteKeys() {
 void OctaveKeys::setupBlackKeys() {
 
     for (int i = 0; i < 5; ++i) {
-        blackKeys[KeyEnum(Cs + i)] = {};
-        blackKeys.at(KeyEnum(Cs + i)).setRadius({5,5,10,10});
-        blackKeys.at(KeyEnum(Cs + i)).setKeyType(KeyEnum(Cs + i));
+        blackKeys[SoundKeys(Cs + i)] = {};
+        blackKeys.at(SoundKeys(Cs + i)).setRadius({5, 5, 10, 10});
+        blackKeys.at(SoundKeys(Cs + i)).setKeyType(SoundKeys(Cs + i));
     }
 }
 
@@ -147,8 +147,8 @@ void OctaveKeys::positionKeys() {
 
 //    position black keys
     for (int i = 0; i < blackKeys.size() ; ++i) {
-        auto whiteKeyIndex = KeyEnum(C+ (i > 1? i+2: i+1));
-        auto blackKeyIndex = KeyEnum(Cs + i);
+        auto whiteKeyIndex = SoundKeys(C + (i > 1 ? i + 2 : i + 1));
+        auto blackKeyIndex = SoundKeys(Cs + i);
 
         Position::alignTop(blackKeys[blackKeyIndex],whiteKeys[whiteKeyIndex]);
         Position::alignLeft(blackKeys[blackKeyIndex],whiteKeys[whiteKeyIndex]);
@@ -181,8 +181,8 @@ float OctaveKeys::getKeySpacing() const {
     return spacing;
 }
 
-KeyEnum OctaveKeys::getKeyPress(const sf::RenderWindow& window) const {
-    KeyEnum keyPressed = NULL_KEY;
+SoundKeys OctaveKeys::getKeyPress(const sf::RenderWindow& window) const {
+    SoundKeys keyPressed = NULL_KEY;
 
     for (auto &k: whiteKeys) {
         if (k.second.isClick(window))

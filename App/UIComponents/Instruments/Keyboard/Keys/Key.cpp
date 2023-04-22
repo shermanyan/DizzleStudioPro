@@ -78,7 +78,7 @@ bool Key::isClick(const sf::RenderWindow &window) const {
     return (MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
 }
 
-void Key::setKeyType(KeyEnum type) {
+void Key::setKeyType(SoundKeys type) {
     keyType = type;
 
 }

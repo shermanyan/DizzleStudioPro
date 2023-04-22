@@ -18,7 +18,7 @@ protected:
 public:
     KeyboardPanel();
 
-    std::pair<int, KeyEnum> getKeyPressed(const sf::RenderWindow& window) const;
+    std::pair<int, SoundKeys> getKeyPressed(const sf::RenderWindow& window) const;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 

@@ -35,7 +35,7 @@ public:
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
 
-    std::pair<int, KeyEnum> getKeyPressed(const sf::RenderWindow& window) const;
+    std::pair<int, SoundKeys> getKeyPressed(const sf::RenderWindow& window) const;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 

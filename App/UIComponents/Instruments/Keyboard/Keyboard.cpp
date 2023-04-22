@@ -98,10 +98,10 @@ void Keyboard::reposition() {
 
 }
 
-std::pair<int, KeyEnum> Keyboard::getKeyPressed(const sf::RenderWindow &window) const {
+std::pair<int, SoundKeys> Keyboard::getKeyPressed(const sf::RenderWindow &window) const {
 
-    std::pair<int, KeyEnum> keyPressed = {1, NULL_KEY};
-    KeyEnum key;
+    std::pair<int, SoundKeys> keyPressed = {1, NULL_KEY};
+    SoundKeys key;
 
     for (int i = 0; i< keyboard.size(); i++) {
         key = keyboard[i].getKeyPress(window);

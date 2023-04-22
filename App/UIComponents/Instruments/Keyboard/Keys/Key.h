@@ -10,7 +10,7 @@
 #include "Squircle.h"
 #include "Position.h"
 #include "MouseEvents.h"
-#include "KeyEnum.h"
+#include "UIComponents/Instruments/SoundKeys.h"
 
 class Key: public AppComponent {
 private:
@@ -19,7 +19,7 @@ private:
     Squircle key;
     sf::Color color;
 
-    KeyEnum keyType = NULL_KEY;
+    SoundKeys keyType = NULL_KEY;
 
 public:
     //default constructor
@@ -39,7 +39,7 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
-    void setKeyType(KeyEnum type);
+    void setKeyType(SoundKeys type);
 
     bool isClick(const sf::RenderWindow& window) const;
 

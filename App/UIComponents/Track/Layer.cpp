@@ -17,7 +17,7 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     if (event.MouseButtonPressed && instrumentPanel->getActivePanel() ==  KEYBOARD) {
         auto *panel = dynamic_cast<KeyboardPanel *>(instrumentPanel->getPanel());
-        KeyEnum num = panel->getKeyPressed(window).second;
+        SoundKeys num = panel->getKeyPressed(window).second;
         if (num != NULL_KEY)
             std::cout << num << " ";
 
