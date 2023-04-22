@@ -129,7 +129,3 @@ void AudioVisualizer::reposition() {
 
 
 
-
-
-
-

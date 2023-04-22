@@ -27,14 +27,13 @@ void DynamicInstrumentPanel::draw(sf::RenderTarget &target, sf::RenderStates sta
     target.draw(*currentPanel,states);
 }
 
-void DynamicInstrumentPanel::setActivePanel(PanelEnum panel) {
+void DynamicInstrumentPanel::setActivePanel(PanelTypeEnum panel) {
     if (panels.count(panel) == 0) {
         loadPanel(panel);
         setChildrenTransform(getTransform());
     }
-
+    currentPanelEnum = panel;
     currentPanel = panels.at(panel);
-
 }
 
 DynamicInstrumentPanel::~DynamicInstrumentPanel() {
@@ -44,7 +43,7 @@ DynamicInstrumentPanel::~DynamicInstrumentPanel() {
 }
 
 
-void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
+void DynamicInstrumentPanel::loadPanel(PanelTypeEnum panel) {
     switch (panel) {
 
         case KEYBOARD: {
@@ -56,11 +55,11 @@ void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
             break;
         }
         case AUDIO: {
-            panels[AUDIO]= new AudioRecordingPanel;
+            panels[AUDIO] = new StaticVisualizerPanel;
             break;
         }
         case VOCAL: {
-            panels[VOCAL]= new StaticVisualizerPanel;
+            panels[VOCAL] = new AudioRecordingPanel;
             break;
         }
         case EMPTY_PANEL: {
@@ -76,7 +75,14 @@ void DynamicInstrumentPanel::loadPanel(PanelEnum panel) {
 void DynamicInstrumentPanel::setChildrenTransform(const sf::Transform &transform) {
     for(auto& p :panels)
         p.second->setParentTransform(transform);
+}
 
+PanelTypeEnum DynamicInstrumentPanel::getActivePanel() const {
+    return currentPanelEnum;
+}
+
+BasePanel* DynamicInstrumentPanel::getPanel() const {
+    return currentPanel;
 }
 
 //void DynamicInstrumentPanel::setPosition(const sf::Vector2f &pos) {

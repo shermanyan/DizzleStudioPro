@@ -23,6 +23,16 @@ std::string Textures::getPath(TextureEnums texture) {
             return "App/Resources/Textueres/PauseButtonRed.png";
         case MIC_BUTTON_RED:
             return "App/Resources/Textueres/MicButtonRed.png";
+        case KEYBOARD_LABEL:
+            return "App/Resources/Textures/Keyboard_Label.png";
+        case DRUMPAD_LABEL:
+            return "App/Resources/Textures/Drumpad_Label.png";
+        case AUDIO_LABEL:
+            return "App/Resources/Textures/Audio_Label.png";
+        case VOCAL_LABEL:
+            return "App/Resources/Textures/Vocals_Label.png";
+        case EMPTY_LABEL:
+            return "App/Resources/Textures/Empty_Label.png";
         case LAST_TEX:
             break;
     }

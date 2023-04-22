@@ -16,6 +16,8 @@ AudioRecordingPanel::AudioRecordingPanel() : liveRecording(100,2200){
     button.setPosition(button.getPosition().x - 600 ,button.getPosition().y);
 
     Position::center(liveRecording,*this);
+    liveRecording.setPosition(liveRecording.getPosition().x - 200 ,liveRecording.getPosition().y);
+
 }
 
 void AudioRecordingPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -68,7 +70,3 @@ void AudioRecordingPanel::draw(sf::RenderTarget &target, sf::RenderStates states
 void AudioRecordingPanel::setChildrenTransform(const sf::Transform &transform) {
     liveRecording.setParentTransform(transform);
 }
-
-
-
-

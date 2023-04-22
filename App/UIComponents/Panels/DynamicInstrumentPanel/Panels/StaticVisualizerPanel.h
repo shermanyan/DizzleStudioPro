@@ -34,5 +34,4 @@ protected:
 
 
 
-
-#endif //DIZZLESTUDIOPRO_STATICVISUALIZERPANEL_H
+#endif
