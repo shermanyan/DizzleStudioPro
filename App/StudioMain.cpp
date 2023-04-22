@@ -30,7 +30,6 @@ StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,3
 
     projectTitle.setPosition(10,10);
     projectTitle.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
-    projectTitle.setTextBoxSize({600,60});
     projectTitle.toggleBox();
     projectTitle.setString("Untitled");
 

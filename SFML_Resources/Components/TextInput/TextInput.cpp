@@ -45,7 +45,6 @@ void TextInput::colorWord(MultiText *&text, const std::string& target, const sf:
 }
 
 void TextInput::update(const sf::RenderWindow &window) {
-
     textBox.update(window);
 }
 
