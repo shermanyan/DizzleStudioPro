@@ -30,7 +30,7 @@ SongInput::SongInput() {
 void SongInput::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     songInput.eventHandler(window,event);
 
-    if(MouseEvents::isHover(getCombinedTransform().transformRect(loadButton.getGlobalBounds()), window) )
+    if(MouseEvents::isHover((loadButton.getGlobalBounds()), window) )
     {
         printf("CLICKED");
     }
@@ -50,7 +50,6 @@ void SongInput::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
 void SongInput::setParentTransform(const sf::Transform &transform) {
     songInput.setParentTransform(transform);
-
 }
 
 
