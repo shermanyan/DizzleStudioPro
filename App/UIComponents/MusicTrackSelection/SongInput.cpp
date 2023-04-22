@@ -48,7 +48,7 @@ void SongInput::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(text,states);
 }
 
-void SongInput::setParentTransform(const sf::Transform &transform) {
+void SongInput::setChildrenTransform(const sf::Transform &transform) {
     songInput.setParentTransform(transform);
 
 }
