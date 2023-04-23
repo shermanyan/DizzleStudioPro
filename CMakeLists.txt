@@ -26,11 +26,10 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
-
+include_directories(App/Resources/Sounds/TestSounds)
 add_executable(DizzleStudioPro
         App/Resources/Sounds/Sounds.cpp
         App/Resources/Sounds/Sounds.h
-        App/Resources/Sounds/SoundsEnum.h
         App/Resources/Textures.cpp
         App/Resources/Textures.h
         App/Resources/TexturesEnum.h
@@ -129,6 +128,8 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/Clock.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
+        App/UIComponents/MusicTrackSelection/SongInput.cpp
+        App/UIComponents/MusicTrackSelection/SongInput.h
 #        AudioVisualizerTester.cpp
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
