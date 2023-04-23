@@ -35,6 +35,7 @@ LayersPanel::LayersPanel() {
     seek.setPosition(420,25);
     seek.setRadius(5);
 
+    timeBar.setDuration(seek.getDuration());
     Position::alignRight(timeBar,layers[0]);
     Position::top(timeBar,layers[0],10);
 
@@ -54,14 +55,25 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
     seek.eventHandler(window,event);
     timeBar.eventHandler(window,event);
 
+
     for (auto&l:layers) {
         l.eventHandler(window,event);
 
-        if (event.MouseButtonPressed && MouseEvents::isClick(getTransform().transformRect(l.getGlobalBounds()), window)) {
+        if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getTransform().transformRect(l.getGlobalBounds()), window)) {
             instrumentPanel->setActivePanel(l.getTrackType());
         }
     }
 
+    if(event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::RBracket)) {
+        int duration =  timeBar.getDuration() + 1;
+        timeBar.setDuration(duration);
+        seek.setDuration(duration);
+    }
+    else if (event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::LBracket)) {
+        int duration =  timeBar.getDuration() -1;
+        timeBar.setDuration(duration);
+        seek.setDuration(duration);
+    }
 
 }
 

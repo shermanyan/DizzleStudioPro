@@ -22,7 +22,7 @@ Keyboard::Keyboard(unsigned int numOctaves, const sf::Vector2f &size) {
 void Keyboard::setupKeyboard() {
     for(int i = 0; i < numOctaves; i++) {
         keyboard.emplace_back();
-        keyboard.back().setOctave(i+1);
+        keyboard.back().setOctave(i+3);
     }
 
 }

@@ -12,7 +12,7 @@
 class SeekBar: public AppComponent{
 private:
     Squircle bar;
-    float duration = 0;
+    int duration = 0;
     float velocity = 0;
     float length = 0;
     Clock clock;
@@ -32,7 +32,9 @@ public:
     void pause();
     void toggleLoop();
 
-    void setDuration(float duration);
+    void setDuration(int duration);
+    int getDuration() const;
+
     void setLength(float length);
 
     float getElapsedTime();
