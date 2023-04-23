@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 29,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 131,
+				"line" : 134,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 132,
+				"line" : 135,
 				"parent" : 0
 			},
 			{
@@ -209,6 +209,12 @@
 				"file" : 0,
 				"line" : 28,
 				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
 			}
 		]
 	},
@@ -218,7 +224,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk"
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -228,95 +234,99 @@
 			[
 				{
 					"backtrace" : 9,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/Resources"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources"
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/DrumPad"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/Keyboard"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/DrumPad"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/Keyboard/Keys"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/Keyboard"
 				},
 				{
 					"backtrace" : 14,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Instruments/Keyboard/Keys"
 				},
 				{
 					"backtrace" : 15,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Base"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel"
 				},
 				{
 					"backtrace" : 16,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Panels"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Base"
 				},
 				{
 					"backtrace" : 17,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/LayersPanel"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Panels"
 				},
 				{
 					"backtrace" : 18,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Track"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Panels/LayersPanel"
 				},
 				{
 					"backtrace" : 19,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/Track"
 				},
 				{
 					"backtrace" : 20,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/TextInput"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer"
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/Typing"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/TextInput"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Shapes"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Components/Typing"
 				},
 				{
 					"backtrace" : 23,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Shapes"
 				},
 				{
 					"backtrace" : 24,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/App"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools"
 				},
 				{
 					"backtrace" : 25,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/Enums"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/App"
 				},
 				{
 					"backtrace" : 26,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/Helpers"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Enums"
 				},
 				{
 					"backtrace" : 27,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/History"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/Helpers"
 				},
 				{
 					"backtrace" : 28,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/Resources/Sounds"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History"
 				},
 				{
 					"backtrace" : 29,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/AudioRecording"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Sounds"
 				},
 				{
 					"backtrace" : 30,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/MusicTrackSelection"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/AudioRecording"
 				},
 				{
 					"backtrace" : 31,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/Resources/Textueres"
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/UIComponents/MusicTrackSelection"
+				},
+				{
+					"backtrace" : 32,
+					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/App/Resources/Textueres"
 				},
 				{
 					"backtrace" : 2,
@@ -377,9 +387,10 @@
 				88,
 				90,
 				93,
-				94,
+				95,
 				96,
-				98
+				97,
+				99
 			]
 		}
 	],
@@ -395,10 +406,6 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-Wl,-rpath,/opt/homebrew/lib",
-				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
@@ -478,9 +485,10 @@
 				88,
 				90,
 				93,
-				94,
+				95,
 				96,
-				98
+				97,
+				99
 			]
 		},
 		{
@@ -539,9 +547,9 @@
 				89,
 				91,
 				92,
-				95,
-				97,
-				99
+				94,
+				98,
+				100
 			]
 		}
 	],
@@ -1061,14 +1069,20 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "App/UIComponents/Instruments/SoundKeys.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DizzleStudioProApp_main.cpp",
+			"path" : "App/Resources/Sounds/Sounds.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "App/UIComponents/Instruments/SoundKeys.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "DizzleStudioProApp_main.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
