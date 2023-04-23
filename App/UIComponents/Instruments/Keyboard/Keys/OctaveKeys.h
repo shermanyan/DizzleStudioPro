@@ -18,8 +18,8 @@ private:
     sf::Vector2<sf::Color> keyColors;
     float spacing = 10;
 
-    std::map<SoundKeys,Key> whiteKeys;
-    std::map<SoundKeys,Key> blackKeys;
+    std::vector<Key> whiteKeys;
+    std::vector<Key> blackKeys;
 
     //refresh key positions
     void refresh();
@@ -61,12 +61,13 @@ public:
     //Set fill color for white key
     void setWhiteKeyColor(const sf::Color& color);
 
+    void setOctave(unsigned int octave);
     //Set spacing between keys
     void setKeySpacing(float spacing);
 
     float getKeySpacing() const;
 
-    SoundKeys getKeyPress(const sf::RenderWindow& window) const;
+    SoundKeyPair getKeyPress(const sf::RenderWindow& window) const;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
