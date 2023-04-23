@@ -30,20 +30,10 @@ void StaticAudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Eve
         sound.stop();
         isPlaying = false;
         for (auto& bar : visualizerBars) {
-            bar.setFillColor(sf::Color::White);
+            bar.setFillColor({121,121,121});
+
         }
     }
-
-
-
-    if(event.key.code == sf::Keyboard::P) {
-        sound.stop();
-        isPlaying = false;
-        for (auto& bar : visualizerBars) {
-            bar.setFillColor(sf::Color::White);
-        }
-    }
-
 }
 
 void StaticAudioVisualizer::update(const sf::RenderWindow &window) {
@@ -63,9 +53,9 @@ void StaticAudioVisualizer::updateColors() {
 
         float barProgress = static_cast<float>(i) / visualizerBars.size();
         if (barProgress <= progress) {
-            visualizerBars[i].setFillColor(sf::Color::Green);
+            visualizerBars[i].setFillColor({14,122,40});
         } else {
-            visualizerBars[i].setFillColor(sf::Color::White);
+            visualizerBars[i].setFillColor({121,121,121});
         }
     }
 }
@@ -102,6 +92,7 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
 
         visualizerBars[i].setRadius(5);
         visualizerBars[i].setSize(sf::Vector2f(barWidth, clampedBarHeight));
+        visualizerBars[i].setFillColor({121,121,121});
     }
 
     reposition();
@@ -114,17 +105,11 @@ sf::SoundBuffer StaticAudioVisualizer::getSong() {
 void StaticAudioVisualizer::reposition() {
 
     visualizerBars.front().setPosition(0,height /2 - visualizerBars.front().getGlobalBounds().height/2);
-//    float spacing = 15.0f;
+//    float  = 15.0f;
     for (int i = 1; i < visualizerBars.size(); ++i) {
         Position::center(visualizerBars[i], visualizerBars[i-1]);
         Position::right(visualizerBars[i], visualizerBars[i - 1], spacing);
     }
-
-    //    for (unsigned int i = 0; i < visualizerBars.size(); ++i) {
-//        float barX = pos.x + i * (visualizerBars[i].getSize().x + spacing);
-//        float barY = pos.y - visualizerBars[i].getSize().y / 2;
-//        visualizerBars[i].setPosition(barX, barY);
-//    }
 
 }
 
