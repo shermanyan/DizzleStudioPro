@@ -17,10 +17,14 @@ StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,3
 
     projectTitle.setPosition(10,10);
     projectTitle.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
+    projectTitle.setLabelFont(Fonts::getFont(NUNITO_BOLD));
+    projectTitle.setLabelString("Untitled");
+    projectTitle.setLabelCharacterSize(45);
+    projectTitle.setLabelPosition(TextInput::INSIDE);
     projectTitle.setTextBoxSize({600,60});
     projectTitle.setCharacterFillColor({185, 185, 185});
+    projectTitle.setLabelFillColor({185, 185, 185});
     projectTitle.toggleBox();
-    projectTitle.setString("Untitled");
 
 
     dynamicInstrumentPanel.setPosition(20,700);

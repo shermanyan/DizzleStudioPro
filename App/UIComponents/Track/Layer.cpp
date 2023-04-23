@@ -24,7 +24,6 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
             SoundKeys num = panel->getKeyPressed(window).second;
             if (num != NULL_KEY)
                 std::cout << num << " ";
-
         }
     }
 

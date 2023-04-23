@@ -10,16 +10,24 @@
 #include "TextboxLabel.h"
 
 class TextInput: public AppComponent{
+public:
+    enum LabelPosition{
+        RIGHT, INSIDE
+    };
 private:
     TextBox textBox;
     TextboxLabel label;
+    LabelPosition position = RIGHT;
+
     bool isOperator(char c);
+    bool empty = true;
 
     void colorWord(MultiText *&text, const std::string &target, const sf::Color &color);
 
 public:
     TextInput();
     TextInput(const std::string& label);
+
     std::string getString();
     void setLabelString(const std::string& label);
     void setLabelCharacterSize(unsigned int size);
@@ -33,6 +41,9 @@ public:
     void setTextBoxOutlineColor(const sf::Color& color);
     void toggleBox();
     void setString(const std::string& string);
+
+    void setLabelPosition(LabelPosition position);
+
 
 private:
     void setChildrenTransform(const sf::Transform &transform) override;

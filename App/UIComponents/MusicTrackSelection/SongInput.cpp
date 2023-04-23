@@ -5,12 +5,17 @@
 #include "SongInput.h"
 
 SongInput::SongInput() {
-    songInput.setPosition(100, 165);
     songInput.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
     songInput.toggleBox();
-    songInput.setLabelCharacterSize(30);
     songInput.setTextBoxSize({400,40});
-    songInput.setString("Enter File Name");
+    songInput.setLabelFont(Fonts::getFont(NUNITO_BOLD));
+    songInput.setLabelPosition(TextInput::INSIDE);
+    songInput.setLabelCharacterSize(30);
+    songInput.setLabelString("Enter File Name");
+    songInput.setPosition(100, 165);
+    songInput.setCharacterFillColor({185, 185, 185});
+    songInput.setLabelFillColor({185, 185, 185});
+
 
     loadButton.setRadius(9);
     loadButton.setSize({105,33});
