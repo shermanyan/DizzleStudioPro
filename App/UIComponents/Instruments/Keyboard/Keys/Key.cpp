@@ -78,13 +78,13 @@ void Key::setRadius(const float (&radii)[4]) {
 }
 
 bool Key::isClick(const sf::RenderWindow &window) const {
-    return (MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
+    return (sf::Mouse::isButtonPressed(sf::Mouse::Left) && MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
 }
 
-void Key::setKeyType(SoundKeys type) {
-    keyType = type;
-
+SoundKeyPair Key::getKeyType() const{
+    return {octave,keyEnum};
 }
+
 
 
 
