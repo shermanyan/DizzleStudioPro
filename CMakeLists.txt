@@ -5,9 +5,13 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(App)
 include_directories(App/Resources)
+include_directories(App/Resources/Sounds)
+include_directories(App/UIComponents/AudioRecording)
+include_directories(App/UIComponents/Instruments)
 include_directories(App/UIComponents/Instruments/DrumPad)
 include_directories(App/UIComponents/Instruments/Keyboard)
 include_directories(App/UIComponents/Instruments/Keyboard/Keys)
+include_directories(App/UIComponents/MusicTrackSelection)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Base)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Panels)
@@ -22,14 +26,16 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
-include_directories(App/Resources/Sounds)
-include_directories(App/UIComponents/AudioRecording)
-include_directories(App/UIComponents/MusicTrackSelection)
-include_directories(App/Resources/Textueres)
+
 add_executable(DizzleStudioPro
+        App/Resources/Sounds/Sounds.cpp
+        App/Resources/Sounds/Sounds.h
+        App/Resources/Sounds/SoundsEnum.h
         App/Resources/Textures.cpp
         App/Resources/Textures.h
         App/Resources/TexturesEnum.h
+        App/UIComponents/AudioRecording/AudioVisualizer.cpp
+        App/UIComponents/AudioRecording/AudioVisualizer.h
         App/UIComponents/Instruments/DrumPad/DrumPad.cpp
         App/UIComponents/Instruments/DrumPad/DrumPad.h
         App/UIComponents/Instruments/DrumPad/Pads.cpp
@@ -40,27 +46,37 @@ add_executable(DizzleStudioPro
         App/UIComponents/Instruments/Keyboard/Keys/OctaveKeys.h
         App/UIComponents/Instruments/Keyboard/Keyboard.cpp
         App/UIComponents/Instruments/Keyboard/Keyboard.h
+        App/UIComponents/Instruments/Keyboard/SoundKeyPair.h
+        App/UIComponents/Instruments/SoundKeys.h
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
+        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelTypeEnum.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.h
         App/UIComponents/Panels/LayersPanel/LayersPanel.cpp
         App/UIComponents/Panels/LayersPanel/LayersPanel.h
         App/UIComponents/Track/DrawableAudioNode.cpp
         App/UIComponents/Track/DrawableAudioNode.h
-        App/UIComponents/Track/TrackLabel.cpp
-        App/UIComponents/Track/TrackLabel.h
         App/UIComponents/Track/Layer.cpp
         App/UIComponents/Track/Layer.h
         App/UIComponents/Track/SeekBar.cpp
         App/UIComponents/Track/SeekBar.h
+        App/UIComponents/Track/TimeBar.cpp
+        App/UIComponents/Track/TimeBar.h
         App/UIComponents/Track/Track.cpp
         App/UIComponents/Track/Track.h
+        App/UIComponents/Track/TrackLabel.cpp
+        App/UIComponents/Track/TrackLabel.h
         App/AudioNode.cpp
         App/AudioNode.h
         App/StudioMain.cpp
@@ -109,23 +125,18 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/History/Snapshot.cpp
         SFML_Resources/Tools/History/Snapshot.h
         SFML_Resources/Tools/History/SnapshotInterface.h
+        SFML_Resources/Tools/Clock.cpp
+        SFML_Resources/Tools/Clock.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
-        App/UIComponents/AudioRecording/AudioVisualizer.h
-        App/UIComponents/AudioRecording/AudioVisualizer.cpp
-        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
-        App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h
-        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp
-        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h
-        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp
-        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h
-#        LiveVisualizerTester.cpp
+#        AudioVisualizerTester.cpp
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
+#        LiveVisualizerTester.cpp
 #        RecorderTester.cpp
 #        TrackPrototypeTester.cpp
-        App/UIComponents/Instruments/SoundKeys.h SFML_Resources/Tools/Clock.cpp SFML_Resources/Tools/Clock.h App/UIComponents/Track/TimeBar.cpp App/UIComponents/Track/TimeBar.h)
+        )
+
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
-

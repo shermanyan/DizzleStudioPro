@@ -10,9 +10,11 @@
 #include "Squircle.h"
 #include "Position.h"
 #include "MouseEvents.h"
-#include "UIComponents/Instruments/SoundKeys.h"
+#include "SoundKeys.h"
+#include "SoundKeyPair.h"
+#include <SFML/Audio.hpp>
 
-class Key: public AppComponent {
+class Key: public AppComponent, public SoundKeyPair {
 private:
     sf::FloatRect clickableRange;
 
@@ -20,6 +22,7 @@ private:
     sf::Color color;
 
     SoundKeys keyType = NULL_KEY;
+    sf::Sound sound;
 
 public:
     //default constructor
@@ -39,7 +42,6 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
-    void setKeyType(SoundKeys type);
 
     bool isClick(const sf::RenderWindow& window) const;
 
@@ -49,6 +51,8 @@ public:
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+
+    SoundKeyPair getKeyType() const;
 };
 
 

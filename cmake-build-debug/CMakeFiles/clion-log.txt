@@ -1,5 +1,14 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/shermanyan/CLionProjects/DizzleStudioPro -B /Users/shermanyan/CLionProjects/DizzleStudioPro/cmake-build-debug
 -- Found SFML 2.5.1 in /opt/homebrew/lib/cmake/SFML
 -- Configuring done
--- Generating done
--- Build files have been written to: /Users/shermanyan/CLionProjects/DizzleStudioPro/cmake-build-debug
+CMake Error at CMakeLists.txt:30 (add_executable):
+  Cannot find source file:
+
+    App/Resources/Sounds/SoundsEnum.h
+
+
+CMake Error at CMakeLists.txt:30 (add_executable):
+  No SOURCES given to target: DizzleStudioPro
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
