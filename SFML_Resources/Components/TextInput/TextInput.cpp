@@ -137,3 +137,10 @@ void TextInput::setChildrenTransform(const sf::Transform &transform) {
     textBox.setParentTransform(transform);
 }
 
+std::string TextInput::getString() {
+    MultiText *text = textBox.getText();
+
+    std::string s = text->getString();
+    return s;
+}
+

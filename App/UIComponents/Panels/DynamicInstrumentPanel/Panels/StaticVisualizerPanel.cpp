@@ -5,6 +5,7 @@
 #include "StaticVisualizerPanel.h"
 #include "Textures.h"
 #include "MouseEvents.h"
+#include <iostream>
 
 StaticVisualizerPanel::StaticVisualizerPanel()
 : visualizer("Kenderick.wav", {1200,900}) {
@@ -23,6 +24,13 @@ StaticVisualizerPanel::StaticVisualizerPanel()
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
     songinput.eventHandler(window, event);
+
+    if (MouseEvents::isClick(getCombinedTransform().transformRect(songinput.loadButton.getGlobalBounds()),window))
+    {
+       visualizer.loadVisualizer(songinput.getSong());
+        playPauseButton.setTexture(Textures::getTexture(PLAY_BUTTON));
+
+    }
 
     if(MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window) ){
         visualizer.eventHandler(window,event);

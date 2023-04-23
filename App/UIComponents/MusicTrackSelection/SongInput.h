@@ -12,12 +12,16 @@
 class SongInput : public BasePanel {
 private:
     TextInput songInput;
-    Squircle loadButton;
     sf::Text text;
+    Squircle inner;
+    Squircle outer;
 
     void setChildrenTransform(const sf::Transform &transform) override;
 
 public:
+    Squircle loadButton;
+
+    std::string getSong();
 
     SongInput();
 
@@ -26,9 +30,6 @@ public:
     void update(const sf::RenderWindow &window) override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-
-    void init();
-
 
 };
 

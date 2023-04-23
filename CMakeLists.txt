@@ -119,6 +119,8 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h
+        App/UIComponents/MusicTrackSelection/SongInput.h
+        App/UIComponents/MusicTrackSelection/SongInput.cpp
 #        LiveVisualizerTester.cpp
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp

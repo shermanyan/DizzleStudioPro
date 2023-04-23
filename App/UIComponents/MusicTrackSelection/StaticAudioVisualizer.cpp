@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "StaticAudioVisualizer.h"
+#include "MouseEvents.h"
 
 StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size)
         : width(size.x), height(size.y) {
@@ -32,6 +33,8 @@ void StaticAudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Eve
             bar.setFillColor(sf::Color::White);
         }
     }
+
+
 
     if(event.key.code == sf::Keyboard::P) {
         sound.stop();

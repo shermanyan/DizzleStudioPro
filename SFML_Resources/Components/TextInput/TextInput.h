@@ -20,7 +20,7 @@ private:
 public:
     TextInput();
     TextInput(const std::string& label);
-
+    std::string getString();
     void setLabelString(const std::string& label);
     void setLabelCharacterSize(unsigned int size);
     void setLabelFont(sf::Font& font);
