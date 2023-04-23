@@ -37,13 +37,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 134,
+				"line" : 141,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 135,
+				"line" : 142,
 				"parent" : 0
 			},
 			{
@@ -209,12 +209,6 @@
 				"file" : 0,
 				"line" : 28,
 				"parent" : 0
-			},
-			{
-				"command" : 5,
-				"file" : 0,
-				"line" : 29,
-				"parent" : 0
 			}
 		]
 	},
@@ -242,91 +236,87 @@
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments"
-				},
-				{
-					"backtrace" : 12,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/DrumPad"
-				},
-				{
-					"backtrace" : 13,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/Keyboard"
-				},
-				{
-					"backtrace" : 14,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/Keyboard/Keys"
-				},
-				{
-					"backtrace" : 15,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel"
-				},
-				{
-					"backtrace" : 16,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Base"
-				},
-				{
-					"backtrace" : 17,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Panels"
-				},
-				{
-					"backtrace" : 18,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/LayersPanel"
-				},
-				{
-					"backtrace" : 19,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Track"
-				},
-				{
-					"backtrace" : 20,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer"
-				},
-				{
-					"backtrace" : 21,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/TextInput"
-				},
-				{
-					"backtrace" : 22,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/Typing"
-				},
-				{
-					"backtrace" : 23,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Shapes"
-				},
-				{
-					"backtrace" : 24,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools"
-				},
-				{
-					"backtrace" : 25,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/App"
-				},
-				{
-					"backtrace" : 26,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/Enums"
-				},
-				{
-					"backtrace" : 27,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/Helpers"
-				},
-				{
-					"backtrace" : 28,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/History"
-				},
-				{
-					"backtrace" : 29,
 					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/Resources/Sounds"
 				},
 				{
-					"backtrace" : 30,
+					"backtrace" : 12,
 					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/AudioRecording"
 				},
 				{
-					"backtrace" : 31,
+					"backtrace" : 13,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/DrumPad"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/Keyboard"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Instruments/Keyboard/Keys"
+				},
+				{
+					"backtrace" : 17,
 					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/MusicTrackSelection"
 				},
 				{
-					"backtrace" : 32,
-					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/Resources/Textueres"
+					"backtrace" : 18,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Base"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/DynamicInstrumentPanel/Panels"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Panels/LayersPanel"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/UIComponents/Track"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/ScrollableContainer"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/TextInput"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Components/Typing"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Shapes"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/App"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/Enums"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/Helpers"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/SFML_Resources/Tools/History"
 				},
 				{
 					"backtrace" : 2,
@@ -347,23 +337,22 @@
 			[
 				0,
 				3,
-				5,
-				7,
-				9,
-				11,
-				13,
+				6,
+				8,
+				10,
+				12,
+				14,
 				16,
-				18,
 				20,
 				22,
-				24,
-				26,
-				28,
-				30,
-				32,
-				34,
-				36,
-				38,
+				25,
+				27,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
 				41,
 				43,
 				45,
@@ -371,26 +360,26 @@
 				49,
 				51,
 				53,
-				55,
+				56,
 				58,
-				61,
+				60,
+				62,
+				64,
 				66,
 				68,
 				70,
-				72,
-				74,
+				73,
 				76,
-				79,
-				82,
+				81,
+				83,
 				85,
-				86,
-				88,
-				90,
-				93,
-				95,
-				96,
+				87,
+				89,
+				91,
+				94,
 				97,
-				99
+				99,
+				101
 			]
 		}
 	],
@@ -449,23 +438,22 @@
 			[
 				0,
 				3,
-				5,
-				7,
-				9,
-				11,
-				13,
+				6,
+				8,
+				10,
+				12,
+				14,
 				16,
-				18,
 				20,
 				22,
-				24,
-				26,
-				28,
-				30,
-				32,
-				34,
-				36,
-				38,
+				25,
+				27,
+				29,
+				31,
+				33,
+				35,
+				37,
+				39,
 				41,
 				43,
 				45,
@@ -473,26 +461,26 @@
 				49,
 				51,
 				53,
-				55,
+				56,
 				58,
-				61,
+				60,
+				62,
+				64,
 				66,
 				68,
 				70,
-				72,
-				74,
+				73,
 				76,
-				79,
-				82,
+				81,
+				83,
 				85,
-				86,
-				88,
-				90,
-				93,
-				95,
-				96,
+				87,
+				89,
+				91,
+				94,
 				97,
-				99
+				99,
+				101
 			]
 		},
 		{
@@ -502,24 +490,25 @@
 				1,
 				2,
 				4,
-				6,
-				8,
-				10,
-				12,
-				14,
+				5,
+				7,
+				9,
+				11,
+				13,
 				15,
 				17,
+				18,
 				19,
 				21,
 				23,
-				25,
-				27,
-				29,
-				31,
-				33,
-				35,
-				37,
-				39,
+				24,
+				26,
+				28,
+				30,
+				32,
+				34,
+				36,
+				38,
 				40,
 				42,
 				44,
@@ -528,38 +517,54 @@
 				50,
 				52,
 				54,
-				56,
+				55,
 				57,
 				59,
-				60,
-				62,
+				61,
 				63,
-				64,
 				65,
 				67,
 				69,
 				71,
-				73,
+				72,
+				74,
 				75,
 				77,
 				78,
+				79,
 				80,
-				81,
-				83,
+				82,
 				84,
-				87,
-				89,
-				91,
+				86,
+				88,
+				90,
 				92,
-				94,
+				93,
+				95,
+				96,
 				98,
-				100,
-				101
+				100
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/Resources/Sounds/Sounds.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/Resources/Sounds/Sounds.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/Resources/Sounds/SoundsEnum.h",
+			"sourceGroupIndex" : 1
+		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
@@ -574,6 +579,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "App/Resources/TexturesEnum.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/AudioRecording/AudioVisualizer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/AudioRecording/AudioVisualizer.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -633,6 +649,27 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "App/UIComponents/Instruments/Keyboard/SoundKeyPair.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/Instruments/SoundKeys.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.cpp",
 			"sourceGroupIndex" : 0
@@ -645,6 +682,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelTypeEnum.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -667,6 +715,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -705,17 +764,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/Track/TrackLabel.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/Track/TrackLabel.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "App/UIComponents/Track/Layer.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -738,12 +786,34 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/Track/TimeBar.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/Track/TimeBar.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "App/UIComponents/Track/Track.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "App/UIComponents/Track/Track.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/Track/TrackLabel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/Track/TrackLabel.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -1009,89 +1079,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "SFML_Resources/Tools/Fonts.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "SFML_Resources/Tools/Fonts.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/AudioRecording/AudioVisualizer.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/AudioRecording/AudioVisualizer.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/MusicTrackSelection/SongInput.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/MusicTrackSelection/SongInput.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/Instruments/SoundKeys.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/Resources/Sounds/Sounds.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "DizzleStudioProApp_main.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "SFML_Resources/Tools/Clock.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -1103,18 +1090,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/Track/TimeBar.cpp",
+			"path" : "SFML_Resources/Tools/Fonts.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "App/UIComponents/Track/TimeBar.h",
+			"path" : "SFML_Resources/Tools/Fonts.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "App/UIComponents/Instruments/Keyboard/SoundKeyPair.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "DizzleStudioProApp_main.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

@@ -10,12 +10,9 @@
 #include "Squircle.h"
 #include "Position.h"
 #include "MouseEvents.h"
-<<<<<<< Updated upstream
-#include "UIComponents/Instruments/SoundKeys.h"
-=======
+#include "SoundKeys.h"
 #include "SoundKeyPair.h"
 #include <SFML/Audio.hpp>
->>>>>>> Stashed changes
 
 class Key: public AppComponent, public SoundKeyPair {
 private:
@@ -24,11 +21,8 @@ private:
     Squircle key;
     sf::Color color;
 
-<<<<<<< Updated upstream
     SoundKeys keyType = NULL_KEY;
-=======
     sf::Sound sound;
->>>>>>> Stashed changes
 
 public:
     //default constructor

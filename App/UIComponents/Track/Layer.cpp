@@ -19,18 +19,11 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         label.eventHandler(window, event);
         track.eventHandler(window, event);
 
-        if (event.KeyPressed && label.getTrackType() == instrumentPanel->getActivePanel() && label.getTrackType() == KEYBOARD) {
+        if (event.KeyPressed && label.getTrackType() == KEYBOARD &&  instrumentPanel->getActivePanel()  == KEYBOARD) {
             auto *panel = dynamic_cast<KeyboardPanel *>(instrumentPanel->getPanel());
-<<<<<<< Updated upstream
-            SoundKeys num = panel->getKeyPressed(window).second;
-            if (num != NULL_KEY)
-                std::cout << num << " ";
-
-=======
             SoundKeyPair num = panel->getKeyPressed(window);
             if (num.keyEnum != NULL_KEY)
                 std::cout << num.octave  << ":" << num.keyEnum << " ";
->>>>>>> Stashed changes
         }
     }
 
