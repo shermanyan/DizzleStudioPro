@@ -8,6 +8,9 @@ Layer::Layer() {
     setState(SELECTED,true);
     Position::right(track,label,10);
 
+    dropDownMenu.setSize({400,400});
+    dropDownMenu.setPosition(label.getPosition().x - 7, label.getPosition().y + 110);
+
 }
 Layer::Layer(PanelTypeEnum panelType): Layer() {
     label.setTrack(panelType);
@@ -37,10 +40,10 @@ void Layer::update(const sf::RenderWindow &window) {
 }
 
 void Layer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-
     states.transform *= getTransform();
     target.draw(label,states);
     target.draw(track,states);
+//    target.draw(dropDownMenu,states);
 
 }
 

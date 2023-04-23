@@ -11,17 +11,19 @@
 #include "TrackLabel.h"
 #include "DynamicInstrumentPanel.h"
 #include "Track.h"
-
+#include "LayerDropDownMenu.h"
 class Layer: public AppComponent {
 private:
 
     DynamicInstrumentPanel* instrumentPanel = nullptr;
 
     TrackLabel label;
+
     Track track;
 
     sf::Color trackColor = {0,0,0};
 
+    LayerDropDownMenu dropDownMenu;
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;

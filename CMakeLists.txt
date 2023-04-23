@@ -136,7 +136,7 @@ add_executable(DizzleStudioPro
 #        LiveVisualizerTester.cpp
 #        RecorderTester.cpp
 #        TrackPrototypeTester.cpp
-        )
+        App/UIComponents/Track/LayerDropDownMenu.cpp App/UIComponents/Track/LayerDropDownMenu.h)
 
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)

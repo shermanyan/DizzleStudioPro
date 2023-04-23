@@ -14,29 +14,29 @@ void Sounds::load(SoundKeys sound) {
 std::string Sounds::getPath(SoundKeys sound) {
     switch (sound){
         case A:
-            return "";
+            return "App/Resources/Sounds/KeyBoardNotes/A3.wav";
         case C:
-            break;
+            return "";
         case D:
-            break;
+            return "";
         case E:
-            break;
+            return "";
         case F:
-            break;
+            return "";
         case G:
-            break;
+            return "";
         case B:
-            break;
+            return "";
         case Cs:
-            break;
+            return "";
         case Ds:
-            break;
+            return "";
         case Fs:
-            break;
+            return "";
         case Gs:
-            break;
+            return "";
         case As:
-            break;
+            return "";
         case NULL_KEY:
             break;
     }

@@ -61,8 +61,6 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             instrumentPanel->setActivePanel(l.getTrackType());
         }
     }
-
-
 }
 
 
@@ -80,7 +78,8 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     states.transform *= getTransform();
     target.draw(background,states);
 
-    for (auto&l:layers) {
+    for (auto it = layers.rbegin(); it != layers.rend(); ++it) {
+        auto& l = *it;
         target.draw(l,states);
     }
 

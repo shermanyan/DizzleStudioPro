@@ -12,6 +12,7 @@
 #include "PanelTypeEnum.h"
 #include "Position.h"
 #include "MouseEvents.h"
+#include "LayerDropDownMenu.h"
 
 class TrackLabel: public AppComponent{
 
@@ -22,7 +23,6 @@ private:
     sf::Color trackColor;
 
     PanelTypeEnum trackType = EMPTY_PANEL;
-
 public:
     TrackLabel();
     TrackLabel(const sf::Color& labelColor, PanelTypeEnum type = EMPTY_PANEL);
