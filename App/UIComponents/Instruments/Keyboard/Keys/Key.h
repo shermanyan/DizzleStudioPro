@@ -11,6 +11,7 @@
 #include "Position.h"
 #include "MouseEvents.h"
 #include "UIComponents/Instruments/SoundKeys.h"
+#include <SFML/Audio.hpp>
 
 class Key: public AppComponent {
 private:
@@ -20,6 +21,7 @@ private:
     sf::Color color;
 
     SoundKeys keyType = NULL_KEY;
+    sf::Sound sound;
 
 public:
     //default constructor

@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(App)
 include_directories(App/Resources)
+include_directories(App/UIComponents/Instruments)
 include_directories(App/UIComponents/Instruments/DrumPad)
 include_directories(App/UIComponents/Instruments/Keyboard)
 include_directories(App/UIComponents/Instruments/Keyboard/Keys)
@@ -121,6 +122,8 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/StaticVisualizerPanel.h
         App/UIComponents/MusicTrackSelection/SongInput.h
         App/UIComponents/MusicTrackSelection/SongInput.cpp
+        App/UIComponents/Instruments/SoundKeys.h
+        App/Resources/Sounds/Sounds.cpp
 #        LiveVisualizerTester.cpp
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp

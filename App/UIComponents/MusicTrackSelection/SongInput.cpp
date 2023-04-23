@@ -66,4 +66,8 @@ std::string SongInput::getSong() {
     return songInput.getString();
 }
 
+bool SongInput::loadButonClicked(sf::RenderWindow &window) {
+    return MouseEvents::isClick(getCombinedTransform().transformRect(loadButton.getGlobalBounds()),window);
+}
+
 

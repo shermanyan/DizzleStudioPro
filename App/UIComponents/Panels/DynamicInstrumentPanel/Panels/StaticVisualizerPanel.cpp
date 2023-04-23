@@ -22,11 +22,11 @@ StaticVisualizerPanel::StaticVisualizerPanel()
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
-    songinput.eventHandler(window, event);
+    songInput.eventHandler(window, event);
 
-    if (MouseEvents::isClick(getCombinedTransform().transformRect(songinput.loadButton.getGlobalBounds()),window))
+    if (songInput.loadButonClicked(window))
     {
-       visualizer.loadVisualizer(songinput.getSong());
+       visualizer.loadVisualizer(songInput.getSong());
         playPauseButton.setTexture(Textures::getTexture(PLAY_BUTTON));
     }
 
@@ -45,7 +45,7 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
 void StaticVisualizerPanel::update(const sf::RenderWindow &window) {
     BasePanel::update(window);
     visualizer.update(window);
-    songinput.update(window);
+    songInput.update(window);
 }
 
 void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -55,12 +55,12 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
 
     target.draw(visualizer,states);
     target.draw(playPauseButton,states);
-    target.draw(songinput,states);
+    target.draw(songInput,states);
 
 }
 
 
 void StaticVisualizerPanel::setChildrenTransform(const sf::Transform &transform) {
     visualizer.setParentTransform(transform);
-    songinput.setParentTransform(transform);
+    songInput.setParentTransform(transform);
 }

@@ -13,7 +13,6 @@ StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const 
 
 }
 
-
 void StaticAudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     states.transform *= getTransform();
     for (const auto& bar : visualizerBars) {
@@ -98,14 +97,11 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
     reposition();
 }
 
-sf::SoundBuffer StaticAudioVisualizer::getSong() {
-    return buffer;
-}
+
 
 void StaticAudioVisualizer::reposition() {
 
     visualizerBars.front().setPosition(0,height /2 - visualizerBars.front().getGlobalBounds().height/2);
-//    float  = 15.0f;
     for (int i = 1; i < visualizerBars.size(); ++i) {
         Position::center(visualizerBars[i], visualizerBars[i-1]);
         Position::right(visualizerBars[i], visualizerBars[i - 1], spacing);
