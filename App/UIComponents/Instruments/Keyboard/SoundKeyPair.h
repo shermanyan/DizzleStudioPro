@@ -26,6 +26,13 @@ public:
         this->keyEnum = keyEnum;
     }
 
+    bool operator<(const SoundKeyPair& other) const {
+        if (keyEnum == other.keyEnum) {
+            return octave < other.octave;
+        }
+        return keyEnum < other.keyEnum;
+    }
+
 };
 
 

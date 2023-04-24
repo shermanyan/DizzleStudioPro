@@ -8,16 +8,15 @@
 #include <SFML/Audio.hpp>
 #include "SoundKeys.h"
 #include <map>
+#include "SoundKeyPair.h"
 
 class Sounds {
-
 private:
-    static std::map<SoundKeys, sf::SoundBuffer> map;
-    static void load(SoundKeys texture);
-    static std::string getPath(SoundKeys texture);
+    static std::map<SoundKeyPair, sf::SoundBuffer> map;
+    static void load(const SoundKeyPair& soundPair);
+    static std::string getPath(const SoundKeyPair& soundPair);
 public:
-    static sf::SoundBuffer& getSound(SoundKeys texture);
-
+    static sf::SoundBuffer& getSound(const SoundKeyPair& soundPair);
 };
 
 

@@ -10,9 +10,8 @@
 #include "Squircle.h"
 #include "Position.h"
 #include "MouseEvents.h"
-#include "SoundKeys.h"
-#include "SoundKeyPair.h"
 #include <SFML/Audio.hpp>
+#include "Sounds.h"
 
 class Key: public AppComponent, public SoundKeyPair {
 private:
@@ -42,6 +41,7 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
+    void loadSound();
 
     bool isClick(const sf::RenderWindow& window) const;
 
