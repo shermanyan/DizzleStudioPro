@@ -16,8 +16,6 @@ private:
     float spacing = 10;
     unsigned int numOctaves = 1;
 
-    unsigned int startingOctave = 3;   //change this value to what octave you want to start at
-
     void setChildrenTransform(const sf::Transform& transform) override;
 
     void setupKeyboard();
