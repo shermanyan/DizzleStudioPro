@@ -92,3 +92,13 @@
 3	343	1682376798330751931	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/Keyboard/Keys/Key.cpp.o	c30b1b4f2f75e95a
 4	396	1682376798384237140	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/Keyboard/Keys/OctaveKeys.cpp.o	4f65f58925107f3d
 396	443	1682376798432943236	DizzleStudioPro	97a72b9c9a93ca89
+9	683	1682377052198044223	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/Keyboard/Keys/Key.cpp.o	c30b1b4f2f75e95a
+10	684	1682377052198043931	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp.o	8aaabaad19cc916
+11	684	1682377052198185598	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.cpp.o	119b8ecfde04d01e
+10	688	1682377052206890119	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/Keyboard/Keyboard.cpp.o	641ad555356b97a0
+11	706	1682377052225064786	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Track/Layer.cpp.o	d142afb32f9b8145
+12	720	1682377052238444755	CMakeFiles/DizzleStudioPro.dir/App/StudioMain.cpp.o	261866fb9583257d
+12	725	1682377052243250910	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.cpp.o	dd0701160ee0d208
+10	757	1682377052276405750	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel/LayersPanel.cpp.o	fe978ec9540f920e
+683	1045	1682377052564818459	CMakeFiles/DizzleStudioPro.dir/DizzleStudioProApp_main.cpp.o	b3b976827582b56
+1045	1105	1682377052627373106	DizzleStudioPro	97a72b9c9a93ca89
