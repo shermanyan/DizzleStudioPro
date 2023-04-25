@@ -7,7 +7,7 @@
 
 DynamicInstrumentPanel::DynamicInstrumentPanel() {
 
-    setActivePanel(EMPTY_PANEL);
+    setActivePanel(EMPTY);
 }
 
 
@@ -27,43 +27,38 @@ void DynamicInstrumentPanel::draw(sf::RenderTarget &target, sf::RenderStates sta
     target.draw(*currentPanel,states);
 }
 
-void DynamicInstrumentPanel::setActivePanel(PanelTypeEnum panel) {
+void DynamicInstrumentPanel::setActivePanel(InstrumentsEnum panel) {
     if (panels.count(panel) == 0) {
         loadPanel(panel);
         setChildrenTransform(getTransform());
     }
     currentPanelEnum = panel;
-    currentPanel = panels.at(panel);
-}
-
-DynamicInstrumentPanel::~DynamicInstrumentPanel() {
-
-    for(auto &p: panels)
-        delete p.second;
+    currentPanel = panels.at(panel).get();
 }
 
 
-void DynamicInstrumentPanel::loadPanel(PanelTypeEnum panel) {
+void DynamicInstrumentPanel::loadPanel(InstrumentsEnum panel) {
+
     switch (panel) {
 
         case KEYBOARD: {
-            panels[KEYBOARD] = new KeyboardPanel;
+            panels[KEYBOARD] = std::make_unique<KeyboardPanel>();
             break;
         }
         case DRUMPAD:{
-            throw;
+            panels[EMPTY] = std::make_unique<EmptyPanel>();
             break;
         }
         case AUDIO: {
-            panels[AUDIO] = new StaticVisualizerPanel;
+            panels[AUDIO] = std::make_unique<StaticVisualizerPanel>();
             break;
         }
         case VOCAL: {
-            panels[VOCAL] = new AudioRecordingPanel;
+            panels[VOCAL] = std::make_unique<AudioRecordingPanel>();
             break;
         }
-        case EMPTY_PANEL: {
-            panels[EMPTY_PANEL] = new EmptyPanel;
+        case EMPTY: {
+            panels[EMPTY] = std::make_unique<EmptyPanel>();
             break;
         }
         default:
@@ -77,20 +72,10 @@ void DynamicInstrumentPanel::setChildrenTransform(const sf::Transform &transform
         p.second->setParentTransform(transform);
 }
 
-PanelTypeEnum DynamicInstrumentPanel::getActivePanel() const {
+InstrumentsEnum DynamicInstrumentPanel::getActivePanel() const {
     return currentPanelEnum;
 }
 
 BasePanel* DynamicInstrumentPanel::getPanel() const {
     return currentPanel;
 }
-
-//void DynamicInstrumentPanel::setPosition(const sf::Vector2f &pos) {
-//    Transformable::setPosition(pos);
-//    setChildrenTransform(getTransform());
-//}
-//
-//void DynamicInstrumentPanel::setPosition(float x, float y) {
-//    setPosition({x,y});
-//}
-//

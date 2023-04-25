@@ -1,0 +1,19 @@
+//
+// Created by Sherman Yan on 4/24/23.
+//
+
+#ifndef DIZZLESTUDIOPRO_DRUMPADTRACK_H
+#define DIZZLESTUDIOPRO_DRUMPADTRACK_H
+
+#include "Track.h"
+
+class DrumPadTrack: public Track {
+
+public:
+    DrumPadTrack();
+};
+
+
+
+
+#endif //DIZZLESTUDIOPRO_DRUMPADTRACK_H

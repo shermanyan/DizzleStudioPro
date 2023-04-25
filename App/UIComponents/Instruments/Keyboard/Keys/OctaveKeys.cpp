@@ -180,7 +180,7 @@ float OctaveKeys::getKeySpacing() const {
     return spacing;
 }
 
-SoundKeyPair OctaveKeys::getKeyPress(const sf::RenderWindow& window) const {
+AudioNode OctaveKeys::getKeyPress(const sf::RenderWindow& window) const {
 
     for (auto &k: whiteKeys) {
         if (k.isClick(window))
@@ -190,7 +190,20 @@ SoundKeyPair OctaveKeys::getKeyPress(const sf::RenderWindow& window) const {
         if (k.isClick(window))
             return k.getKeyType();
     }
-    return SoundKeyPair{};
+    return {};
+}
+
+
+AudioNode OctaveKeys::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
+    for (auto &k: whiteKeys) {
+        if (k.isRelease(window, event))
+            return k.getKeyType();
+    }
+    for (auto &k: blackKeys) {
+        if (k.isRelease(window,event))
+            return k.getKeyType();
+    }
+    return {};
 }
 
 void OctaveKeys::setOctave(unsigned int octave) {
@@ -199,7 +212,6 @@ void OctaveKeys::setOctave(unsigned int octave) {
         k.octave = octave;
     for (auto& k:blackKeys)
         k.octave = octave;
-
 
 }
 

@@ -15,15 +15,13 @@
 class LayersPanel: public AppComponent {
 private:
 
-    DynamicInstrumentPanel* instrumentPanel = nullptr;
-
     Squircle background;
 
     std::vector<Layer> layers;
 
     sf::Color trackColors[4] = {{167,42,54},{14,122,40},{41,107,170},{175,143,54}};
 
-    SeekBar seek;
+    static SeekBar seek;
     TimeBar timeBar;
 
 
@@ -33,7 +31,7 @@ protected:
 public:
     LayersPanel();
 
-    void setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel);
+    void setInstrumentPanel(DynamicInstrumentPanel *dynamicInstrumentPanel);
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 

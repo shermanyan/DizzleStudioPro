@@ -67,7 +67,8 @@ public:
 
     float getKeySpacing() const;
 
-    SoundKeyPair getKeyPress(const sf::RenderWindow& window) const;
+    AudioNode getKeyPress(const sf::RenderWindow& window) const;
+    AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;

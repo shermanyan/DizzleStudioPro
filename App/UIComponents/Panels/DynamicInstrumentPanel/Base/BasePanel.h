@@ -8,7 +8,8 @@
 #include "AppComponent.h"
 #include "Squircle.h"
 #include "Position.h"
-#include "PanelTypeEnum.h"
+#include "InstrumentsEnum.h"
+#include "AudioNode.h"
 
 class BasePanel: public AppComponent {
 
@@ -19,6 +20,9 @@ private:
 public:
     BasePanel();
     BasePanel(const sf::Vector2f& size);
+
+    virtual AudioNode getKeyPressed(const sf::RenderWindow& window) const;
+    virtual AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const;
 
     void setSize(const sf::Vector2f& size);
     sf::Vector2f getSize();

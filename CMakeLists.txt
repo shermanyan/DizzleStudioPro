@@ -17,6 +17,7 @@ include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Base)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Panels)
 include_directories(App/UIComponents/Panels/LayersPanel)
 include_directories(App/UIComponents/Track)
+include_directories(App/UIComponents/Track/Tracks)
 include_directories(SFML_Resources/Components/ScrollableContainer)
 include_directories(SFML_Resources/Components/TextInput)
 include_directories(SFML_Resources/Components/Typing)
@@ -47,13 +48,13 @@ add_executable(DizzleStudioPro
         App/UIComponents/Instruments/Keyboard/Keys/OctaveKeys.h
         App/UIComponents/Instruments/Keyboard/Keyboard.cpp
         App/UIComponents/Instruments/Keyboard/Keyboard.h
-        App/UIComponents/Instruments/Keyboard/SoundKeyPair.h
+        App/AudioNode.h
         App/UIComponents/Instruments/SoundKeys.h
         App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.cpp
         App/UIComponents/MusicTrackSelection/StaticAudioVisualizer.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.h
-        App/UIComponents/Panels/DynamicInstrumentPanel/Base/PanelTypeEnum.h
+        App/InstrumentsEnum.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp
@@ -66,8 +67,6 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.h
         App/UIComponents/Panels/LayersPanel/LayersPanel.cpp
         App/UIComponents/Panels/LayersPanel/LayersPanel.h
-        App/UIComponents/Track/DrawableAudioNode.cpp
-        App/UIComponents/Track/DrawableAudioNode.h
         App/UIComponents/Track/Layer.cpp
         App/UIComponents/Track/Layer.h
         App/UIComponents/Track/SeekBar.cpp
@@ -78,8 +77,6 @@ add_executable(DizzleStudioPro
         App/UIComponents/Track/Track.h
         App/UIComponents/Track/TrackLabel.cpp
         App/UIComponents/Track/TrackLabel.h
-        App/AudioNode.cpp
-        App/AudioNode.h
         App/StudioMain.cpp
         App/StudioMain.h
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp
@@ -136,9 +133,8 @@ add_executable(DizzleStudioPro
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
-#        RecorderTester.cpp
 #        TrackPrototypeTester.cpp
-        App/Resources/Sounds/SoundsEnum.h)
+        App/Resources/Sounds/SoundsEnum.h App/UIComponents/Track/Tracks/KeyboardTrack.cpp App/UIComponents/Track/Tracks/KeyboardTrack.h App/UIComponents/Track/Tracks/AudioTrack.cpp App/UIComponents/Track/Tracks/AudioTrack.h App/UIComponents/Track/Tracks/VocalTrack.cpp App/UIComponents/Track/Tracks/VocalTrack.h App/UIComponents/Track/Tracks/DrumPadTrack.cpp App/UIComponents/Track/Tracks/DrumPadTrack.h App/UIComponents/Track/DrawableAudioNode.cpp App/UIComponents/Track/DrawableAudioNode.h)
 
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
