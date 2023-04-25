@@ -10,15 +10,19 @@
 #include "Squircle.h"
 #include "Position.h"
 #include "MouseEvents.h"
-#include <SFML/Audio.hpp>
+#include "SoundKeys.h"
 #include "Sounds.h"
+#include "AudioNode.h"
+#include <SFML/Audio.hpp>
 
-class Key: public AppComponent, public SoundKeyPair {
+class Key: public AppComponent, public AudioNode {
 private:
     sf::FloatRect clickableRange;
 
     Squircle key;
     sf::Color color;
+
+    bool play = false;
 
     SoundKeys keyType = NULL_KEY;
     sf::Sound sound;
@@ -41,9 +45,9 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
-    void loadSound();
 
     bool isClick(const sf::RenderWindow& window) const;
+    bool isRelease(const sf::RenderWindow& window, const sf::Event& event) const;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -52,7 +56,9 @@ public:
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    SoundKeyPair getKeyType() const;
+    AudioNode getKeyType() const;
+
+    void loadSound();
 };
 
 

@@ -54,7 +54,7 @@ int main()
                     clock.rewind(1);
 
             }
-            else if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(button.getGlobalBounds(), window)) {
+            else if (!draw && MouseEvents::isClick(button.getGlobalBounds(), window)) {
                 button.setFillColor(sf::Color::Red);
                 nodes.emplace_back();
                 nodes.back().setSize(10, 100);
@@ -62,7 +62,7 @@ int main()
                 nodes.back().setFillColor(sf::Color((int)(rand() % 255 + 1) ,(int)(rand() % 255 + 1),(int)(rand() % 255 + 1)));
                 Position::center(nodes.back(), seek);
                 draw = true;
-            } else if (event.type == sf::Event::MouseButtonReleased){
+            } else if (draw && !MouseEvents::isClick(button.getGlobalBounds(),window)){
                 draw = false;
                 button.setFillColor(sf::Color::White);
             }

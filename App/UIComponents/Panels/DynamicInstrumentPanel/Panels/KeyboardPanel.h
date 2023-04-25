@@ -18,7 +18,9 @@ protected:
 public:
     KeyboardPanel();
 
-    SoundKeyPair getKeyPressed(const sf::RenderWindow& window) const;
+    AudioNode getKeyPressed(const sf::RenderWindow& window) const override;
+
+    AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 

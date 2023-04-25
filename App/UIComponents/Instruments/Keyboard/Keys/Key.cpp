@@ -38,10 +38,17 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     if(isClick(window)){
         key.setFillColor(color + sf::Color{25,25,25});
-        sound.play();
-
     }else{
         setFillColor(color);
+    }
+
+    if (isClick(window) && !play) {
+        play = true;
+        sound.play();
+    }
+    else if(!isClick(window) && play) {
+        sound.stop();
+        play = false;
     }
 
 }
@@ -83,12 +90,17 @@ void Key::setRadius(const float (&radii)[4]) {
 }
 
 bool Key::isClick(const sf::RenderWindow &window) const {
-    return (sf::Mouse::isButtonPressed(sf::Mouse::Left) && MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
+    return (MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
 }
 
-SoundKeyPair Key::getKeyType() const{
+AudioNode Key::getKeyType() const{
     return {octave,keyEnum};
 }
+
+bool Key::isRelease(const sf::RenderWindow &window, const sf::Event& event) const {
+    return !sf::Mouse::isButtonPressed(sf::Mouse::Left) && MouseEvents::isHover(getCombinedTransform().transformRect(clickableRange),window);
+}
+
 
 
 
