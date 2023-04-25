@@ -1,8 +1,8 @@
 //
-// Created by Brandon Hargitay on 4/19/23.
+// Created by Sherman Yan on 4/23/23.
 //
 
-enum SoundsEnum{
-    NARUTO,
-    LAST_IMG
-};
+#ifndef DIZZLESTUDIOPRO_SOUNDSENUM_H
+#define DIZZLESTUDIOPRO_SOUNDSENUM_H
+
+#endif //DIZZLESTUDIOPRO_SOUNDSENUM_H

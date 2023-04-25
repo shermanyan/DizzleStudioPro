@@ -22,7 +22,7 @@ Keyboard::Keyboard(unsigned int numOctaves, const sf::Vector2f &size) {
 void Keyboard::setupKeyboard() {
     for(int i = 0; i < numOctaves; i++) {
         keyboard.emplace_back();
-        keyboard.back().setOctave(i+1);
+        keyboard.back().setOctave(i+3);
     }
 
 }
@@ -100,18 +100,29 @@ void Keyboard::reposition() {
 
 }
 
-SoundKeyPair Keyboard::getKeyPressed(const sf::RenderWindow &window) const {
+AudioNode Keyboard::getKeyPressed(const sf::RenderWindow &window) const {
 
-    SoundKeyPair keyPressed;
+    AudioNode keyPressed;
 
     for (int i = 0; i< keyboard.size(); i++) {
         keyPressed = keyboard[i].getKeyPress(window);
         if (keyPressed.keyEnum != NULL_KEY) {
-
             return keyPressed;
         }
     }
     return keyPressed;
+}
+
+AudioNode Keyboard::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
+    AudioNode keyReleased;
+
+    for (int i = 0; i< keyboard.size(); i++) {
+        keyReleased = keyboard[i].getKeyRelease(window,event);
+        if (keyReleased.keyEnum != NULL_KEY) {
+            return keyReleased;
+        }
+    }
+    return keyReleased;
 }
 
 

@@ -6,17 +6,17 @@
 #define DIZZLESTUDIOPRO_SOUNDS_H
 
 #include <SFML/Audio.hpp>
-#include "SoundsEnum.h"
+#include "SoundKeys.h"
 #include <map>
 
 class Sounds {
 
 private:
-    static std::map<SoundsEnum, sf::SoundBuffer> map;
-    static void load(SoundsEnum texture);
-    static std::string getPath(SoundsEnum texture);
+    static std::map<SoundKeys, sf::SoundBuffer> map;
+    static void load(SoundKeys texture);
+    static std::string getPath(SoundKeys texture);
 public:
-    static sf::SoundBuffer& getSound(SoundsEnum texture);
+    static sf::SoundBuffer& getSound(SoundKeys texture);
 
 };
 

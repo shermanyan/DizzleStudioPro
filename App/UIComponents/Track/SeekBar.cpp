@@ -12,9 +12,9 @@ void SeekBar::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         if (event.key.code == sf::Keyboard::P)
             clock.toggle();
         else if (event.key.code == sf::Keyboard::Right)
-            clock.forward(1);
+            clock.forward(0.5);
         else if (event.key.code == sf::Keyboard::Left)
-            clock.rewind(1);
+            clock.rewind(0.5);
     }
 }
 
@@ -41,7 +41,7 @@ sf::FloatRect SeekBar::getLocalBounds() const {
     return bar.getLocalBounds();
 }
 
-void SeekBar::setDuration(float duration) {
+void SeekBar::setDuration(int duration) {
     SeekBar::duration = duration;
     updateVelocity();
 }
@@ -83,6 +83,10 @@ void SeekBar::updateVelocity() {
 
 void SeekBar::setRadius(float radius) {
     bar.setRadius(radius);
+}
+
+int SeekBar::getDuration() const {
+    return duration;
 }
 
 

@@ -7,13 +7,32 @@
 
 #include "AppComponent.h"
 #include "Squircle.h"
+#include "Position.h"
+#include "MouseEvents.h"
+#include "AudioNode.h"
+#include "DrawableAudioNode.h"
+#include "SeekBar.h"
 
 class Track: public AppComponent{
-private:
-    Squircle background;
+protected:
+    void setFillColor(const sf::Color& color);
 
+    std::map<float, DrawableAudioNode> audioTrack;
+
+private:
+
+    Squircle background, outline;
+
+    sf::Color trackColor = sf::Color::White;
 public:
     Track();
+
+    void emplace_back(float timeStamp, AudioNode key);
+    DrawableAudioNode& getLastNode();
+
+    std::map<float, AudioNode> getAudioTrack();
+
+    void setTrackColor(const sf::Color &trackColor);
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;

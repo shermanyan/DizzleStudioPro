@@ -22,9 +22,6 @@ private:
 
     void refresh();
 
-protected:
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-
 public:
     Squircle();
 
@@ -52,6 +49,7 @@ public:
     sf::FloatRect getGlobalBounds() const;
     sf::FloatRect getLocalBounds() const;
 
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };
 
 

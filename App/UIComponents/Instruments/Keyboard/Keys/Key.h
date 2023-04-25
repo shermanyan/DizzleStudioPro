@@ -11,10 +11,10 @@
 #include "Position.h"
 #include "MouseEvents.h"
 #include "SoundKeys.h"
-#include "SoundKeyPair.h"
+#include "AudioNode.h"
 #include <SFML/Audio.hpp>
 
-class Key: public AppComponent, public SoundKeyPair {
+class Key: public AppComponent, public AudioNode {
 private:
     sf::FloatRect clickableRange;
 
@@ -44,6 +44,7 @@ public:
 
 
     bool isClick(const sf::RenderWindow& window) const;
+    bool isRelease(const sf::RenderWindow& window, const sf::Event& event) const;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -52,7 +53,7 @@ public:
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    SoundKeyPair getKeyType() const;
+    AudioNode getKeyType() const;
 };
 
 

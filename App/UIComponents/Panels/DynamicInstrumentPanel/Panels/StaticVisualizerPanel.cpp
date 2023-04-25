@@ -18,18 +18,17 @@ StaticVisualizerPanel::StaticVisualizerPanel()
     Position::center(visualizer, *this);
     visualizer.setPosition(visualizer.getPosition().x + 385, visualizer.getPosition().y);
 
-    songNameInput.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
-    songNameInput.setString("Song");
-    songNameInput.toggleBox();
-
-    songNameInput.setPosition(60, 100);
-    songNameInput.setTextBoxSize({300,80});
-
 }
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
-    songNameInput.eventHandler(window, event);
+    songInput.eventHandler(window, event);
+
+    if (songInput.loadButonClicked(window))
+    {
+       visualizer.loadVisualizer(songInput.getSong());
+        playPauseButton.setTexture(Textures::getTexture(PLAY_BUTTON));
+    }
 
     if(MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window) ){
         visualizer.eventHandler(window,event);
@@ -37,15 +36,16 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
             playPauseButton.setTexture(Textures::getTexture(PAUSE_BUTTON));
         }else{
             playPauseButton.setTexture(Textures::getTexture(PLAY_BUTTON));
-
         }
     }
+
+
 }
 
 void StaticVisualizerPanel::update(const sf::RenderWindow &window) {
     BasePanel::update(window);
     visualizer.update(window);
-    songNameInput.update(window);
+    songInput.update(window);
 }
 
 void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -55,12 +55,12 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
 
     target.draw(visualizer,states);
     target.draw(playPauseButton,states);
-    target.draw(songNameInput,states);
+    target.draw(songInput,states);
 
 }
 
 
 void StaticVisualizerPanel::setChildrenTransform(const sf::Transform &transform) {
     visualizer.setParentTransform(transform);
-    songNameInput.setParentTransform(transform);
+    songInput.setParentTransform(transform);
 }
