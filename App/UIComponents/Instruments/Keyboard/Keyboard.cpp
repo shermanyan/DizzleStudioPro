@@ -23,6 +23,8 @@ void Keyboard::setupKeyboard() {
     for(int i = 0; i < numOctaves; i++) {
         keyboard.emplace_back();
         keyboard.back().setOctave(i+3);
+        keyboard.back().loudSoundWhiteKeys(); // Call the modified setUpWhiteKeys() function
+        keyboard.back().loudSoundBlackKeys();
     }
 
 }

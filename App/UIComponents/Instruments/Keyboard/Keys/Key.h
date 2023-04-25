@@ -11,6 +11,7 @@
 #include "Position.h"
 #include "MouseEvents.h"
 #include "SoundKeys.h"
+#include "Sounds.h"
 #include "AudioNode.h"
 #include <SFML/Audio.hpp>
 
@@ -54,6 +55,8 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
     AudioNode getKeyType() const;
+
+    void loadSound();
 };
 
 

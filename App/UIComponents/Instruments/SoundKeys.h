@@ -6,9 +6,16 @@
 #define DIZZLESTUDIOPRO_SOUNDKEYS_H
 
 enum SoundKeys{
-    NULL_KEY,
     C,D,E,F,G,A,B,
     Cs,Ds,Fs,Gs,As,
     DRUM,
+    NULL_KEY
 };
+
+static const std::string SoundKeysStrings[] = {
+        "A", "C", "D", "E", "F",
+        "G", "B", "Cs", "Ds", "Fs",
+        "Gs", "As", "NULL_KEY"
+};
+
 #endif //DIZZLESTUDIOPRO_SOUNDKEYS_H
