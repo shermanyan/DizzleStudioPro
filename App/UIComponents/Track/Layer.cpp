@@ -4,30 +4,49 @@
 
 #include "Layer.h"
 
+DynamicInstrumentPanel* Layer::instrumentPanel = nullptr;
+SeekBar* Layer::seekBar = nullptr;
+
 Layer::Layer() {
-    setState(SELECTED,true);
+    setTrack(EMPTY);
+    setState(SELECTED,false);
     Position::right(track,label,10);
-
-    dropDownMenu.setSize({400,400});
-    dropDownMenu.setPosition(label.getPosition().x - 7, label.getPosition().y + 110);
-
-}
-Layer::Layer(PanelTypeEnum panelType): Layer() {
-    label.setTrack(panelType);
 }
 
 void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    if (event.type == sf::Event::MouseButtonPressed &&
+            MouseEvents::isClick(getCombinedTransform().transformRect(track.getGlobalBounds()), window)) {
+        instrumentPanel->setActivePanel(label.getTrackType());
+        setState(SELECTED, true);
+        track.setState(SELECTED, true);
+    } else if(instrumentPanel->getActivePanel() != label.getTrackType()) {
+        setState(SELECTED, false);
+        track.setState(SELECTED, false);
+    }
+
 
     if (checkStates(SELECTED)) {
         label.eventHandler(window, event);
         track.eventHandler(window, event);
 
-        if (event.KeyPressed && label.getTrackType() == KEYBOARD &&  instrumentPanel->getActivePanel()  == KEYBOARD) {
-            auto *panel = dynamic_cast<KeyboardPanel *>(instrumentPanel->getPanel());
-            SoundKeyPair num = panel->getKeyPressed(window);
-            if (num.keyEnum != NULL_KEY)
-                std::cout << num.octave  << ":" << num.keyEnum << " ";
+        if (instrumentPanel->getActivePanel() == label.getTrackType() && label.getTrackType() != EMPTY) {
+            bool drawNew = true;
+            if(label.getTrackType() == KEYBOARD && event.type != event.MouseButtonReleased){
+                AudioNode key = instrumentPanel->getPanel()->getKeyPressed(window);
+                AudioNode* lastKey = &track.getLastNode().getNode();
+                if (key.keyEnum != NULL_KEY && key.keyEnum == lastKey->keyEnum) {
+                    lastKey->setStopTimeStamp(seekBar->getElapsedTime());
+                    drawNew = false;
+                }
+            }
+            if(drawNew) {
+                AudioNode key = instrumentPanel->getPanel()->getKeyPressed(window);
+                if (key.keyEnum != NULL_KEY) {
+                    track.emplace_back(seekBar->getElapsedTime(), key);
+                }
+            }
         }
+
     }
 
 }
@@ -35,15 +54,16 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 void Layer::update(const sf::RenderWindow &window) {
     if(checkStates(SELECTED)) {
         label.update(window);
-        track.update(window);
     }
+
+    track.update(window);
 }
 
 void Layer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+
     states.transform *= getTransform();
     target.draw(label,states);
     target.draw(track,states);
-//    target.draw(dropDownMenu,states);
 
 }
 
@@ -54,9 +74,10 @@ void Layer::setChildrenTransform(const sf::Transform &transform) {
 
 void Layer::setTrackColor(const sf::Color &color) {
     label.setTrackColor(color);
+    track.setTrackColor(color);
 }
 
-void Layer::setTrack(PanelTypeEnum type) {
+void Layer::setTrack(InstrumentsEnum type) {
     label.setTrack(type);
 }
 
@@ -71,12 +92,17 @@ sf::FloatRect Layer::getLocalBounds() const {
     return label.getLocalBounds();
 }
 
-PanelTypeEnum Layer::getTrackType() const {
+InstrumentsEnum Layer::getTrackType() const {
     return label.getTrackType();
 }
 
 void Layer::setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel) {
     Layer::instrumentPanel = instrumentPanel;
 }
+
+void Layer::setSeekBar(SeekBar *seekbar) {
+    Layer::seekBar = seekbar;
+}
+
 
 

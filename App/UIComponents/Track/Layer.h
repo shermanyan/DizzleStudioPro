@@ -11,32 +11,35 @@
 #include "TrackLabel.h"
 #include "DynamicInstrumentPanel.h"
 #include "Track.h"
-#include "LayerDropDownMenu.h"
+
+#include "KeyboardTrack.h"
+#include "AudioTrack.h"
+#include "VocalTrack.h"
+#include "DrumPadTrack.h"
+
 class Layer: public AppComponent {
 private:
 
-    DynamicInstrumentPanel* instrumentPanel = nullptr;
+    static DynamicInstrumentPanel* instrumentPanel;
+    static SeekBar* seekBar;
 
     TrackLabel label;
 
     Track track;
 
-    sf::Color trackColor = {0,0,0};
-
-    LayerDropDownMenu dropDownMenu;
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;
 
 public:
     Layer();
-    Layer(PanelTypeEnum trackType);
 
     void setTrackColor(const sf::Color& color);
-    void setTrack(PanelTypeEnum type);
-    PanelTypeEnum getTrackType() const;
+    void setTrack(InstrumentsEnum type);
+    InstrumentsEnum getTrackType() const;
 
-    void setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel);
+    static void setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel);
+    static void setSeekBar(SeekBar* seekbar);
 
     sf::FloatRect getGlobalBounds() const override;
 

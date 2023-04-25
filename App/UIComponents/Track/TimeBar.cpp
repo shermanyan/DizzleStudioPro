@@ -19,13 +19,13 @@ void TimeBar::setSize(const sf::Vector2f &size) {
 }
 
 void TimeBar::setDuration(int seconds) {
-    if (seconds > 0) {
-        this->duration = seconds * 2;
+    if (seconds > 1) {
+        this->duration = (seconds * 2);
 
-        while (intervalBars.size() < duration ) {
+        while (intervalBars.size() < duration + 1) {
             intervalBars.emplace_back(sf::Vector2f{}, 2.5, sf::Color{94, 94, 94});
         }
-        while (intervalBars.size() > duration  && !intervalBars.empty())
+        while (intervalBars.size() > duration + 1  && !intervalBars.empty())
             intervalBars.pop_back();
 
         resize();
@@ -42,7 +42,7 @@ void TimeBar::resize() {
     if (!intervalBars.empty())
         for (int i = 0; i< intervalBars.size(); i++) {
             intervalBars[i].setOrigin(intervalBars[i].getSize().x/2,0);
-            intervalBars[i].setSize(5, background.getSize().y * (i%2 == 0 ? .5: .7));
+            intervalBars[i].setSize(5, background.getSize().y * (i%2 == 0 ? .7: .5));
         }
 }
 
@@ -50,7 +50,7 @@ void TimeBar::resize() {
 
 void TimeBar::position() {
 
-    float spacing = ((background.getSize().x ) -20) / (duration -1);
+    float spacing = ((background.getSize().x ) -20) / (duration);
 
     if (!intervalBars.empty())
         for (int i = 0; i < intervalBars.size(); i++) {
@@ -62,14 +62,6 @@ void TimeBar::position() {
 
 
 void TimeBar::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::RBracket)) {
-        printf("A");
-        setDuration((duration / 2) + 1);
-    }
-    else if (event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::LBracket)) {
-        setDuration((duration / 2) - 1);
-        printf("S");
-    }
 
 }
 
