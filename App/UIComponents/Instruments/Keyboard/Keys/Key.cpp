@@ -47,7 +47,8 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         sound.play();
     }
     else if(!isClick(window) && play) {
-        sound.stop();
+        if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Tab))
+            sound.stop();
         play = false;
     }
 
