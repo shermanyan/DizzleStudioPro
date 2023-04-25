@@ -26,15 +26,11 @@ private:
 
     //setup keys position and color
     void setupKeys();
-
-    //setup white keys color and positions;
-    void setUpWhiteKeys();
-
-    //setup black keys color and positions;
-    void setupBlackKeys();
-
     void setWhiteKeysSize();
     void setBlackKeysSize();
+
+    void setupWhiteKeys();
+    void setupBlackKeys();
 
     void positionKeys();
 
@@ -65,6 +61,7 @@ public:
     //Set spacing between keys
     void setKeySpacing(float spacing);
 
+
     float getKeySpacing() const;
 
     AudioNode getKeyPress(const sf::RenderWindow& window) const;
@@ -79,6 +76,11 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+    //setup white keys color and positions;
+    void loudSoundWhiteKeys();
+
+    //setup black keys color and positions;
+    void loudSoundBlackKeys();
 };
 
 

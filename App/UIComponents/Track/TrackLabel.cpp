@@ -40,7 +40,6 @@ void TrackLabel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(labelImg,states);
     target.draw(label,states);
-
 }
 
 void TrackLabel::setTrack(InstrumentsEnum type) {

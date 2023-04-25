@@ -1,50 +1,20 @@
-//
-// Created by Brandon Hargitay on 4/19/23.
-//
-
 #include "Sounds.h"
 
-std::map<SoundKeys, sf::SoundBuffer> Sounds::map;
+std::map<SoundKeyPair, sf::SoundBuffer> Sounds::map;
 
-void Sounds::load(SoundKeys sound) {
-    if (map.count(sound) == 0 &&!map[sound].loadFromFile(getPath(sound)))
+void Sounds::load(const SoundKeyPair& soundPair) {
+    if (map.count(soundPair) == 0 && !map[soundPair].loadFromFile(getPath(soundPair)))
         exit(20);
 }
 
-std::string Sounds::getPath(SoundKeys sound) {
-    switch (sound){
-        case A:
-            return "";
-        case C:
-            break;
-        case D:
-            break;
-        case E:
-            break;
-        case F:
-            break;
-        case G:
-            break;
-        case B:
-            break;
-        case Cs:
-            break;
-        case Ds:
-            break;
-        case Fs:
-            break;
-        case Gs:
-            break;
-        case As:
-            break;
-        case NULL_KEY:
-            break;
-    }
+std::string Sounds::getPath(const SoundKeyPair& soundPair) {
+    std::string basePath = "App/Resources/Sounds/KeyBoardNotes/";
+    std::string fileName = SoundKeysStrings[soundPair.keyEnum] + std::to_string(soundPair.octave) + ".wav";
+    return basePath + fileName;
 }
 
-sf::SoundBuffer &Sounds::getSound(SoundKeys sound) {
-    if (map.count(sound) == 0)
-        load(sound);
-    return map.at(sound);
+sf::SoundBuffer &Sounds::getSound(const SoundKeyPair& soundPair) {
+    if (map.count(soundPair) == 0)
+        load(soundPair);
+    return map.at(soundPair);
 }
-

@@ -97,14 +97,13 @@ void OctaveKeys::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 
 void OctaveKeys::setupKeys() {
-
     setupBlackKeys();
-    setUpWhiteKeys();
+    setupWhiteKeys();
     setFillColors(keyColors);
     positionKeys();
 }
 
-void OctaveKeys::setUpWhiteKeys() {
+void OctaveKeys::setupWhiteKeys() {
     for (int i = 0; i < 7; ++i) {
         whiteKeys.emplace_back();
         whiteKeys.back().setRadius({10, 10, 10, 10});
@@ -113,11 +112,21 @@ void OctaveKeys::setUpWhiteKeys() {
 }
 
 void OctaveKeys::setupBlackKeys() {
-
     for (int i = 0; i < 5; ++i) {
         blackKeys.emplace_back();
         blackKeys.back().setRadius({5, 5, 10, 10});
         blackKeys.back().keyEnum = (SoundKeys(Cs + i));
+    }
+}
+void OctaveKeys::loudSoundWhiteKeys() {
+    for (auto &k : whiteKeys) {
+        k.loadSound();
+    }
+}
+
+void OctaveKeys::loudSoundBlackKeys() {
+    for (auto &k : blackKeys) {
+        k.loadSound();
     }
 }
 
@@ -207,7 +216,6 @@ AudioNode OctaveKeys::getKeyRelease(const sf::RenderWindow &window, const sf::Ev
 }
 
 void OctaveKeys::setOctave(unsigned int octave) {
-
     for (auto& k:whiteKeys)
         k.octave = octave;
     for (auto& k:blackKeys)

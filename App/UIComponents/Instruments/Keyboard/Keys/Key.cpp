@@ -3,12 +3,12 @@
 //
 
 #include "Key.h"
-#include <iostream>
 
 //Default Constructor
 //Size: 0,0
 //Color: white
-Key::Key(): Key({0,0}, sf::Color::White) {}
+Key::Key(): Key({0,0}, sf::Color::White) {
+}
 
 Key::Key(const sf::Vector2f &size, const sf::Color &color) {
     //set key size
@@ -39,10 +39,15 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     if(isClick(window)){
         key.setFillColor(color + sf::Color{25,25,25});
         sound.play();
+
     }else{
         setFillColor(color);
     }
 
+}
+
+void Key::loadSound() {
+    sound.setBuffer(Sounds::getSound(*this));
 }
 
 void Key::update(const sf::RenderWindow &window) {
