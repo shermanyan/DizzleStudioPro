@@ -22,6 +22,8 @@ private:
     Squircle key;
     sf::Color color;
 
+    bool play = false;
+
     SoundKeys keyType = NULL_KEY;
     sf::Sound sound;
 

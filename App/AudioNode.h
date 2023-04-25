@@ -44,6 +44,12 @@ public:
         duration = time - timeStamp;
     }
 
+    bool operator<(const AudioNode& other) const {
+        if (keyEnum == other.keyEnum) {
+            return octave < other.octave;
+        }
+        return keyEnum < other.keyEnum;
+    }
 };
 
 

@@ -38,10 +38,17 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     if(isClick(window)){
         key.setFillColor(color + sf::Color{25,25,25});
-        sound.play();
-
     }else{
         setFillColor(color);
+    }
+
+    if (isClick(window) && !play) {
+        play = true;
+        sound.play();
+    }
+    else if(!isClick(window) && play) {
+        sound.stop();
+        play = false;
     }
 
 }

@@ -1,9 +1,9 @@
 #include "Sounds.h"
 
-std::map<SoundKeys, sf::SoundBuffer> Sounds::map;
+std::map<AudioNode, sf::SoundBuffer> Sounds::map;
 
 void Sounds::load(const AudioNode& soundPair) {
-    if (map.count(soundPair.keyEnum) == 0 && !map[soundPair.keyEnum].loadFromFile(getPath(soundPair)))
+    if (map.count(soundPair) == 0 && !map[soundPair].loadFromFile(getPath(soundPair)))
         exit(20);
 }
 
@@ -14,7 +14,7 @@ std::string Sounds::getPath(const AudioNode& soundPair) {
 }
 
 sf::SoundBuffer &Sounds::getSound(const AudioNode& soundPair) {
-    if (map.count(soundPair.keyEnum) == 0)
+    if (map.count(soundPair) == 0)
         load(soundPair);
-    return map.at(soundPair.keyEnum);
+    return map.at(soundPair);
 }

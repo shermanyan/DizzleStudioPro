@@ -12,7 +12,7 @@
 
 class Sounds {
 private:
-    static std::map<SoundKeys, sf::SoundBuffer> map;
+    static std::map<AudioNode, sf::SoundBuffer> map;
     static void load(const AudioNode& soundPair);
     static std::string getPath(const AudioNode& soundPair);
 public:
