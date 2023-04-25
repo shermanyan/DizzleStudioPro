@@ -30,8 +30,12 @@ void KeyboardPanel::setChildrenTransform(const sf::Transform &transform) {
     keyboard.setParentTransform(transform);
 }
 
-std::pair<int, SoundKeys> KeyboardPanel::getKeyPressed(const sf::RenderWindow &window) const {
+AudioNode KeyboardPanel::getKeyPressed(const sf::RenderWindow &window) const {
     return keyboard.getKeyPressed(window);
+}
+
+AudioNode KeyboardPanel::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
+    return keyboard.getKeyRelease(window, event);
 }
 
 //void KeyboardPanel::setPosition(const sf::Vector2f &pos) {

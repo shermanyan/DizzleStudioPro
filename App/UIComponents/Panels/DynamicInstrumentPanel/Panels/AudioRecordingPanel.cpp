@@ -53,19 +53,6 @@ void AudioRecordingPanel::draw(sf::RenderTarget &target, sf::RenderStates states
 
 }
 
-//void AudioRecordingPanel::setPosition(sf::Vector2f pos) {
-//    BasePanel::setPosition(pos);
-//
-//    pos.x = BasePanel::getGlobalBounds().left + 880;
-//    pos.y = BasePanel::getGlobalBounds().top + 905;
-//
-//    std::cout << pos.x << " " << pos.y;
-//    button.setPosition(sf::Vector2f(BasePanel::getGlobalBounds().left + 500 , BasePanel::getGlobalBounds().top +100));
-//
-//    liveRecording.setPosition(pos);
-//}
-
-
 
 void AudioRecordingPanel::setChildrenTransform(const sf::Transform &transform) {
     liveRecording.setParentTransform(transform);

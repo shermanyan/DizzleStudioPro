@@ -21,13 +21,12 @@ public:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     void loadVisualizer(const std::string& filePath);
 
-
-    sf::SoundBuffer getSong();
-
     sf::FloatRect getGlobalBounds() const override;
 
     sf::SoundBuffer buffer;
+
     sf::Sound sound;
+
     bool isPlaying = false;
 
 private:

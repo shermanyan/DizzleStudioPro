@@ -9,5 +9,6 @@ enum SoundKeys{
     NULL_KEY,
     C,D,E,F,G,A,B,
     Cs,Ds,Fs,Gs,As,
+    DRUM,
 };
 #endif //DIZZLESTUDIOPRO_SOUNDKEYS_H

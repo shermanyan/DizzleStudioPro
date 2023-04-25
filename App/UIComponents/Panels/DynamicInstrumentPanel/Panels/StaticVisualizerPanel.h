@@ -7,14 +7,15 @@
 #include "StaticAudioVisualizer.h"
 #include "SpriteImage.h"
 #include "BasePanel.h"
-#include "TextInput.h"
+#include "SongInput.h"
 
 class StaticVisualizerPanel : public BasePanel {
 private:
     StaticAudioVisualizer visualizer;
     SpriteImage playPauseButton;
     sf::Texture texture;
-    TextInput songNameInput;
+    SongInput songInput;
+
 public:
 
     StaticVisualizerPanel();
@@ -24,8 +25,6 @@ public:
     void update(const sf::RenderWindow &window) override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-
-
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;

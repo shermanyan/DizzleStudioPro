@@ -46,6 +46,12 @@ void TextInput::colorWord(MultiText *&text, const std::string& target, const sf:
 
 void TextInput::update(const sf::RenderWindow &window) {
     textBox.update(window);
+
+    if (!getString().empty())
+        empty = false;
+    else
+        empty = true;
+
 }
 
 bool TextInput::isOperator(char c) {
@@ -61,7 +67,8 @@ void TextInput::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     if(!checkStates(HIDDEN)) {
         states.transform *= getTransform();
         target.draw(textBox, states);
-        target.draw(label, states);
+        if(position == INSIDE && empty && !textBox.checkStates(SELECTED))
+            target.draw(label, states);
     }
 }
 
@@ -70,7 +77,10 @@ sf::FloatRect TextInput::getGlobalBounds() const {
     sf::Vector2f lPos = label.getPosition(), tPos = textBox.getPosition();
     bounds.left = label.getPosition().x;
     bounds.top =  tPos.y > lPos.y? tPos.y: lPos.y;
-    bounds.width = lBound.width + tBound.width;
+    if(position == INSIDE)
+        bounds.width = tBound.width;
+    else
+        bounds.width = lBound.width + tBound.width;
     bounds.height = lBound.height > tBound.height? lBound.height: tBound.height;
 
     return getTransform().transformRect(bounds);
@@ -135,5 +145,19 @@ void TextInput::setString(const std::string &string) {
 
 void TextInput::setChildrenTransform(const sf::Transform &transform) {
     textBox.setParentTransform(transform);
+}
+
+std::string TextInput::getString(){
+    MultiText *text = textBox.getText();
+
+    std::string s = text->getString();
+    return s;
+}
+
+void TextInput::setLabelPosition(TextInput::LabelPosition position) {
+    this->position = position;
+    Position::alignLeft(label,textBox);
+
+    label.setPosition(label.getPosition() + sf::Vector2f{10,0});
 }
 
