@@ -57,7 +57,6 @@ void AudioRecordingPanel::handleButtonClick() {
         isRecording = false;
         isPlaying = true;
     } else if (!isRecording && isPlaying) {
-        liveRecording.resetVisualizerBars();
         button.setTexture(Textures::getTexture(MIC_BUTTON_RED));
         liveRecording.playRecordedSound();
         isPlaying = false;

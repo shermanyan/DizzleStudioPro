@@ -9,7 +9,7 @@
 AudioVisualizer::AudioVisualizer(unsigned int width, unsigned int height)
         : width(width), height(height) {
     float spacing = 20.0f;
-    float barWidth = 5;
+    float barWidth = 12;
 //    float barWidth = ((static_cast<float>(width) - spacing * (numBars - 1)) / numBars) * barWidthScale;
     visualizerBars.resize(numBars);
     for (unsigned int i = 0; i < numBars; ++i) {
@@ -43,7 +43,7 @@ void AudioVisualizer::stopRecording() {
 bool AudioVisualizer::onProcessSamples(const sf::Int16* samples, std::size_t sampleCount) {
     sampleBuffer.insert(sampleBuffer.end(), samples, samples + sampleCount);
 
-    // Calculate the average amplitude for the new rightmost bar
+    // Calculate the average amplitude for the new leftmost bar
     float average = 0.0f;
     for (unsigned int j = 0; j < sampleCount; ++j) {
         average += std::abs(samples[j]);
@@ -64,14 +64,17 @@ bool AudioVisualizer::onProcessSamples(const sf::Int16* samples, std::size_t sam
     // Enforce the maxBarHeight limit
     barHeight = std::min(250.f, barHeight);
 
-    // Shift the bar heights to the left
-    for (unsigned int i = 0; i < numBars - 1; ++i) {
-        float leftBarHeight = visualizerBars[i + 1].getSize().y;
-        visualizerBars[i].setSize(sf::Vector2f(visualizerBars[i].getSize().x, leftBarHeight));
+    // Shift the bar heights to the right
+    for (int i = numBars - 1; i > 0; --i) {
+        float rightBarHeight = visualizerBars[i - 1].getSize().y;
+        visualizerBars[i].setSize(sf::Vector2f(visualizerBars[i].getSize().x, rightBarHeight));
+
+        if (visualizerBars[i].getSize().y != 0)
+            visualizerBars[i].setRadius(5);
     }
 
-    // Update the rightmost rectangle
-    visualizerBars[numBars - 1].setSize(sf::Vector2f(visualizerBars[numBars - 1].getSize().x, barHeight));
+        // Update the leftmost rectangle
+    visualizerBars[0].setSize(sf::Vector2f(visualizerBars[0].getSize().x, barHeight));
 
     reposition();
 
@@ -87,8 +90,6 @@ void AudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates states) co
 }
 
 
-
-
 sf::FloatRect AudioVisualizer::getGlobalBounds() const {
     sf::FloatRect bounds;
     bounds.width = width;
@@ -99,7 +100,6 @@ sf::FloatRect AudioVisualizer::getGlobalBounds() const {
 
 void AudioVisualizer::reposition() {
     float spacing = 10.0f; // Change this value to adjust the spacing between bars
-
 
     visualizerBars.front().setPosition(0,height /2 - visualizerBars.front().getGlobalBounds().height/2);
     for (int i = 1; i < visualizerBars.size(); ++i) {
@@ -120,15 +120,17 @@ void AudioVisualizer::saveRecordedSoundToFile(const std::string &filename) {
 }
 
 void AudioVisualizer::playRecordedSound() {
+    resetVisualizerBars();
     recordedSound.setBuffer(recordedSoundBuffer);
     recordedSound.play();
 }
 
 void AudioVisualizer::resetVisualizerBars() {
     float spacing = 20.0f;
-    float barWidth = 5;
+    float barWidth = 12;
 
     for (unsigned int i = 0; i < numBars; ++i) {
+        visualizerBars[i].setRadius(0);
         visualizerBars[i].setSize(sf::Vector2f(barWidth, 0));
         visualizerBars[i].setPosition(i * (barWidth + spacing), height);
     }
