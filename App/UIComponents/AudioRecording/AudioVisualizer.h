@@ -22,6 +22,9 @@ public:
     const unsigned int numBars = 80;
     std::vector<sf::Int16> sampleBuffer;
 
+    void saveRecordedSoundToFile(const std::string& filename);
+
+    void playRecordedSound();
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 
@@ -31,8 +34,11 @@ public:
 
     void reposition();
 
+    void resetVisualizerBars();
 private:
 
+    sf::SoundBuffer recordedSoundBuffer;
+    sf::Sound recordedSound;
 
 
 

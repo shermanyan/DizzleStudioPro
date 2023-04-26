@@ -24,19 +24,7 @@ void AudioRecordingPanel::eventHandler(sf::RenderWindow &window, const sf::Event
     BasePanel::eventHandler(window, event);
 
     if(MouseEvents::isClick(getCombinedTransform().transformRect(button.getGlobalBounds()),window) ){
-        if(!isRecording){
-            button.setTexture(Textures::getTexture(PAUSE_BUTTON_RED));
-            liveRecording.startRecording();
-            isRecording = true;
-            return;
-        }else if (isRecording){
-            button.setTexture(Textures::getTexture(PLAY_BUTTON_GREY));
-//            liveRecording.stop();
-            isRecording = false;
-        }
-        if(!isRecording){
-            liveRecording.stopRecording();
-        }
+        handleButtonClick();
     }
 }
 
@@ -56,4 +44,22 @@ void AudioRecordingPanel::draw(sf::RenderTarget &target, sf::RenderStates states
 
 void AudioRecordingPanel::setChildrenTransform(const sf::Transform &transform) {
     liveRecording.setParentTransform(transform);
+}
+
+void AudioRecordingPanel::handleButtonClick() {
+    if (!isRecording && !isPlaying) {
+        button.setTexture(Textures::getTexture(PAUSE_BUTTON_RED));
+        liveRecording.startRecording();
+        isRecording = true;
+    } else if (isRecording) {
+        button.setTexture(Textures::getTexture(PLAY_BUTTON_GREY));
+        liveRecording.stopRecording();
+        isRecording = false;
+        isPlaying = true;
+    } else if (!isRecording && isPlaying) {
+        liveRecording.resetVisualizerBars();
+        button.setTexture(Textures::getTexture(MIC_BUTTON_RED));
+        liveRecording.playRecordedSound();
+        isPlaying = false;
+    }
 }

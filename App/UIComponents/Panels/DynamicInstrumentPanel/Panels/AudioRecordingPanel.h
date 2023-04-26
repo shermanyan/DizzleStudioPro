@@ -15,6 +15,10 @@ private:
     SpriteImage button;
     sf::Texture texture;
     bool isRecording = false;
+    bool isPlaying = false;
+
+    void handleButtonClick();
+
 public:
 
     AudioRecordingPanel();
