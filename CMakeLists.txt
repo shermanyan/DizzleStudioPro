@@ -144,7 +144,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        )
+        SFML_Resources/Tools/Helpers/FloatToStringNoTrailingZeros.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
