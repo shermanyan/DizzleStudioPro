@@ -26,13 +26,7 @@ bool Pads::isClick(const sf::RenderWindow &window) const {
     return false;
 }
 
-void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-}
-
-void Pads::update(const sf::RenderWindow &window) {
-
-}
 
 void Pads::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
@@ -70,10 +64,17 @@ void Pads::setupText() {
     text.setFillColor({185, 185, 185});
     text.setString("TEST");
     Position::centerText(text,pad);
-    std::cout << text.getPosition().x << " " << text.getPosition().y << std::endl;
-
 }
 
+void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    if(MouseEvents::isClick(getCombinedTransform().transformRect(pad.getGlobalBounds()),window)){
+        std::cout << "Clicked";
+    }
+}
+
+void Pads::update(const sf::RenderWindow &window) {
+
+}
 
 
 

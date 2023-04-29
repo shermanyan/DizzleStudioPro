@@ -55,11 +55,11 @@ void DrumPad::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
     for(auto &p : pads)
         target.draw(p,states);
-
 }
 
 void DrumPad::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-
+    for(auto &p : pads)
+        p.eventHandler(window,event);
 }
 
 void DrumPad::update(const sf::RenderWindow &window) {
