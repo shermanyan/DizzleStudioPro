@@ -13,9 +13,7 @@
 #include "EmptyPanel.h"
 #include "StaticVisualizerPanel.h"
 #include "AudioRecordingPanel.h"
-
-#include "StaticVisualizerPanel.h"
-#include "AudioRecordingPanel.h"
+#include "DrumPadPanel.h"
 
 class DynamicInstrumentPanel: public AppComponent {
 
