@@ -14,6 +14,7 @@
 #include "Sounds.h"
 #include "AudioNode.h"
 #include <SFML/Audio.hpp>
+#include "KeyboardKeyMap.h"
 
 class Key: public AppComponent, public AudioNode {
 private:
@@ -22,10 +23,10 @@ private:
     Squircle key;
     sf::Color color;
 
-    bool play = false;
-
-    SoundKeys keyType = NULL_KEY;
     sf::Sound sound;
+
+    bool isClick(const sf::RenderWindow& window) const;
+
 
 public:
     //default constructor
@@ -45,9 +46,8 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
-
-    bool isClick(const sf::RenderWindow& window) const;
-    bool isRelease(const sf::RenderWindow& window, const sf::Event& event) const;
+    AudioNode getKeyType() const;
+    void loadSound();
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -56,9 +56,7 @@ public:
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    AudioNode getKeyType() const;
 
-    void loadSound();
 };
 
 

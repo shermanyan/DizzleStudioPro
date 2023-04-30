@@ -5,5 +5,6 @@
 #include "AudioTrack.h"
 
 AudioTrack::AudioTrack() : Track{}{
-    setFillColor(sf::Color::Yellow);
+//    setFillColor(sf::Color::Yellow);
 }
+

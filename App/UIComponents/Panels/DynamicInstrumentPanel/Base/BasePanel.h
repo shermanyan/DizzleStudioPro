@@ -10,6 +10,7 @@
 #include "Position.h"
 #include "InstrumentsEnum.h"
 #include "AudioNode.h"
+#include "Key.h"
 
 class BasePanel: public AppComponent {
 
@@ -21,8 +22,7 @@ public:
     BasePanel();
     BasePanel(const sf::Vector2f& size);
 
-    virtual AudioNode getKeyPressed(const sf::RenderWindow& window) const;
-    virtual AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const;
+    virtual std::vector<Key*> getKeys(const sf::RenderWindow& window);
 
     void setSize(const sf::Vector2f& size);
     sf::Vector2f getSize();

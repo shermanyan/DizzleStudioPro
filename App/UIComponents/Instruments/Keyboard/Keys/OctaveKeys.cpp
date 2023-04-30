@@ -189,31 +189,31 @@ float OctaveKeys::getKeySpacing() const {
     return spacing;
 }
 
-AudioNode OctaveKeys::getKeyPress(const sf::RenderWindow& window) const {
+std::vector<Key*> OctaveKeys::getKeys(const sf::RenderWindow& window){
+    std::vector<Key*> keys;
 
     for (auto &k: whiteKeys) {
-        if (k.isClick(window))
-            return k.getKeyType();
+        keys.push_back(&k);
     }
     for (auto &k: blackKeys) {
-        if (k.isClick(window))
-            return k.getKeyType();
+        keys.push_back(&k);
     }
-    return {};
+
+    return keys;
 }
 
 
-AudioNode OctaveKeys::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
-    for (auto &k: whiteKeys) {
-        if (k.isRelease(window, event))
-            return k.getKeyType();
-    }
-    for (auto &k: blackKeys) {
-        if (k.isRelease(window,event))
-            return k.getKeyType();
-    }
-    return {};
-}
+//AudioNode& OctaveKeys::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) {
+//    for (auto &k: whiteKeys) {
+//        if (k.isRelease(window, event))
+//            return k.getKeyType();
+//    }
+//    for (auto &k: blackKeys) {
+//        if (k.isRelease(window,event))
+//            return k.getKeyType();
+//    }
+//    return {};
+//}
 
 void OctaveKeys::setOctave(unsigned int octave) {
     for (auto& k:whiteKeys)

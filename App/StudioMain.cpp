@@ -12,8 +12,14 @@ void StudioMain::updater(sf::RenderWindow &window) {
 
 }
 
-StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,30}) {
+StudioMain::StudioMain()
+:Application({2000,1125},"Dizzle Studio Pro", {30,30,30}),
+dynamicInstrumentPanel({}), trackPanel({})
+{
+    StudioStatics::panel = &dynamicInstrumentPanel;
 
+    dynamicInstrumentPanel.setPosition(20,700);
+    trackPanel.setPosition(20,80);
 
     projectTitle.setPosition(10,10);
     projectTitle.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
@@ -26,11 +32,7 @@ StudioMain::StudioMain() : Application({2000,1125},"Dizzle Studio Pro", {30,30,3
     projectTitle.setLabelFillColor({185, 185, 185});
     projectTitle.toggleBox();
 
-
-    dynamicInstrumentPanel.setPosition(20,700);
-
-    trackPanel.setPosition(20,80);
-    trackPanel.setInstrumentPanel(&dynamicInstrumentPanel);
+//    trackPanel.setInstrumentPanel(&dynamicInstrumentPanel);
 
     addComponent(dynamicInstrumentPanel);
     addComponent(trackPanel);

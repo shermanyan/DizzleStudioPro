@@ -16,7 +16,7 @@
 class TrackLabel: public AppComponent{
 
 private:
-    Squircle label;
+    Squircle label, overlay;
     SpriteImage labelImg;
 
     sf::Color trackColor;

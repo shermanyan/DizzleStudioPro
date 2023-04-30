@@ -144,7 +144,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        )
+        App/StudioStatics.cpp App/StudioStatics.h App/UIComponents/Instruments/Keyboard/KeyboardKeyMap.cpp App/UIComponents/Instruments/Keyboard/KeyboardKeyMap.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

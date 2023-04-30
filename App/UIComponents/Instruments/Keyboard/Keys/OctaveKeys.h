@@ -36,6 +36,7 @@ private:
 
     void setChildrenTransform(const sf::Transform& transform) override;
 
+
 public:
     //Default Constructor
     //Size: {760,347}
@@ -61,11 +62,12 @@ public:
     //Set spacing between keys
     void setKeySpacing(float spacing);
 
-
     float getKeySpacing() const;
 
-    AudioNode getKeyPress(const sf::RenderWindow& window) const;
-    AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const;
+//    std::vector<Key*> getKeys();
+
+
+    //    AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) ;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -81,6 +83,8 @@ public:
 
     //setup black keys color and positions;
     void loudSoundBlackKeys();
+
+    std::vector<Key *> getKeys(const sf::RenderWindow &window);
 };
 
 

@@ -4,6 +4,7 @@
 
 #ifndef DIZZLESTUDIOPRO_SOUNDKEYS_H
 #define DIZZLESTUDIOPRO_SOUNDKEYS_H
+#include <string>
 
 enum SoundKeys{
     NULL_KEY,

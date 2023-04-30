@@ -5,5 +5,5 @@
 #include "VocalTrack.h"
 
 VocalTrack::VocalTrack(): Track{}{
-    setFillColor(sf::Color::Blue);
+//    setFillColor(sf::Color::Blue);
 }

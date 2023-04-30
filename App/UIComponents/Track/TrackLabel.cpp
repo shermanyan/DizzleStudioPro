@@ -15,20 +15,22 @@ TrackLabel::TrackLabel(const sf::Vector2f &size, const sf::Color &labelColor, In
     setSize(size);
     setTrackColor(labelColor);
     label.setRadius({0,0,10,10});
+
+    overlay.setFillColor({100, 100, 100, 20});
 }
 
 void TrackLabel::setSize(const sf::Vector2f &size) {
+    overlay.setSize(size);
     labelImg.setSize({size.x, size.y * .8f});
     label.setSize(size.x,size.y * .2f);
     Position::bottom(label,labelImg);
 }
 
 void TrackLabel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(MouseEvents::isClick(getCombinedTransform().transformRect(getGlobalBounds()),window))
-        label.setFillColor(trackColor * sf::Color{10,10,10});
+    if(MouseEvents::isHover(getCombinedTransform().transformRect(getGlobalBounds()),window))
+        setState(HOVERED,true);
     else
-        label.setFillColor(trackColor);
-
+        setState(HOVERED,false);
 
 }
 
@@ -40,6 +42,8 @@ void TrackLabel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(labelImg,states);
     target.draw(label,states);
+    if(checkStates(HOVERED))
+        target.draw(overlay,states);
 }
 
 void TrackLabel::setTrack(InstrumentsEnum type) {
