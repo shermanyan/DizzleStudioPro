@@ -45,17 +45,17 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     if (isClick(window) && !AudioNode::checkStates(PLAY)) {
         AudioNode::setState(PLAY, true);
-        sound.play();
+        play();
     }
     else if(!isClick(window) && AudioNode::checkStates(PLAY)) {
         if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Tab))
-            sound.stop();
+            stop();
         AudioNode::setState(PLAY, false);
     }
 }
 
 void Key::loadSound() {
-    sound.setBuffer(Sounds::getSound(*this));
+    setBuffer(Sounds::getSound(*this));
 }
 
 void Key::update(const sf::RenderWindow &window) {

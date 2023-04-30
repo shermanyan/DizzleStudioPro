@@ -23,8 +23,6 @@ private:
     Squircle key;
     sf::Color color;
 
-    sf::Sound sound;
-
     bool isClick(const sf::RenderWindow& window) const;
 
 

@@ -72,6 +72,8 @@ void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     }else{
         pad.setFillColor(sf::Color{36, 36, 36});
     }
+
+
 }
 
 void Pads::update(const sf::RenderWindow &window) {
