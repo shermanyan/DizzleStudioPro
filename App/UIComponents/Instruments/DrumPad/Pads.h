@@ -18,7 +18,6 @@
 class Pads: public AppComponent, public AudioNode {
 private:
     Squircle pad;
-    sf::Color color;
     sf::Text text;
     SoundKeys keyType = NULL_KEY;
     sf::Sound sound;
@@ -45,7 +44,7 @@ public:
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-
+    void setText(const std::string &string);
 };
 
 

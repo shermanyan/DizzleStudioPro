@@ -16,7 +16,9 @@ enum SoundKeys{
 static const std::string SoundKeysStrings[] = {
         "NULL_KEY","C", "D", "E", "F",
         "G", "A","B", "Cs", "Ds", "Fs",
-        "Gs", "As",
+        "Gs", "As", "Crash", "Snare",
+        "Hi-Hat", "High Tom", "Low Tom", "Kick",
+        "Clap"
 };
 
 #endif //DIZZLESTUDIOPRO_SOUNDKEYS_H

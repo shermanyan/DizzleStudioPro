@@ -68,11 +68,19 @@ void Pads::setupText() {
 
 void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     if(MouseEvents::isClick(getCombinedTransform().transformRect(pad.getGlobalBounds()),window)){
-        std::cout << "Clicked";
+        pad.setFillColor(sf::Color{36, 36, 36} + sf::Color{25,25,25});
+    }else{
+        pad.setFillColor(sf::Color{36, 36, 36});
     }
 }
 
 void Pads::update(const sf::RenderWindow &window) {
+
+}
+
+void Pads::setText(const std::string &string) {
+    text.setString(string);
+    Position::centerText(text,pad);
 
 }
 
