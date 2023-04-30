@@ -34,10 +34,21 @@ bool AudioVisualizer::startRecording() {
 
 void AudioVisualizer::stopRecording() {
     sf::SoundRecorder::stop();
-
     recordedSoundBuffer.loadFromSamples(sampleBuffer.data(), sampleBuffer.size(), 1, getSampleRate());
 
+    //set the Audio node duration
+    sf::Time duration = recordedSoundBuffer.getDuration();
+    float durationInSeconds = duration.asSeconds();
+    this->duration = durationInSeconds;
 }
+
+void AudioVisualizer::playRecordedSound() {
+    resetVisualizerBars();
+    AudioNode::setBuffer(recordedSoundBuffer);
+    AudioNode::play();
+
+}
+
 
 bool AudioVisualizer::onProcessSamples(const sf::Int16* samples, std::size_t sampleCount) {
     sampleBuffer.insert(sampleBuffer.end(), samples, samples + sampleCount);
@@ -89,8 +100,6 @@ void AudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates states) co
 }
 
 
-
-
 void AudioVisualizer::reposition() {
     float spacing = 10.0f; // Change this value to adjust the spacing between bars
 
@@ -112,11 +121,7 @@ void AudioVisualizer::saveRecordedSoundToFile(const std::string &filename) {
     }
 }
 
-void AudioVisualizer::playRecordedSound() {
-    resetVisualizerBars();
-    recordedSound.setBuffer(recordedSoundBuffer);
-    recordedSound.play();
-}
+
 
 void AudioVisualizer::resetVisualizerBars() {
     float spacing = 20.0f;

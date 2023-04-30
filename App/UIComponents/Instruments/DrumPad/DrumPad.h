@@ -15,8 +15,8 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
-    float getKeySpacing() const;
     void loudSound();
+
 private:
     std::vector<Pads> pads;
     int numOfPads;
@@ -26,7 +26,6 @@ private:
     void setupPads();
     void positionPads();
     sf::Vector2f calculatePadSize() const;
-
     void setChildrenTransform(const sf::Transform& transform) override;
 
 

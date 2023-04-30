@@ -20,11 +20,12 @@ private:
                 duration = 0;
         }
     }
-    sf::Sound sound;
 
 public:
     SoundKeys keyEnum = NULL_KEY;
     unsigned int octave = 0;
+
+    sf::Sound sound;
 
     float duration = 0, timeStamp = 0;
 

@@ -7,13 +7,10 @@
 #include <SFML/Audio.hpp>
 #include "AppComponent.h"
 #include "Squircle.h"
-class AudioVisualizer : public AppComponent , public sf::SoundRecorder {
-public:
+#include "AudioNode.h"
 
-    std::vector<sf::Int16> sampleBuffer;
-    unsigned int width;
-    unsigned int height;
-    const unsigned int numBars = 53;
+class AudioVisualizer : public AppComponent , public sf::SoundRecorder, public AudioNode {
+public:
 
     AudioVisualizer(unsigned int width, unsigned int height);
     std::vector<Squircle> visualizerBars;
@@ -35,6 +32,10 @@ public:
 
 
 private:
+    std::vector<sf::Int16> sampleBuffer;
+    unsigned int width;
+    unsigned int height;
+    const unsigned int numBars = 53;
 
     sf::SoundBuffer recordedSoundBuffer;
     sf::Sound recordedSound;

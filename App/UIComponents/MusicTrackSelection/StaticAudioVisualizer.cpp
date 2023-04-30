@@ -2,14 +2,12 @@
 // Created by Brandon Hargitay on 4/19/23.
 //
 
-#include <iostream>
 #include "StaticAudioVisualizer.h"
-#include "MouseEvents.h"
 
 StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size)
         : width(size.x), height(size.y) {
 
-    loadVisualizer(filePath);
+//    loadVisualizer(filePath);
 
 }
 
@@ -23,10 +21,10 @@ void StaticAudioVisualizer::draw(sf::RenderTarget& target, sf::RenderStates stat
 void StaticAudioVisualizer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     if (sound.getStatus() != sf::Sound::Playing) {
-        sound.play();
+        AudioNode::play();
         isPlaying = true;
     } else {
-        sound.stop();
+       AudioNode::stop();
         isPlaying = false;
         for (auto& bar : visualizerBars) {
             bar.setFillColor({121,121,121});
@@ -60,27 +58,30 @@ void StaticAudioVisualizer::updateColors() {
 }
 
 void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
-//    buffer = Sounds::getSound(NARUTO);
-
+    // buffer = Sounds::getSound(NARUTO);
+    visualizerBars.clear();
     if (!buffer.loadFromFile("App/Resources/Sounds/TestSounds/" + filePath)) {
         std::cout << "Fail";
     }
-    sound.setBuffer(buffer);
+    AudioNode::setBuffer(buffer);
 
     float spacing = 15.0f;
     float barWidth = 12.0f;
 
     unsigned int numBars = static_cast<unsigned int>((width - spacing) / (barWidth + spacing));
 
-    visualizerBars.resize(numBars);
+    visualizerBars.reserve(numBars); // Reserve space for visualizer bars
 
     const sf::Int16 *samples = buffer.getSamples();
     std::size_t sampleCount = buffer.getSampleCount();
+    unsigned int samplesPerBar = sampleCount / numBars;
 
     for (unsigned int i = 0; i < numBars; ++i) {
         float average = 0.0f;
-        unsigned int samplesPerBar = sampleCount / numBars;
-        for (unsigned int j = i * samplesPerBar; j < (i + 1) * samplesPerBar; ++j) {
+        unsigned int sampleStart = i * samplesPerBar;
+        unsigned int sampleEnd = sampleStart + samplesPerBar;
+
+        for (unsigned int j = sampleStart; j < sampleEnd; ++j) {
             average += std::abs(samples[j]);
         }
         average /= samplesPerBar;
@@ -89,11 +90,12 @@ void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
         float barHeight = normalizedAverage * height;
         float clampedBarHeight = std::min(barHeight, 320.f);
 
-        visualizerBars[i].setRadius(5);
-        visualizerBars[i].setSize(sf::Vector2f(barWidth, clampedBarHeight));
+        visualizerBars.emplace_back(Squircle(sf::Vector2f(barWidth, clampedBarHeight), 5)); // Construct in place
+//        visualizerBars[i].setRadius(5);
         visualizerBars[i].setFillColor({121,121,121});
     }
 
+    this->duration = sound.getBuffer()->getDuration().asSeconds();
     reposition();
 }
 

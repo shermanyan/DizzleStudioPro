@@ -56,9 +56,7 @@ void DrumPad::loudSound() {
     }
 }
 
-float DrumPad::getKeySpacing() const {
-    return spacing;
-}
+
 void DrumPad::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
 

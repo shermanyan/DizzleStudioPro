@@ -13,7 +13,7 @@
 #include "MouseEvents.h"
 #include "Fonts.h"
 #include "FloatToStringNoTrailingZeros.h"
-
+#include "AddToTrackButton.h"
 class AudioRecordingPanel : public BasePanel{
 private:
     AudioVisualizer liveRecording;
@@ -26,6 +26,7 @@ private:
     void updateClockText();
     void handleButtonClick();
 
+    AddToTrackButton addToTrackButton;
 public:
 
     AudioRecordingPanel();

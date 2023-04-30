@@ -12,7 +12,7 @@ AudioRecordingPanel::AudioRecordingPanel() : liveRecording(100,2200){
     button.setSize({200,200});
 
     Position::center(button,*this);
-    button.setPosition(button.getPosition().x - 600 ,button.getPosition().y);
+    button.setPosition(button.getPosition().x - 650 ,button.getPosition().y);
 
     Position::center(liveRecording,*this);
     liveRecording.setPosition(liveRecording.getPosition().x - 200 ,liveRecording.getPosition().y);
@@ -22,10 +22,17 @@ AudioRecordingPanel::AudioRecordingPanel() : liveRecording(100,2200){
     clockText.setString("0:00");
     Position::center(clockText,button);
     Position::bottom(clockText,button, 10.f);
+
+    addToTrackButton.setPosition(1730, 40);
 }
 
 void AudioRecordingPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
+
+
+    if(addToTrackButton.isClick(window)){
+        std::cout << "Clicked";
+    }
 
     if(MouseEvents::isClick(getCombinedTransform().transformRect(button.getGlobalBounds()),window) ){
         handleButtonClick();
@@ -44,22 +51,22 @@ void AudioRecordingPanel::draw(sf::RenderTarget &target, sf::RenderStates states
     target.draw(liveRecording,states);
     target.draw(button,states);
     target.draw(clockText, states);
-
+    target.draw(addToTrackButton, states);
 }
 
 
 void AudioRecordingPanel::setChildrenTransform(const sf::Transform &transform) {
     liveRecording.setParentTransform(transform);
+    addToTrackButton.setParentTransform(transform);
 }
 
 void AudioRecordingPanel::handleButtonClick() {
     if (!isRecording && !isPlaying) {
-        clock.start();
         button.setTexture(Textures::getTexture(PAUSE_BUTTON_RED));
         liveRecording.startRecording();
+        clock.start();
         isRecording = true;
     } else if (isRecording) {
-        std::cout << std::endl << clock.getElapsedTimeAsSeconds();
         button.setTexture(Textures::getTexture(PLAY_BUTTON_GREY));
         liveRecording.stopRecording();
         isRecording = false;

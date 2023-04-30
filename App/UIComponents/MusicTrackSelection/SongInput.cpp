@@ -21,7 +21,7 @@ SongInput::SongInput() {
     loadButton.setSize({105,33});
     loadButton.setFillColor({121,121,121});
     Position::bottom(loadButton,songInput);
-    loadButton.setPosition(songInput.getPosition().x + 120,loadButton.getPosition().y + 12);
+    loadButton.setPosition(songInput.getPosition().x + 145,loadButton.getPosition().y + 12);
 
 
     text.setFont(Fonts::getFont(NUNITO_BOLD));

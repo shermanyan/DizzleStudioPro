@@ -18,11 +18,17 @@ StaticVisualizerPanel::StaticVisualizerPanel()
     Position::center(visualizer, *this);
     visualizer.setPosition(visualizer.getPosition().x + 385, visualizer.getPosition().y);
 
+    addToTrackButton.setPosition(1730, 40);
+
 }
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
     songInput.eventHandler(window, event);
+
+    if(addToTrackButton.isClick(window)){
+        std::cout << "Clicked";
+    }
 
     if (songInput.loadButonClicked(window))
     {
@@ -46,6 +52,7 @@ void StaticVisualizerPanel::update(const sf::RenderWindow &window) {
     BasePanel::update(window);
     visualizer.update(window);
     songInput.update(window);
+
 }
 
 void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -56,6 +63,7 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
     target.draw(visualizer,states);
     target.draw(playPauseButton,states);
     target.draw(songInput,states);
+    target.draw(addToTrackButton, states);
 
 }
 
@@ -63,4 +71,6 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
 void StaticVisualizerPanel::setChildrenTransform(const sf::Transform &transform) {
     visualizer.setParentTransform(transform);
     songInput.setParentTransform(transform);
+    addToTrackButton.setParentTransform(transform);
+
 }
