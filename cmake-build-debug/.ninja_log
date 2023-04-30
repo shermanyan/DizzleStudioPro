@@ -52,3 +52,6 @@
 7	445	1682834204060726832	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/MusicTrackSelection/SongInput.cpp.o	c50e1f2167fafeb8
 1878	2195	1682832774043996521	CMakeFiles/DizzleStudioPro.dir/SFML_Resources/Shapes/Squircle.cpp.o	e85083025661cc07
 1619	1669	1682834205288362993	DizzleStudioPro	26b8edca4eca3ad7
+13	642	1682879351869941632	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/Keyboard/Keys/Key.cpp.o	4ad5215602c73236
+3	410	1682879483233299117	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Instruments/DrumPad/DrumPad.cpp.o	b7cf3039fd8a5d25
+410	486	1682879483311232844	DizzleStudioPro	26b8edca4eca3ad7
