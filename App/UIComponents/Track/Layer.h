@@ -5,12 +5,12 @@
 #ifndef DIZZLESTUDIOPRO_LAYER_H
 #define DIZZLESTUDIOPRO_LAYER_H
 
+#include "StudioStatics.h"
 
 #include "AppComponent.h"
 #include "Squircle.h"
 #include "TrackLabel.h"
 #include "DynamicInstrumentPanel.h"
-#include "Track.h"
 
 #include "KeyboardTrack.h"
 #include "AudioTrack.h"
@@ -20,15 +20,10 @@
 class Layer: public AppComponent {
 private:
 
-    static DynamicInstrumentPanel* instrumentPanel;
-    static SeekBar* seekBar;
+    std::unique_ptr<Track> track;
 
     TrackLabel label;
 
-    Track track;
-
-
-protected:
     void setChildrenTransform(const sf::Transform &transform) override;
 
 public:
@@ -37,9 +32,6 @@ public:
     void setTrackColor(const sf::Color& color);
     void setTrack(InstrumentsEnum type);
     InstrumentsEnum getTrackType() const;
-
-    static void setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel);
-    static void setSeekBar(SeekBar* seekbar);
 
     sf::FloatRect getGlobalBounds() const override;
 

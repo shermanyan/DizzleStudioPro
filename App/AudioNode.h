@@ -5,10 +5,11 @@
 #ifndef DIZZLESTUDIOPRO_AUDIONODE_H
 #define DIZZLESTUDIOPRO_AUDIONODE_H
 #include "SoundKeys.h"
+#include "States.h"
 
-struct AudioNode{
-public:
+struct AudioNode: public States{
 private:
+
     void setDuration(){
         switch (keyEnum) {
             case DRUM:

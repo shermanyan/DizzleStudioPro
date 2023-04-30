@@ -6,7 +6,11 @@
 #define STATESENUM_H
 
 enum StatesEnum{
+    PLAY,
+    STOP,
+    PAUSE,
     SELECTED,
+    HOVERED,
     ACTIVE,
     HIDDEN,
     LAST_STATE

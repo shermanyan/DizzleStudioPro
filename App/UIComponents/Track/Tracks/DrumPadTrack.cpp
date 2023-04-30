@@ -5,5 +5,5 @@
 #include "DrumPadTrack.h"
 
 DrumPadTrack::DrumPadTrack() : Track{}{
-    setFillColor(sf::Color::Green);
+//    setFillColor(sf::Color::Green);
 }

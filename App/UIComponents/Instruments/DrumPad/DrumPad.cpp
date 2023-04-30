@@ -44,7 +44,7 @@ void DrumPad::setupPads() {
     sf::Vector2f padSize = calculatePadSize();
     for (int i = 0; i < numOfPads; i++) {
         pads.emplace_back(Pads(padSize));
-        pads[i].octave = 1;
+//        pads
     }
 }
 

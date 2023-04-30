@@ -20,7 +20,7 @@ class DynamicInstrumentPanel: public AppComponent {
 private:
     std::map<InstrumentsEnum,std::unique_ptr<BasePanel>> panels;
 
-    BasePanel* currentPanel;
+    BasePanel* currentPanel = nullptr;
 
     InstrumentsEnum currentPanelEnum;
 
@@ -34,7 +34,7 @@ public:
     void setActivePanel(InstrumentsEnum panel);
     InstrumentsEnum getActivePanel() const;
 
-    BasePanel* getPanel() const;
+    BasePanel* getPanel();
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;

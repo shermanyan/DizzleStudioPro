@@ -4,6 +4,8 @@
 
 #include "Keyboard.h"
 
+const unsigned int Keyboard::STARTING_OCTAVE = 3;
+
 Keyboard::Keyboard() : Keyboard(1) {
 }
 
@@ -24,7 +26,7 @@ void Keyboard::setupKeyboard() {
 
     for(int i = 0; i < numOctaves; i++) {
         keyboard.emplace_back();
-        keyboard.back().setOctave(i+3);
+        keyboard.back().setOctave(i+STARTING_OCTAVE);
         keyboard.back().loudSoundWhiteKeys(); // Call the modified setUpWhiteKeys() function
         keyboard.back().loudSoundBlackKeys();
     }
@@ -104,30 +106,28 @@ void Keyboard::reposition() {
 
 }
 
-AudioNode Keyboard::getKeyPressed(const sf::RenderWindow &window) const {
+std::vector<Key*> Keyboard::getKeys(const sf::RenderWindow& window) {
 
-    AudioNode keyPressed;
+    std::vector<Key*> keyboardKeys;
 
-    for (int i = 0; i< keyboard.size(); i++) {
-        keyPressed = keyboard[i].getKeyPress(window);
-        if (keyPressed.keyEnum != NULL_KEY) {
-            return keyPressed;
-        }
+    for (auto &o: keyboard) {
+        for (auto& k: o.getKeys(window))
+            keyboardKeys.push_back(k);
     }
-    return keyPressed;
+    return keyboardKeys;
 }
 
-AudioNode Keyboard::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
-    AudioNode keyReleased;
-
-    for (int i = 0; i< keyboard.size(); i++) {
-        keyReleased = keyboard[i].getKeyRelease(window,event);
-        if (keyReleased.keyEnum != NULL_KEY) {
-            return keyReleased;
-        }
-    }
-    return keyReleased;
-}
+//AudioNode Keyboard::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
+//    AudioNode keyReleased;
+//
+//    for (int i = 0; i< keyboard.size(); i++) {
+//        keyReleased = keyboard[i].getKeyRelease(window,event);
+//        if (keyReleased.keyEnum != NULL_KEY) {
+//            return keyReleased;
+//        }
+//    }
+//    return keyReleased;
+//}
 
 
 

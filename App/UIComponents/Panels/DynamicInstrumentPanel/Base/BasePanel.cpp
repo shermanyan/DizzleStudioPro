@@ -80,13 +80,13 @@ sf::Vector2f BasePanel::getSize() {
     return outside.getSize();
 }
 
-AudioNode BasePanel::getKeyPressed(const sf::RenderWindow &window) const {
+std::vector<Key *> BasePanel::getKeys(const sf::RenderWindow &window) {
     return {};
 }
 
-AudioNode BasePanel::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
-    return {};
-}
+
+
+
 
 
 

@@ -6,7 +6,6 @@
 #include <iostream>
 
 DynamicInstrumentPanel::DynamicInstrumentPanel() {
-
     setActivePanel(EMPTY);
 }
 
@@ -76,6 +75,6 @@ InstrumentsEnum DynamicInstrumentPanel::getActivePanel() const {
     return currentPanelEnum;
 }
 
-BasePanel* DynamicInstrumentPanel::getPanel() const {
+BasePanel* DynamicInstrumentPanel::getPanel() {
     return currentPanel;
 }
