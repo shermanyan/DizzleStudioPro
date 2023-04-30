@@ -50,7 +50,6 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         sound.stop();
         play = false;
     }
-
 }
 
 void Key::loadSound() {

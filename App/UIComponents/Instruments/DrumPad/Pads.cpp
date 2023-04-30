@@ -6,13 +6,11 @@
 #include <iostream>
 
 Pads::Pads() : Pads({200,200}) {
-    setupText();
     pad.setRadius(10);
     pad.setFillColor({36, 36, 36});
 }
 Pads::Pads(const sf::Vector2f &size) {
     setSize(size);
-    setupText();
     pad.setRadius(10);
     pad.setFillColor({36, 36, 36});
 }
@@ -59,10 +57,10 @@ AudioNode Pads::getKeyType() const {
     return {octave,keyEnum};
 }
 
-void Pads::setupText() {
+void Pads::setupText(const std::string &string) {
     text.setFont(Fonts::getFont(NUNITO_BOLD));
     text.setFillColor({185, 185, 185});
-    text.setString("TEST");
+    text.setString(string);
     Position::centerText(text,pad);
 }
 
@@ -78,11 +76,7 @@ void Pads::update(const sf::RenderWindow &window) {
 
 }
 
-void Pads::setText(const std::string &string) {
-    text.setString(string);
-    Position::centerText(text,pad);
 
-}
 
 
 

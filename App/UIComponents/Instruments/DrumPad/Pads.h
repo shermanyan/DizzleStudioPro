@@ -35,7 +35,7 @@ public:
     void loadSound();
 
     AudioNode getKeyType() const;
-    void setupText();
+    void setupText(const std::string &string);
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -44,7 +44,6 @@ public:
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    void setText(const std::string &string);
 };
 
 

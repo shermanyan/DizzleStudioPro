@@ -30,7 +30,7 @@ void DrumPad::positionPads() {
         float xPos = leftOffset + i * (padSize.x + spacing);
         float yPos = topOffset;
         pads[i].setPosition({xPos + 30, yPos + 30});
-        pads[i].setupText();
+        pads[i].setupText(SoundKeysStrings[i+13]);
     }
 
 }
@@ -44,6 +44,7 @@ void DrumPad::setupPads() {
     sf::Vector2f padSize = calculatePadSize();
     for (int i = 0; i < numOfPads; i++) {
         pads.emplace_back(Pads(padSize));
+        pads
     }
 }
 
