@@ -27,8 +27,9 @@ LayersPanel::LayersPanel() {
     }
 
     layers[0].setTrack(KEYBOARD);
-    layers[1].setTrack(AUDIO);
-    layers[2].setTrack(VOCAL);
+    layers[1].setTrack(DRUMPAD);
+    layers[2].setTrack(AUDIO);
+    layers[3].setTrack(VOCAL);
 
 
     seek.setSize({10,560});

@@ -18,10 +18,12 @@ Keyboard::Keyboard(unsigned int numOctaves, const sf::Vector2f &size) {
     this->numOctaves = numOctaves;
     setupKeyboard();
     setSize(size);
+    std::cout << "whattttt";
 }
 
 
 void Keyboard::setupKeyboard() {
+
     for(int i = 0; i < numOctaves; i++) {
         keyboard.emplace_back();
         keyboard.back().setOctave(i+STARTING_OCTAVE);

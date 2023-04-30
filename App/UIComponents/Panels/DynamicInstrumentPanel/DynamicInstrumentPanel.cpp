@@ -45,7 +45,7 @@ void DynamicInstrumentPanel::loadPanel(InstrumentsEnum panel) {
             break;
         }
         case DRUMPAD:{
-            panels[EMPTY] = std::make_unique<EmptyPanel>();
+            panels[DRUMPAD] = std::make_unique<DrumPadPanel>();
             break;
         }
         case AUDIO: {

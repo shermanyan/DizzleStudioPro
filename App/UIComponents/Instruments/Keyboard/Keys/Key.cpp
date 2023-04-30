@@ -52,7 +52,6 @@ void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
             sound.stop();
         AudioNode::setState(PLAY, false);
     }
-
 }
 
 void Key::loadSound() {

@@ -8,6 +8,11 @@
 #include "AudioVisualizer.h"
 #include "SpriteImage.h"
 #include "BasePanel.h"
+#include "Clock.h"
+#include "Textures.h"
+#include "MouseEvents.h"
+#include "Fonts.h"
+#include "FloatToStringNoTrailingZeros.h"
 
 class AudioRecordingPanel : public BasePanel{
 private:
@@ -15,6 +20,12 @@ private:
     SpriteImage button;
     sf::Texture texture;
     bool isRecording = false;
+    bool isPlaying = false;
+    sf::Text clockText;
+    Clock clock;
+    void updateClockText();
+    void handleButtonClick();
+
 public:
 
     AudioRecordingPanel();
