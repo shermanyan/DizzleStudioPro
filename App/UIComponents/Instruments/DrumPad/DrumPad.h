@@ -16,7 +16,7 @@ public:
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
     void update(const sf::RenderWindow &window) override;
     float getKeySpacing() const;
-
+    void loudSound();
 private:
     std::vector<Pads> pads;
     int numOfPads;

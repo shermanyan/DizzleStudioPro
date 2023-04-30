@@ -90,9 +90,6 @@ void Key::setRadius(const float (&radii)[4]) {
     key.setRadius(radii);
 }
 
-AudioNode Key::getKeyType() const{
-    return *this;
-}
 
 
 bool Key::isClick(const sf::RenderWindow &window) const {

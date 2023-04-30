@@ -46,7 +46,6 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
-    AudioNode getKeyType() const;
     void loadSound();
 
     sf::FloatRect getGlobalBounds() const override;

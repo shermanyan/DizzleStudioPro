@@ -10,6 +10,7 @@ Pads::Pads() : Pads({200,200}) {
     pad.setFillColor({36, 36, 36});
 }
 Pads::Pads(const sf::Vector2f &size) {
+//    AppComponent::setState(PLAY, false);
     setSize(size);
     pad.setRadius(10);
     pad.setFillColor({36, 36, 36});
@@ -21,7 +22,7 @@ Pads::Pads(const sf::Vector2f &size) {
 //}
 
 bool Pads::isClick(const sf::RenderWindow &window) const {
-    return false;
+    return MouseEvents::isClick(getCombinedTransform().transformRect(pad.getGlobalBounds()),window);
 }
 
 
@@ -42,7 +43,7 @@ void Pads::getSize() {
 }
 
 void Pads::loadSound() {
-    sound.setBuffer(Sounds::getSound(*this));
+    setBuffer(Sounds::getSound(*this));
 }
 
 sf::FloatRect Pads::getGlobalBounds() const {
@@ -65,8 +66,9 @@ void Pads::setupText(const std::string &string) {
 }
 
 void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(MouseEvents::isClick(getCombinedTransform().transformRect(pad.getGlobalBounds()),window)){
+    if(isClick(window)){
         pad.setFillColor(sf::Color{36, 36, 36} + sf::Color{25,25,25});
+        play();
     }else{
         pad.setFillColor(sf::Color{36, 36, 36});
     }
