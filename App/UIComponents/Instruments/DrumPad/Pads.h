@@ -26,7 +26,7 @@ public:
 
     Pads();
     Pads(const sf::Vector2f &size);
-    void setPosition(const sf::Vector2f &position);
+//    void setPosition(const sf::Vector2f &position);
     bool isClick(const sf::RenderWindow& window) const;
 
     void setSize(const sf::Vector2f &size);

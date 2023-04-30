@@ -46,6 +46,8 @@ add_executable(DizzleStudioPro
         App/UIComponents/Instruments/Keyboard/Keys/OctaveKeys.h
         App/UIComponents/Instruments/Keyboard/Keyboard.cpp
         App/UIComponents/Instruments/Keyboard/Keyboard.h
+        App/UIComponents/Instruments/Keyboard/KeyboardKeyMap.cpp
+        App/UIComponents/Instruments/Keyboard/KeyboardKeyMap.h
         App/UIComponents/Instruments/SoundKeys.h
         App/UIComponents/MusicTrackSelection/SongInput.cpp
         App/UIComponents/MusicTrackSelection/SongInput.h
@@ -55,6 +57,8 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/DynamicInstrumentPanel/Base/BasePanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.h
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/DrumPadPanel.cpp
+        App/UIComponents/Panels/DynamicInstrumentPanel/Panels/DrumPadPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.cpp
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/EmptyPanel.h
         App/UIComponents/Panels/DynamicInstrumentPanel/Panels/KeyboardPanel.cpp
@@ -91,6 +95,8 @@ add_executable(DizzleStudioPro
         App/InstrumentsEnum.h
         App/StudioMain.cpp
         App/StudioMain.h
+        App/StudioStatics.cpp
+        App/StudioStatics.h
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.cpp
         SFML_Resources/Components/ScrollableContainer/ScrollableContainer.h
         SFML_Resources/Components/ScrollableContainer/ScrollEnum.h
@@ -119,6 +125,7 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/App/Updatable.h
         SFML_Resources/Tools/Enums/FontsEnum.h
         SFML_Resources/Tools/Enums/StatesEnum.h
+        SFML_Resources/Tools/Helpers/FloatToStringNoTrailingZeros.h
         SFML_Resources/Tools/Helpers/KeyboardShortcuts.cpp
         SFML_Resources/Tools/Helpers/KeyboardShortcuts.h
         SFML_Resources/Tools/Helpers/MouseEvents.cpp
@@ -144,7 +151,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        App/StudioStatics.cpp App/StudioStatics.h App/UIComponents/Instruments/Keyboard/KeyboardKeyMap.cpp App/UIComponents/Instruments/Keyboard/KeyboardKeyMap.h)
+        )
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

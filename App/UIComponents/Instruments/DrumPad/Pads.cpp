@@ -16,9 +16,9 @@ Pads::Pads(const sf::Vector2f &size) {
 }
 
 
-void Pads::setPosition(const sf::Vector2f &position) { // New function to set position
-    pad.setPosition(position);
-}
+//void Pads::setPosition(const sf::Vector2f &position) { // New function to set position
+//    pad.setPosition(position);
+//}
 
 bool Pads::isClick(const sf::RenderWindow &window) const {
     return false;
