@@ -32,8 +32,8 @@ void KeyboardPanel::setChildrenTransform(const sf::Transform &transform) {
     keyboard.setParentTransform(transform);
 }
 
-std::vector<Key *> KeyboardPanel::getKeys(const sf::RenderWindow &window) {
-    return keyboard.getKeys(window);
+std::vector<Key *> KeyboardPanel::getKeys() {
+    return keyboard.getKeys();
 }
 
 //std::vector<Key*> KeyboardPanel::getKeys() {

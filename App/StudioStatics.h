@@ -14,6 +14,7 @@ public:
     static DynamicInstrumentPanel* panel;
     static SeekBar* seekBar;
 
+
 };
 
 

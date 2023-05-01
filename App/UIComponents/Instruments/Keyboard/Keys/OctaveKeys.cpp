@@ -189,7 +189,7 @@ float OctaveKeys::getKeySpacing() const {
     return spacing;
 }
 
-std::vector<Key*> OctaveKeys::getKeys(const sf::RenderWindow& window){
+std::vector<Key*> OctaveKeys::getKeys(){
     std::vector<Key*> keys;
 
     for (auto &k: whiteKeys) {

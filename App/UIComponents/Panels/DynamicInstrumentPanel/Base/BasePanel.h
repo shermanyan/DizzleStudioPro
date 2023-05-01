@@ -22,7 +22,7 @@ public:
     BasePanel();
     BasePanel(const sf::Vector2f& size);
 
-    virtual std::vector<Key*> getKeys(const sf::RenderWindow& window);
+    virtual std::vector<Key*> getKeys();
 
     void setSize(const sf::Vector2f& size);
     sf::Vector2f getSize();

@@ -14,7 +14,7 @@ void SpriteImage::setSize(const sf::Vector2f& size) {
     scale.x = (size.x/curSize.width);
     scale.y = (size.y/curSize.height);
 
-    setScale(scale);
+    Transformable::setScale(scale);
 }
 
 void SpriteImage::setWidth(float width) {
@@ -23,6 +23,7 @@ void SpriteImage::setWidth(float width) {
 
     scale = (width/curSize.width);
 
-    setScale(scale,scale);
+    Transformable::setScale(scale,scale);
 
 }
+

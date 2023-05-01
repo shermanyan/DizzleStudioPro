@@ -397,7 +397,8 @@
 				110,
 				113,
 				115,
-				117
+				117,
+				118
 			]
 		}
 	],
@@ -506,7 +507,8 @@
 				110,
 				113,
 				115,
-				117
+				117,
+				118
 			]
 		},
 		{
@@ -577,7 +579,8 @@
 				111,
 				112,
 				114,
-				116
+				116,
+				119
 			]
 		}
 	],
@@ -1225,6 +1228,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "DizzleStudioProApp_main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/UIComponents/Panels/LayersPanel/TrackControls.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/UIComponents/Panels/LayersPanel/TrackControls.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

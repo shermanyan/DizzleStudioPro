@@ -80,7 +80,7 @@ sf::Vector2f BasePanel::getSize() {
     return outside.getSize();
 }
 
-std::vector<Key *> BasePanel::getKeys(const sf::RenderWindow &window) {
+std::vector<Key *> BasePanel::getKeys() {
     return {};
 }
 

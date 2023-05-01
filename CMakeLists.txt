@@ -151,7 +151,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        )
+        App/UIComponents/Panels/LayersPanel/TrackControls.cpp App/UIComponents/Panels/LayersPanel/TrackControls.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

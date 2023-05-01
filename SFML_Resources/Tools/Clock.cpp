@@ -34,9 +34,10 @@ void Clock::toggle() {
 }
 
 void Clock::restart() {
-    clock.restart();
     time = sf::Time::Zero;
     offset = 0;
+    clock.restart();
+    on = true;
 }
 
 void Clock::forward(float seconds) {

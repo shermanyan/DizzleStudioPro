@@ -37,28 +37,10 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     if(!checkStates(SELECTED))
         track->setState(SELECTED, false);
 
-
     label.eventHandler(window, event);
+
+    track->setState(RECORDING, checkStates(RECORDING));
     track->eventHandler(window, event);
-
-//        if (instrumentPanel->getActivePanel() == label.getTrackType() && label.getTrackType() != EMPTY) {
-//            bool drawNew = true;
-//            if(label.getTrackType() == KEYBOARD){
-//                AudioNode key = instrumentPanel->getPanel()->getKeyPressed(window);
-//                AudioNode* lastKey = &track.getLastNode().getNode();
-//                if (key.keyEnum != NULL_KEY && key.keyEnum == lastKey->keyEnum) {
-//                    lastKey->setStopTimeStamp(seekBar->getElapsedTime());
-//                    drawNew = false;
-//                }
-//            }
-//            if(drawNew) {
-//                AudioNode key = instrumentPanel->getPanel()->getKeyPressed(window);
-//                if (key.keyEnum != NULL_KEY) {
-//                    track.emplace_back(seekBar->getElapsedTime(), key);
-//                }
-//            }
-//        }
-
 
 }
 

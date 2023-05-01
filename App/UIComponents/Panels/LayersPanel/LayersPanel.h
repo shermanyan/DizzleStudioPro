@@ -11,6 +11,7 @@
 #include "DynamicInstrumentPanel.h"
 #include "SeekBar.h"
 #include "TimeBar.h"
+#include "TrackControls.h"
 
 class LayersPanel: public AppComponent {
 private:
@@ -25,6 +26,7 @@ private:
 
     TimeBar timeBar;
 
+    TrackControls trackControls;
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;
