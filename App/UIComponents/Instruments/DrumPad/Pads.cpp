@@ -44,6 +44,7 @@ void Pads::getSize() {
 
 void Pads::loadSound() {
     setBuffer(Sounds::getSound(*this));
+    duration = buffer.getDuration().asSeconds();
 }
 
 sf::FloatRect Pads::getGlobalBounds() const {

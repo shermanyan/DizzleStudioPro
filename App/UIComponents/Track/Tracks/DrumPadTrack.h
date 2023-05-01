@@ -11,6 +11,8 @@ class DrumPadTrack: public Track {
 
 public:
     DrumPadTrack();
+
+    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 };
 
 

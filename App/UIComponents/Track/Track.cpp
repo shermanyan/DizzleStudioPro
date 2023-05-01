@@ -19,8 +19,6 @@ void Track::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
 void Track::update(const sf::RenderWindow &window) {
 
-    writeTrack();
-
     for (auto& n: audioTrack) {
         for (auto& node: n.second) {
             node->update(window);
@@ -70,10 +68,6 @@ std::map<float, std::vector<AudioNode>> Track::getAudioTrack() {
 
 void Track::setTrackColor(const sf::Color &trackColor) {
     Track::trackColor = trackColor;
-}
-
-void Track::writeTrack() {
-
 }
 
 

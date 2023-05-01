@@ -14,8 +14,8 @@ private:
     std::vector<std::map<SoundKeys,DrawableAudioNode*>> nodes;
 public:
     KeyboardTrack();
-
-    void writeTrack() override;
+    
+    void update(const sf::RenderWindow &window) override;
 
 
 };
