@@ -91,7 +91,7 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             sound.setBuffer(combinedBuffer);
             sound.play();
 
-            std::cout << "Play";
+//            std::cout << "Play";
         }
     } else if(!trackControls.checkStates(PLAY)) {
         sound.stop();
