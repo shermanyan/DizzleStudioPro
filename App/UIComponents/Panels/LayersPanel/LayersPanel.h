@@ -32,6 +32,8 @@ private:
     sf::SoundBuffer combinedBuffer;
     sf::Sound sound;
 
+    std::map<float, std::vector<AudioNode>> getMixedAudio();
+
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;
 

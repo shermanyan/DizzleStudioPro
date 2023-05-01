@@ -53,6 +53,7 @@ void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &even
                 break;
             case sf::Keyboard::Left:
                 StudioStatics::seekBar->rewind(0.25);
+                break;
             case sf::Keyboard::Enter:
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::RShift))
                     toggleState(RECORDING);

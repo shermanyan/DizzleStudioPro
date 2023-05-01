@@ -83,6 +83,7 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
 
 
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
+        setState(PLAY, true);
         combinedBuffer = GetBuffer::getCombinedSoundBuffer(layers[0].getAudioTrack(), 44100);
 
         sound.setBuffer(combinedBuffer);
@@ -141,4 +142,8 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     target.draw(timeBar,states);
     target.draw(seek,states);
     target.draw(trackControls,states);
+}
+
+std::map<float, std::vector<AudioNode>> LayersPanel::getMixedAudio() {
+    return std::map<float, std::vector<AudioNode>>();
 }
