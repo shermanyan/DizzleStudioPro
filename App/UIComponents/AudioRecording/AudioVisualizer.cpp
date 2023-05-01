@@ -43,10 +43,10 @@ void AudioVisualizer::stopRecording() {
 }
 
 void AudioVisualizer::playRecordedSound() {
+
     resetVisualizerBars();
     AudioNode::setBuffer(recordedSoundBuffer);
     AudioNode::play();
-
 }
 
 
@@ -110,16 +110,16 @@ void AudioVisualizer::reposition() {
     }
 }
 
-void AudioVisualizer::saveRecordedSoundToFile(const std::string &filename) {
-    sf::SoundBuffer soundBuffer;
-    soundBuffer.loadFromSamples(sampleBuffer.data(), sampleBuffer.size(), 1, getSampleRate());
-
-    if (soundBuffer.saveToFile(filename)) {
-        std::cout << "Recorded sound saved to " << filename << std::endl;
-    } else {
-        std::cerr << "Failed to save recorded sound to " << filename << std::endl;
-    }
-}
+//void AudioVisualizer::saveRecordedSoundToFile(const std::string &filename) {
+//    sf::SoundBuffer soundBuffer;
+//    soundBuffer.loadFromSamples(sampleBuffer.data(), sampleBuffer.size(), 1, getSampleRate());
+//
+//    if (soundBuffer.saveToFile(filename)) {
+//        std::cout << "Recorded sound saved to " << filename << std::endl;
+//    } else {
+//        std::cerr << "Failed to save recorded sound to " << filename << std::endl;
+//    }
+//}
 
 
 
