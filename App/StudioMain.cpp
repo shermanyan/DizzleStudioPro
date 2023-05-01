@@ -32,8 +32,6 @@ dynamicInstrumentPanel({}), trackPanel({})
     projectTitle.setLabelFillColor({185, 185, 185});
     projectTitle.toggleBox();
 
-//    trackPanel.setInstrumentPanel(&dynamicInstrumentPanel);
-
     addComponent(dynamicInstrumentPanel);
     addComponent(trackPanel);
     addComponent(projectTitle);

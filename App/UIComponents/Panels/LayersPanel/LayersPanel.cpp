@@ -8,6 +8,7 @@ void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
     for (auto&l:layers) {
         l.setParentTransform(transform);
     }
+    trackControls.setParentTransform(transform);
 }
 
 LayersPanel::LayersPanel() {
@@ -45,16 +46,14 @@ LayersPanel::LayersPanel() {
     Position::alignRight(timeBar,layers[0]);
     Position::top(timeBar,layers[0],10);
 
+    trackControls.setPosition(20,20);
 }
-
-//void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *dynamicInstrumentPanel) {
-//    Layer::setInstrumentPanel(dynamicInstrumentPanel);
-//}
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
     seek.eventHandler(window,event);
     timeBar.eventHandler(window,event);
+    trackControls.eventHandler(window,event);
 
     for (auto&l:layers) {
         l.eventHandler(window, event);
@@ -82,15 +81,56 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         DrawableAudioNode::setDurationScale(duration);
     }
 
+
+    if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
+        setState(PLAY, true);
+        auto track = getMixedAudioTrack();
+        if (!track.empty()) {
+            combinedBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
+
+            sound.setBuffer(combinedBuffer);
+            sound.play();
+
+//            std::cout << "Play";
+        }
+    } else if(!trackControls.checkStates(PLAY)) {
+        sound.stop();
+        setState(PLAY, false);
+    }
+
 }
 
 void LayersPanel::update(const sf::RenderWindow &window) {
     seek.update(window);
     timeBar.update(window);
+    trackControls.update(window);
 
     for (auto&l:layers) {
         l.update(window);
+        l.setState(RECORDING,trackControls.checkStates(RECORDING));
     }
+
+    if(trackControls.checkStates(RECORDING)){
+        if (seek.checkStates(STOP))
+            trackControls.setState(RECORDING,false);
+        else if (!seek.checkStates(PLAY)){
+            seek.play();
+        }
+    }
+    else if(trackControls.checkStates(PLAY)) {
+        seek.setState(LOOP,trackControls.checkStates(LOOP));
+
+        if(seek.checkStates(STOP)) {
+            trackControls.setState(PLAY, false);
+        }
+        else if (!seek.checkStates(PLAY)) {
+            seek.play();
+        }
+    } else if (seek.checkStates(PLAY)){
+        seek.pause();
+    }
+
+
 
 }
 
@@ -104,5 +144,19 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
 
     target.draw(timeBar,states);
     target.draw(seek,states);
+    target.draw(trackControls,states);
+}
 
+std::map<float, std::vector<AudioNode>> LayersPanel::getMixedAudioTrack() {
+    std::map<float, std::vector<AudioNode>> finalTrack = layers[0].getAudioTrack();
+    for (int i = 1; i<layers.size(); i++) {
+        std::map<float, std::vector<AudioNode>> track = layers[i].getAudioTrack();
+        if (!track.empty())
+            for (auto&t:track) {
+                for (auto&n: t.second) {
+                    finalTrack[t.first].push_back(n);
+                }
+            }
+    }
+    return finalTrack;
 }

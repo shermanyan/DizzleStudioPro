@@ -84,7 +84,7 @@ public:
     //setup black keys color and positions;
     void loudSoundBlackKeys();
 
-    std::vector<Key *> getKeys(const sf::RenderWindow &window);
+    std::vector<Key *> getKeys();
 };
 
 

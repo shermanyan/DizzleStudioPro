@@ -17,9 +17,7 @@ void DrawableAudioNode::positionNode() {
 
     switch (node.keyEnum) {
         case NULL_KEY:
-        case DRUM:
-            box.setPosition(box.getPosition() + sf::Vector2f{0, trackHeight});
-            break;
+            throw;
         case C: {
             box.setPosition(box.getPosition() + sf::Vector2f {0,box.getSize().y});
             break;
@@ -68,6 +66,10 @@ void DrawableAudioNode::positionNode() {
             box.setPosition(box.getPosition() + sf::Vector2f {0,box.getSize().y*11});
             break;
         }
+        default:
+            box.setPosition(box.getPosition() + sf::Vector2f{0, trackHeight});
+            break;
+
     }
 
 }
@@ -89,21 +91,29 @@ void DrawableAudioNode::setSize() {
             box.setSize({node.duration*DrawableAudioNode::scale,trackHeight/12});
             break;
         default:
-            throw;
+            float d = node.duration*DrawableAudioNode::scale;
+            if ((node.duration  + node.timeStamp) >StudioStatics::seekBar->getDuration()) {
+                d = (StudioStatics::seekBar->getDuration() - node.timeStamp);
+                box.setSize({d*DrawableAudioNode::scale,trackHeight*0.6f});
+            } else
+                box.setSize({d,trackHeight*0.6f});
+
+            box.setRadius({5,5,0,0});
+            break;
 
     }
     box.setOrigin(0,box.getSize().y);
 }
 
 DrawableAudioNode::DrawableAudioNode(float timeStamp, const AudioNode& key, const sf::Color& color, float trackHeight) {
-    AppComponent::setState(ACTIVE, true);
+    AppComponent::setState(ACTIVE, false);
 
     this->trackHeight = trackHeight;
     node = key;
     node.timeStamp = timeStamp;
-//    box.setFillColor(sf::Color((int)(rand() % 255 + 1) ,(int)(rand() % 255 + 1),(int)(rand() % 255 + 1)));
     box.setFillColor(color);
     positionNode();
+    setSize();
 }
 
 
@@ -114,8 +124,8 @@ void DrawableAudioNode::update(const sf::RenderWindow &window) {
     if(AppComponent::checkStates(ACTIVE)) {
         node.setStopTimeStamp(StudioStatics::seekBar->getElapsedTime());
     }
-    positionNode();
     setSize();
+    positionNode();
 }
 
 void DrawableAudioNode::draw(sf::RenderTarget &target, sf::RenderStates states) const {

@@ -26,9 +26,9 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
     BasePanel::eventHandler(window, event);
     songInput.eventHandler(window, event);
 
-    if(addToTrackButton.isClick(window)){
-        std::cout << "Clicked";
-    }
+//    if(addToTrackButton.isClick(window)){
+//        std::cout << "Clicked";
+//    }
 
     if (songInput.loadButonClicked(window))
     {
@@ -36,7 +36,7 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
         playPauseButton.setTexture(Textures::getTexture(PLAY_BUTTON));
     }
 
-    if(MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window) ){
+    if(event.type ==sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window) ){
         visualizer.eventHandler(window,event);
         if(visualizer.isPlaying){
             playPauseButton.setTexture(Textures::getTexture(PAUSE_BUTTON));
@@ -73,4 +73,15 @@ void StaticVisualizerPanel::setChildrenTransform(const sf::Transform &transform)
     songInput.setParentTransform(transform);
     addToTrackButton.setParentTransform(transform);
 
+}
+
+AudioNode *StaticVisualizerPanel::getNode() {
+    auto node = &visualizer;
+    node->duration = visualizer.buffer.getDuration().asSeconds();
+    node->keyEnum = SOUND;
+    return node;
+}
+
+bool StaticVisualizerPanel::addTrackStatus(const sf::RenderWindow& window) {
+    return addToTrackButton.isClick(window);
 }

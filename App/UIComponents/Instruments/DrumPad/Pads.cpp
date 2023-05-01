@@ -44,6 +44,7 @@ void Pads::getSize() {
 
 void Pads::loadSound() {
     setBuffer(Sounds::getSound(*this));
+    duration = buffer.getDuration().asSeconds();
 }
 
 sf::FloatRect Pads::getGlobalBounds() const {
@@ -66,10 +67,10 @@ void Pads::setupText(const std::string &string) {
 }
 
 void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(isClick(window)){
+    if(event.type == sf::Event::MouseButtonPressed && isClick(window)){
         pad.setFillColor(sf::Color{36, 36, 36} + sf::Color{25,25,25});
         play();
-    }else{
+    }else if (event.type == sf::Event::MouseButtonReleased){
         pad.setFillColor(sf::Color{36, 36, 36});
     }
 

@@ -20,6 +20,8 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void setChildrenTransform(const sf::Transform &transform) override;
 
+    std::vector<AudioNode*> getKeyPressed(const sf::RenderWindow& window);
+
 private:
 
 };

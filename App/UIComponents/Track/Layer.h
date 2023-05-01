@@ -48,6 +48,9 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+    std::map<float, std::vector<AudioNode>> getAudioTrack();
+
+
     void playAudioMap(const std::map<float, std::vector<AudioNode>>& audioMap);
 
     sf::SoundBuffer concatenateSounds(const std::map<float, std::vector<AudioNode>>& audioMap, unsigned int targetSampleRate);

@@ -6,7 +6,6 @@
 
 StaticAudioVisualizer::StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size)
         : width(size.x), height(size.y) {
-
 //    loadVisualizer(filePath);
 
 }

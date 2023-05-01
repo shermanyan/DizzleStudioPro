@@ -8,22 +8,20 @@ SeekBar::SeekBar() {
 }
 
 void SeekBar::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if (event.type == sf::Event::KeyPressed) {
-        if (event.key.code == sf::Keyboard::P)
-            clock.toggle();
-        else if (event.key.code == sf::Keyboard::Right)
-            clock.forward(0.5);
-        else if (event.key.code == sf::Keyboard::Left)
-            clock.rewind(0.5);
-    }
+
 }
 
 void SeekBar::update(const sf::RenderWindow &window) {
-
     bar.setPosition((velocity * clock.getElapsedTimeAsSeconds()), bar.getPosition().y);
 
-    if (bar.getPosition().x >= length)
-        clock.stop();
+        if (bar.getPosition().x >= length) {
+            stop();
+            if (checkStates(LOOP)) {
+                restart();
+            }
+        } else if(checkStates(STOP))
+            toggleState(STOP);
+
 
 }
 
@@ -61,16 +59,21 @@ void SeekBar::setFillColor(const sf::Color &color) {
 }
 
 void SeekBar::play() {
-
+    setState(PLAY,true);
+    setState(STOP,false);
     clock.start();
 }
 
-void SeekBar::pause() {
-    clock.stop();
+void SeekBar::restart() {
+    setState(PLAY,true);
+    setState(STOP,false);
+    clock.restart();
 }
 
-void SeekBar::toggleLoop() {
-    loop = !loop;
+
+void SeekBar::pause() {
+    setState(PLAY,false);
+    clock.stop();
 }
 
 float SeekBar::getElapsedTime() {
@@ -87,6 +90,22 @@ void SeekBar::setRadius(float radius) {
 
 int SeekBar::getDuration() const {
     return duration;
+}
+
+void SeekBar::stop() {
+    pause();
+    setState(STOP,true);
+}
+
+void SeekBar::forward(float amt) {
+    float n = clock.getElapsedTimeAsSeconds() + amt ;
+    clock.forward(n < duration? amt : duration - clock.getElapsedTimeAsSeconds());
+}
+
+void SeekBar::rewind(float amt) {
+    float n = clock.getElapsedTimeAsSeconds() - amt;
+
+    clock.rewind(n > 0? amt: clock.getElapsedTimeAsSeconds());
 }
 
 

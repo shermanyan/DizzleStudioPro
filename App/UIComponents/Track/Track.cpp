@@ -3,7 +3,6 @@
 //
 
 #include "Track.h"
-#include <iostream>
 
 Track::Track() {
 
@@ -20,14 +19,11 @@ void Track::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
 void Track::update(const sf::RenderWindow &window) {
 
-//    std::cout << audioTrack.size() << " ";
-
     for (auto& n: audioTrack) {
         for (auto& node: n.second) {
             node->update(window);
         }
     }
-
 
 }
 
@@ -65,27 +61,14 @@ std::map<float, std::vector<AudioNode>> Track::getAudioTrack() {
         for (auto &node: i.second) {
             track[i.first].push_back(node->getNode());
         }
-   }
+    }
     return track;
 }
 
-//DrawableAudioNode& Track::getLastNode() {
-//    return std::prev(audioTrack.end())->second;
-//}
-
-//void Track::emplace_back(float timeStamp, AudioNode key) {
-//    audioTrack.emplace(timeStamp,DrawableAudioNode{timeStamp,key, trackColor});
-//}
 
 void Track::setTrackColor(const sf::Color &trackColor) {
     Track::trackColor = trackColor;
 }
-
-//void Track::updateTrack(const std::vector<AudioNode> &keyPressed) {
-//    for (auto & node: keyPressed) {
-//
-//    }
-//}
 
 
 

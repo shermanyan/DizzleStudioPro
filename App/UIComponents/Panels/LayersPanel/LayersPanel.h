@@ -11,6 +11,8 @@
 #include "DynamicInstrumentPanel.h"
 #include "SeekBar.h"
 #include "TimeBar.h"
+#include "TrackControls.h"
+#include "GetBuffer.h"
 
 class LayersPanel: public AppComponent {
 private:
@@ -25,6 +27,12 @@ private:
 
     TimeBar timeBar;
 
+    TrackControls trackControls;
+
+    sf::SoundBuffer combinedBuffer;
+    sf::Sound sound;
+
+    std::map<float, std::vector<AudioNode>> getMixedAudioTrack();
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;

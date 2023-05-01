@@ -17,8 +17,6 @@ private:
     float length = 0;
     Clock clock;
 
-    bool loop = false;
-
     void updateVelocity();
 
 public:
@@ -30,7 +28,7 @@ public:
 
     void play();
     void pause();
-    void toggleLoop();
+    void restart();
 
     void setDuration(int duration);
     int getDuration() const;
@@ -41,6 +39,8 @@ public:
 
     void setRadius(float radius);
 
+    void forward(float amt);
+    void rewind(float amt);
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -50,6 +50,7 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
 
+    void stop();
 };
 
 

@@ -30,3 +30,7 @@ void DrumPadPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const
 void DrumPadPanel::setChildrenTransform(const sf::Transform &transform) {
     drumPad.setParentTransform(transform);
 }
+
+std::vector<AudioNode *> DrumPadPanel::getKeyPressed(const sf::RenderWindow &window) {
+    return drumPad.getKeyPressed(window);
+}

@@ -8,6 +8,7 @@
 #include "TextInput.h"
 #include "DynamicInstrumentPanel.h"
 #include "LayersPanel.h"
+#include "TrackControls.h"
 
 class StudioMain : public Application{
 
