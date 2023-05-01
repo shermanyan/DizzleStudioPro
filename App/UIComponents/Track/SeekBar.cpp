@@ -8,12 +8,7 @@ SeekBar::SeekBar() {
 }
 
 void SeekBar::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if (event.type == sf::Event::KeyPressed) {
-        if (event.key.code == sf::Keyboard::Right)
-            forward(0.25);
-        else if (event.key.code == sf::Keyboard::Left)
-            rewind(0.25);
-    }
+
 }
 
 void SeekBar::update(const sf::RenderWindow &window) {
@@ -64,7 +59,6 @@ void SeekBar::setFillColor(const sf::Color &color) {
 }
 
 void SeekBar::play() {
-    printf("play");
     setState(PLAY,true);
     setState(STOP,false);
     clock.start();

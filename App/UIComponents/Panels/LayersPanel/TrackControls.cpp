@@ -46,27 +46,47 @@ TrackControls::TrackControls() {
 
 void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-    if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(record.getGlobalBounds()),window)) {
-        toggleState(RECORDING);
-    }else if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(play.getGlobalBounds()),window)){
-        toggleState(PLAY);
-    }else if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(forward.getGlobalBounds()),window)){
-        forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD_LIGHT));
-        StudioStatics::seekBar->forward(0.5);
-    }else if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(rewind.getGlobalBounds()),window)){
-        rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND_LIGHT));
-        StudioStatics::seekBar->rewind(0.5);
+    if (event.type == sf::Event::KeyPressed) {
+        switch (event.key.code) {
+            case sf::Keyboard::Right:
+                StudioStatics::seekBar->forward(0.25);
+                break;
+            case sf::Keyboard::Left:
+                StudioStatics::seekBar->rewind(0.25);
+            case sf::Keyboard::Enter:
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::RShift))
+                    toggleState(RECORDING);
+                else if (!checkStates(RECORDING))
+                    toggleState(PLAY);
+                break;
+
+        }
+
     }
-    else if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(loop.getGlobalBounds()),window)){
-        toggleState(LOOP);
-        if (checkStates(LOOP))
-            loop.setTexture(Textures::getTexture(TRACKCONTROLS_LOOP_LIGHT));
-        else
-            loop.setTexture(Textures::getTexture(TRACKCONTROLS_LOOP));
-    } else {
-        forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD));
-        rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND));
+    else if (event.type == sf::Event::MouseButtonPressed) {
+
+        if (MouseEvents::isClick(getCombinedTransform().transformRect(record.getGlobalBounds()), window)) {
+            toggleState(RECORDING);
+        } else if (MouseEvents::isClick(getCombinedTransform().transformRect(play.getGlobalBounds()), window)) {
+            toggleState(PLAY);
+        } else if (MouseEvents::isClick(getCombinedTransform().transformRect(forward.getGlobalBounds()), window)) {
+            forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD_LIGHT));
+            StudioStatics::seekBar->forward(0.5);
+        } else if (MouseEvents::isClick(getCombinedTransform().transformRect(rewind.getGlobalBounds()), window)) {
+            rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND_LIGHT));
+            StudioStatics::seekBar->rewind(0.5);
+        } else if (MouseEvents::isClick(getCombinedTransform().transformRect(loop.getGlobalBounds()), window)) {
+            toggleState(LOOP);
+            if (checkStates(LOOP))
+                loop.setTexture(Textures::getTexture(TRACKCONTROLS_LOOP_LIGHT));
+            else
+                loop.setTexture(Textures::getTexture(TRACKCONTROLS_LOOP));
+        } else {
+            forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD));
+            rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND));
+        }
     }
+
 
 }
 
