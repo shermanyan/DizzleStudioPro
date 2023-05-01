@@ -161,3 +161,7 @@ void TextInput::setLabelPosition(TextInput::LabelPosition position) {
     label.setPosition(label.getPosition() + sf::Vector2f{10,0});
 }
 
+bool TextInput::isEmpty() {
+    return textBox.isEmpty();
+}
+

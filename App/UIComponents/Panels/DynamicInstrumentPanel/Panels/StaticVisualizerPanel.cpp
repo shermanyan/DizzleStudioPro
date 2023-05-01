@@ -26,17 +26,14 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
     BasePanel::eventHandler(window, event);
     songInput.eventHandler(window, event);
 
-//    if(addToTrackButton.isClick(window)){
-//        std::cout << "Clicked";
-//    }
-
-    if (songInput.loadButonClicked(window))
+    if (songInput.loadButonClicked(window) && !(songInput.isEmpty()))
     {
        visualizer.loadVisualizer(songInput.getSong());
         playPauseButton.setTexture(Textures::getTexture(PLAY_BUTTON));
+
     }
 
-    if(event.type ==sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window) ){
+    if((event.type ==sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(playPauseButton.getGlobalBounds()),window)) && !(songInput.isEmpty())){
         visualizer.eventHandler(window,event);
         if(visualizer.isPlaying){
             playPauseButton.setTexture(Textures::getTexture(PAUSE_BUTTON));

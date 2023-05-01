@@ -143,3 +143,7 @@ void MultiText::updatePosition() {
     }
 }
 
+bool MultiText::isEmpty() {
+    return text.empty();
+}
+
