@@ -152,7 +152,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        App/UIComponents/AddToTrackButton.cpp App/UIComponents/AddToTrackButton.h)
+        App/UIComponents/AddToTrackButton.cpp App/UIComponents/AddToTrackButton.h App/UIComponents/Panels/PlayAudioMap.cpp App/UIComponents/Panels/PlayAudioMap.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
