@@ -41,6 +41,19 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     label.eventHandler(window, event);
     track->eventHandler(window, event);
 
+
+    if(checkStates(SELECTED)){
+        if (event.type == sf::Event::KeyPressed) {
+            if (event.key.code == sf::Keyboard::Space) {
+                // Space bar is pressed, perform your desired action here
+
+//
+                std::cout << "PRESSED";
+                playAudioMap(track->getAudioTrack());
+            }
+        }
+    }
+
 //        if (instrumentPanel->getActivePanel() == label.getTrackType() && label.getTrackType() != EMPTY) {
 //            bool drawNew = true;
 //            if(label.getTrackType() == KEYBOARD){
@@ -132,6 +145,26 @@ sf::FloatRect Layer::getLocalBounds() const {
 
 InstrumentsEnum Layer::getTrackType() const {
     return label.getTrackType();
+}
+
+void Layer::playAudioMap(const std::map<float, std::vector<AudioNode>>& audioMap) {
+    float previousTimeStamp = 0.0f;
+
+    for (const auto& timestampAndAudioNodes : audioMap) {
+        float currentTimestamp = timestampAndAudioNodes.first;
+        const std::vector<AudioNode>& audioNodes = timestampAndAudioNodes.second;
+
+        sf::Time timeToSleep = sf::seconds(currentTimestamp - previousTimeStamp);
+        sf::sleep(timeToSleep);
+
+        // Use a separate loop to play the sounds without modifying the const reference
+        for (size_t i = 0; i < audioNodes.size(); i++) {
+            AudioNode& audioNode = const_cast<AudioNode&>(audioNodes[i]);
+            audioNode.play();
+        }
+
+        previousTimeStamp = currentTimestamp;
+    }
 }
 
 

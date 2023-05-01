@@ -25,6 +25,7 @@ public:
     SoundKeys keyEnum = NULL_KEY;
     unsigned int octave = 0;
 
+    sf::SoundBuffer buffer;
     sf::Sound sound;
 
     float duration = 0, timeStamp = 0;
@@ -56,7 +57,7 @@ public:
         return keyEnum < other.keyEnum;
     }
 
-    void play(){
+    void play() {
         sound.play();
     }
 
@@ -65,6 +66,7 @@ public:
     }
 
     void setBuffer(const sf::SoundBuffer& sound){
+        buffer = sound;
         this->sound.setBuffer(sound);
     }
 };

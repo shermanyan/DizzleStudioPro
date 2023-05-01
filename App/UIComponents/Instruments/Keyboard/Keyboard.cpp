@@ -18,7 +18,6 @@ Keyboard::Keyboard(unsigned int numOctaves, const sf::Vector2f &size) {
     this->numOctaves = numOctaves;
     setupKeyboard();
     setSize(size);
-    std::cout << "whattttt";
 }
 
 

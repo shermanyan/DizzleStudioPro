@@ -28,6 +28,7 @@ void Track::update(const sf::RenderWindow &window) {
         }
     }
 
+
 }
 
 void Track::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -59,13 +60,13 @@ void Track::setFillColor(const sf::Color &color) {
 }
 
 std::map<float, std::vector<AudioNode>> Track::getAudioTrack() {
-//    std::map<float, std::vector<AudioNode>> track;
-//    for (auto &i: audioTrack) {
-//        for (auto &node: i.second) {
-//            track[i.first].push_back(node.getNode());
-//        }
-//    }
-//    return track;
+    std::map<float, std::vector<AudioNode>> track;
+    for (auto &i: audioTrack) {
+        for (auto &node: i.second) {
+            track[i.first].push_back(node->getNode());
+        }
+   }
+    return track;
 }
 
 //DrawableAudioNode& Track::getLastNode() {
