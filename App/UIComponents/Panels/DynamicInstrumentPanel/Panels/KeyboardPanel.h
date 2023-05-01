@@ -22,7 +22,7 @@ public:
 
 //    std::vector<Key*> getKeys();
 
-    std::vector<Key *> getKeys() override;
+    std::vector<Key *> getKeys();
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 

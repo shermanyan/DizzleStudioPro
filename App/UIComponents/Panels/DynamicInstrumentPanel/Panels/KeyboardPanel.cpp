@@ -36,25 +36,3 @@ std::vector<Key *> KeyboardPanel::getKeys() {
     return keyboard.getKeys();
 }
 
-//std::vector<Key*> KeyboardPanel::getKeys() {
-//    return keyboard.getKeys();
-//}
-
-
-
-//AudioNode KeyboardPanel::getKeyPressed(const sf::RenderWindow &window) const {
-//    return keyboard.getKeyPressed(window);
-//}
-//
-//AudioNode KeyboardPanel::getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const {
-//    return keyboard.getKeyRelease(window, event);
-//}
-
-//void KeyboardPanel::setPosition(const sf::Vector2f &pos) {
-//    BasePanel::setPosition(pos);
-//}
-//
-//void KeyboardPanel::setPosition(float x, float y) {
-//    setPosition({x, y});
-//}
-//

@@ -17,6 +17,7 @@ public:
     void update(const sf::RenderWindow &window) override;
     void loudSound();
 
+    std::vector<AudioNode*> getKeyPressed(const sf::RenderWindow& window);
 private:
     std::vector<Pads> pads;
     int numOfPads;

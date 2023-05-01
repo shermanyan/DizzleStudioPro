@@ -11,6 +11,8 @@ class AudioTrack: public Track {
 
 public:
     AudioTrack();
+
+    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 };
 
 

@@ -43,7 +43,7 @@ sf::Vector2f DrumPad::calculatePadSize() const {
 
 void DrumPad::setupPads() {
     sf::Vector2f padSize = calculatePadSize();
-    for (int i = 0; i < numOfPads; i++) {
+    for (int i = 0; i < numOfPads; i++){
         pads.emplace_back(Pads(padSize));
         pads[i].octave = 1;
         pads[i].keyEnum = (SoundKeys(CLAP + i));
@@ -71,4 +71,14 @@ void DrumPad::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
 void DrumPad::update(const sf::RenderWindow &window) {
 
+}
+
+std::vector<AudioNode *> DrumPad::getKeyPressed(const sf::RenderWindow& window) {
+    std::vector<AudioNode *> pressed;
+    for (auto& p:pads) {
+        if(p.isClick(window))
+            pressed.push_back(&p);
+
+    }
+    return pressed;
 }
