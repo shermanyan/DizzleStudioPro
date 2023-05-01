@@ -84,12 +84,15 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
 
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
         setState(PLAY, true);
-        combinedBuffer = GetBuffer::getCombinedSoundBuffer(layers[0].getAudioTrack(), 44100);
+        auto track = getMixedAudioTrack();
+        if (!track.empty()) {
+            combinedBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
 
-        sound.setBuffer(combinedBuffer);
-        sound.play();
+            sound.setBuffer(combinedBuffer);
+            sound.play();
 
-        std::cout << "Play";
+            std::cout << "Play";
+        }
     } else if(!trackControls.checkStates(PLAY)) {
         sound.stop();
         setState(PLAY, false);
@@ -144,6 +147,16 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     target.draw(trackControls,states);
 }
 
-std::map<float, std::vector<AudioNode>> LayersPanel::getMixedAudio() {
-    return std::map<float, std::vector<AudioNode>>();
+std::map<float, std::vector<AudioNode>> LayersPanel::getMixedAudioTrack() {
+    std::map<float, std::vector<AudioNode>> finalTrack = layers[0].getAudioTrack();
+    for (int i = 1; i<layers.size(); i++) {
+        std::map<float, std::vector<AudioNode>> track = layers[i].getAudioTrack();
+        if (!track.empty())
+            for (auto&t:track) {
+                for (auto&n: t.second) {
+                    finalTrack[t.first].push_back(n);
+                }
+            }
+    }
+    return finalTrack;
 }
