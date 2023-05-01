@@ -10,14 +10,16 @@ enum SoundKeys{
     NULL_KEY,
     C,D,E,F,G,A,B,
     Cs,Ds,Fs,Gs,As,
-    DRUM, SOUND,
+    DRUM, SOUND, CLAP,
+    SNARE, KICK, HIGHTOM,
+    HIGHHAT, BASS, Cymbal
 
 };
 
 static const std::string SoundKeysStrings[] = {
         "NULL_KEY","C", "D", "E", "F",
         "G", "A","B", "Cs", "Ds", "Fs",
-        "Gs", "As", "Clap", "Snare",
+        "Gs", "As","Drum","Sound", "Clap", "Snare",
         "Kick", "High Tom", "High Hat", "Bass",
         "Cymbal"
 };

@@ -17,12 +17,16 @@
 #include "VocalTrack.h"
 #include "DrumPadTrack.h"
 
+#include <algorithm>
+
 class Layer: public AppComponent {
 private:
 
     std::unique_ptr<Track> track;
 
     TrackLabel label;
+    sf::Sound test;
+    sf::SoundBuffer buffer1;
 
     void setChildrenTransform(const sf::Transform &transform) override;
 
@@ -42,7 +46,14 @@ public:
     void update(const sf::RenderWindow &window) override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-};
+
+    void playAudioMap(const std::map<float, std::vector<AudioNode>>& audioMap);
+
+    sf::SoundBuffer concatenateSounds(const std::map<float, std::vector<AudioNode>>& audioMap, unsigned int targetSampleRate);
+    sf::SoundBuffer convertToMono(const sf::SoundBuffer& buffer);
+    sf::SoundBuffer resampleSoundBuffer(const sf::SoundBuffer& buffer, unsigned int targetSampleRate);
+
+    };
 
 
 

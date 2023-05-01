@@ -19,8 +19,6 @@ class Pads: public AppComponent, public AudioNode {
 private:
     Squircle pad;
     sf::Text text;
-    SoundKeys keyType = NULL_KEY;
-    sf::Sound sound;
 
 public:
 

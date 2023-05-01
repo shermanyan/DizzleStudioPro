@@ -23,8 +23,6 @@ private:
     Squircle key;
     sf::Color color;
 
-    sf::Sound sound;
-
     bool isClick(const sf::RenderWindow& window) const;
 
 
@@ -46,7 +44,6 @@ public:
     void setFillColor (const sf::Color& color);
     sf::Color getFillColor();
 
-    AudioNode getKeyType() const;
     void loadSound();
 
     sf::FloatRect getGlobalBounds() const override;

@@ -13,6 +13,7 @@ DrumPad::DrumPad(const sf::Vector2f &size, int numOfPads) {
     this->spacing = 15.0f;
     setupPads();
     positionPads();
+    loudSound();
 }
 
 void DrumPad::setChildrenTransform(const sf::Transform &transform) {
@@ -30,7 +31,7 @@ void DrumPad::positionPads() {
         float xPos = leftOffset + i * (padSize.x + spacing);
         float yPos = topOffset;
         pads[i].setPosition({xPos + 30, yPos + 30});
-        pads[i].setupText(SoundKeysStrings[i+13]);
+        pads[i].setupText(SoundKeysStrings[i+15]);
     }
 
 }
@@ -44,13 +45,18 @@ void DrumPad::setupPads() {
     sf::Vector2f padSize = calculatePadSize();
     for (int i = 0; i < numOfPads; i++) {
         pads.emplace_back(Pads(padSize));
-//        pads
+        pads[i].octave = 1;
+        pads[i].keyEnum = (SoundKeys(CLAP + i));
     }
 }
 
-float DrumPad::getKeySpacing() const {
-    return spacing;
+void DrumPad::loudSound() {
+    for (auto &k : pads) {
+        k.loadSound();
+    }
 }
+
+
 void DrumPad::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
 

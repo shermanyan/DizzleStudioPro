@@ -27,6 +27,7 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
+include_directories(App/UIComponents)
 
 add_executable(DizzleStudioPro
         App/Resources/Sounds/Sounds.cpp
@@ -151,7 +152,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        App/UIComponents/Panels/LayersPanel/TrackControls.cpp App/UIComponents/Panels/LayersPanel/TrackControls.h)
+        App/UIComponents/AddToTrackButton.cpp App/UIComponents/AddToTrackButton.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

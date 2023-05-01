@@ -6,6 +6,8 @@
 #define DIZZLESTUDIOPRO_AUDIONODE_H
 #include "SoundKeys.h"
 #include "States.h"
+#include <SFML/Audio.hpp>
+#include <iostream>
 
 struct AudioNode: public States{
 private:
@@ -22,6 +24,9 @@ private:
 public:
     SoundKeys keyEnum = NULL_KEY;
     unsigned int octave = 0;
+
+    sf::SoundBuffer buffer;
+    sf::Sound sound;
 
     float duration = 0, timeStamp = 0;
 
@@ -50,6 +55,19 @@ public:
             return octave < other.octave;
         }
         return keyEnum < other.keyEnum;
+    }
+
+    void play() {
+        sound.play();
+    }
+
+    void stop(){
+        sound.stop();
+    }
+
+    void setBuffer(const sf::SoundBuffer& sound){
+        buffer = sound;
+        this->sound.setBuffer(sound);
     }
 };
 
