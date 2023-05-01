@@ -7,9 +7,11 @@
 //Default Constructor
 //Size: 0,0
 //Color: white
-Key::Key(): Key({0,0}, sf::Color::White) {}
+Key::Key(): Key({0,0}, sf::Color::White) {
+}
 
 Key::Key(const sf::Vector2f &size, const sf::Color &color) {
+    AppComponent::setState(PLAY, false);
     //set key size
     setSize(size);
     //set default clickable range (full key size)
@@ -35,11 +37,25 @@ void Key::setFillColor(const sf::Color &color) {
 
 void Key::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-    if(isClick(window))
+    if(isClick(window)){
         key.setFillColor(color + sf::Color{25,25,25});
-
-    else
+    }else{
         setFillColor(color);
+    }
+
+    if (isClick(window) && !AudioNode::checkStates(PLAY)) {
+        AudioNode::setState(PLAY, true);
+        play();
+    }
+    else if(!isClick(window) && AudioNode::checkStates(PLAY)) {
+        if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Tab))
+            stop();
+        AudioNode::setState(PLAY, false);
+    }
+}
+
+void Key::loadSound() {
+    setBuffer(Sounds::getSound(*this));
 }
 
 void Key::update(const sf::RenderWindow &window) {
@@ -74,14 +90,13 @@ void Key::setRadius(const float (&radii)[4]) {
     key.setRadius(radii);
 }
 
+
+
 bool Key::isClick(const sf::RenderWindow &window) const {
-    return (MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window));
+    return MouseEvents::isClick(getCombinedTransform().transformRect(clickableRange),window)
+            || KeyboardKeyMap::isKeyBoardPress(keyEnum,octave);
 }
 
-void Key::setKeyType(SoundKeys type) {
-    keyType = type;
-
-}
 
 
 

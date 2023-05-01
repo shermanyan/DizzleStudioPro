@@ -11,7 +11,6 @@ class MouseEvents {
 public:
     static bool isHover(const sf::FloatRect& bounds , const sf::RenderWindow& window);
 
-
     static bool isClick(const sf::FloatRect& bounds, const sf::RenderWindow& window);
 
     static bool isClick(const sf::RenderWindow& window);

@@ -11,6 +11,8 @@ void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
 }
 
 LayersPanel::LayersPanel() {
+    StudioStatics::seekBar = &seek;
+
     background = {{1960, 600},20, {121,121,121}};
 
     for (int i = 0; i < 4; ++i) {
@@ -25,40 +27,71 @@ LayersPanel::LayersPanel() {
     }
 
     layers[0].setTrack(KEYBOARD);
-    layers[1].setTrack(AUDIO);
-    layers[2].setTrack(VOCAL);
+    layers[1].setTrack(DRUMPAD);
+    layers[2].setTrack(AUDIO);
+    layers[3].setTrack(VOCAL);
 
 
+    seek.setSize({10,560});
+    seek.setDuration(20);
+    seek.setLength(1530);
+    seek.setFillColor({185,185,185});
+    seek.setPosition(410,25);
+    seek.setRadius(5);
+
+    timeBar.setDuration(seek.getDuration());
+    DrawableAudioNode::setDurationScale(seek.getDuration());
+
+    Position::alignRight(timeBar,layers[0]);
+    Position::top(timeBar,layers[0],10);
 
 }
 
-void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *instrumentPanel) {
-
-    this->instrumentPanel = instrumentPanel;
-
-    for (auto&l:layers) {
-        l.setInstrumentPanel(instrumentPanel);
-    }
-}
+//void LayersPanel::setInstrumentPanel(DynamicInstrumentPanel *dynamicInstrumentPanel) {
+//    Layer::setInstrumentPanel(dynamicInstrumentPanel);
+//}
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 
-    for (auto&l:layers) {
-        l.eventHandler(window,event);
+    seek.eventHandler(window,event);
+    timeBar.eventHandler(window,event);
 
-        if (event.MouseButtonPressed && MouseEvents::isClick(getTransform().transformRect(l.getGlobalBounds()), window)) {
-            instrumentPanel->setActivePanel(l.getTrackType());
+    for (auto&l:layers) {
+        l.eventHandler(window, event);
+        if(l.checkStates(SELECTED)) {
+            for (auto &l2: layers) {
+                if (&l2 != &l) {
+                    l2.setState(SELECTED, false);
+                }
+            }
         }
+    }
+
+
+
+    if(event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::RBracket)) {
+        int duration =  timeBar.getDuration() + 1;
+        timeBar.setDuration(duration);
+        seek.setDuration(duration);
+        DrawableAudioNode::setDurationScale(duration);
+    }
+    else if (event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::LBracket)) {
+        int duration =  timeBar.getDuration() -1;
+        timeBar.setDuration(duration);
+        seek.setDuration(duration);
+        DrawableAudioNode::setDurationScale(duration);
     }
 
 }
 
-
-
 void LayersPanel::update(const sf::RenderWindow &window) {
+    seek.update(window);
+    timeBar.update(window);
+
     for (auto&l:layers) {
         l.update(window);
     }
+
 }
 
 void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -68,5 +101,8 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     for (auto&l:layers) {
         target.draw(l,states);
     }
+
+    target.draw(timeBar,states);
+    target.draw(seek,states);
 
 }

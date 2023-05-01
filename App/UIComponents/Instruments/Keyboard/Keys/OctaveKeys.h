@@ -18,27 +18,24 @@ private:
     sf::Vector2<sf::Color> keyColors;
     float spacing = 10;
 
-    std::map<SoundKeys,Key> whiteKeys;
-    std::map<SoundKeys,Key> blackKeys;
+    std::vector<Key> whiteKeys;
+    std::vector<Key> blackKeys;
 
     //refresh key positions
     void refresh();
 
     //setup keys position and color
     void setupKeys();
-
-    //setup white keys color and positions;
-    void setUpWhiteKeys();
-
-    //setup black keys color and positions;
-    void setupBlackKeys();
-
     void setWhiteKeysSize();
     void setBlackKeysSize();
+
+    void setupWhiteKeys();
+    void setupBlackKeys();
 
     void positionKeys();
 
     void setChildrenTransform(const sf::Transform& transform) override;
+
 
 public:
     //Default Constructor
@@ -61,12 +58,16 @@ public:
     //Set fill color for white key
     void setWhiteKeyColor(const sf::Color& color);
 
+    void setOctave(unsigned int octave);
     //Set spacing between keys
     void setKeySpacing(float spacing);
 
     float getKeySpacing() const;
 
-    SoundKeys getKeyPress(const sf::RenderWindow& window) const;
+//    std::vector<Key*> getKeys();
+
+
+    //    AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) ;
 
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
@@ -77,6 +78,13 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+    //setup white keys color and positions;
+    void loudSoundWhiteKeys();
+
+    //setup black keys color and positions;
+    void loudSoundBlackKeys();
+
+    std::vector<Key *> getKeys(const sf::RenderWindow &window);
 };
 
 

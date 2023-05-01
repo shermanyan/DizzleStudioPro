@@ -11,8 +11,10 @@
 #include "Sounds.h"
 #include "Squircle.h"
 #include "Position.h"
+#include "MouseEvents.h"
+#include "AudioNode.h"
 
-class StaticAudioVisualizer : public AppComponent {
+class StaticAudioVisualizer : public AppComponent, public AudioNode{
 public:
     StaticAudioVisualizer(const std::string& filePath, const sf::Vector2u& size);
 
@@ -21,13 +23,10 @@ public:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     void loadVisualizer(const std::string& filePath);
 
-
-    sf::SoundBuffer getSong();
-
     sf::FloatRect getGlobalBounds() const override;
 
     sf::SoundBuffer buffer;
-    sf::Sound sound;
+
     bool isPlaying = false;
 
 private:

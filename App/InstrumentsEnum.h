@@ -1,0 +1,17 @@
+//
+// Created by Sherman Yan on 4/19/23.
+//
+
+#ifndef DIZZLESTUDIOPRO_INSTRUMENTSENUM_H
+#define DIZZLESTUDIOPRO_INSTRUMENTSENUM_H
+
+
+enum InstrumentsEnum{
+    KEYBOARD,
+    DRUMPAD,
+    AUDIO,
+    VOCAL,
+    EMPTY
+
+};
+#endif //DIZZLESTUDIOPRO_INSTRUMENTSENUM_H

@@ -7,28 +7,30 @@
 TrackLabel::TrackLabel():
         TrackLabel({380, 120}, sf::Color::White) {}
 
-TrackLabel::TrackLabel(const sf::Color &labelColor, PanelTypeEnum type):
+TrackLabel::TrackLabel(const sf::Color &labelColor, InstrumentsEnum type):
         TrackLabel({380, 120}, labelColor, type) {}
 
-TrackLabel::TrackLabel(const sf::Vector2f &size, const sf::Color &labelColor, PanelTypeEnum type) {
+TrackLabel::TrackLabel(const sf::Vector2f &size, const sf::Color &labelColor, InstrumentsEnum type) {
     setTrack(type);
     setSize(size);
     setTrackColor(labelColor);
     label.setRadius({0,0,10,10});
+
+    overlay.setFillColor({100, 100, 100, 20});
 }
 
 void TrackLabel::setSize(const sf::Vector2f &size) {
+    overlay.setSize(size);
     labelImg.setSize({size.x, size.y * .8f});
     label.setSize(size.x,size.y * .2f);
     Position::bottom(label,labelImg);
 }
 
 void TrackLabel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(MouseEvents::isClick(getCombinedTransform().transformRect(getGlobalBounds()),window))
-        label.setFillColor(trackColor * sf::Color{10,10,10});
+    if(MouseEvents::isHover(getCombinedTransform().transformRect(getGlobalBounds()),window))
+        setState(HOVERED,true);
     else
-        label.setFillColor(trackColor);
-
+        setState(HOVERED,false);
 
 }
 
@@ -40,10 +42,11 @@ void TrackLabel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(labelImg,states);
     target.draw(label,states);
-
+    if(checkStates(HOVERED))
+        target.draw(overlay,states);
 }
 
-void TrackLabel::setTrack(PanelTypeEnum type) {
+void TrackLabel::setTrack(InstrumentsEnum type) {
     trackType = type;
 
     switch (type) {
@@ -63,7 +66,7 @@ void TrackLabel::setTrack(PanelTypeEnum type) {
             labelImg.setTexture(Textures::getTexture(DRUMPAD_LABEL));
             break;
         }
-        case EMPTY_PANEL: {
+        case EMPTY: {
             labelImg.setTexture(Textures::getTexture(EMPTY_LABEL));
             break;
         }
@@ -97,7 +100,7 @@ void TrackLabel::setTrackColor(const sf::Color &trackColor) {
     label.setFillColor(trackColor);
 }
 
-PanelTypeEnum TrackLabel::getTrackType() const {
+InstrumentsEnum TrackLabel::getTrackType() const {
     return trackType;
 }
 

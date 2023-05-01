@@ -8,7 +8,9 @@
 #include "AppComponent.h"
 #include "Squircle.h"
 #include "Position.h"
-#include "PanelTypeEnum.h"
+#include "InstrumentsEnum.h"
+#include "AudioNode.h"
+#include "Key.h"
 
 class BasePanel: public AppComponent {
 
@@ -19,6 +21,8 @@ private:
 public:
     BasePanel();
     BasePanel(const sf::Vector2f& size);
+
+    virtual std::vector<Key*> getKeys(const sf::RenderWindow& window);
 
     void setSize(const sf::Vector2f& size);
     sf::Vector2f getSize();

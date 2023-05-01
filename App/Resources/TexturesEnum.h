@@ -13,5 +13,6 @@ enum TextureEnums{
     AUDIO_LABEL,
     VOCAL_LABEL,
     EMPTY_LABEL,
+    DROP_DOWN_MENU,
     LAST_TEX
 };

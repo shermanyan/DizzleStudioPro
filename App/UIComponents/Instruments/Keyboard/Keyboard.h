@@ -16,12 +16,17 @@ private:
     float spacing = 10;
     unsigned int numOctaves = 1;
 
+
     void setChildrenTransform(const sf::Transform& transform) override;
 
     void setupKeyboard();
 
     void reposition();
+
+
 public:
+    static const unsigned int STARTING_OCTAVE ;   //change this value to what octave you want to start at
+
     Keyboard();
     Keyboard(unsigned int numOctaves);
     Keyboard(unsigned int numOctaves, const sf::Vector2f& size);
@@ -35,7 +40,9 @@ public:
     sf::FloatRect getGlobalBounds() const override;
     sf::FloatRect getLocalBounds() const override;
 
-    std::pair<int, SoundKeys> getKeyPressed(const sf::RenderWindow& window) const;
+//    std::vector<Key*> getKeys();
+
+//    AudioNode getKeyRelease(const sf::RenderWindow &window, const sf::Event& event) const;
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 
@@ -48,6 +55,7 @@ public:
     unsigned int getNumOctaves() const;
 
 
+    std::vector<Key *> getKeys(const sf::RenderWindow &window);
 };
 
 

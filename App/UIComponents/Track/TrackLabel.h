@@ -9,31 +9,31 @@
 #include "Squircle.h"
 #include "Textures.h"
 #include "SpriteImage.h"
-#include "PanelTypeEnum.h"
+#include "InstrumentsEnum.h"
 #include "Position.h"
 #include "MouseEvents.h"
 
 class TrackLabel: public AppComponent{
 
 private:
-    Squircle label;
+    Squircle label, overlay;
     SpriteImage labelImg;
 
     sf::Color trackColor;
 
-    PanelTypeEnum trackType = EMPTY_PANEL;
+    InstrumentsEnum trackType = EMPTY;
 
 public:
     TrackLabel();
-    TrackLabel(const sf::Color& labelColor, PanelTypeEnum type = EMPTY_PANEL);
-    TrackLabel(const sf::Vector2f& size, const sf::Color& labelColor , PanelTypeEnum type = EMPTY_PANEL);
+    TrackLabel(const sf::Color& labelColor, InstrumentsEnum type = EMPTY);
+    TrackLabel(const sf::Vector2f& size, const sf::Color& labelColor , InstrumentsEnum type = EMPTY);
 
     sf::Color getTrackColor() const;
     void setTrackColor(const sf::Color &trackColor);
 
-    void setTrack(PanelTypeEnum type);
+    void setTrack(InstrumentsEnum type);
 
-    PanelTypeEnum getTrackType() const;
+    InstrumentsEnum getTrackType() const;
 
     void setSize(const sf::Vector2f& size);
 

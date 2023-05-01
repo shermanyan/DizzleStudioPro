@@ -8,13 +8,25 @@
 #include "AudioVisualizer.h"
 #include "SpriteImage.h"
 #include "BasePanel.h"
-
+#include "Clock.h"
+#include "Textures.h"
+#include "MouseEvents.h"
+#include "Fonts.h"
+#include "FloatToStringNoTrailingZeros.h"
+#include "AddToTrackButton.h"
 class AudioRecordingPanel : public BasePanel{
 private:
     AudioVisualizer liveRecording;
     SpriteImage button;
     sf::Texture texture;
     bool isRecording = false;
+    bool isPlaying = false;
+    sf::Text clockText;
+    Clock clock;
+    void updateClockText();
+    void handleButtonClick();
+
+    AddToTrackButton addToTrackButton;
 public:
 
     AudioRecordingPanel();

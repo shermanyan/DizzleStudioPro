@@ -13,12 +13,16 @@ private:
     Keyboard keyboard;
 
 protected:
+
     void setChildrenTransform(const sf::Transform &transform) override;
 
 public:
     KeyboardPanel();
 
-    std::pair<int, SoundKeys> getKeyPressed(const sf::RenderWindow& window) const;
+
+//    std::vector<Key*> getKeys();
+
+    std::vector<Key *> getKeys(const sf::RenderWindow &window) override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
@@ -29,6 +33,7 @@ public:
 //    void setPosition(const sf::Vector2f & pos) override;
 //    void setPosition(float x, float y) override;
 
+    static unsigned int octaveCount;
 };
 
 
