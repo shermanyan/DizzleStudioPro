@@ -31,7 +31,7 @@ void DrumPad::positionPads() {
         float xPos = leftOffset + i * (padSize.x + spacing);
         float yPos = topOffset;
         pads[i].setPosition({xPos + 30, yPos + 30});
-        pads[i].setupText(SoundKeysStrings[i+13]);
+        pads[i].setupText(SoundKeysStrings[i+15]);
     }
 
 }
