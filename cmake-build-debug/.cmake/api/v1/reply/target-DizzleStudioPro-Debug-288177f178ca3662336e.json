@@ -421,7 +421,8 @@
 				118,
 				121,
 				123,
-				125
+				125,
+				126
 			]
 		}
 	],
@@ -534,7 +535,8 @@
 				118,
 				121,
 				123,
-				125
+				125,
+				126
 			]
 		},
 		{
@@ -609,7 +611,8 @@
 				119,
 				120,
 				122,
-				124
+				124,
+				127
 			]
 		}
 	],
@@ -1301,6 +1304,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "DizzleStudioProApp_main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/DizzleStudioAppMain.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/DizzleStudioAppMain.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

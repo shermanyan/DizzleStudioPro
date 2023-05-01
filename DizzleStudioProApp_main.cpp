@@ -2,9 +2,9 @@
 // Created by Sherman Yan on 4/19/23.
 //
 
-#include "StudioMain.h"
+#include "DizzleStudioAppMain.h"
 int main(){
-    StudioMain application;
+    DizzleStudioAppMain application;
     application.run();
 
     return 0;

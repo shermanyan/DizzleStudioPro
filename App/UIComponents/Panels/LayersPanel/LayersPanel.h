@@ -29,8 +29,8 @@ private:
 
     TrackControls trackControls;
 
-    sf::SoundBuffer combinedBuffer;
-    sf::Sound sound;
+    std::vector<sf::SoundBuffer> buffers;
+    std::vector<sf::Sound> sounds;
 
     std::map<float, std::vector<AudioNode>> getMixedAudioTrack();
 

@@ -3,6 +3,7 @@
 //
 
 #include "LayersPanel.h"
+#include <iostream>
 
 void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
     for (auto&l:layers) {
@@ -47,6 +48,11 @@ LayersPanel::LayersPanel() {
     Position::top(timeBar,layers[0],10);
 
     trackControls.setPosition(20,20);
+
+    for(int i=0; i<layers.size(); i++){
+        buffers.emplace_back();
+        sounds.emplace_back();
+    }
 }
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -84,17 +90,28 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
 
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
         setState(PLAY, true);
-        auto track = getMixedAudioTrack();
-        if (!track.empty()) {
-            combinedBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
+//        auto track = getMixedAudioTrack();
+        for (int i = 0; i <layers.size(); i++ ) {
+            auto lTrack = layers[i].getAudioTrack();
+            if (!lTrack.empty()) {
+                buffers[i] = (GetBuffer::getCombinedSoundBuffer(lTrack, 41000));
+                sounds[i].setBuffer(buffers[i]);
 
-            sound.setBuffer(combinedBuffer);
-            sound.play();
-
-//            std::cout << "Play";
+                if(layers[i].getTrackType() != KEYBOARD) {
+                    sounds[i].setVolume(50);
+                }
+            }
         }
+        for(auto& s: sounds) {
+            s.play();
+            std::cout << "Play";
+        }
+
     } else if(!trackControls.checkStates(PLAY)) {
-        sound.stop();
+        for (auto& sound:sounds) {
+            sound.stop();
+//            sound.resetBuffer();
+        }
         setState(PLAY, false);
     }
 
