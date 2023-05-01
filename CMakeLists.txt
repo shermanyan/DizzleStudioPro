@@ -6,14 +6,12 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(App)
 include_directories(App/Resources)
 include_directories(App/Resources/Sounds)
-include_directories(App/UIComponents)
 include_directories(App/UIComponents/AudioRecording)
 include_directories(App/UIComponents/Instruments)
 include_directories(App/UIComponents/Instruments/DrumPad)
 include_directories(App/UIComponents/Instruments/Keyboard)
 include_directories(App/UIComponents/Instruments/Keyboard/Keys)
 include_directories(App/UIComponents/MusicTrackSelection)
-include_directories(App/UIComponents/Panels)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Base)
 include_directories(App/UIComponents/Panels/DynamicInstrumentPanel/Panels)
@@ -29,6 +27,7 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
+include_directories(App/UIComponents)
 
 add_executable(DizzleStudioPro
         App/Resources/Sounds/Sounds.cpp
@@ -71,10 +70,6 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/DynamicInstrumentPanel/DynamicInstrumentPanel.h
         App/UIComponents/Panels/LayersPanel/LayersPanel.cpp
         App/UIComponents/Panels/LayersPanel/LayersPanel.h
-        App/UIComponents/Panels/LayersPanel/TrackControls.cpp
-        App/UIComponents/Panels/LayersPanel/TrackControls.h
-        App/UIComponents/Panels/GetBuffer.cpp
-        App/UIComponents/Panels/GetBuffer.h
         App/UIComponents/Track/Tracks/AudioTrack.cpp
         App/UIComponents/Track/Tracks/AudioTrack.h
         App/UIComponents/Track/Tracks/DrumPadTrack.cpp
@@ -97,8 +92,6 @@ add_executable(DizzleStudioPro
         App/UIComponents/Track/Track.h
         App/UIComponents/Track/TrackLabel.cpp
         App/UIComponents/Track/TrackLabel.h
-        App/UIComponents/AddToTrackButton.cpp
-        App/UIComponents/AddToTrackButton.h
         App/AudioNode.h
         App/InstrumentsEnum.h
         App/StudioMain.cpp
@@ -159,9 +152,7 @@ add_executable(DizzleStudioPro
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-
-        App/UIComponents/Track/GetAudioTrack.cpp App/UIComponents/Track/GetAudioTrack.h)
-
+        App/UIComponents/AddToTrackButton.cpp App/UIComponents/AddToTrackButton.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
