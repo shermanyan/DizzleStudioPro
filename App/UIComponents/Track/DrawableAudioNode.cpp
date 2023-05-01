@@ -8,7 +8,7 @@
 float DrawableAudioNode::scale;
 
 void DrawableAudioNode::setDurationScale(int duration) {
-    DrawableAudioNode::scale = 1510.f/duration;
+    DrawableAudioNode::scale = 1530.f/duration;
 }
 
 void DrawableAudioNode::positionNode() {
