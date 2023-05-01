@@ -85,7 +85,6 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
         setState(PLAY, true);
         combinedBuffer = GetBuffer::getCombinedSoundBuffer(layers[0].getAudioTrack(), 44100);
-
         sound.setBuffer(combinedBuffer);
         sound.play();
 
