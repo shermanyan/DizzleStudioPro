@@ -160,7 +160,7 @@ add_executable(DizzleStudioPro
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
 
-        )
+        App/UIComponents/Track/GetAudioTrack.cpp App/UIComponents/Track/GetAudioTrack.h)
 
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
