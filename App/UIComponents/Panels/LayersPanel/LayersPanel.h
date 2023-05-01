@@ -12,6 +12,7 @@
 #include "SeekBar.h"
 #include "TimeBar.h"
 #include "TrackControls.h"
+#include "GetBuffer.h"
 
 class LayersPanel: public AppComponent {
 private:
@@ -27,6 +28,9 @@ private:
     TimeBar timeBar;
 
     TrackControls trackControls;
+
+    sf::SoundBuffer combinedBuffer;
+    sf::Sound sound;
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;

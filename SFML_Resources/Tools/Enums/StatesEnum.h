@@ -14,6 +14,7 @@ enum StatesEnum{
     HOVERED,
     ACTIVE,
     HIDDEN,
+    PLAYBACK,
     LAST_STATE
 };
 

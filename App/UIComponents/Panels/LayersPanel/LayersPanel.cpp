@@ -81,6 +81,19 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         DrawableAudioNode::setDurationScale(duration);
     }
 
+
+    if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
+        combinedBuffer = GetBuffer::getCombinedSoundBuffer(layers[0].getAudioTrack(), 44100);
+
+        sound.setBuffer(combinedBuffer);
+        sound.play();
+
+        std::cout << "Play";
+    } else if(!trackControls.checkStates(PLAY)) {
+        sound.stop();
+        setState(PLAY, false);
+    }
+
 }
 
 void LayersPanel::update(const sf::RenderWindow &window) {
@@ -112,6 +125,7 @@ void LayersPanel::update(const sf::RenderWindow &window) {
     } else if (seek.checkStates(PLAY)){
         seek.pause();
     }
+
 
 
 }

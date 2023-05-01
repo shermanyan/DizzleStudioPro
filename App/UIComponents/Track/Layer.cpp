@@ -116,6 +116,10 @@ InstrumentsEnum Layer::getTrackType() const {
     return label.getTrackType();
 }
 
+std::map<float, std::vector<AudioNode>> Layer::getAudioTrack() {
+    return track->getAudioTrack();
+}
+
 
 
 

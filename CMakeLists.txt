@@ -73,8 +73,8 @@ add_executable(DizzleStudioPro
         App/UIComponents/Panels/LayersPanel/LayersPanel.h
         App/UIComponents/Panels/LayersPanel/TrackControls.cpp
         App/UIComponents/Panels/LayersPanel/TrackControls.h
-        App/UIComponents/Panels/PlayAudioMap.cpp
-        App/UIComponents/Panels/PlayAudioMap.h
+        App/UIComponents/Panels/GetBuffer.cpp
+        App/UIComponents/Panels/GetBuffer.h
         App/UIComponents/Track/Tracks/AudioTrack.cpp
         App/UIComponents/Track/Tracks/AudioTrack.h
         App/UIComponents/Track/Tracks/DrumPadTrack.cpp
