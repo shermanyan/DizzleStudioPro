@@ -35,9 +35,24 @@ std::string Textures::getPath(TextureEnums texture) {
             return "App/Resources/Textures/Empty_Label.png";
         case DROP_DOWN_MENU:
             return "App/Resources/Textures/DropDownMenu.png";
+        case TRACKCONTROLS_FORWARD:
+            return "App/Resources/Textures/TrackControls/TrackControls_Forward.png";
+        case TRACKCONTROLS_LOOP:
+            return "App/Resources/Textures/TrackControls/TrackControls_Loop.png";
+        case TRACKCONTROLS_PAUSE:
+            return "App/Resources/Textures/TrackControls/TrackControls_Pause.png";
+        case TRACKCONTROLS_PLAY:
+            return "App/Resources/Textures/TrackControls/TrackControls_Play.png";
+        case TRACKCONTROLS_REWIND:
+            return "App/Resources/Textures/TrackControls/TrackControls_Rewind.png";
+        case TRACKCONTROLS_FORWARD_LIGHT:
+            return "App/Resources/Textures/TrackControls/TrackControls_Forward_Light.png";
+        case TRACKCONTROLS_LOOP_LIGHT:
+            return "App/Resources/Textures/TrackControls/TrackControls_Loop_Light.png";
+        case TRACKCONTROLS_REWIND_LIGHT:
+            return "App/Resources/Textures/TrackControls/TrackControls_Rewind_Light.png";
         case LAST_TEX:
             break;
-
     }
 }
 

@@ -105,12 +105,12 @@ void Keyboard::reposition() {
 
 }
 
-std::vector<Key*> Keyboard::getKeys(const sf::RenderWindow& window) {
+std::vector<Key*> Keyboard::getKeys() {
 
     std::vector<Key*> keyboardKeys;
 
     for (auto &o: keyboard) {
-        for (auto& k: o.getKeys(window))
+        for (auto& k: o.getKeys())
             keyboardKeys.push_back(k);
     }
     return keyboardKeys;

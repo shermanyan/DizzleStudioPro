@@ -12,12 +12,10 @@
 class KeyboardTrack :public Track{
 private:
     std::vector<std::map<SoundKeys,DrawableAudioNode*>> nodes;
-
 public:
     KeyboardTrack();
 
-    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
-    void update(const sf::RenderWindow &window) override;
+    void writeTrack() override;
 
 
 };

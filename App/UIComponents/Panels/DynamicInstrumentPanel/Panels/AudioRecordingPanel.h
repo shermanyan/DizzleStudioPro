@@ -14,6 +14,7 @@
 #include "Fonts.h"
 #include "FloatToStringNoTrailingZeros.h"
 #include "AddToTrackButton.h"
+
 class AudioRecordingPanel : public BasePanel{
 private:
     AudioVisualizer liveRecording;

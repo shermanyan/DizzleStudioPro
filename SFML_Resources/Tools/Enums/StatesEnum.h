@@ -8,7 +8,8 @@
 enum StatesEnum{
     PLAY,
     STOP,
-    PAUSE,
+    LOOP,
+    RECORDING,
     SELECTED,
     HOVERED,
     ACTIVE,

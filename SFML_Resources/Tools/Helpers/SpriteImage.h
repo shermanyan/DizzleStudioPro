@@ -8,6 +8,8 @@
 #include "SFML/Graphics.hpp"
 
 class SpriteImage:public sf::Sprite{
+private:
+
 public:
     SpriteImage();
     void setSize(const sf::Vector2f& size);

@@ -19,6 +19,7 @@ protected:
     sf::Color trackColor = sf::Color::White;
     std::map<float, std::vector<std::unique_ptr<DrawableAudioNode>>> audioTrack;
 
+    virtual void writeTrack();
 private:
 
     Squircle background, outline;
