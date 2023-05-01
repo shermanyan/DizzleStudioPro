@@ -18,6 +18,7 @@
 #include "DrumPadTrack.h"
 
 #include <algorithm>
+#include <future>
 
 class Layer: public AppComponent {
 private:

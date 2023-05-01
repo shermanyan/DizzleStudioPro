@@ -46,13 +46,13 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
         if (event.type == sf::Event::KeyPressed) {
             if (event.key.code == sf::Keyboard::Space) {
                 // Space bar is pressed, perform your desired action here
-//                sf::SoundBuffer combinedBuffer = concatenateSounds(track->getAudioTrack(), 44100);
-//                test.setBuffer(combinedBuffer);
-//                test.play();
-//                std::cout << "PRESSED";
-//                sf::sleep(sf::seconds(combinedBuffer.getDuration().asSeconds()));
+                sf::SoundBuffer combinedBuffer = concatenateSounds(track->getAudioTrack(), 44100);
+                test.setBuffer(combinedBuffer);
+                test.play();
+                std::cout << "PRESSED";
+                sf::sleep(sf::seconds(combinedBuffer.getDuration().asSeconds()));
 
-                playAudioMap(track->getAudioTrack());
+//                playAudioMap(track->getAudioTrack());
             }
         }
     }
@@ -152,18 +152,33 @@ InstrumentsEnum Layer::getTrackType() const {
 
 void Layer::playAudioMap(const std::map<float, std::vector<AudioNode>>& audioMap) {
     float previousTimeStamp = 0.0f;
+    sf::Clock clock;
 
     for (const auto& timestampAndAudioNodes : audioMap) {
         float currentTimestamp = timestampAndAudioNodes.first;
         const std::vector<AudioNode>& audioNodes = timestampAndAudioNodes.second;
 
-        sf::Time timeToSleep = sf::seconds(currentTimestamp - previousTimeStamp);
-        sf::sleep(timeToSleep);
+        float timeToWait = currentTimestamp - previousTimeStamp;
+
+        // Wait until the time to play the next audio nodes
+        while (clock.getElapsedTime().asSeconds() < timeToWait) {
+            // Do nothing and wait for the time to elapse
+        }
+
+        // Reset the clock after the time has elapsed
+        clock.restart();
 
         // Use a separate loop to play the sounds without modifying the const reference
+        std::vector<std::future<void>> stopSoundFutures;
         for (size_t i = 0; i < audioNodes.size(); i++) {
             AudioNode& audioNode = const_cast<AudioNode&>(audioNodes[i]);
             audioNode.play();
+
+            // Schedule a task to stop the sound after its duration
+            stopSoundFutures.push_back(std::async(std::launch::async, [&audioNode]() {
+                sf::sleep(sf::seconds(audioNode.duration));
+                audioNode.stop();
+            }));
         }
 
         previousTimeStamp = currentTimestamp;
@@ -175,20 +190,21 @@ void Layer::playAudioMap(const std::map<float, std::vector<AudioNode>>& audioMap
 sf::SoundBuffer Layer::concatenateSounds(const std::map<float, std::vector<AudioNode>>& audioMap, unsigned int targetSampleRate) {
     std::vector<sf::Int16> samples;
 
-    // calculate the total number of samples needed
+// calculate the total number of samples needed
     std::size_t totalSampleCount = 0;
     for (const auto& timestampAndAudioNodes : audioMap) {
         for (const AudioNode& audioNode : timestampAndAudioNodes.second) {
             sf::SoundBuffer monoBuffer = convertToMono(audioNode.buffer);
             sf::SoundBuffer resampledBuffer = resampleSoundBuffer(monoBuffer, 44100);
-            totalSampleCount += resampledBuffer.getSampleCount();
+            std::size_t durationSampleCount = static_cast<std::size_t>(audioNode.duration * resampledBuffer.getSampleRate());
+            totalSampleCount += std::min(durationSampleCount, static_cast<std::size_t>(resampledBuffer.getSampleCount()));
         }
     }
 
-    // add enough 0s to the output buffer to accommodate all the samples
+// add enough 0s to the output buffer to accommodate all the samples
     samples.resize(totalSampleCount, 0);
 
-    // add the samples to the output buffer at the correct position
+// add the samples to the output buffer at the correct position
     std::size_t outputPosition = 0;
     for (const auto& timestampAndAudioNodes : audioMap) {
         const float timestamp = timestampAndAudioNodes.first;
@@ -201,19 +217,23 @@ sf::SoundBuffer Layer::concatenateSounds(const std::map<float, std::vector<Audio
             const sf::Int16* bufferSamples = resampledBuffer.getSamples();
             std::size_t bufferSampleCount = resampledBuffer.getSampleCount();
 
-            // calculate the position in the output buffer to add the samples
-            outputPosition = std::round(timestamp * targetSampleRate);
+            // Calculate the number of samples to copy based on the duration
+            std::size_t samplesToCopy = static_cast<std::size_t>(audioNode.duration * resampledBuffer.getSampleRate());
+            samplesToCopy = std::min(samplesToCopy, bufferSampleCount);
 
-            // add the samples to the output buffer at the correct position
-            if (outputPosition + bufferSampleCount <= samples.size()) {
-                std::copy(bufferSamples, bufferSamples + bufferSampleCount, samples.begin() + outputPosition);
-            } else {
-                std::cerr << "Not enough space in output buffer to add samples" << std::endl;
-                return sf::SoundBuffer();
+            // Calculate the position in the output buffer to add the samples
+            outputPosition = std::round(timestamp * 44100);
+
+            // Ensure there is enough space in the output buffer to add the samples
+            if (outputPosition + samplesToCopy > samples.size()) {
+                samples.resize(outputPosition + samplesToCopy, 0);
             }
 
-            // update the output position
-            outputPosition += bufferSampleCount;
+            // Add the samples to the output buffer at the correct position
+            std::copy(bufferSamples, bufferSamples + samplesToCopy, samples.begin() + outputPosition);
+
+            // Update the output position
+            outputPosition += samplesToCopy;
         }
     }
 
