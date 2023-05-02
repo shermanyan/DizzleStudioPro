@@ -29,6 +29,9 @@ private:
 
     TrackControls trackControls;
 
+    sf::SoundBuffer combinedBuffer;
+    sf::Sound sound;
+
     std::vector<sf::SoundBuffer> buffers;
     std::vector<sf::Sound> sounds;
 

@@ -32,6 +32,9 @@ public:
     static void center(T& self,const S& ref);
     template<class T, class S>
     static void centerText(S& text, const T &ref);
+
+    template<class T, class S>
+    static void alignBottomToBottom(T& self, const S& ref);
 };
 
 #include "Position.cpp"
