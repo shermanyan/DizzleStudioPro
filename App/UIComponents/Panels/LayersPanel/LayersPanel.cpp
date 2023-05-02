@@ -11,7 +11,6 @@ void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
     }
     trackControls.setParentTransform(transform);
     seek.setParentTransform(transform);
-    dropDownMenu.setParentTransform(transform);
 }
 
 LayersPanel::LayersPanel() {
@@ -57,10 +56,6 @@ LayersPanel::LayersPanel() {
         sounds.emplace_back();
     }
 
-    dropDownMenu.setWidth(layers[0].getLabelGlobalBounds().width);
-    dropDownMenu.setPosition(20,0);
-//    dropDownMenu.setState(HIDDEN, false);
-
 }
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -75,6 +70,15 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             for (auto &l2: layers) {
                 if (&l2 != &l) {
                     l2.setState(SELECTED, false);
+                }
+            }
+        }
+    }
+    for (auto&l:layers) {
+        if(l.getDropDownState()) {
+            for (auto &l2: layers) {
+                if (&l2 != &l) {
+                    l2.setDropDownState(false);
                 }
             }
         }
@@ -108,13 +112,6 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         setState(PLAY, false);
     }
 
-
-    for (auto& l:layers) {
-        if(MouseEvents::isClick(getCombinedTransform().transformRect(l.getLabelGlobalBounds()),window)){
-            dropDownMenu.toggleState(HIDDEN);
-            Position::bottom(dropDownMenu,l);
-        }
-    }
 }
 
 void LayersPanel::update(const sf::RenderWindow &window) {
@@ -160,9 +157,6 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     target.draw(timeBar,states);
     target.draw(seek,states);
     target.draw(trackControls,states);
-
-    if(!dropDownMenu.checkStates(HIDDEN))
-        target.draw(dropDownMenu,states);
 
 }
 

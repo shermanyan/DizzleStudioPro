@@ -17,8 +17,6 @@
 class LayersPanel: public AppComponent {
 private:
 
-    LayerDropDownMenu dropDownMenu;
-
     Squircle background;
 
     std::vector<Layer> layers;

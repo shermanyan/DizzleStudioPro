@@ -22,6 +22,7 @@
 
 class Layer: public AppComponent {
 private:
+    LayerDropDownMenu dropDownMenu;
 
     std::unique_ptr<Track> track;
 
@@ -54,6 +55,8 @@ public:
 
     std::map<float, std::vector<AudioNode>> getAudioTrack();
 
+    void setDropDownState(bool value);
+    bool getDropDownState();
 
 };
 

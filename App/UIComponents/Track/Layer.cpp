@@ -7,9 +7,25 @@
 Layer::Layer() {
     setTrack(EMPTY);
     setState(SELECTED,false);
+
+    dropDownMenu.setWidth(label.getGlobalBounds().width);
+    Position::center(dropDownMenu,label);
+    Position::bottom(dropDownMenu,label);
+
 }
 
 void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+
+    if (!dropDownMenu.checkStates(HIDDEN)) {
+        dropDownMenu.eventHandler(window, event);
+        if(dropDownMenu.getSelected() != EMPTY) {
+            setTrack(dropDownMenu.getSelected());
+        }
+    }
+
+    if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(label.getGlobalBounds()),window)){
+        dropDownMenu.toggleState(HIDDEN);
+    }
 
     if (!checkStates(SELECTED)&&event.type == sf::Event::MouseButtonPressed &&
             MouseEvents::isClick(getCombinedTransform().transformRect(track->getGlobalBounds()), window)) {
@@ -33,6 +49,10 @@ void Layer::update(const sf::RenderWindow &window) {
         track->update(window);
     }
 
+    if (!dropDownMenu.checkStates(HIDDEN))
+        dropDownMenu.update(window);
+
+
 }
 
 void Layer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -41,11 +61,15 @@ void Layer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(label,states);
     target.draw(*track,states);
 
+    if(!dropDownMenu.checkStates(HIDDEN))
+        target.draw(dropDownMenu,states);
+
 }
 
 void Layer::setChildrenTransform(const sf::Transform &transform) {
     label.setParentTransform(transform);
     track->setParentTransform(transform);
+    dropDownMenu.setParentTransform(transform);
 }
 
 void Layer::setTrackColor(const sf::Color &color) {
@@ -108,6 +132,14 @@ sf::FloatRect Layer::getLabelGlobalBounds() const {
 
 sf::FloatRect Layer::getTrackGlobalBounds() const {
     return getTransform().transformRect(track->getGlobalBounds());
+}
+
+void Layer::setDropDownState(bool value){
+    dropDownMenu.setState(HIDDEN,!value);
+}
+
+bool Layer::getDropDownState() {
+    return !dropDownMenu.checkStates(HIDDEN);
 }
 
 
