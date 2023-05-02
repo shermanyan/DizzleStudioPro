@@ -4,28 +4,27 @@
 
 #ifndef DIZZLESTUDIOPRO_STUDIOMAIN_H
 #define DIZZLESTUDIOPRO_STUDIOMAIN_H
-#include "Application.h"
+#include "AppComponent.h"
 #include "TextInput.h"
 #include "DynamicInstrumentPanel.h"
 #include "LayersPanel.h"
 #include "TrackControls.h"
 
-class StudioMain : public Application{
+class StudioMain: public AppComponent{
 
 private:
     DynamicInstrumentPanel dynamicInstrumentPanel;
 
-    LayersPanel trackPanel;
+    LayersPanel layersPanel;
     TextInput projectTitle;
 
 public:
 
     StudioMain();
 
-    void eventHandler(RenderWindow &window, const sf::Event &event) override;
-
-    void updater(RenderWindow &window) override;
-
+    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
+    void update(const sf::RenderWindow &window) override;
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };
 
 

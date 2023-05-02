@@ -101,6 +101,11 @@ void Application::setBgColor(const sf::Color &bgColor) {
     Application::bgColor = bgColor;
 }
 
+sf::Vector2u Application::getWindowSize() {
+    return windowSize;
+}
+
+
 
 
 

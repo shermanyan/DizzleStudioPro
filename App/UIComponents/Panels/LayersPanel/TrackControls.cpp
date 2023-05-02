@@ -57,11 +57,11 @@ void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &even
             case sf::Keyboard::Enter:
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)) {
                     toggleState(RECORDING);
-                    setState(PLAY, false);
+//                    setState(PLAY,false);
                 }
                 else if (!checkStates(RECORDING)) {
+//                    setState(RECORDING,false);
                     toggleState(PLAY);
-                    setState(RECORDING, false);
                 }
                 break;
 
@@ -72,26 +72,26 @@ void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &even
 
         if (MouseEvents::isClick(getCombinedTransform().transformRect(record.getGlobalBounds()), window)) {
             toggleState(RECORDING);
-            setState(PLAY,false);
-        } else if (!checkStates(RECORDING) && MouseEvents::isClick(getCombinedTransform().transformRect(play.getGlobalBounds()), window)) {
+//            setState(PLAY,false);
+        } else if (MouseEvents::isClick(getCombinedTransform().transformRect(play.getGlobalBounds()), window)) {
             toggleState(PLAY);
-            setState(RECORDING,false);
+//            setState(RECORDING,false);
         } else if (MouseEvents::isClick(getCombinedTransform().transformRect(forward.getGlobalBounds()), window)) {
             forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD_LIGHT));
-            StudioStatics::seekBar->forward(1);
+            StudioStatics::seekBar->forward(0.5);
         } else if (MouseEvents::isClick(getCombinedTransform().transformRect(rewind.getGlobalBounds()), window)) {
             rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND_LIGHT));
-            StudioStatics::seekBar->rewind(1);
+            StudioStatics::seekBar->rewind(0.5);
         } else if (MouseEvents::isClick(getCombinedTransform().transformRect(loop.getGlobalBounds()), window)) {
             toggleState(LOOP);
             if (checkStates(LOOP))
                 loop.setTexture(Textures::getTexture(TRACKCONTROLS_LOOP_LIGHT));
             else
                 loop.setTexture(Textures::getTexture(TRACKCONTROLS_LOOP));
+        } else {
+            forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD));
+            rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND));
         }
-    }else {
-        forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD));
-        rewind.setTexture(Textures::getTexture(TRACKCONTROLS_REWIND));
     }
 
 

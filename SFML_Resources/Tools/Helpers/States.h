@@ -18,7 +18,6 @@ public:
     void disableState(StatesEnum state);
     void setState(StatesEnum state, bool value);
     void toggleState(StatesEnum state);
-
 };
 
 #endif //STATES_H

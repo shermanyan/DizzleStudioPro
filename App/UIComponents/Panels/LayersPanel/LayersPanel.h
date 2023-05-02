@@ -32,6 +32,9 @@ private:
     sf::SoundBuffer combinedBuffer;
     sf::Sound sound;
 
+    std::vector<sf::SoundBuffer> buffers;
+    std::vector<sf::Sound> sounds;
+
     std::map<float, std::vector<AudioNode>> getMixedAudioTrack();
 
 protected:
@@ -39,7 +42,6 @@ protected:
 
 public:
     LayersPanel();
-
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 

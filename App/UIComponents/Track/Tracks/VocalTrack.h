@@ -10,6 +10,8 @@
 class VocalTrack: public Track {
 public:
     VocalTrack();
+
+    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 };
 
 

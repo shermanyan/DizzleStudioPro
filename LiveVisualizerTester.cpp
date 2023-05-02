@@ -8,7 +8,7 @@
 int main(){
 
     Application tester;
-    tester.setWindowSize({2000, 1800});
+    tester.setWindowSize({2000,1125});
     tester.setBgColor(sf::Color::Black);
 //    AudioVisualizer liveVisualizer(100,800);
 

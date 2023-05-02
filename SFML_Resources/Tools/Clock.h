@@ -13,13 +13,11 @@ private:
 
     bool on = false;
 
-    float offset = 0;
-
-    sf::Time getElapsedTime();
 
 public:
     Clock();
 
+    sf::Time getElapsedTime();
 
     void start();
     void stop();

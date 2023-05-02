@@ -131,6 +131,10 @@ void TextBox::setString(const std::string &string) {
     text.setString(string);
 }
 
+bool TextBox::isEmpty() {
+    return text.isEmpty();
+}
+
 
 
 

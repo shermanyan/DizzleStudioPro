@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 33,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 166,
+				"line" : 170,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 167,
+				"line" : 171,
 				"parent" : 0
 			},
 			{
@@ -227,6 +227,18 @@
 				"file" : 0,
 				"line" : 31,
 				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 0
 			}
 		]
 	},
@@ -236,7 +248,11 @@
 			"compileCommandFragments" : 
 			[
 				{
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-DizzleStudioPro-Debug-e68cf48ac9914b1b4641.json
 					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6"
+========
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics"
+>>>>>>>> Sherman:cmake-build-debug/.cmake/api/v1/reply/target-DizzleStudioPro-Debug-3fa15d441c7ea11c1ac7.json
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -349,6 +365,14 @@
 					"path" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/SFML_Resources/Tools/History"
 				},
 				{
+					"backtrace" : 35,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/Resources/Textures/SplashScreen"
+				},
+				{
+					"backtrace" : 36,
+					"path" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/App/SplashScreen"
+				},
+				{
 					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/opt/homebrew/include"
@@ -398,10 +422,10 @@
 				62,
 				64,
 				66,
-				68,
+				70,
 				72,
 				74,
-				76,
+				77,
 				79,
 				81,
 				83,
@@ -409,19 +433,20 @@
 				87,
 				89,
 				91,
-				93,
-				96,
-				99,
+				94,
+				97,
+				103,
 				105,
 				107,
 				109,
 				111,
 				113,
-				115,
-				118,
+				116,
+				119,
 				121,
 				123,
-				125
+				125,
+				126
 			]
 		}
 	],
@@ -507,10 +532,10 @@
 				62,
 				64,
 				66,
-				68,
+				70,
 				72,
 				74,
-				76,
+				77,
 				79,
 				81,
 				83,
@@ -518,19 +543,20 @@
 				87,
 				89,
 				91,
-				93,
-				96,
-				99,
+				94,
+				97,
+				103,
 				105,
 				107,
 				109,
 				111,
 				113,
-				115,
-				118,
+				116,
+				119,
 				121,
 				123,
-				125
+				125,
+				126
 			]
 		},
 		{
@@ -572,12 +598,12 @@
 				63,
 				65,
 				67,
+				68,
 				69,
-				70,
 				71,
 				73,
 				75,
-				77,
+				76,
 				78,
 				80,
 				82,
@@ -586,26 +612,27 @@
 				88,
 				90,
 				92,
-				94,
+				93,
 				95,
-				97,
+				96,
 				98,
+				99,
 				100,
 				101,
 				102,
-				103,
 				104,
 				106,
 				108,
 				110,
 				112,
 				114,
-				116,
+				115,
 				117,
-				119,
+				118,
 				120,
 				122,
-				124
+				124,
+				127
 			]
 		}
 	],
@@ -905,17 +932,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "App/UIComponents/Track/DrawableAudioNode.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "App/UIComponents/Track/GetAudioTrack.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "App/UIComponents/Track/GetAudioTrack.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -1295,8 +1311,30 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "App/DizzleStudioAppMain.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/DizzleStudioAppMain.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "DizzleStudioProApp_main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "App/SplashScreen/SplashScreen.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "App/SplashScreen/SplashScreen.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

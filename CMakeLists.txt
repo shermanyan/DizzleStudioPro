@@ -29,7 +29,8 @@ include_directories(SFML_Resources/Tools/App)
 include_directories(SFML_Resources/Tools/Enums)
 include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
-
+include_directories(App/Resources/Textures/SplashScreen)
+include_directories(App/SplashScreen)
 add_executable(DizzleStudioPro
         App/Resources/Sounds/Sounds.cpp
         App/Resources/Sounds/Sounds.h
@@ -85,8 +86,6 @@ add_executable(DizzleStudioPro
         App/UIComponents/Track/Tracks/VocalTrack.h
         App/UIComponents/Track/DrawableAudioNode.cpp
         App/UIComponents/Track/DrawableAudioNode.h
-        App/UIComponents/Track/GetAudioTrack.cpp
-        App/UIComponents/Track/GetAudioTrack.h
         App/UIComponents/Track/Layer.cpp
         App/UIComponents/Track/Layer.h
         App/UIComponents/Track/LayerDropDownMenu.cpp
@@ -156,11 +155,16 @@ add_executable(DizzleStudioPro
         SFML_Resources/Tools/Clock.h
         SFML_Resources/Tools/Fonts.cpp
         SFML_Resources/Tools/Fonts.h
+        App/DizzleStudioAppMain.cpp
+        App/DizzleStudioAppMain.h
 #        AudioVisualizerTester.cpp
         DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
+#        SplashScreenTester.cpp
+        App/SplashScreen/SplashScreen.cpp
+        App/SplashScreen/SplashScreen.h
         )
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)

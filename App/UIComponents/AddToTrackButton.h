@@ -31,8 +31,6 @@ public:
 
     void setParentTransform(const sf::Transform &transform) override;
 
-    AudioNode getAudioNode(const sf::RenderWindow &windo);
-
     bool isClick(const sf::RenderWindow& window) const;
 
 protected:

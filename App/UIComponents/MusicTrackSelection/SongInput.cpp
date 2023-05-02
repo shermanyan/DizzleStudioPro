@@ -75,4 +75,8 @@ bool SongInput::loadButonClicked(sf::RenderWindow &window) {
     return MouseEvents::isClick(getCombinedTransform().transformRect(loadButton.getGlobalBounds()),window);
 }
 
+bool SongInput::isEmpty() {
+    return songInput.isEmpty();
+}
+
 

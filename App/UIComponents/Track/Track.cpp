@@ -15,6 +15,18 @@ Track::Track() {
 
 }
 void Track::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    for (auto& n: audioTrack) {
+        for (auto& node: n.second) {
+            node->eventHandler(window,event);
+
+            if(node->checkStates(SELECTED)&& sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
+                printf("Erase");
+                node.reset();
+                n.second.erase(std::find(n.second.begin(), n.second.end(), node));
+            }
+        }
+    }
+
 }
 
 void Track::update(const sf::RenderWindow &window) {
@@ -68,6 +80,14 @@ std::map<float, std::vector<AudioNode>> Track::getAudioTrack() {
 
 void Track::setTrackColor(const sf::Color &trackColor) {
     Track::trackColor = trackColor;
+}
+
+void Track::setChildrenTransform(const sf::Transform &transform) {
+    for (auto& n: audioTrack) {
+        for (auto& node: n.second) {
+            node->setParentTransform(transform);
+        }
+    }
 }
 
 

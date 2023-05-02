@@ -31,6 +31,7 @@ public:
     void setBgColor(const sf::Color &bgColor);
 
     void setWindowSize(const sf::Vector2u& windowSize);
+    sf::Vector2u getWindowSize();
     void addComponent(AppComponent& component);
     void disableResize();
     void run();

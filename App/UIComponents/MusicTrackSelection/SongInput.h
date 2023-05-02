@@ -32,6 +32,8 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
     bool loadButonClicked(sf::RenderWindow &window);
+
+    bool isEmpty();
 };
 
 

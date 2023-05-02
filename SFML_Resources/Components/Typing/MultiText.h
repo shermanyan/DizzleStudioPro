@@ -44,6 +44,7 @@ public:
     sf::FloatRect getGlobalBounds()const;
     sf::FloatRect getLocalBounds()const;
 
+    bool isEmpty();
     void updatePosition();
 };
 

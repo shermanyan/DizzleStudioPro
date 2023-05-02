@@ -9,29 +9,27 @@ sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vec
                                                 unsigned int targetSampleRate) {
     std::vector<sf::Int16> samples;
 
-// calculate the total number of samples needed
+    // calculate the total number of samples needed
     std::size_t totalSampleCount = 0;
     for (const auto& timestampAndAudioNodes : audioMap) {
         for (const AudioNode& audioNode : timestampAndAudioNodes.second) {
-            sf::SoundBuffer monoBuffer = convertToMono(audioNode.buffer);
-            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(monoBuffer, 44100);
+            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(convertToMono(audioNode.buffer), 44100);
             std::size_t durationSampleCount = static_cast<std::size_t>(audioNode.duration * resampledBuffer.getSampleRate());
-            totalSampleCount += std::min(durationSampleCount, static_cast<std::size_t>(resampledBuffer.getSampleCount()));
+            totalSampleCount += std::max(durationSampleCount, static_cast<std::size_t>(resampledBuffer.getSampleCount()));
         }
     }
 
-// add enough 0s to the output buffer to accommodate all the samples
+    // add enough 0s to the output buffer to accommodate all the samples
     samples.resize(totalSampleCount, 0);
 
-// add the samples to the output buffer at the correct position
+    // add the samples to the output buffer at the correct position
     std::size_t outputPosition = 0;
     for (const auto& timestampAndAudioNodes : audioMap) {
         const float timestamp = timestampAndAudioNodes.first;
         const std::vector<AudioNode>& audioNodes = timestampAndAudioNodes.second;
 
         for (const AudioNode& audioNode : audioNodes) {
-            sf::SoundBuffer monoBuffer = convertToMono(audioNode.buffer);
-            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(monoBuffer, 44100);
+            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(convertToMono(audioNode.buffer), 44100);
 
             const sf::Int16* bufferSamples = resampledBuffer.getSamples();
             std::size_t bufferSampleCount = resampledBuffer.getSampleCount();
@@ -49,13 +47,20 @@ sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vec
             }
 
             // Add the samples to the output buffer at the correct position
-            std::copy(bufferSamples, bufferSamples + samplesToCopy, samples.begin() + outputPosition);
+            for (std::size_t i = 0; i < samplesToCopy; ++i) {
+                sf::Int32 mixedSample = static_cast<sf::Int32>(samples[outputPosition + i]) + static_cast<sf::Int32>(bufferSamples[i]);
+
+                // Clamp the mixed sample to the valid range for a sf::Int16
+                mixedSample = std::max(mixedSample, static_cast<sf::Int32>(std::numeric_limits<sf::Int16>::min()));
+                mixedSample = std::min(mixedSample, static_cast<sf::Int32>(std::numeric_limits<sf::Int16>::max()));
+
+                samples[outputPosition + i] = static_cast<sf::Int16>(mixedSample);
+            }
 
             // Update the output position
             outputPosition += samplesToCopy;
         }
     }
-
     sf::SoundBuffer result;
     if (!result.loadFromSamples(samples.data(), samples.size(), 1, targetSampleRate)) {
         std::cerr << "Failed to load samples into resulting sound buffer" << std::endl;

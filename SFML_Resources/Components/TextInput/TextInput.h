@@ -41,7 +41,7 @@ public:
     void setTextBoxOutlineColor(const sf::Color& color);
     void toggleBox();
     void setString(const std::string& string);
-
+    bool isEmpty();
     void setLabelPosition(LabelPosition position);
 
 
