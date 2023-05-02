@@ -77,4 +77,11 @@ void Position::alignBottom(T &self, const S &ref) {
 
 }
 
+template<class T, class S>
+void Position::alignBottomToBottom(T& self, const S& ref) {
+    sf::FloatRect s = self.getGlobalBounds();
+    sf::FloatRect r = ref.getGlobalBounds();
+    self.setPosition(s.left, r.top + r.height - s.height);
+}
+
 #endif //POSITION_CPP
