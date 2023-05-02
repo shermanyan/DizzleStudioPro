@@ -10,6 +10,8 @@ void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
         l.setParentTransform(transform);
     }
     trackControls.setParentTransform(transform);
+    seek.setParentTransform(transform);
+
 }
 
 LayersPanel::LayersPanel() {
@@ -148,7 +150,7 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     target.draw(trackControls,states);
 }
 
-std::map<float, std::vector<AudioNode>> LayersPanel::getMixedAudioTrack() {
+std::map<float, std::vector<AudioNode>> LayersPanel:: getMixedAudioTrack() {
     std::map<float, std::vector<AudioNode>> finalTrack = layers[0].getAudioTrack();
     for (int i = 1; i<layers.size(); i++) {
         std::map<float, std::vector<AudioNode>> track = layers[i].getAudioTrack();

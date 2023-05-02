@@ -18,8 +18,6 @@ KeyboardTrack::KeyboardTrack(): Track{} {
 void KeyboardTrack::update(const sf::RenderWindow &window) {
     Track::update(window);
 
-
-
     std::vector<Key *> keys = dynamic_cast<KeyboardPanel*>(StudioStatics::panel->getPanel())->getKeys();
     for (auto &n: keys) {
         auto &dNode = nodes[n->octave - Keyboard::STARTING_OCTAVE];
@@ -30,6 +28,7 @@ void KeyboardTrack::update(const sf::RenderWindow &window) {
                 float timeStamp = StudioStatics::seekBar->getElapsedTime().asSeconds();
                 audioTrack[timeStamp].emplace_back(std::make_unique<DrawableAudioNode>(timeStamp, *n, trackColor));
                 dNode.at(n->keyEnum) = audioTrack[timeStamp].back().get();
+                dNode.at(n->keyEnum)->setParentTransform(getCombinedTransform());
                 dNode.at(n->keyEnum)->setState(ACTIVE, true);
             }
         }
@@ -38,8 +37,20 @@ void KeyboardTrack::update(const sf::RenderWindow &window) {
             dNode.at(n->keyEnum)->setState(ACTIVE, false);
         }
     }
+}
 
+void KeyboardTrack::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    for (auto& n: audioTrack) {
+        for (auto& node: n.second) {
+            node->eventHandler(window,event);
 
+            if(node->checkStates(SELECTED)&& sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
+                printf("Erase");
+                nodes[node->getNode().octave - Keyboard::STARTING_OCTAVE].at(node->getNode().keyEnum) = nullptr;
+                n.second.erase(std::find(n.second.begin(), n.second.end(), node));
+            }
+        }
+    }
 }
 
 

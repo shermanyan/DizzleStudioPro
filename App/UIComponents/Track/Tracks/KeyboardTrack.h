@@ -17,6 +17,8 @@ public:
 
     void update(const sf::RenderWindow &window) override;
 
+    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
+
 
 };
 

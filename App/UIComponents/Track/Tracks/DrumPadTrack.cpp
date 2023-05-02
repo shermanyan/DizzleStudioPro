@@ -16,6 +16,7 @@ void DrumPadTrack::eventHandler(sf::RenderWindow &window, const sf::Event &event
         for (auto &n: nodesPressed) {
             float timeStamp = StudioStatics::seekBar->getElapsedTime().asSeconds();
             audioTrack[timeStamp].emplace_back(std::make_unique<DrawableAudioNode>(timeStamp, *n, trackColor));
+            audioTrack[timeStamp].back()->setParentTransform(getCombinedTransform());
         }
     }
 }

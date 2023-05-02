@@ -42,9 +42,3 @@ void AddToTrackButton::init() {
 bool AddToTrackButton::isClick(const sf::RenderWindow &window) const {
     return MouseEvents::isClick(getCombinedTransform().transformRect(button.getGlobalBounds()),window);
 }
-
-AudioNode AddToTrackButton::getAudioNode( const sf::RenderWindow &window) {
-
-}
-
-

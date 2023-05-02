@@ -111,6 +111,7 @@ DrawableAudioNode::DrawableAudioNode(float timeStamp, const AudioNode& key, cons
     this->trackHeight = trackHeight;
     node = key;
     node.timeStamp = timeStamp;
+    this->color = color;
     box.setFillColor(color);
     positionNode();
     setSize();
@@ -120,7 +121,10 @@ DrawableAudioNode::DrawableAudioNode(float timeStamp, const AudioNode& key, cons
 void DrawableAudioNode::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(box.getGlobalBounds()),window)){
         toggleState(SELECTED);
-    }
+        box.setFillColor( color + sf::Color{50,50,50});
+    } else if(!checkStates(SELECTED))
+        box.setFillColor(color);
+
 }
 
 void DrawableAudioNode::update(const sf::RenderWindow &window) {

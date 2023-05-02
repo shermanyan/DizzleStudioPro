@@ -29,11 +29,6 @@ AudioRecordingPanel::AudioRecordingPanel() : liveRecording(100,2200){
 void AudioRecordingPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
 
-
-    if(addToTrackButton.isClick(window)){
-        std::cout << "Clicked";
-    }
-
     if(MouseEvents::isClick(getCombinedTransform().transformRect(button.getGlobalBounds()),window) ){
         handleButtonClick();
     }
@@ -84,4 +79,14 @@ void AudioRecordingPanel::updateClockText() {
         clockText.setString("0:00");
         clockText.setString(FloatToStringNoTrailingZeros::floatToStringNoTrailingZeros(rounded));
     }
+}
+
+AudioNode *AudioRecordingPanel::getNode() {
+    auto node = &liveRecording;
+    node->duration = liveRecording.buffer.getDuration().asSeconds();
+    node->keyEnum = SOUND;
+    return node;
+}
+bool AudioRecordingPanel::getStatus(const sf::RenderWindow &window) {
+    return addToTrackButton.isClick(window);
 }

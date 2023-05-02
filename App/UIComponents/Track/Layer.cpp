@@ -97,7 +97,7 @@ void Layer::setTrack(InstrumentsEnum type) {
     }
 
     track->setTrackColor(label.getTrackColor());
-    track->setParentTransform(getTransform());
+//    track->setParentTransform(getCombinedTransform());
     Position::right(*track,label,10);
 }
 
