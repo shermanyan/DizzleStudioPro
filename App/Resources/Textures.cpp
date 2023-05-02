@@ -53,8 +53,13 @@ std::string Textures::getPath(TextureEnums texture) {
             return "App/Resources/Textures/TrackControls/TrackControls_Rewind_Light.png";
         case AUDIOBARS:
             return "App/Resources/Textures/SplashScreen/AudioBars.png";
+        case MUSICMIXER:
+            return "App/Resources/Textures/SplashScreen/MusicMixer.png";
+        case MUSICPLAYER:
+            return "App/Resources/Textures/SplashScreen/MusicPlayer.png";
         case LAST_TEX:
             break;
+
 
     }
 }

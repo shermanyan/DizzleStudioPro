@@ -19,6 +19,9 @@ class SplashScreen : public AppComponent{
 
 private:
     SpriteImage sprite;
+    SpriteImage musicMixer;
+    SpriteImage musicPlayer;
+
     sf::Text dizzleStudio;
     sf::Text pro;
 

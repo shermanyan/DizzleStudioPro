@@ -18,6 +18,14 @@ void SplashScreen::setUpTextures() {
     sprite.setSize({2000,1600});
     sprite.setPosition(0, 630);
 
+    musicMixer.setTexture(Textures::getTexture(MUSICMIXER));
+    musicMixer.setSize({900,500});
+    musicMixer.setPosition(200, 1500);
+
+    musicPlayer.setTexture(Textures::getTexture(MUSICPLAYER));
+    musicPlayer.setSize({900,500});
+    musicPlayer.setPosition(600, 1500);
+
 }
 void SplashScreen::setUpText() {
 
@@ -65,7 +73,6 @@ void SplashScreen::eventHandler(sf::RenderWindow &window, const sf::Event &event
     if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(startButton.getGlobalBounds(), window)){
         setState(SELECTED, true);
         animationClock.restart(); // Start the clock when the start button is clicked
-
     }
 }
 
@@ -88,6 +95,8 @@ void SplashScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
     target.draw(welcome, states);
     target.draw(getStarted,states);
+    target.draw(musicPlayer,states);
+    target.draw(musicMixer,states);
 }
 
 void SplashScreen::fade() {
@@ -134,7 +143,7 @@ void SplashScreen::transition() {
 
     if(elapsedTime >= duration + 1){
         if(sprite.getPosition().y > -450){
-            moveUp({0,-5});
+            moveUp({0,-7});
         }else{
             toggleState(SELECTED);
         }
@@ -145,6 +154,8 @@ void SplashScreen::moveUp(const sf::Vector2f & offset) {
     sprite.move(offset);
     welcome.move(offset);
     getStarted.move(offset);
+    musicMixer.move(offset);
+    musicPlayer.move(offset);
 }
 
 
