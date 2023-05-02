@@ -141,8 +141,8 @@ void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const 
     states.transform *= getTransform();
     target.draw(background,states);
 
-    for (auto&l:layers) {
-        target.draw(l,states);
+    for (int i = layers.size() - 1; i >= 0 ; i--) {
+        target.draw(layers[i],states);
     }
 
     target.draw(timeBar,states);

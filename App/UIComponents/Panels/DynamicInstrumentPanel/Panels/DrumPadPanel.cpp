@@ -12,7 +12,6 @@ DrumPadPanel::DrumPadPanel() {
 
 void DrumPadPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     BasePanel::eventHandler(window, event);
-
     drumPad.eventHandler(window, event);
 }
 

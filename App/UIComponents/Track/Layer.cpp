@@ -7,25 +7,16 @@
 Layer::Layer() {
     setTrack(EMPTY);
     setState(SELECTED,false);
+
+    dropDownMenu.setWidth(label.getGlobalBounds().width);
+    Position::center(dropDownMenu,label);
+    Position::bottom(dropDownMenu,label);
+//    dropDownMenu.setState(HIDDEN, false);
 }
 
 void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(event.type == sf::Event::KeyPressed && MouseEvents::isHover(getCombinedTransform().transformRect(label.getGlobalBounds()),window)) {
-        sf::Keyboard::Key key = event.key.code;
-        switch (key) {
-            case sf::Keyboard::K: {
-                setTrack(KEYBOARD);
-                break;
-            }
-            case sf::Keyboard::V: {
-                setTrack(VOCAL);
-                break;
-            }
-            case sf::Keyboard::A: {
-                setTrack(AUDIO);
-                break;
-            }
-        }
+    if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(label.getGlobalBounds()),window)) {
+        dropDownMenu.toggleState(HIDDEN);
     }
 
     if (!checkStates(SELECTED)&&event.type == sf::Event::MouseButtonPressed &&
@@ -57,6 +48,8 @@ void Layer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(label,states);
     target.draw(*track,states);
+
+    target.draw(dropDownMenu,states);
 
 }
 

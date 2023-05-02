@@ -11,10 +11,10 @@ enum StatesEnum{
     LOOP,
     RECORDING,
     SELECTED,
+    DISABLED,
     HOVERED,
     ACTIVE,
     HIDDEN,
-    PLAYBACK,
     LAST_STATE
 };
 

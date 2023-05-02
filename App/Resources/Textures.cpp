@@ -34,7 +34,7 @@ std::string Textures::getPath(TextureEnums texture) {
         case EMPTY_LABEL:
             return "App/Resources/Textures/TrackLabels/Empty_Label.png";
         case DROP_DOWN_MENU:
-            return "App/Resources/Textures/DTrackLabels/ropDownMenu.png";
+            return "App/Resources/Textures/TrackLabels/DropDownMenu.png";
         case TRACKCONTROLS_FORWARD:
             return "App/Resources/Textures/TrackControls/TrackControls_Forward.png";
         case TRACKCONTROLS_LOOP:
