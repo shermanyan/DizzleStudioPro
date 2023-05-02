@@ -95,14 +95,14 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             if (!lTrack.empty()) {
                 buffers[i] = (GetBuffer::getCombinedSoundBuffer(lTrack, 44100));
                 sounds[i].setBuffer(buffers[i]);
-
-//                if(layers[i].getTrackType() != KEYBOARD) {
-//                    sounds[i].setVolume(25);
-//                }
+                if(layers[i].getTrackType() != KEYBOARD) {
+                    sounds[i].setVolume(25);
+                }
             }
         }
         for(auto& s: sounds) {
             s.play();
+            s.setPlayingOffset(seek.getElapsedTime());
             std::cout << "Play";
         }
 
@@ -146,8 +146,6 @@ void LayersPanel::update(const sf::RenderWindow &window) {
     } else if (seek.checkStates(PLAY)){
         seek.pause();
     }
-
-
 
 }
 

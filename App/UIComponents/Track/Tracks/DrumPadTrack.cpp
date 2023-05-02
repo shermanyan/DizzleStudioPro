@@ -14,7 +14,7 @@ void DrumPadTrack::eventHandler(sf::RenderWindow &window, const sf::Event &event
     if (event.type == sf::Event::MouseButtonPressed && checkStates(SELECTED) && checkStates(RECORDING)) {
         std::vector<AudioNode *> nodesPressed = dynamic_cast<DrumPadPanel*>(StudioStatics::panel->getPanel())->getKeyPressed(window);
         for (auto &n: nodesPressed) {
-            float timeStamp = StudioStatics::seekBar->getElapsedTime();
+            float timeStamp = StudioStatics::seekBar->getElapsedTime().asSeconds();
             audioTrack[timeStamp].emplace_back(std::make_unique<DrawableAudioNode>(timeStamp, *n, trackColor));
         }
     }

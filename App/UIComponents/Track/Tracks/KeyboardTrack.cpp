@@ -29,7 +29,7 @@ void KeyboardTrack::update(const sf::RenderWindow &window) {
             // if node doesnt exit or not active;
             if (dNode.at(n->keyEnum) == nullptr || !dNode.at(n->keyEnum)->AppComponent::checkStates(ACTIVE)) {
 //                std::cout << n->duration;
-                float timeStamp = StudioStatics::seekBar->getElapsedTime();
+                float timeStamp = StudioStatics::seekBar->getElapsedTime().asSeconds();
                 audioTrack[timeStamp].emplace_back(std::make_unique<DrawableAudioNode>(timeStamp, *n, trackColor));
                 dNode.at(n->keyEnum) = audioTrack[timeStamp].back().get();
                 dNode.at(n->keyEnum)->setState(ACTIVE, true);

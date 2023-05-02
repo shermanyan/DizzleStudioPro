@@ -118,11 +118,14 @@ DrawableAudioNode::DrawableAudioNode(float timeStamp, const AudioNode& key, cons
 
 
 void DrawableAudioNode::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    if (event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(box.getGlobalBounds()),window)){
+        toggleState(SELECTED);
+    }
 }
 
 void DrawableAudioNode::update(const sf::RenderWindow &window) {
     if(AppComponent::checkStates(ACTIVE)) {
-        node.setStopTimeStamp(StudioStatics::seekBar->getElapsedTime());
+        node.setStopTimeStamp(StudioStatics::seekBar->getElapsedTime().asSeconds());
     }
     setSize();
     positionNode();
