@@ -19,33 +19,34 @@ class SplashScreen : public AppComponent{
 
 private:
     SpriteImage sprite;
-
     sf::Text dizzleStudio;
     sf::Text pro;
+
     sf::Text startButton;
+
     sf::Text credits;
+
+    sf::Text welcome;
+    sf::Text getStarted;
+
     sf::Vector2f initialDizzleStudioPosition;
+    sf::Clock animationClock;
+    float duration;
 
-    sf::Clock fadeClock;
-
-    sf::Clock fallClock;
-    float fallDuration;
-
-    void fade(float duration);
-
+    void fade();
     void fall();
+    void transition();
+
+    void moveUp(const sf::Vector2f & offset);
+
 public:
     SplashScreen();
 
     void setUpText();
-
     void setUpTextures();
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
-
     void update(const sf::RenderWindow &window) override;
-
-protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
 };

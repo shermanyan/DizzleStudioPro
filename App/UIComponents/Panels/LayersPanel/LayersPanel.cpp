@@ -86,7 +86,7 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         seek.setDuration(duration);
         DrawableAudioNode::setDurationScale(duration);
     }
-    //this is the right if statment
+    //this is the right if statement
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
         setState(PLAY, true);
         auto track = getMixedAudioTrack();
@@ -100,7 +100,7 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             setState(PLAY, false);
         }
     }
-    //this is the right if statment ^^^^^^
+    //this is the right if statement ^^^^^^
 
 //    if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
 //        setState(PLAY, true);
