@@ -5,21 +5,26 @@
 #include "StudioMain.h"
 
 void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
+    dynamicInstrumentPanel.eventHandler(window,event);
+    layersPanel.eventHandler(window,event);
+    projectTitle.eventHandler(window,event);
 
 }
 
-void StudioMain::updater(sf::RenderWindow &window) {
+void StudioMain::update(const sf::RenderWindow &window) {
+    dynamicInstrumentPanel.update(window);
+    layersPanel.update(window);
+    projectTitle.update(window);
 
 }
 
 StudioMain::StudioMain()
-:Application({2000,1125},"Dizzle Studio Pro", {30,30,30}),
-dynamicInstrumentPanel({}), trackPanel({})
+:dynamicInstrumentPanel({}), layersPanel({})
 {
     StudioStatics::panel = &dynamicInstrumentPanel;
 
     dynamicInstrumentPanel.setPosition(20,700);
-    trackPanel.setPosition(20,80);
+    layersPanel.setPosition(20,80);
 
     projectTitle.setPosition(10,10);
     projectTitle.setTextBoxFont(Fonts::getFont(NUNITO_BOLD));
@@ -32,8 +37,11 @@ dynamicInstrumentPanel({}), trackPanel({})
     projectTitle.setLabelFillColor({185, 185, 185});
     projectTitle.toggleBox();
 
-    addComponent(dynamicInstrumentPanel);
-    addComponent(trackPanel);
-    addComponent(projectTitle);
+}
+
+void StudioMain::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    target.draw(dynamicInstrumentPanel);
+    target.draw(layersPanel);
+    target.draw(projectTitle);
 }
 

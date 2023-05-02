@@ -13,10 +13,9 @@ sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vec
     std::size_t totalSampleCount = 0;
     for (const auto& timestampAndAudioNodes : audioMap) {
         for (const AudioNode& audioNode : timestampAndAudioNodes.second) {
-            sf::SoundBuffer monoBuffer = convertToMono(audioNode.buffer);
-            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(monoBuffer, 44100);
+            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(convertToMono(audioNode.buffer), 44100);
             std::size_t durationSampleCount = static_cast<std::size_t>(audioNode.duration * resampledBuffer.getSampleRate());
-            totalSampleCount += std::min(durationSampleCount, static_cast<std::size_t>(resampledBuffer.getSampleCount()));
+            totalSampleCount += std::max(durationSampleCount, static_cast<std::size_t>(resampledBuffer.getSampleCount()));
         }
     }
 
@@ -30,8 +29,7 @@ sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vec
         const std::vector<AudioNode>& audioNodes = timestampAndAudioNodes.second;
 
         for (const AudioNode& audioNode : audioNodes) {
-            sf::SoundBuffer monoBuffer = convertToMono(audioNode.buffer);
-            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(monoBuffer, 44100);
+            sf::SoundBuffer resampledBuffer = resampleSoundBuffer(convertToMono(audioNode.buffer), 44100);
 
             const sf::Int16* bufferSamples = resampledBuffer.getSamples();
             std::size_t bufferSampleCount = resampledBuffer.getSampleCount();

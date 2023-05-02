@@ -1324,12 +1324,20 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-DizzleStudioPro-Debug-857d50838e1ef3452128.json
 			"path" : "App/SplashScreen/SplashScreen.cpp",
+========
+			"path" : "App/DizzleStudioAppMain.cpp",
+>>>>>>>> Sherman:cmake-build-debug/.cmake/api/v1/reply/target-DizzleStudioPro-Debug-5e899d6efd69d4f2c837.json
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
+<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-DizzleStudioPro-Debug-857d50838e1ef3452128.json
 			"path" : "App/SplashScreen/SplashScreen.h",
+========
+			"path" : "App/DizzleStudioAppMain.h",
+>>>>>>>> Sherman:cmake-build-debug/.cmake/api/v1/reply/target-DizzleStudioPro-Debug-5e899d6efd69d4f2c837.json
 			"sourceGroupIndex" : 1
 		}
 	],
