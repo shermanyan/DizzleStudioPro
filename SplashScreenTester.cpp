@@ -11,8 +11,6 @@ int main(){
     tester.setBgColor({31,31,31});
     SplashScreen splash;
 
-
-
     tester.addComponent(splash);
     tester.run();
 

@@ -6,6 +6,9 @@
 
 SplashScreen::SplashScreen() {
     setState(SELECTED, false);
+    musicMixer.setState(HOVERED,false);
+    musicPlayer.setState(HOVERED,false);
+
     setUpText();
     setUpTextures();
     duration = 1.0f;
@@ -19,12 +22,12 @@ void SplashScreen::setUpTextures() {
     sprite.setPosition(0, 630);
 
     musicMixer.setTexture(Textures::getTexture(MUSICMIXER));
-    musicMixer.setSize({900,500});
-    musicMixer.setPosition(200, 1500);
+    musicMixer.setSize({1000,600});
+    musicMixer.setPosition(15, 1490);
 
     musicPlayer.setTexture(Textures::getTexture(MUSICPLAYER));
-    musicPlayer.setSize({900,500});
-    musicPlayer.setPosition(600, 1500);
+    musicPlayer.setSize({1000,600});
+    musicPlayer.setPosition(975, 1490);
 
 }
 void SplashScreen::setUpText() {
@@ -45,6 +48,7 @@ void SplashScreen::setUpText() {
     Position::top(dizzleStudio, startButton, 50);
 
     credits.setFont(Fonts::getFont(NUNITO_BOLD));
+    credits.setFillColor({151, 151,151});
     credits.setString("Created By: Brandon Hargitay & Sherman Yan");
     credits.setPosition(2000 - credits.getLocalBounds().width -30, 1125 - 50);
 
@@ -59,13 +63,13 @@ void SplashScreen::setUpText() {
     welcome.setString("Welcome");
     welcome.setCharacterSize(100);
     welcome.setFillColor({175, 143, 54});
-    welcome.setPosition(50, 1130);
+    welcome.setPosition(50, 1180);
 
     getStarted.setFont(Fonts::getFont(NUNITO_BOLD));
     getStarted.setString("Get Started");
-    getStarted.setCharacterSize(60);
+    getStarted.setCharacterSize(55);
     getStarted.setFillColor({151, 151,151});
-    getStarted.setPosition(70, 1225);
+    getStarted.setPosition(80, 1310);
 
 }
 
@@ -73,12 +77,25 @@ void SplashScreen::eventHandler(sf::RenderWindow &window, const sf::Event &event
     if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(startButton.getGlobalBounds(), window)){
         setState(SELECTED, true);
         animationClock.restart(); // Start the clock when the start button is clicked
+        std::cout << "START CLICKED";
+
     }
+    if(MouseEvents::isHover(musicMixer.getGlobalBounds(), window)){
+        musicMixer.setState(HOVERED, true);
+    }else{
+        musicMixer.setState(HOVERED, false);
+    }
+
+    if(MouseEvents::isHover(musicPlayer.getGlobalBounds(), window)){
+        musicPlayer.setState(HOVERED, true);
+    }else{
+        musicPlayer.setState(HOVERED, false);
+    }
+
 }
 
 void SplashScreen::update(const sf::RenderWindow &window) {
     if(checkStates(SELECTED)){
-        fade();
         fall();
         transition();
     }
@@ -95,27 +112,26 @@ void SplashScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
     target.draw(welcome, states);
     target.draw(getStarted,states);
-    target.draw(musicPlayer,states);
-    target.draw(musicMixer,states);
-}
 
-void SplashScreen::fade() {
-    float elapsedTime = animationClock.getElapsedTime().asSeconds();
-
-    if (elapsedTime > duration) {
-        return;
+    if(musicPlayer.checkStates(HOVERED)){
+        states.transform.scale(1.1,1.1);
+        target.draw(musicPlayer,states);
+    }else{
+        states.transform.scale(1,1);
+        target.draw(musicPlayer,states);
     }
 
-    int newAlpha = static_cast<int>(255 - (255 * (elapsedTime / duration)));
-
-    if (newAlpha < 5){
-        newAlpha = 0;
+    if(musicMixer.checkStates(HOVERED)){
+        states.transform.scale(1.1,1.1);
+        target.draw(musicMixer,states);
+    }else{
+        states.transform.scale(1,1);
+        target.draw(musicMixer,states);
     }
-    sf::Color currentColor = credits.getFillColor();
-    currentColor.a = newAlpha;
-    credits.setFillColor(currentColor);
 
 }
+
+
 
 void SplashScreen::fall() {
     float elapsedTime = animationClock.getElapsedTime().asSeconds();
@@ -141,7 +157,7 @@ void SplashScreen::fall() {
 void SplashScreen::transition() {
     float elapsedTime = animationClock.getElapsedTime().asSeconds();
 
-    if(elapsedTime >= duration + 1){
+    if(elapsedTime >= duration + 0.5){
         if(sprite.getPosition().y > -450){
             moveUp({0,-7});
         }else{
@@ -158,4 +174,20 @@ void SplashScreen::moveUp(const sf::Vector2f & offset) {
     musicPlayer.move(offset);
 }
 
+void SplashScreen::fade() {
+    float elapsedTime = animationClock.getElapsedTime().asSeconds();
 
+    if (elapsedTime > duration) {
+        return;
+    }
+
+    int newAlpha = static_cast<int>(255 - (255 * (elapsedTime / duration)));
+
+    if (newAlpha < 5){
+        newAlpha = 0;
+    }
+    sf::Color currentColor = credits.getFillColor();
+    currentColor.a = newAlpha;
+    credits.setFillColor(currentColor);
+
+}

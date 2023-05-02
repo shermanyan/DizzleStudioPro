@@ -6,8 +6,9 @@
 #define FINALPROJECT_SPRITEIMAGE_H
 
 #include "SFML/Graphics.hpp"
+#include "States.h"
 
-class SpriteImage:public sf::Sprite{
+class SpriteImage : public sf::Sprite, public States{
 private:
 
 public:
