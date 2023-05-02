@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/cmake-build-debug"
+			"value" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/shermanyan/CLionProjects/DizzleStudioPro"
+			"value" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -735,7 +735,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "12.6"
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/cmake-build-debug"
+			"value" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug"
 		},
 		{
 			"name" : "DizzleStudioPro_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/shermanyan/CLionProjects/DizzleStudioPro"
+			"value" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro"
 		},
 		{
 			"name" : "SFML_DIR",
