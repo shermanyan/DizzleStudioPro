@@ -132,7 +132,6 @@ void SplashScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const
 }
 
 
-
 void SplashScreen::fall() {
     float elapsedTime = animationClock.getElapsedTime().asSeconds();
 
