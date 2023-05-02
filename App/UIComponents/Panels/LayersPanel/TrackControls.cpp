@@ -57,10 +57,10 @@ void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &even
             case sf::Keyboard::Enter:
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)) {
                     toggleState(RECORDING);
-                    setState(PLAY,false);
+//                    setState(PLAY,false);
                 }
                 else if (!checkStates(RECORDING)) {
-                    setState(RECORDING,false);
+//                    setState(RECORDING,false);
                     toggleState(PLAY);
                 }
                 break;
@@ -72,10 +72,10 @@ void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &even
 
         if (MouseEvents::isClick(getCombinedTransform().transformRect(record.getGlobalBounds()), window)) {
             toggleState(RECORDING);
-            setState(PLAY,false);
+//            setState(PLAY,false);
         } else if (MouseEvents::isClick(getCombinedTransform().transformRect(play.getGlobalBounds()), window)) {
             toggleState(PLAY);
-            setState(RECORDING,false);
+//            setState(RECORDING,false);
         } else if (MouseEvents::isClick(getCombinedTransform().transformRect(forward.getGlobalBounds()), window)) {
             forward.setTexture(Textures::getTexture(TRACKCONTROLS_FORWARD_LIGHT));
             StudioStatics::seekBar->forward(0.5);

@@ -6,8 +6,6 @@
 
 KeyboardTrack::KeyboardTrack(): Track{} {
 
-//    setFillColor(sf::Color::Red);
-
     for (int i = 0; i < KeyboardPanel::octaveCount; ++i) {
         nodes.emplace_back();
         for (int j = C; j <= As; ++j) {
