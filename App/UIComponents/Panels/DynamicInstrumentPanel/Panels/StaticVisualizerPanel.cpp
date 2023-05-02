@@ -80,5 +80,5 @@ AudioNode *StaticVisualizerPanel::getNode() {
 }
 
 bool StaticVisualizerPanel::getStatus(const sf::RenderWindow& window) {
-    return addToTrackButton.isClick(window);
+    return addToTrackButton.isClick(window) && visualizer.buffer.getDuration().asSeconds() > 0;
 }

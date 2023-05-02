@@ -11,7 +11,7 @@ AudioTrack::AudioTrack() : Track{}{
 void AudioTrack::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
     Track::eventHandler(window, event);
     auto* panel = dynamic_cast<StaticVisualizerPanel*>(StudioStatics::panel->getPanel());
-    if (checkStates(SELECTED)&& panel->getStatus(window)){
+    if (event.type == sf::Event::MouseButtonPressed && checkStates(SELECTED)&& panel->getStatus(window)){
         float timeStamp = StudioStatics::seekBar->getElapsedTime().asSeconds();
         audioTrack[timeStamp].emplace_back(std::make_unique<DrawableAudioNode>(timeStamp, *panel->getNode(), trackColor));
         audioTrack[timeStamp].back()->setParentTransform(getCombinedTransform());

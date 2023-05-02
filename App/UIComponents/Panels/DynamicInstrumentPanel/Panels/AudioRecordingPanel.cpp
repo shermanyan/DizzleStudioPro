@@ -88,5 +88,5 @@ AudioNode *AudioRecordingPanel::getNode() {
     return node;
 }
 bool AudioRecordingPanel::getStatus(const sf::RenderWindow &window) {
-    return addToTrackButton.isClick(window);
+    return addToTrackButton.isClick(window) && liveRecording.buffer.getDuration().asSeconds() > 0;
 }
