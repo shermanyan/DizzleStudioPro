@@ -86,35 +86,52 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         seek.setDuration(duration);
         DrawableAudioNode::setDurationScale(duration);
     }
-
-
+    //this is the right if statment
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
         setState(PLAY, true);
-        for (int i = 0; i <layers.size(); i++ ) {
-            auto lTrack = layers[i].getAudioTrack();
-            if (!lTrack.empty()) {
-                buffers[i] = (GetBuffer::getCombinedSoundBuffer(lTrack, 44100));
-                sounds[i].setBuffer(buffers[i]);
+        auto track = getMixedAudioTrack();
+        if (!track.empty()) {
+            combinedBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
 
-//                if(layers[i].getTrackType() != KEYBOARD) {
-//                    sounds[i].setVolume(25);
-//                }
-            }
-        }
-        for(auto& s: sounds) {
-            s.play();
-            std::cout << "Play";
-        }
-
-    } else if(!trackControls.checkStates(PLAY) && checkStates(PLAY)) {
-        for (auto& sound:sounds) {
-            printf("Stop");
+            sound.setBuffer(combinedBuffer);
+            sound.play();
+        }else if(!trackControls.checkStates(PLAY)) {
             sound.stop();
-//            sound.resetBuffer();
+            setState(PLAY, false);
         }
-        setState(PLAY, false);
     }
+    //this is the right if statment ^^^^^^
 
+//    if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
+//        setState(PLAY, true);
+//        for (int i = 0; i <layers.size(); i++ ) {
+//            auto lTrack = layers[i].getAudioTrack();
+//            if (!lTrack.empty()) {
+//                buffers[i] = (GetBuffer::getCombinedSoundBuffer(lTrack, 44100));
+//                sounds[i].setBuffer(buffers[i]);
+//
+////                if(layers[i].getTrackType() != KEYBOARD) {
+////                    sounds[i].setVolume(25);
+////                }
+//            }
+//        }
+
+//        for(auto& s: sounds) {
+//            s.play();
+//            std::cout << "Play";
+//        }
+
+//    } else if(!trackControls.checkStates(PLAY) && checkStates(PLAY)) {
+//        for (auto& sound:sounds) {
+//            printf("Stop");
+//            sound.stop();
+////            sound.resetBuffer();
+//        }
+//        setState(PLAY, false);
+//    }
+//
+//
+//    }
 }
 
 void LayersPanel::update(const sf::RenderWindow &window) {
