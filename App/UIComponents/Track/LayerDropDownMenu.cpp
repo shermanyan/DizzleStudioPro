@@ -16,7 +16,7 @@ void LayerDropDownMenu::draw(sf::RenderTarget &target, sf::RenderStates states) 
 }
 
 sf::FloatRect LayerDropDownMenu::getGlobalBounds() const {
-    return dropDownMenu.getGlobalBounds();
+    return getTransform().transformRect(dropDownMenu.getGlobalBounds());
 }
 
 sf::FloatRect LayerDropDownMenu::getLocalBounds() const {

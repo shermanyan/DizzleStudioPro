@@ -17,6 +17,8 @@
 class LayersPanel: public AppComponent {
 private:
 
+    LayerDropDownMenu dropDownMenu;
+
     Squircle background;
 
     std::vector<Layer> layers;
@@ -42,7 +44,6 @@ protected:
 
 public:
     LayersPanel();
-
 
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 

@@ -25,7 +25,6 @@ private:
 
     std::unique_ptr<Track> track;
 
-    LayerDropDownMenu dropDownMenu;
     TrackLabel label;
 
     sf::Sound test;
@@ -39,6 +38,9 @@ public:
     void setTrackColor(const sf::Color& color);
     void setTrack(InstrumentsEnum type);
     InstrumentsEnum getTrackType() const;
+
+    sf::FloatRect getLabelGlobalBounds()const;
+    sf::FloatRect getTrackGlobalBounds()const;
 
     sf::FloatRect getGlobalBounds() const override;
 

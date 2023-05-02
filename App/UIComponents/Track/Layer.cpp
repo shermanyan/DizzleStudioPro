@@ -7,17 +7,9 @@
 Layer::Layer() {
     setTrack(EMPTY);
     setState(SELECTED,false);
-
-    dropDownMenu.setWidth(label.getGlobalBounds().width);
-    Position::center(dropDownMenu,label);
-    Position::bottom(dropDownMenu,label);
-//    dropDownMenu.setState(HIDDEN, false);
 }
 
 void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(event.type == sf::Event::MouseButtonPressed && MouseEvents::isClick(getCombinedTransform().transformRect(label.getGlobalBounds()),window)) {
-        dropDownMenu.toggleState(HIDDEN);
-    }
 
     if (!checkStates(SELECTED)&&event.type == sf::Event::MouseButtonPressed &&
             MouseEvents::isClick(getCombinedTransform().transformRect(track->getGlobalBounds()), window)) {
@@ -48,8 +40,6 @@ void Layer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(label,states);
     target.draw(*track,states);
-
-    target.draw(dropDownMenu,states);
 
 }
 
@@ -86,7 +76,6 @@ void Layer::setTrack(InstrumentsEnum type) {
             track = std::make_unique<VocalTrack>();
         }
 
-
     }
 
     track->setTrackColor(label.getTrackColor());
@@ -113,7 +102,13 @@ std::map<float, std::vector<AudioNode>> Layer::getAudioTrack() {
     return track->getAudioTrack();
 }
 
+sf::FloatRect Layer::getLabelGlobalBounds() const {
+    return getTransform().transformRect(label.getGlobalBounds());
+}
 
+sf::FloatRect Layer::getTrackGlobalBounds() const {
+    return getTransform().transformRect(track->getGlobalBounds());
+}
 
 
 
