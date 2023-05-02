@@ -39,11 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DizzleStudioPro::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a249daaf406e7f0ba383.json
-					"jsonFile" : "target-DizzleStudioPro-Debug-e68cf48ac9914b1b4641.json",
-========
 					"jsonFile" : "target-DizzleStudioPro-Debug-3fa15d441c7ea11c1ac7.json",
->>>>>>>> Sherman:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-df62b77362f8434789ae.json
 					"name" : "DizzleStudioPro",
 					"projectIndex" : 0
 				}
@@ -53,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro/cmake-build-debug",
-		"source" : "/Users/hargy/CLionProjects/CS008/DizzleStudioPro"
+		"build" : "/Users/shermanyan/CLionProjects/DizzleStudioPro/cmake-build-debug",
+		"source" : "/Users/shermanyan/CLionProjects/DizzleStudioPro"
 	},
 	"version" : 
 	{
