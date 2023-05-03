@@ -4,6 +4,7 @@
 
 #ifndef DIZZLESTUDIOPRO_DIZZLESTUDIOAPPMAIN_H
 #define DIZZLESTUDIOPRO_DIZZLESTUDIOAPPMAIN_H
+
 #include "Application.h"
 #include "StudioMain.h"
 #include "SplashScreen.h"
@@ -18,6 +19,8 @@ public:
     void eventHandler(RenderWindow &window, const sf::Event &event) override;
 
     void updater(RenderWindow &window) override;
+
+
 };
 
 

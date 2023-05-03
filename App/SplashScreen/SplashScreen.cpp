@@ -90,16 +90,23 @@ void SplashScreen::eventHandler(sf::RenderWindow &window, const sf::Event &event
     }else {
         startButton.setFillColor({151, 151,151});
     }
-    if(MouseEvents::isHover(musicMixer.getGlobalBounds(), window)){
-        musicMixer.setState(HOVERED, true);
-    }else{
-        musicMixer.setState(HOVERED, false);
+    if (event.type == sf::Event::MouseButtonPressed){
+        if(MouseEvents::isClick(musicMixer.getGlobalBounds(), window)){
+            musicMixer.setState(SELECTED, true);
+        }else if(MouseEvents::isClick(musicPlayer.getGlobalBounds(), window)) {
+            musicPlayer.setState(SELECTED, true);
+        }
+
     }
 
-    if(MouseEvents::isHover(musicPlayer.getGlobalBounds(), window)){
+    else if(MouseEvents::isHover(musicMixer.getGlobalBounds(), window)){
+        musicMixer.setState(HOVERED, true);
+    }else if(MouseEvents::isHover(musicPlayer.getGlobalBounds(), window)) {
         musicPlayer.setState(HOVERED, true);
-    }else{
+    }
+    else{
         musicPlayer.setState(HOVERED, false);
+        musicMixer.setState(HOVERED, false);
     }
 
 }
@@ -200,4 +207,19 @@ void SplashScreen::fade() {
     currentColor.a = newAlpha;
     credits.setFillColor(currentColor);
 
+}
+
+AppEnums SplashScreen::getAppSwitchStatus() {
+    if (musicMixer.checkStates(SELECTED)) {
+        printf("music");
+        musicMixer.setState(SELECTED, false);
+        return STUDIO;
+    }
+    else if (musicPlayer.checkStates(SELECTED)){
+        printf("player");
+        musicPlayer.setState(SELECTED, false);
+        return STUDIO;
+    }
+    printf("NULL");
+    return NULL_APP;
 }

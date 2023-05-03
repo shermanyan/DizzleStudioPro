@@ -20,6 +20,7 @@ void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) 
                 name = "Untitled";
             layersPanel.exportTrack(name + ".wav");
         } else if (MouseEvents::isHover(xit.getGlobalBounds(), window)) {
+            xit.toggleState(SELECTED);
             printf("Exit Clicked ");
         }
     }
@@ -35,9 +36,6 @@ void StudioMain::update(const sf::RenderWindow &window) {
 StudioMain::StudioMain()
 :dynamicInstrumentPanel({}), layersPanel({})
 {
-    //added#########################
-    setState(ACTIVE, false);
-    //added#########################
 
     StudioStatics::panel = &dynamicInstrumentPanel;
 
@@ -69,17 +67,23 @@ StudioMain::StudioMain()
 }
 
 void StudioMain::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    //added#########################
 
-    if(checkStates(ACTIVE)){
-        target.draw(dynamicInstrumentPanel);
-        target.draw(layersPanel);
-        target.draw(projectTitle);
+    target.draw(dynamicInstrumentPanel);
+    target.draw(layersPanel);
+    target.draw(projectTitle);
 
-        target.draw(xport);
-        target.draw(xit);
+    target.draw(xport);
+    target.draw(xit);
+
+
+}
+
+bool StudioMain::getExitStatus() {
+
+    if (xit.checkStates(SELECTED)) {
+        xit.setState(SELECTED, false);
+        return true;
     }
-    //added#########################
-
+    return false;
 }
 

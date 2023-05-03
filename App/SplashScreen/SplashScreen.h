@@ -14,6 +14,7 @@
 #include <iostream>
 #include "MouseEvents.h"
 #include "States.h"
+#include "AppEnums.h"
 
 class SplashScreen : public AppComponent{
 
@@ -52,6 +53,7 @@ public:
     void update(const sf::RenderWindow &window) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+    AppEnums getAppSwitchStatus();
 };
 
 

@@ -44,8 +44,9 @@ void Application::run(){
 
         clear(bgColor);
 
-        for (sf::Drawable *c: components) {
-            draw(*c);
+        for (auto *c: components) {
+            if(c->checkStates(ACTIVE))
+                draw(*c);
         }
 //        draw(r);
 
@@ -54,8 +55,11 @@ void Application::run(){
 }
 
 void Application::windowUpdater() {
-    for (Updatable *u: components)
-        u->update(*this);
+    for (auto *u: components) {
+        if (u->checkStates(ACTIVE)) {
+            u->update(*this);
+        }
+    }
 
     updater(*this);
 }
@@ -73,8 +77,10 @@ void Application::windowEventListener(sf::Event &event) {
                 setView(sf::View({0, 0, (float) windowSize.x, (float) windowSize.y}));
             }
         }
-        for (EventHandleable *c: components)
-            c->eventHandler(*this, event);
+        for (auto *c: components) {
+            if (c->checkStates(ACTIVE))
+                c->eventHandler(*this, event);
+        }
 
         eventHandler(*this, event);
     }
