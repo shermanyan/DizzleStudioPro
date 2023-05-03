@@ -89,6 +89,7 @@ void Application::windowEventListener(sf::Event &event) {
 void Application::setWindowSize(const sf::Vector2u &windowSize) {
     this->windowSize = windowSize;
     setSize(windowSize);
+    setView(sf::View({0, 0, (float) windowSize.x, (float) windowSize.y}));
 }
 
 void Application::disableResize() {

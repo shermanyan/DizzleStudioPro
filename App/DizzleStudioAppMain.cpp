@@ -29,7 +29,7 @@ void DizzleStudioAppMain::eventHandler(sf::RenderWindow &window, const sf::Event
                 case PLAYER:
                     splashScreen.setState(ACTIVE, false);
                     audioPlayer.setState(ACTIVE, true);
-                    setWindowSize({2000,1125});
+                    setWindowSize({2000,500});
                     break;
                 case NULL_APP:
                     break;
@@ -43,8 +43,15 @@ void DizzleStudioAppMain::eventHandler(sf::RenderWindow &window, const sf::Event
                 studioMain.setState(ACTIVE, false);
             }
         }
+    }else if (audioPlayer.checkStates(ACTIVE)) {
+        if (event.type == sf::Event::MouseButtonPressed) {
+            if (audioPlayer.getExitStatus()) {
+                splashScreen.setState(ACTIVE, true);
+                audioPlayer.setState(ACTIVE, false);
+                setWindowSize({2000,1125});
+            }
+        }
     }
-
 
 
 }
