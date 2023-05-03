@@ -125,3 +125,13 @@
 15	595	1683095106595182135	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/GetBuffer.cpp.o	ce1985a629ba9b7c
 14	768	1683095106769199605	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel/LayersPanel.cpp.o	e8fc67a4c6352418
 768	839	1683095106843190381	DizzleStudioPro	cc83b2bfd55540ac
+3	670	1683095407914755562	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/AudioRecording/AudioVisualizer.cpp.o	39322aa42cc17702
+670	741	1683095407989764583	DizzleStudioPro	cc83b2bfd55540ac
+3	394	1683095453907922589	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/AudioRecording/AudioVisualizer.cpp.o	39322aa42cc17702
+394	447	1683095453964405840	DizzleStudioPro	cc83b2bfd55540ac
+13	404	1683095495692671735	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/AudioRecording/AudioVisualizer.cpp.o	39322aa42cc17702
+405	458	1683095495748129584	DizzleStudioPro	cc83b2bfd55540ac
+3	608	1683095605316296282	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp.o	a5adc0e7548ab38b
+608	680	1683095605391248725	DizzleStudioPro	cc83b2bfd55540ac
+4	379	1683095765603089676	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/DynamicInstrumentPanel/Panels/AudioRecordingPanel.cpp.o	a5adc0e7548ab38b
+379	432	1683095765659142707	DizzleStudioPro	cc83b2bfd55540ac

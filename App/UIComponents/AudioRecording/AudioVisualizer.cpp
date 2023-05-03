@@ -20,6 +20,7 @@ AudioVisualizer::AudioVisualizer(unsigned int width, unsigned int height)
 
 
 bool AudioVisualizer::startRecording() {
+    resetVisualizerBars();
     if (sf::SoundRecorder::isAvailable()) {
         // Clear sampleBuffer and recordedSoundBuffer
         sampleBuffer.clear();
@@ -40,13 +41,13 @@ void AudioVisualizer::stopRecording() {
     sf::Time duration = recordedSoundBuffer.getDuration();
     float durationInSeconds = duration.asSeconds();
     this->duration = durationInSeconds;
+
+    AudioNode::setBuffer(recordedSoundBuffer);
 }
 
 void AudioVisualizer::playRecordedSound() {
-
-    resetVisualizerBars();
-    AudioNode::setBuffer(recordedSoundBuffer);
     AudioNode::play();
+
 }
 
 
@@ -60,7 +61,6 @@ bool AudioVisualizer::onProcessSamples(const sf::Int16* samples, std::size_t sam
     }
     average /= sampleCount;
 
-    // Apply the sensitivity factor to the average value
     average *= 4;
 
     // Normalize the average to a value between 0 and 1
