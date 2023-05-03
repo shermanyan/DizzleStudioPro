@@ -8,10 +8,8 @@
 int main(){
     Application tester;
     tester.setWindowSize({2000,1125});
-    tester.setBgColor({31,31,31});
+    tester.setBgColor({20,20,20});
     SplashScreen splash;
-
-
 
     tester.addComponent(splash);
     tester.run();
