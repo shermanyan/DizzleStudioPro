@@ -46,6 +46,7 @@ void DizzleStudioAppMain::eventHandler(sf::RenderWindow &window, const sf::Event
     }
 
 
+
 }
 
 void DizzleStudioAppMain::updater(sf::RenderWindow &window) {
