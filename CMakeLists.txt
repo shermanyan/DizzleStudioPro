@@ -158,11 +158,11 @@ add_executable(DizzleStudioPro
         App/DizzleStudioAppMain.cpp
         App/DizzleStudioAppMain.h
 #        AudioVisualizerTester.cpp
-#        DizzleStudioProApp_main.cpp
+        DizzleStudioProApp_main.cpp
 #        KeyboardTester.cpp
 #        LiveVisualizerTester.cpp
 #        TrackPrototypeTester.cpp
-        SplashScreenTester.cpp
+#        SplashScreenTester.cpp
         App/SplashScreen/SplashScreen.cpp
         App/SplashScreen/SplashScreen.h
         )
