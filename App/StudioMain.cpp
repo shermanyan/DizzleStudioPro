@@ -35,6 +35,10 @@ void StudioMain::update(const sf::RenderWindow &window) {
 StudioMain::StudioMain()
 :dynamicInstrumentPanel({}), layersPanel({})
 {
+    //added#########################
+    setState(ACTIVE, false);
+    //added#########################
+
     StudioStatics::panel = &dynamicInstrumentPanel;
 
     dynamicInstrumentPanel.setPosition(20,700);
@@ -65,12 +69,17 @@ StudioMain::StudioMain()
 }
 
 void StudioMain::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(dynamicInstrumentPanel);
-    target.draw(layersPanel);
-    target.draw(projectTitle);
+    //added#########################
 
-    target.draw(xport);
-    target.draw(xit);
+    if(checkStates(ACTIVE)){
+        target.draw(dynamicInstrumentPanel);
+        target.draw(layersPanel);
+        target.draw(projectTitle);
+
+        target.draw(xport);
+        target.draw(xit);
+    }
+    //added#########################
 
 }
 

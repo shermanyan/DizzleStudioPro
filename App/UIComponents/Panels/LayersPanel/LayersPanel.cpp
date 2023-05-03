@@ -178,13 +178,15 @@ std::map<float, std::vector<AudioNode>> LayersPanel:: getMixedAudioTrack() {
 }
 
 void LayersPanel::exportTrack(const std::string& string) {
+    std::string outputDirectory = "ExportedFiles/";
+    std::string fullPath = outputDirectory + string;
 
     sf::SoundBuffer exportBuffer;
 
     auto track = getMixedAudioTrack();
     if (!track.empty()) {
         exportBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
-        exportBuffer.saveToFile(string);
+        exportBuffer.saveToFile(fullPath);
         std::cout << "EXPORTED to " << string << std::endl;
     }
 }

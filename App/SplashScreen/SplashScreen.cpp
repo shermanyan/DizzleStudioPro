@@ -5,6 +5,12 @@
 #include "SplashScreen.h"
 
 SplashScreen::SplashScreen() {
+    //added
+    setState(ACTIVE, true);
+    musicMixer.setState(ACTIVE, false);
+    musicPlayer.setState(ACTIVE, false);
+    //added
+
     setState(SELECTED, false);
     musicMixer.setState(HOVERED,false);
     musicPlayer.setState(HOVERED,false);
@@ -107,32 +113,32 @@ void SplashScreen::update(const sf::RenderWindow &window) {
 
 void SplashScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
+    if(checkStates(ACTIVE)){
+        target.draw(dizzleStudio, states);
+        target.draw(startButton, states);
+        target.draw(pro, states);
+        target.draw(sprite, states);
+        target.draw(credits, states);
 
-    target.draw(dizzleStudio, states);
-    target.draw(startButton, states);
-    target.draw(pro, states);
-    target.draw(sprite, states);
-    target.draw(credits, states);
+        target.draw(welcome, states);
+        target.draw(getStarted,states);
 
-    target.draw(welcome, states);
-    target.draw(getStarted,states);
+        sf::RenderStates newStates = states;
 
-    sf::RenderStates newStates = states;
+        if(musicPlayer.checkStates(HOVERED)){
+            sf::FloatRect s = musicPlayer.getGlobalBounds();
+            newStates.transform.scale(1.025,1.025,s.left + s.width/2,s.top + s.height/2);
+        }
+        target.draw(musicPlayer,newStates);
 
-    if(musicPlayer.checkStates(HOVERED)){
-        sf::FloatRect s = musicPlayer.getGlobalBounds();
-        newStates.transform.scale(1.025,1.025,s.left + s.width/2,s.top + s.height/2);
+        newStates = states;
+
+        if(musicMixer.checkStates(HOVERED)){
+            sf::FloatRect s = musicMixer.getGlobalBounds();
+            newStates.transform.scale(1.025,1.025,s.left + s.width/2,s.top + s.height/2);
+        }
+        target.draw(musicMixer,newStates);
     }
-    target.draw(musicPlayer,newStates);
-
-    newStates = states;
-
-    if(musicMixer.checkStates(HOVERED)){
-        sf::FloatRect s = musicMixer.getGlobalBounds();
-        newStates.transform.scale(1.025,1.025,s.left + s.width/2,s.top + s.height/2);
-    }
-    target.draw(musicMixer,newStates);
-
 
 }
 
