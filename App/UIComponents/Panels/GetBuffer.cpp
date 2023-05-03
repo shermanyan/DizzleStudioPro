@@ -6,7 +6,7 @@
 
 
 sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vector<AudioNode>> &audioMap,
-                                                unsigned int targetSampleRate) {
+                                                  unsigned int targetSampleRate) {
     std::vector<sf::Int16> samples;
 
     // calculate the total number of samples needed
@@ -24,6 +24,7 @@ sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vec
 
     // add the samples to the output buffer at the correct position
     std::size_t outputPosition = 0;
+    std::size_t maxOutputPosition = 0; // Keep track of the maximum position where the samples are added
     for (const auto& timestampAndAudioNodes : audioMap) {
         const float timestamp = timestampAndAudioNodes.first;
         const std::vector<AudioNode>& audioNodes = timestampAndAudioNodes.second;
@@ -59,8 +60,15 @@ sf::SoundBuffer GetBuffer::getCombinedSoundBuffer(const std::map<float, std::vec
 
             // Update the output position
             outputPosition += samplesToCopy;
+
+            // Update the maximum output position
+            maxOutputPosition = std::max(maxOutputPosition, outputPosition);
         }
     }
+
+    // Resize the output buffer to the actual length of the combined sound
+    samples.resize(maxOutputPosition);
+
     sf::SoundBuffer result;
     if (!result.loadFromSamples(samples.data(), samples.size(), 1, targetSampleRate)) {
         std::cerr << "Failed to load samples into resulting sound buffer" << std::endl;

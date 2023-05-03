@@ -187,7 +187,6 @@ void LayersPanel::exportTrack(const std::string& string) {
         exportBuffer.saveToFile(string);
         std::cout << "EXPORTED to " << string << std::endl;
     }
-
 }
 
 sf::FloatRect LayersPanel::getGlobalBounds() const {

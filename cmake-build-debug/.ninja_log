@@ -122,3 +122,6 @@
 2842	2888	1683094027607078487	DizzleStudioPro	cc83b2bfd55540ac
 3	535	1683094247715817974	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Track/Layer.cpp.o	f9a031104fe3a3ac
 535	604	1683094247787324512	DizzleStudioPro	cc83b2bfd55540ac
+15	595	1683095106595182135	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/GetBuffer.cpp.o	ce1985a629ba9b7c
+14	768	1683095106769199605	CMakeFiles/DizzleStudioPro.dir/App/UIComponents/Panels/LayersPanel/LayersPanel.cpp.o	e8fc67a4c6352418
+768	839	1683095106843190381	DizzleStudioPro	cc83b2bfd55540ac
