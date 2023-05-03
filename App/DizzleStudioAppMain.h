@@ -8,11 +8,14 @@
 #include "Application.h"
 #include "StudioMain.h"
 #include "SplashScreen.h"
+#include "AudioPlayer.h"
 
 class DizzleStudioAppMain: public Application{
 private:
     StudioMain studioMain;
     SplashScreen splashScreen;
+    AudioPlayer audioPlayer;
+
 public:
     DizzleStudioAppMain();
 

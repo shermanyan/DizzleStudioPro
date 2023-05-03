@@ -31,6 +31,7 @@ include_directories(SFML_Resources/Tools/Helpers)
 include_directories(SFML_Resources/Tools/History)
 include_directories(App/Resources/Textures/SplashScreen)
 include_directories(App/SplashScreen)
+
 add_executable(DizzleStudioPro
         App/Resources/Sounds/Sounds.cpp
         App/Resources/Sounds/Sounds.h
@@ -165,7 +166,7 @@ add_executable(DizzleStudioPro
 #        SplashScreenTester.cpp
         App/SplashScreen/SplashScreen.cpp
         App/SplashScreen/SplashScreen.h
-        App/UIComponents/Panels/LayersPanel/TextButton.cpp App/UIComponents/Panels/LayersPanel/TextButton.h AppEnums.h App/AudioPlayer/AudioPlayer.cpp App/AudioPlayer/AudioPlayer.h)
+        App/UIComponents/Panels/LayersPanel/TextButton.cpp App/UIComponents/Panels/LayersPanel/TextButton.h AppEnums.h  App/AudioPlayer.cpp App/AudioPlayer.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

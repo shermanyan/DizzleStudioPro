@@ -9,10 +9,11 @@ DizzleStudioAppMain::DizzleStudioAppMain()
 {
     addComponent(studioMain);
     addComponent(splashScreen);
+    addComponent(audioPlayer);
 
     studioMain.setState(ACTIVE, false);
     splashScreen.setState(ACTIVE, true);
-
+    audioPlayer.setState(ACTIVE, false);
 }
 
 void DizzleStudioAppMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -26,6 +27,9 @@ void DizzleStudioAppMain::eventHandler(sf::RenderWindow &window, const sf::Event
                     studioMain.setState(ACTIVE, true);
                     break;
                 case PLAYER:
+                    splashScreen.setState(ACTIVE, false);
+                    audioPlayer.setState(ACTIVE, true);
+                    setWindowSize({2000,1125});
                     break;
                 case NULL_APP:
                     break;

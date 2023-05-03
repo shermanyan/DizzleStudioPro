@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 34,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 170,
+				"line" : 171,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 171,
+				"line" : 172,
 				"parent" : 0
 			},
 			{
@@ -1362,12 +1362,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "App/AudioPlayer/AudioPlayer.cpp",
+			"path" : "App/AudioPlayer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "App/AudioPlayer/AudioPlayer.h",
+			"path" : "App/AudioPlayer.h",
 			"sourceGroupIndex" : 1
 		}
 	],

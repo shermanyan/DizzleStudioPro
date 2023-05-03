@@ -7,11 +7,13 @@
 
 #include "AppComponent.h"
 #include "StaticVisualizerPanel.h"
+#include "TextButton.h"
 
 class AudioPlayer: public AppComponent{
 private:
 
     StaticVisualizerPanel visualizer;
+    TextButton xit;
 
 public:
     AudioPlayer();
@@ -21,6 +23,7 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
 
+    bool getExitStatus();
 };
 
 

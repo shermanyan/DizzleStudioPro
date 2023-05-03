@@ -218,7 +218,7 @@ AppEnums SplashScreen::getAppSwitchStatus() {
     else if (musicPlayer.checkStates(SELECTED)){
         printf("player");
         musicPlayer.setState(SELECTED, false);
-        return STUDIO;
+        return PLAYER;
     }
     printf("NULL");
     return NULL_APP;
