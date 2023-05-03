@@ -18,7 +18,7 @@ void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) 
             std::string name = projectTitle.getString();
             if (name.empty())
                 name = "Untitled";
-            layersPanel.exportTrack(projectTitle.getString() + ".wav");
+            layersPanel.exportTrack(name + ".wav");
         } else if (MouseEvents::isHover(xit.getGlobalBounds(), window)) {
             printf("Exit Clicked ");
         }
