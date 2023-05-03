@@ -46,9 +46,8 @@ void Layer::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
 void Layer::update(const sf::RenderWindow &window) {
     if(checkStates(SELECTED)) {
         label.update(window);
-    }
-    if (track!= nullptr)
         track->update(window);
+    }
 
     if (!dropDownMenu.checkStates(HIDDEN))
         dropDownMenu.update(window);
