@@ -20,7 +20,6 @@ void Track::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
             node->eventHandler(window,event);
 
             if(node->checkStates(SELECTED)&& sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
-                printf("Erase");
                 node.reset();
                 n.second.erase(std::find(n.second.begin(), n.second.end(), node));
             }

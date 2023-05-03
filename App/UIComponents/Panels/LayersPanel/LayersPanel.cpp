@@ -56,6 +56,7 @@ LayersPanel::LayersPanel() {
         sounds.emplace_back();
     }
 
+
 }
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -63,6 +64,7 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
     seek.eventHandler(window,event);
     timeBar.eventHandler(window,event);
     trackControls.eventHandler(window,event);
+
 
     for (auto&l:layers) {
         l.eventHandler(window, event);
@@ -83,6 +85,7 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             }
         }
     }
+
 
     if(event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::RBracket)) {
         int duration =  timeBar.getDuration() + 1;
@@ -172,4 +175,25 @@ std::map<float, std::vector<AudioNode>> LayersPanel:: getMixedAudioTrack() {
             }
     }
     return finalTrack;
+}
+
+void LayersPanel::exportTrack(const std::string& string) {
+
+    sf::SoundBuffer exportBuffer;
+
+    auto track = getMixedAudioTrack();
+    if (!track.empty()) {
+        exportBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
+        exportBuffer.saveToFile(string);
+        std::cout << "EXPORTED to " << string << std::endl;
+    }
+
+}
+
+sf::FloatRect LayersPanel::getGlobalBounds() const {
+    return getTransform().transformRect(background.getGlobalBounds());
+}
+
+sf::FloatRect LayersPanel::getLocalBounds() const {
+    return background.getLocalBounds();
 }

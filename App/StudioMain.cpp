@@ -9,6 +9,20 @@ void StudioMain::eventHandler(sf::RenderWindow &window, const sf::Event &event) 
     layersPanel.eventHandler(window,event);
     projectTitle.eventHandler(window,event);
 
+    xport.eventHandler(window,event);
+    xit.eventHandler(window,event);
+
+    if (sf::Event::MouseButtonPressed == event.type) {
+        if (MouseEvents::isHover(xport.getGlobalBounds(), window)) {
+            printf("Export Clicked ");
+            std::string name = projectTitle.getString();
+            if (name.empty())
+                name = "Untitled";
+            layersPanel.exportTrack(projectTitle.getString() + ".wav");
+        } else if (MouseEvents::isHover(xit.getGlobalBounds(), window)) {
+            printf("Exit Clicked ");
+        }
+    }
 }
 
 void StudioMain::update(const sf::RenderWindow &window) {
@@ -37,11 +51,26 @@ StudioMain::StudioMain()
     projectTitle.setLabelFillColor({185, 185, 185});
     projectTitle.toggleBox();
 
+    xport.setText("Export");
+    xport.setSize(128,40);
+    xit.setText("Exit");
+    xit.setSize(83,40);
+
+    Position::alignRight(xit,layersPanel);
+    Position::top(xit,layersPanel,10);
+    Position::center(xport,xit);
+    Position::left(xport,xit,30);
+
+
 }
 
 void StudioMain::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(dynamicInstrumentPanel);
     target.draw(layersPanel);
     target.draw(projectTitle);
+
+    target.draw(xport);
+    target.draw(xit);
+
 }
 

@@ -18,6 +18,8 @@ private:
     LayersPanel layersPanel;
     TextInput projectTitle;
 
+    TextButton xport,xit;
+
 public:
 
     StudioMain();

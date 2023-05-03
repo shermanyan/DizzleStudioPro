@@ -45,7 +45,6 @@ void KeyboardTrack::eventHandler(sf::RenderWindow &window, const sf::Event &even
             node->eventHandler(window,event);
 
             if(node->checkStates(SELECTED)&& sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) {
-                printf("Erase");
                 nodes[node->getNode().octave - Keyboard::STARTING_OCTAVE].at(node->getNode().keyEnum) = nullptr;
                 n.second.erase(std::find(n.second.begin(), n.second.end(), node));
             }

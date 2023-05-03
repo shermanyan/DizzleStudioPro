@@ -165,7 +165,7 @@ add_executable(DizzleStudioPro
 #        SplashScreenTester.cpp
         App/SplashScreen/SplashScreen.cpp
         App/SplashScreen/SplashScreen.h
-        )
+        App/UIComponents/Panels/LayersPanel/TextButton.cpp App/UIComponents/Panels/LayersPanel/TextButton.h)
 
 target_link_libraries(DizzleStudioPro sfml-graphics sfml-audio)
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)

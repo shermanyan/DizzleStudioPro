@@ -48,19 +48,20 @@ void TrackControls::eventHandler(sf::RenderWindow &window, const sf::Event &even
 
     if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
+
             case sf::Keyboard::Right:
-                StudioStatics::seekBar->forward(0.25);
+                if (!checkStates(PLAY))
+                    StudioStatics::seekBar->forward(0.25);
                 break;
             case sf::Keyboard::Left:
-                StudioStatics::seekBar->rewind(0.25);
+                if (!checkStates(PLAY))
+                    StudioStatics::seekBar->rewind(0.25);
                 break;
             case sf::Keyboard::Enter:
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::RShift)) {
                     toggleState(RECORDING);
-//                    setState(PLAY,false);
                 }
                 else if (!checkStates(RECORDING)) {
-//                    setState(RECORDING,false);
                     toggleState(PLAY);
                 }
                 break;

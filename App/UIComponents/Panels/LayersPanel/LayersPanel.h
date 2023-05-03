@@ -13,9 +13,11 @@
 #include "TimeBar.h"
 #include "TrackControls.h"
 #include "GetBuffer.h"
+#include "TextButton.h"
 
 class LayersPanel: public AppComponent {
 private:
+
 
     Squircle background;
 
@@ -43,11 +45,18 @@ protected:
 public:
     LayersPanel();
 
+    sf::FloatRect getGlobalBounds() const override;
+
+    sf::FloatRect getLocalBounds() const override;
+
     void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
 
     void update(const sf::RenderWindow &window) override;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+
+    void exportTrack(const std::string& string);
+
 };
 
 
