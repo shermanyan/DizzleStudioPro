@@ -29,6 +29,8 @@ public:
 
     bool isPlaying = false;
 
+    void setDefaultFilePath(const std::string& string);
+
 private:
 
     std::vector<Squircle> visualizerBars;
@@ -41,7 +43,7 @@ private:
 
     void reposition();
 
-
+    std::string defaultFilePath = "App/Resources/Sounds/TestSounds/";
 
 };
 

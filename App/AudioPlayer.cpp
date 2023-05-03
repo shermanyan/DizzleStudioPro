@@ -26,6 +26,7 @@ void AudioPlayer::draw(sf::RenderTarget &target, sf::RenderStates states) const 
 
 AudioPlayer::AudioPlayer() {
     visualizer.setPosition(20,70);
+    visualizer.setAddTrackState(true);
 
     xit.setText("Exit");
     xit.setSize(83,40);
@@ -33,6 +34,7 @@ AudioPlayer::AudioPlayer() {
     Position::alignRight(xit,visualizer);
     Position::top(xit,visualizer,10);
 
+    visualizer.setDefaultFilePath("ExportedFiles/");
 }
 
 bool AudioPlayer::getExitStatus() {

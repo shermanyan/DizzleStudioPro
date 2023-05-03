@@ -59,7 +59,7 @@ void StaticAudioVisualizer::updateColors() {
 void StaticAudioVisualizer::loadVisualizer(const std::string &filePath) {
     // buffer = Sounds::getSound(NARUTO);
     visualizerBars.clear();
-    if (!buffer.loadFromFile("App/Resources/Sounds/TestSounds/" + filePath)) {
+    if (!buffer.loadFromFile(defaultFilePath + filePath)) {
         std::cout << "Fail";
     }
     AudioNode::setBuffer(buffer);
@@ -116,4 +116,9 @@ sf::FloatRect StaticAudioVisualizer::getGlobalBounds() const {
     bounds.height = height;
 
     return getTransform().transformRect(bounds);
+}
+
+void StaticAudioVisualizer::setDefaultFilePath(const std::string &string) {
+    defaultFilePath = string;
+
 }

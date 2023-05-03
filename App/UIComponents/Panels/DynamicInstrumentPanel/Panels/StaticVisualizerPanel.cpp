@@ -19,7 +19,7 @@ StaticVisualizerPanel::StaticVisualizerPanel()
     visualizer.setPosition(visualizer.getPosition().x + 385, visualizer.getPosition().y);
 
     addToTrackButton.setPosition(1730, 40);
-
+    addToTrackButton.setState(HIDDEN, false);
 }
 
 void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -42,7 +42,6 @@ void StaticVisualizerPanel::eventHandler(sf::RenderWindow &window, const sf::Eve
         }
     }
 
-
 }
 
 void StaticVisualizerPanel::update(const sf::RenderWindow &window) {
@@ -60,7 +59,9 @@ void StaticVisualizerPanel::draw(sf::RenderTarget &target, sf::RenderStates stat
     target.draw(visualizer,states);
     target.draw(playPauseButton,states);
     target.draw(songInput,states);
-    target.draw(addToTrackButton, states);
+    if (!addToTrackButton.checkStates(HIDDEN)) {
+        target.draw(addToTrackButton, states);
+    }
 
 }
 
@@ -81,4 +82,13 @@ AudioNode *StaticVisualizerPanel::getNode() {
 
 bool StaticVisualizerPanel::getStatus(const sf::RenderWindow& window) {
     return addToTrackButton.isClick(window) && visualizer.buffer.getDuration().asSeconds() > 0;
+}
+
+void StaticVisualizerPanel::setAddTrackState(bool value) {
+
+    addToTrackButton.setState(HIDDEN,value);
+}
+
+void StaticVisualizerPanel::setDefaultFilePath(const std::string& string){
+    visualizer.setDefaultFilePath(string);
 }

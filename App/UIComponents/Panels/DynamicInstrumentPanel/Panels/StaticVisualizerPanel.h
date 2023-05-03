@@ -31,6 +31,11 @@ public:
     bool getStatus(const sf::RenderWindow& window);
 
     AudioNode* getNode();
+
+    void setAddTrackState(bool value);
+
+    void setDefaultFilePath(const std::string &string);
+
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;
 
