@@ -35,21 +35,20 @@ void Clock::toggle() {
 
 void Clock::restart() {
     time = sf::Time::Zero;
-    offset = 0;
     clock.restart();
     on = true;
 }
 
 void Clock::forward(float seconds) {
-    offset += seconds ;
+    time += sf::seconds(seconds );
 
 }
 
 void Clock::rewind(float seconds) {
-    offset -= seconds;
+    time -= sf::seconds(seconds );
 }
 
 float Clock::getElapsedTimeAsSeconds() {
-    return getElapsedTime().asSeconds() + offset;
+    return getElapsedTime().asSeconds();
 }
 

@@ -8,7 +8,7 @@
 #include "SFML/Graphics.hpp"
 #include "States.h"
 
-class SpriteImage : public sf::Sprite, public States{
+class SpriteImage:public sf::Sprite, public States{
 private:
 
 public:

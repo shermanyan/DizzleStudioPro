@@ -28,7 +28,7 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    bool addTrackStatus(const sf::RenderWindow& window);
+    bool getStatus(const sf::RenderWindow& window);
 
     AudioNode* getNode();
 protected:

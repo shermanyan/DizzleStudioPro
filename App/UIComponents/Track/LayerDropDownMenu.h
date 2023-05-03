@@ -8,11 +8,14 @@
 #include "AppComponent.h"
 #include "SpriteImage.h"
 #include "Textures.h"
-
+#include "Squircle.h"
+#include "InstrumentsEnum.h"
 class LayerDropDownMenu : public AppComponent{
 private:
     SpriteImage dropDownMenu;
+    std::map<InstrumentsEnum, SpriteImage> clickableRanges;
 
+    void resize();
 public:
     LayerDropDownMenu();
 
@@ -26,8 +29,11 @@ public:
 
     void update(const sf::RenderWindow &window) override;
 
-
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+
+    void setWidth(float width);
+
+    InstrumentsEnum getSelected();
 };
 
 

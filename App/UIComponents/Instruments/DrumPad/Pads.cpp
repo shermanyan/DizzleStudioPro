@@ -67,10 +67,12 @@ void Pads::setupText(const std::string &string) {
 }
 
 void Pads::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
-    if(event.type == sf::Event::MouseButtonPressed && isClick(window)){
+    if(isClick(window) && !::AudioNode::checkStates(PLAY)){
+        ::AudioNode::setState(PLAY, true);
         pad.setFillColor(sf::Color{36, 36, 36} + sf::Color{25,25,25});
         play();
-    }else if (event.type == sf::Event::MouseButtonReleased){
+    }else if(!isClick(window)){
+        ::AudioNode::setState(PLAY, false);
         pad.setFillColor(sf::Color{36, 36, 36});
     }
 

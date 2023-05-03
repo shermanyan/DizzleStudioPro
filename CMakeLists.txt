@@ -86,8 +86,6 @@ add_executable(DizzleStudioPro
         App/UIComponents/Track/Tracks/VocalTrack.h
         App/UIComponents/Track/DrawableAudioNode.cpp
         App/UIComponents/Track/DrawableAudioNode.h
-        App/UIComponents/Track/GetAudioTrack.cpp
-        App/UIComponents/Track/GetAudioTrack.h
         App/UIComponents/Track/Layer.cpp
         App/UIComponents/Track/Layer.h
         App/UIComponents/Track/LayerDropDownMenu.cpp

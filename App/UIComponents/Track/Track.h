@@ -23,6 +23,9 @@ private:
 
     Squircle background, outline;
 
+protected:
+    void setChildrenTransform(const sf::Transform &transform) override;
+
 public:
     Track();
 

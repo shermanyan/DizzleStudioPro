@@ -38,10 +38,13 @@ public:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+    bool getStatus(const sf::RenderWindow& window);
 
+    AudioNode *getNode();
 
 protected:
     void setChildrenTransform(const sf::Transform &transform) override;
+
 };
 
 

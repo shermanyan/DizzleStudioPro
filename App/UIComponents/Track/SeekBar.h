@@ -35,7 +35,7 @@ public:
 
     void setLength(float length);
 
-    float getElapsedTime();
+    sf::Time getElapsedTime();
 
     void setRadius(float radius);
 

@@ -18,14 +18,16 @@
 #include "DrumPadTrack.h"
 
 #include <algorithm>
-#include <future>
+#include "LayerDropDownMenu.h"
 
 class Layer: public AppComponent {
 private:
+    LayerDropDownMenu dropDownMenu;
 
     std::unique_ptr<Track> track;
 
     TrackLabel label;
+
     sf::Sound test;
     sf::SoundBuffer buffer1;
 
@@ -37,6 +39,9 @@ public:
     void setTrackColor(const sf::Color& color);
     void setTrack(InstrumentsEnum type);
     InstrumentsEnum getTrackType() const;
+
+    sf::FloatRect getLabelGlobalBounds()const;
+    sf::FloatRect getTrackGlobalBounds()const;
 
     sf::FloatRect getGlobalBounds() const override;
 
@@ -50,14 +55,10 @@ public:
 
     std::map<float, std::vector<AudioNode>> getAudioTrack();
 
+    void setDropDownState(bool value);
+    bool getDropDownState();
 
-    void playAudioMap(const std::map<float, std::vector<AudioNode>>& audioMap);
-
-    sf::SoundBuffer concatenateSounds(const std::map<float, std::vector<AudioNode>>& audioMap, unsigned int targetSampleRate);
-    sf::SoundBuffer convertToMono(const sf::SoundBuffer& buffer);
-    sf::SoundBuffer resampleSoundBuffer(const sf::SoundBuffer& buffer, unsigned int targetSampleRate);
-
-    };
+};
 
 
 

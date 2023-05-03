@@ -76,8 +76,8 @@ void SeekBar::pause() {
     clock.stop();
 }
 
-float SeekBar::getElapsedTime() {
-    return clock.getElapsedTimeAsSeconds();
+sf::Time SeekBar::getElapsedTime() {
+    return clock.getElapsedTime();
 }
 
 void SeekBar::updateVelocity() {

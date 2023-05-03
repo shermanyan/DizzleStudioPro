@@ -10,6 +10,7 @@ void LayersPanel::setChildrenTransform(const sf::Transform &transform) {
         l.setParentTransform(transform);
     }
     trackControls.setParentTransform(transform);
+    seek.setParentTransform(transform);
 }
 
 LayersPanel::LayersPanel() {
@@ -27,6 +28,7 @@ LayersPanel::LayersPanel() {
         Position::center(layers[i],layers[i-1]);
         Position::bottom(layers[i],layers[i-1],10);
     }
+
 
     layers[0].setTrack(KEYBOARD);
     layers[1].setTrack(DRUMPAD);
@@ -53,6 +55,7 @@ LayersPanel::LayersPanel() {
         buffers.emplace_back();
         sounds.emplace_back();
     }
+
 }
 
 void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event) {
@@ -71,8 +74,15 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
             }
         }
     }
-
-
+    for (auto&l:layers) {
+        if(l.getDropDownState()) {
+            for (auto &l2: layers) {
+                if (&l2 != &l) {
+                    l2.setDropDownState(false);
+                }
+            }
+        }
+    }
 
     if(event.KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::RBracket)) {
         int duration =  timeBar.getDuration() + 1;
@@ -86,52 +96,22 @@ void LayersPanel::eventHandler(sf::RenderWindow &window, const sf::Event &event)
         seek.setDuration(duration);
         DrawableAudioNode::setDurationScale(duration);
     }
-    //this is the right if statement
+
     if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
         setState(PLAY, true);
         auto track = getMixedAudioTrack();
         if (!track.empty()) {
             combinedBuffer = GetBuffer::getCombinedSoundBuffer(track, 44100);
-
             sound.setBuffer(combinedBuffer);
             sound.play();
-        }else if(!trackControls.checkStates(PLAY)) {
-            sound.stop();
-            setState(PLAY, false);
+            sound.setPlayingOffset(seek.getElapsedTime());
         }
+    }else if(!trackControls.checkStates(PLAY) && checkStates(PLAY)) {
+        sound.stop();
+        sound.resetBuffer();
+        setState(PLAY, false);
     }
-    //this is the right if statement ^^^^^^
 
-//    if(trackControls.checkStates(PLAY) && !checkStates(PLAY)) {
-//        setState(PLAY, true);
-//        for (int i = 0; i <layers.size(); i++ ) {
-//            auto lTrack = layers[i].getAudioTrack();
-//            if (!lTrack.empty()) {
-//                buffers[i] = (GetBuffer::getCombinedSoundBuffer(lTrack, 44100));
-//                sounds[i].setBuffer(buffers[i]);
-//
-////                if(layers[i].getTrackType() != KEYBOARD) {
-////                    sounds[i].setVolume(25);
-////                }
-//            }
-//        }
-
-//        for(auto& s: sounds) {
-//            s.play();
-//            std::cout << "Play";
-//        }
-
-//    } else if(!trackControls.checkStates(PLAY) && checkStates(PLAY)) {
-//        for (auto& sound:sounds) {
-//            printf("Stop");
-//            sound.stop();
-////            sound.resetBuffer();
-//        }
-//        setState(PLAY, false);
-//    }
-//
-//
-//    }
 }
 
 void LayersPanel::update(const sf::RenderWindow &window) {
@@ -164,24 +144,23 @@ void LayersPanel::update(const sf::RenderWindow &window) {
         seek.pause();
     }
 
-
-
 }
 
 void LayersPanel::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
     target.draw(background,states);
 
-    for (auto&l:layers) {
-        target.draw(l,states);
+    for (int i = layers.size() - 1; i >= 0 ; i--) {
+        target.draw(layers[i],states);
     }
 
     target.draw(timeBar,states);
     target.draw(seek,states);
     target.draw(trackControls,states);
+
 }
 
-std::map<float, std::vector<AudioNode>> LayersPanel::getMixedAudioTrack() {
+std::map<float, std::vector<AudioNode>> LayersPanel:: getMixedAudioTrack() {
     std::map<float, std::vector<AudioNode>> finalTrack = layers[0].getAudioTrack();
     for (int i = 1; i<layers.size(); i++) {
         std::map<float, std::vector<AudioNode>> track = layers[i].getAudioTrack();

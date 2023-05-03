@@ -19,6 +19,8 @@ private:
     Squircle box;
     float trackHeight;
 
+    sf::Color color;
+
     void positionNode();
     void setSize();
 

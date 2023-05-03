@@ -16,7 +16,7 @@ TrackLabel::TrackLabel(const sf::Vector2f &size, const sf::Color &labelColor, In
     setTrackColor(labelColor);
     label.setRadius({0,0,10,10});
 
-    overlay.setFillColor({100, 100, 100, 20});
+    overlay.setFillColor({100, 100, 100, 60});
 }
 
 void TrackLabel::setSize(const sf::Vector2f &size) {
